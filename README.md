@@ -13,7 +13,7 @@
 
 `/src` mirrors SRC's v1 API 1:1. No derived fields, no custom attachments. A `/v1` layer with enrichment and multi-source aggregation is planned for a future release.
 
-Full API reference: [openapi-src.yaml](https://docs.speedrun.io/openapi-src.yaml) · [status](https://docs.speedrun.io/status) · [release notes/changelog](https://docs.speedrun.io/notes)
+Full API reference: [openapi-src.yaml](https://docs.speedrun.io/openapi-src.yaml) · [status](https://docs.speedrun.io/status) · [release notes](https://docs.speedrun.io/notes)
 
 ## Data license
 
