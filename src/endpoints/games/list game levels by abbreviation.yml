@@ -1,0 +1,1526 @@
+info:
+  name: list game levels by abbreviation
+  type: http
+  seq: 7
+
+http:
+  method: GET
+  url: https://api.speedrun.io/src/games/{{slug}}/levels
+  auth: inherit
+
+runtime:
+  variables:
+    - name: slug
+      value: botw
+      description: example game abbreviation
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true
+
+examples:
+  - name: "zelda: breath of the wild"
+    description: use an abbreviation to list the levels for a specific game
+    request:
+      url: https://api.speedrun.io/src/games/botw/levels
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: |-
+          {
+            "data": [
+              {
+                "id": "49562q2d",
+                "name": "Akkala Shrines",
+                "weblink": "https://www.speedrun.com/botw?h=Akkala_Shrines&x=l_49562q2d",
+                "rules": "**General IL Rules:**\n\n- Game version must be the latest available (currently Ver. 1.5.0 for Wii U and Ver. 1.6.0 for Switch)\r\n- All homebrew applications are banned, except for BotwRuns v1.0 found in the resources section.\r\n- Video proof is required.\n- Video must contain an additional second of cutscene after run is complete.\r\n- Any preparation is allowed (unless specified). This includes, but is not limited to, entering with:\r\nAttack, Defense, or Speed boosts, Bonus Hearts, Bonus Stamina, “Moonjump”, “Skew”.\n\n**Shrines Any% Rules**\n\n- Timing starts from control of Link.\r\n- Timing ends once you interact with the Monk's pedestal.\r\n- The Spirit Orb must be collected in order for the run to be valid.\r\n- The Shrine must be completely untouched before starting.\r\n\n**No Major Glitches Rules**\n\n- Same as Any%\r\n- The following tricks are not allowed to be performed during the run or setup during the preparation in order to do during the run:\r\n- Clipping through solid surfaces or objects.\r\n- Moonjump\r\n- Windbomb\r\n- Horse Sliding\r\n- Skew Bouncing\r\n- Bomb Bouncing\r\n- Bow Lift Smuggling\r\n- Amplifying momentum by abusing bullet time slowdown\r\n- Void Out Storage or any other effect of Apparatus Storage\r\n- (Note: Newly discovered glitches/tricks will be subject to a vote before being allowed or banned).\r\n\n**100% Rules**\n\n- Same as Any%.\r\n- Must open all chests and obtain the item within. Destroying chests is allowed as long as the item is collected.\r\n- Must defeat all enemies.\r\n\n**No Major Glitches 100% Rules**\n\n- Same as Any%\r\n- Same as No Major Glitches Rules\r\n- Same as 100%",
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/levels/49562q2d"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/76rqjqd8"
+                  },
+                  {
+                    "rel": "categories",
+                    "uri": "https://www.speedrun.com/api/v1/levels/49562q2d/categories"
+                  },
+                  {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/levels/49562q2d/variables"
+                  },
+                  {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/levels/49562q2d/records"
+                  },
+                  {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?level=49562q2d"
+                  },
+                  {
+                    "rel": "leaderboard",
+                    "uri": "https://www.speedrun.com/api/v1/leaderboards/76rqjqd8/level/49562q2d/824mrqg2"
+                  }
+                ]
+              },
+              {
+                "id": "rdqj8mm9",
+                "name": "Central Shrines",
+                "weblink": "https://www.speedrun.com/botw?h=Central_Shrines&x=l_rdqj8mm9",
+                "rules": "**General IL Rules:**\n\n- Game version must be the latest available (currently Ver. 1.5.0 for Wii U and Ver. 1.6.0 for Switch)\r\n- All homebrew applications are banned, except for BotwRuns v1.0 found in the resources section.\r\n- Video proof is required.\n- Video must contain an additional second of cutscene after run is complete.\r\n- Any preparation is allowed (unless specified). This includes, but is not limited to, entering with:\r\nAttack, Defense, or Speed boosts, Bonus Hearts, Bonus Stamina, “Moonjump”, “Skew”.\n\n**Shrines Any% Rules**\n\n- Timing starts from control of Link.\r\n- Timing ends once you interact with the Monk's pedestal.\r\n- The Spirit Orb must be collected in order for the run to be valid.\r\n- The Shrine must be completely untouched before starting.\r\n\n**No Major Glitches Rules**\n\n- Same as Any%\r\n- The following tricks are not allowed to be performed during the run or setup during the preparation in order to do during the run:\r\n- Clipping through solid surfaces or objects.\r\n- Moonjump\r\n- Windbomb\r\n- Horse Sliding\r\n- Skew Bouncing\r\n- Bomb Bouncing\r\n- Bow Lift Smuggling\r\n- Amplifying momentum by abusing bullet time slowdown\r\n- Void Out Storage or any other effect of Apparatus Storage\r\n- (Note: Newly discovered glitches/tricks will be subject to a vote before being allowed or banned).\r\n\n**100% Rules**\n\n- Same as Any%.\r\n- Must open all chests and obtain the item within. Destroying chests is allowed as long as the item is collected.\r\n- Must defeat all enemies.\r\n\n**No Major Glitches 100% Rules**\n\n- Same as Any%\r\n- Same as No Major Glitches Rules\r\n- Same as 100%",
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/levels/rdqj8mm9"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/76rqjqd8"
+                  },
+                  {
+                    "rel": "categories",
+                    "uri": "https://www.speedrun.com/api/v1/levels/rdqj8mm9/categories"
+                  },
+                  {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/levels/rdqj8mm9/variables"
+                  },
+                  {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/levels/rdqj8mm9/records"
+                  },
+                  {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?level=rdqj8mm9"
+                  },
+                  {
+                    "rel": "leaderboard",
+                    "uri": "https://www.speedrun.com/api/v1/leaderboards/76rqjqd8/level/rdqj8mm9/824mrqg2"
+                  }
+                ]
+              },
+              {
+                "id": "ywe1pryd",
+                "name": "Daruk's Song Shrines",
+                "weblink": "https://www.speedrun.com/botw?h=Daruks_Song_Shrines&x=l_ywe1pryd",
+                "rules": "**General IL Rules:**\n\n- Game version must be the latest available (currently Ver. 1.5.0 for Wii U and Ver. 1.6.0 for Switch)\r\n- All homebrew applications are banned, except for BotwRuns v1.0 found in the resources section.\r\n- Video proof is required.\n- Video must contain an additional second of cutscene after run is complete.\r\n- Any preparation is allowed (unless specified). This includes, but is not limited to, entering with:\r\nAttack, Defense, or Speed boosts, Bonus Hearts, Bonus Stamina, “Moonjump”, “Skew”.\n\n**Shrines Any% Rules**\n\n- Timing starts from control of Link.\r\n- Timing ends once you interact with the Monk's pedestal.\r\n- The Spirit Orb must be collected in order for the run to be valid.\r\n- The Shrine must be completely untouched before starting.\r\n\n**No Major Glitches Rules**\n\n- Same as Any%\r\n- The following tricks are not allowed to be performed during the run or setup during the preparation in order to do during the run:\r\n- Clipping through solid surfaces or objects.\r\n- Moonjump\r\n- Windbomb\r\n- Horse Sliding\r\n- Skew Bouncing\r\n- Bomb Bouncing\r\n- Bow Lift Smuggling\r\n- Amplifying momentum by abusing bullet time slowdown\r\n- Void Out Storage or any other effect of Apparatus Storage\r\n- (Note: Newly discovered glitches/tricks will be subject to a vote before being allowed or banned).\r\n\n**100% Rules**\n\n- Same as Any%.\r\n- Must open all chests and obtain the item within. Destroying chests is allowed as long as the item is collected.\r\n- Must defeat all enemies.\r\n\n**No Major Glitches 100% Rules**\n\n- Same as Any%\r\n- Same as No Major Glitches Rules\r\n- Same as 100%",
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/levels/ywe1pryd"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/76rqjqd8"
+                  },
+                  {
+                    "rel": "categories",
+                    "uri": "https://www.speedrun.com/api/v1/levels/ywe1pryd/categories"
+                  },
+                  {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/levels/ywe1pryd/variables"
+                  },
+                  {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/levels/ywe1pryd/records"
+                  },
+                  {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?level=ywe1pryd"
+                  },
+                  {
+                    "rel": "leaderboard",
+                    "uri": "https://www.speedrun.com/api/v1/leaderboards/76rqjqd8/level/ywe1pryd/824mrqg2"
+                  }
+                ]
+              },
+              {
+                "id": "z988e219",
+                "name": "Divine Beast Vah Medoh",
+                "weblink": "https://www.speedrun.com/botw?h=Divine_Beast_Vah_Medoh&x=l_z988e219",
+                "rules": "**General IL Rules:**\n\n- Game version must be the latest available (currently Ver. 1.5.0 for Wii U and Ver. 1.6.0 for Switch)\r\n- All homebrew applications are banned, except for BotwRuns v1.0 found in the resources section.\r\n- Video proof is required.\n- Video must contain an additional second of cutscene after run is complete.\r\n- Any preparation is allowed (unless specified). This includes, but is not limited to, entering with:\r\nAttack, Defense, or Speed boosts, Bonus Hearts, Bonus Stamina, “Moonjump”, “Skew”.\n\n**Divine Beast Any% Rules**\n\n- Timing starts when gaining control of Link.\r\n- Timing ends once you interact with the final pedestal of the Divine Beast.\r\n- The Divine Beast must be completely untouched before starting.\r\n\n**No Major Glitches Rules**\n\n- Same as Any%\r\n- The following tricks are not allowed to be performed during the run or setup during the preparation in order to do during the run:\r\n- Clipping through solid surfaces or objects.\r\n- Moonjump\r\n- Windbomb\r\n- Horse Sliding\r\n- Skew Bouncing\r\n- Bomb Bouncing\r\n- Bow Lift Smuggling\r\n- Amplifying momentum by abusing bullet time slowdown\r\n- Void Out Storage or any other effect of Apparatus Storage\r\n- (Note: Newly discovered glitches/tricks will be subject to a vote before being allowed or banned).\r\n\n**100% Rules**\n\n- Same as Any%\r\n- Must open all 8 chests and obtain the item within. Destroying wooden chests is allowed as long as the item is collected. List of chests:\r\n- Giant Ancient Core\r\n- Ice Arrow x10\r\n- Knight’s Bow\r\n- Ancient Shaft\r\n- Bomb Arrow x5\r\n- Ancient Core\r\n- Knight’s Claymore\r\n- Sapphire\r\n- Must obtain the Heart Container.\r\n- Must defeat all enemies.\r\n\n**No Major Glitches 100% Rules**\n\n- Same as Any%\r\n- Same as No Major Glitches Rules\r\n- Same as 100%",
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/levels/z988e219"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/76rqjqd8"
+                  },
+                  {
+                    "rel": "categories",
+                    "uri": "https://www.speedrun.com/api/v1/levels/z988e219/categories"
+                  },
+                  {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/levels/z988e219/variables"
+                  },
+                  {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/levels/z988e219/records"
+                  },
+                  {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?level=z988e219"
+                  },
+                  {
+                    "rel": "leaderboard",
+                    "uri": "https://www.speedrun.com/api/v1/leaderboards/76rqjqd8/level/z988e219/824mrqg2"
+                  }
+                ]
+              },
+              {
+                "id": "rdnprk69",
+                "name": "Divine Beast Vah Naboris",
+                "weblink": "https://www.speedrun.com/botw?h=Divine_Beast_Vah_Naboris&x=l_rdnprk69",
+                "rules": "**General IL Rules:**\n\n- Game version must be the latest available (currently Ver. 1.5.0 for Wii U and Ver. 1.6.0 for Switch)\r\n- All homebrew applications are banned, except for BotwRuns v1.0 found in the resources section.\r\n- Video proof is required.\n- Video must contain an additional second of cutscene after run is complete.\r\n- Any preparation is allowed (unless specified). This includes, but is not limited to, entering with:\r\nAttack, Defense, or Speed boosts, Bonus Hearts, Bonus Stamina, “Moonjump”, “Skew”.\n\n**Divine Beast Any% Rules**\n\n- Timing starts when gaining control of Link.\r\n- Timing ends once you interact with the final pedestal of the Divine Beast.\r\n- The Divine Beast must be completely untouched before starting.\r\n\n**No Major Glitches Rules**\n\n- Same as Any%\r\n- The following tricks are not allowed to be performed during the run or setup during the preparation in order to do during the run:\r\n- Clipping through solid surfaces or objects.\r\n- Moonjump\r\n- Windbomb\r\n- Horse Sliding\r\n- Skew Bouncing\r\n- Bomb Bouncing\r\n- Bow Lift Smuggling\r\n- Amplifying momentum by abusing bullet time slowdown\r\n- Void Out Storage or any other effect of Apparatus Storage\r\n- (Note: Newly discovered glitches/tricks will be subject to a vote before being allowed or banned).\r\n\n**100% Rules**\n\n- Same as Any%\r\n- Must open all 9 chests and obtain the item within. Destroying wooden chests is allowed as long as the item is collected. List of chests:\r\n- Knight’s Shield\r\n- Ancient Spring\r\n- Ancient Shaft\r\n- Knight’s Bow\r\n- Topaz\r\n- Ancient Screw\r\n- Bomb Arrow x5\r\n- Ancient Gear\r\n- Ancient Core\r\n- Must obtain the Heart Container.\r\n- Must defeat all enemies.\r\n\n**No Major Glitches 100% Rules**\n\n- Same as Any%\r\n- Same as No Major Glitches Rules\r\n- Same as 100%",
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/levels/rdnprk69"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/76rqjqd8"
+                  },
+                  {
+                    "rel": "categories",
+                    "uri": "https://www.speedrun.com/api/v1/levels/rdnprk69/categories"
+                  },
+                  {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/levels/rdnprk69/variables"
+                  },
+                  {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/levels/rdnprk69/records"
+                  },
+                  {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?level=rdnprk69"
+                  },
+                  {
+                    "rel": "leaderboard",
+                    "uri": "https://www.speedrun.com/api/v1/leaderboards/76rqjqd8/level/rdnprk69/824mrqg2"
+                  }
+                ]
+              },
+              {
+                "id": "ldypj47d",
+                "name": "Divine Beast Vah Rudania",
+                "weblink": "https://www.speedrun.com/botw?h=Divine_Beast_Vah_Rudania&x=l_ldypj47d",
+                "rules": "**General IL Rules:**\n\n- Game version must be the latest available (currently Ver. 1.5.0 for Wii U and Ver. 1.6.0 for Switch)\r\n- All homebrew applications are banned, except for BotwRuns v1.0 found in the resources section.\r\n- Video proof is required.\n- Video must contain an additional second of cutscene after run is complete.\r\n- Any preparation is allowed (unless specified). This includes, but is not limited to, entering with:\r\nAttack, Defense, or Speed boosts, Bonus Hearts, Bonus Stamina, “Moonjump”, “Skew”.\n\n**Divine Beast Any% Rules**\n\n- Timing starts when gaining control of Link.\r\n- Timing ends once you interact with the final pedestal of the Divine Beast.\r\n- The Divine Beast must be completely untouched before starting.\r\n\n**No Major Glitches Rules**\n\n- Same as Any%\r\n- The following tricks are not allowed to be performed during the run or setup during the preparation in order to do during the run:\r\n- Clipping through solid surfaces or objects.\r\n- Moonjump\r\n- Windbomb\r\n- Horse Sliding\r\n- Skew Bouncing\r\n- Bomb Bouncing\r\n- Bow Lift Smuggling\r\n- Amplifying momentum by abusing bullet time slowdown\r\n- Void Out Storage or any other effect of Apparatus Storage\r\n- (Note: Newly discovered glitches/tricks will be subject to a vote before being allowed or banned).\r\n\n**100% Rules**\n\n- Same as Any%\r\n- Must open all 8 chests and obtain the item within. Destroying wooden chests is allowed as long as the item is collected. List of chests:\r\n- Giant Ancient Core\r\n- Ice Arrow x10\r\n- Knight’s Bow\r\n- Ancient Shaft\r\n- Bomb Arrow x5\r\n- Ancient Core\r\n- Knight’s Claymore\r\n- Sapphire\r\n- Must obtain the Heart Container.\r\n- Must defeat all enemies.\r\n\n**No Major Glitches 100% Rules**\n\n- Same as Any%\r\n- Same as No Major Glitches Rules\r\n- Same as 100%",
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/levels/ldypj47d"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/76rqjqd8"
+                  },
+                  {
+                    "rel": "categories",
+                    "uri": "https://www.speedrun.com/api/v1/levels/ldypj47d/categories"
+                  },
+                  {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/levels/ldypj47d/variables"
+                  },
+                  {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/levels/ldypj47d/records"
+                  },
+                  {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?level=ldypj47d"
+                  },
+                  {
+                    "rel": "leaderboard",
+                    "uri": "https://www.speedrun.com/api/v1/leaderboards/76rqjqd8/level/ldypj47d/824mrqg2"
+                  }
+                ]
+              },
+              {
+                "id": "gdrqgpk9",
+                "name": "Divine Beast Vah Ruta",
+                "weblink": "https://www.speedrun.com/botw?h=Divine_Beast_Vah_Ruta&x=l_gdrqgpk9",
+                "rules": "**General IL Rules:**\n\n- Game version must be the latest available (currently Ver. 1.5.0 for Wii U and Ver. 1.6.0 for Switch)\r\n- All homebrew applications are banned, except for BotwRuns v1.0 found in the resources section.\r\n- Video proof is required.\n- Video must contain an additional second of cutscene after run is complete.\r\n- Any preparation is allowed (unless specified). This includes, but is not limited to, entering with:\r\nAttack, Defense, or Speed boosts, Bonus Hearts, Bonus Stamina, “Moonjump”, “Skew”.\n\n**Divine Beast Any% Rules**\n\n- Timing starts when gaining control of Link.\r\n- Timing ends once you interact with the final pedestal of the Divine Beast.\r\n- The Divine Beast must be completely untouched before starting.\r\n\n**No Major Glitches Rules**\n\n- Same as Any%\r\n- The following tricks are not allowed to be performed during the run or setup during the preparation in order to do during the run:\r\n- Clipping through solid surfaces or objects.\r\n- Moonjump\r\n- Windbomb\r\n- Horse Sliding\r\n- Skew Bouncing\r\n- Bomb Bouncing\r\n- Bow Lift Smuggling\r\n- Amplifying momentum by abusing bullet time slowdown\r\n- Void Out Storage or any other effect of Apparatus Storage\r\n- (Note: Newly discovered glitches/tricks will be subject to a vote before being allowed or banned).\r\n\n**100% Rules**\n\n- Same as Any%\r\n- Must open all 8 chests and obtain the item within. Destroying wooden chests is allowed as long as the item is collected. List of chests:\r\n- Giant Ancient Core\r\n- Ice Arrow x10\r\n- Knight’s Bow\r\n- Ancient Shaft\r\n- Bomb Arrow x5\r\n- Ancient Core\r\n- Knight’s Claymore\r\n- Sapphire\r\n- Must obtain the Heart Container.\r\n- Must defeat all enemies.\r\n\n**No Major Glitches 100% Rules**\n\n- Same as Any%\r\n- Same as No Major Glitches Rules\r\n- Same as 100%",
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/levels/gdrqgpk9"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/76rqjqd8"
+                  },
+                  {
+                    "rel": "categories",
+                    "uri": "https://www.speedrun.com/api/v1/levels/gdrqgpk9/categories"
+                  },
+                  {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/levels/gdrqgpk9/variables"
+                  },
+                  {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/levels/gdrqgpk9/records"
+                  },
+                  {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?level=gdrqgpk9"
+                  },
+                  {
+                    "rel": "leaderboard",
+                    "uri": "https://www.speedrun.com/api/v1/leaderboards/76rqjqd8/level/gdrqgpk9/824mrqg2"
+                  }
+                ]
+              },
+              {
+                "id": "5d7v1j5d",
+                "name": "Dueling Peaks Shrines",
+                "weblink": "https://www.speedrun.com/botw?h=Dueling_Peaks_Shrines&x=l_5d7v1j5d",
+                "rules": "**General IL Rules:**\n\n- Game version must be the latest available (currently Ver. 1.5.0 for Wii U and Ver. 1.6.0 for Switch)\r\n- All homebrew applications are banned, except for BotwRuns v1.0 found in the resources section.\r\n- Video proof is required.\n- Video must contain an additional second of cutscene after run is complete.\r\n- Any preparation is allowed (unless specified). This includes, but is not limited to, entering with:\r\nAttack, Defense, or Speed boosts, Bonus Hearts, Bonus Stamina, “Moonjump”, “Skew”.\n\n**Shrines Any% Rules**\n\n- Timing starts from control of Link.\r\n- Timing ends once you interact with the Monk's pedestal.\r\n- The Spirit Orb must be collected in order for the run to be valid.\r\n- The Shrine must be completely untouched before starting.\r\n\n**No Major Glitches Rules**\n\n- Same as Any%\r\n- The following tricks are not allowed to be performed during the run or setup during the preparation in order to do during the run:\r\n- Clipping through solid surfaces or objects.\r\n- Moonjump\r\n- Windbomb\r\n- Horse Sliding\r\n- Skew Bouncing\r\n- Bomb Bouncing\r\n- Bow Lift Smuggling\r\n- Amplifying momentum by abusing bullet time slowdown\r\n- Void Out Storage or any other effect of Apparatus Storage\r\n- (Note: Newly discovered glitches/tricks will be subject to a vote before being allowed or banned).\r\n\n**100% Rules**\n\n- Same as Any%.\r\n- Must open all chests and obtain the item within. Destroying chests is allowed as long as the item is collected.\r\n- Must defeat all enemies.\r\n\n**No Major Glitches 100% Rules**\n\n- Same as Any%\r\n- Same as No Major Glitches Rules\r\n- Same as 100%",
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/levels/5d7v1j5d"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/76rqjqd8"
+                  },
+                  {
+                    "rel": "categories",
+                    "uri": "https://www.speedrun.com/api/v1/levels/5d7v1j5d/categories"
+                  },
+                  {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/levels/5d7v1j5d/variables"
+                  },
+                  {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/levels/5d7v1j5d/records"
+                  },
+                  {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?level=5d7v1j5d"
+                  },
+                  {
+                    "rel": "leaderboard",
+                    "uri": "https://www.speedrun.com/api/v1/leaderboards/76rqjqd8/level/5d7v1j5d/824mrqg2"
+                  }
+                ]
+              },
+              {
+                "id": "kwj5gkr9",
+                "name": "Eldin Shrines",
+                "weblink": "https://www.speedrun.com/botw?h=Eldin_Shrines&x=l_kwj5gkr9",
+                "rules": "**General IL Rules:**\n\n- Game version must be the latest available (currently Ver. 1.5.0 for Wii U and Ver. 1.6.0 for Switch)\r\n- All homebrew applications are banned, except for BotwRuns v1.0 found in the resources section.\r\n- Video proof is required.\n- Video must contain an additional second of cutscene after run is complete.\r\n- Any preparation is allowed (unless specified). This includes, but is not limited to, entering with:\r\nAttack, Defense, or Speed boosts, Bonus Hearts, Bonus Stamina, “Moonjump”, “Skew”.\n\n**Shrines Any% Rules**\n\n- Timing starts from control of Link.\r\n- Timing ends once you interact with the Monk's pedestal.\r\n- The Spirit Orb must be collected in order for the run to be valid.\r\n- The Shrine must be completely untouched before starting.\r\n\n**No Major Glitches Rules**\n\n- Same as Any%\r\n- The following tricks are not allowed to be performed during the run or setup during the preparation in order to do during the run:\r\n- Clipping through solid surfaces or objects.\r\n- Moonjump\r\n- Windbomb\r\n- Horse Sliding\r\n- Skew Bouncing\r\n- Bomb Bouncing\r\n- Bow Lift Smuggling\r\n- Amplifying momentum by abusing bullet time slowdown\r\n- Void Out Storage or any other effect of Apparatus Storage\r\n- (Note: Newly discovered glitches/tricks will be subject to a vote before being allowed or banned).\r\n\n**100% Rules**\n\n- Same as Any%.\r\n- Must open all chests and obtain the item within. Destroying chests is allowed as long as the item is collected.\r\n- Must defeat all enemies.\r\n\n**No Major Glitches 100% Rules**\n\n- Same as Any%\r\n- Same as No Major Glitches Rules\r\n- Same as 100%",
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/levels/kwj5gkr9"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/76rqjqd8"
+                  },
+                  {
+                    "rel": "categories",
+                    "uri": "https://www.speedrun.com/api/v1/levels/kwj5gkr9/categories"
+                  },
+                  {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/levels/kwj5gkr9/variables"
+                  },
+                  {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/levels/kwj5gkr9/records"
+                  },
+                  {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?level=kwj5gkr9"
+                  },
+                  {
+                    "rel": "leaderboard",
+                    "uri": "https://www.speedrun.com/api/v1/leaderboards/76rqjqd8/level/kwj5gkr9/824mrqg2"
+                  }
+                ]
+              },
+              {
+                "id": "owo0jmvw",
+                "name": "Faron Shrines",
+                "weblink": "https://www.speedrun.com/botw?h=Faron_Shrines&x=l_owo0jmvw",
+                "rules": "**General IL Rules:**\n\n- Game version must be the latest available (currently Ver. 1.5.0 for Wii U and Ver. 1.6.0 for Switch)\r\n- All homebrew applications are banned, except for BotwRuns v1.0 found in the resources section.\r\n- Video proof is required.\n- Video must contain an additional second of cutscene after run is complete.\r\n- Any preparation is allowed (unless specified). This includes, but is not limited to, entering with:\r\nAttack, Defense, or Speed boosts, Bonus Hearts, Bonus Stamina, “Moonjump”, “Skew”.\n\n**Shrines Any% Rules**\n\n- Timing starts from control of Link.\r\n- Timing ends once you interact with the Monk's pedestal.\r\n- The Spirit Orb must be collected in order for the run to be valid.\r\n- The Shrine must be completely untouched before starting.\r\n\n**No Major Glitches Rules**\n\n- Same as Any%\r\n- The following tricks are not allowed to be performed during the run or setup during the preparation in order to do during the run:\r\n- Clipping through solid surfaces or objects.\r\n- Moonjump\r\n- Windbomb\r\n- Horse Sliding\r\n- Skew Bouncing\r\n- Bomb Bouncing\r\n- Bow Lift Smuggling\r\n- Amplifying momentum by abusing bullet time slowdown\r\n- Void Out Storage or any other effect of Apparatus Storage\r\n- (Note: Newly discovered glitches/tricks will be subject to a vote before being allowed or banned).\r\n\n**100% Rules**\n\n- Same as Any%.\r\n- Must open all chests and obtain the item within. Destroying chests is allowed as long as the item is collected.\r\n- Must defeat all enemies.\r\n\n**No Major Glitches 100% Rules**\n\n- Same as Any%\r\n- Same as No Major Glitches Rules\r\n- Same as 100%",
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/levels/owo0jmvw"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/76rqjqd8"
+                  },
+                  {
+                    "rel": "categories",
+                    "uri": "https://www.speedrun.com/api/v1/levels/owo0jmvw/categories"
+                  },
+                  {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/levels/owo0jmvw/variables"
+                  },
+                  {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/levels/owo0jmvw/records"
+                  },
+                  {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?level=owo0jmvw"
+                  },
+                  {
+                    "rel": "leaderboard",
+                    "uri": "https://www.speedrun.com/api/v1/leaderboards/76rqjqd8/level/owo0jmvw/824mrqg2"
+                  }
+                ]
+              },
+              {
+                "id": "kwj5j009",
+                "name": "Footrace",
+                "weblink": "https://www.speedrun.com/botw?h=Footrace&x=l_kwj5j009",
+                "rules": "**General IL Rules:**\n\n- Game version must be the latest available (currently Ver. 1.5.0 for Wii U and Ver. 1.6.0 for Switch)\r\n- All homebrew applications are banned, except for BotwRuns v1.0 found in the resources section.\r\n- Video proof is required.\n- Video must contain an additional second of cutscene after run is complete.\r\n- Any preparation is allowed (unless specified). This includes, but is not limited to, entering with:\r\nAttack, Defense, or Speed boosts, Bonus Hearts, Bonus Stamina, “Moonjump”, “Skew”.\n\n**Footrace Rules**\n\n- Timing starts on the gunshot.\r\n- Timing ends when the timer stops changing.\r\n- Submitted times must be RTA, not the in-game time.\r\n\n**No Major Glitches Rules**\n\n- Do not submit to this subcategory.\r\n\n** 100% Rules **\n\n- Do not submit to this subcategory.\r\n\n**No Major Glitches 100% Rules**\n\n- Do not submit to this subcategory.",
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/levels/kwj5j009"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/76rqjqd8"
+                  },
+                  {
+                    "rel": "categories",
+                    "uri": "https://www.speedrun.com/api/v1/levels/kwj5j009/categories"
+                  },
+                  {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/levels/kwj5j009/variables"
+                  },
+                  {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/levels/kwj5j009/records"
+                  },
+                  {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?level=kwj5j009"
+                  },
+                  {
+                    "rel": "leaderboard",
+                    "uri": "https://www.speedrun.com/api/v1/leaderboards/76rqjqd8/level/kwj5j009/824mrqg2"
+                  }
+                ]
+              },
+              {
+                "id": "xd17mzqd",
+                "name": "Gerudo Shrines",
+                "weblink": "https://www.speedrun.com/botw?h=Gerudo_Shrines&x=l_xd17mzqd",
+                "rules": "**General IL Rules:**\n\n- Game version must be the latest available (currently Ver. 1.5.0 for Wii U and Ver. 1.6.0 for Switch)\r\n- All homebrew applications are banned, except for BotwRuns v1.0 found in the resources section.\r\n- Video proof is required.\n- Video must contain an additional second of cutscene after run is complete.\r\n- Any preparation is allowed (unless specified). This includes, but is not limited to, entering with:\r\nAttack, Defense, or Speed boosts, Bonus Hearts, Bonus Stamina, “Moonjump”, “Skew”.\n\n**Shrines Any% Rules**\n\n- Timing starts from control of Link.\r\n- Timing ends once you interact with the Monk's pedestal.\r\n- The Spirit Orb must be collected in order for the run to be valid.\r\n- The Shrine must be completely untouched before starting.\r\n\n**No Major Glitches Rules**\n\n- Same as Any%\r\n- The following tricks are not allowed to be performed during the run or setup during the preparation in order to do during the run:\r\n- Clipping through solid surfaces or objects.\r\n- Moonjump\r\n- Windbomb\r\n- Horse Sliding\r\n- Skew Bouncing\r\n- Bomb Bouncing\r\n- Bow Lift Smuggling\r\n- Amplifying momentum by abusing bullet time slowdown\r\n- Void Out Storage or any other effect of Apparatus Storage\r\n- (Note: Newly discovered glitches/tricks will be subject to a vote before being allowed or banned).\r\n\n**100% Rules**\n\n- Same as Any%.\r\n- Must open all chests and obtain the item within. Destroying chests is allowed as long as the item is collected.\r\n- Must defeat all enemies.\r\n\n**No Major Glitches 100% Rules**\n\n- Same as Any%\r\n- Same as No Major Glitches Rules\r\n- Same as 100%",
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/levels/xd17mzqd"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/76rqjqd8"
+                  },
+                  {
+                    "rel": "categories",
+                    "uri": "https://www.speedrun.com/api/v1/levels/xd17mzqd/categories"
+                  },
+                  {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/levels/xd17mzqd/variables"
+                  },
+                  {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/levels/xd17mzqd/records"
+                  },
+                  {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?level=xd17mzqd"
+                  },
+                  {
+                    "rel": "leaderboard",
+                    "uri": "https://www.speedrun.com/api/v1/leaderboards/76rqjqd8/level/xd17mzqd/824mrqg2"
+                  }
+                ]
+              },
+              {
+                "id": "nwlleq0w",
+                "name": "Great Plateau Revisit Shrines",
+                "weblink": "https://www.speedrun.com/botw?h=Great_Plateau_Revisit_Shrines&x=l_nwlleq0w",
+                "rules": "**General IL Rules:**\n\n- Game version must be the latest available (currently Ver. 1.5.0 for Wii U and Ver. 1.6.0 for Switch)\r\n- All homebrew applications are banned, except for BotwRuns v1.0 found in the resources section.\r\n- Video proof is required.\n- Video must contain an additional second of cutscene after run is complete.\r\n- Any preparation is allowed (unless specified). This includes, but is not limited to, entering with:\r\nAttack, Defense, or Speed boosts, Bonus Hearts, Bonus Stamina, “Moonjump”, “Skew”.\n\n**Shrines Any% Rules**\n\n- Timing starts from control of Link.\r\n- Timing ends once you interact with the Monk's pedestal.\r\n- The Spirit Orb must be collected in order for the run to be valid.\r\n- The Shrine must be completely untouched before starting.\r\n\n**No Major Glitches Rules**\n\n- Same as Any%\r\n- The following tricks are not allowed to be performed during the run or setup during the preparation in order to do during the run:\r\n- Clipping through solid surfaces or objects.\r\n- Moonjump\r\n- Windbomb\r\n- Horse Sliding\r\n- Skew Bouncing\r\n- Bomb Bouncing\r\n- Bow Lift Smuggling\r\n- Amplifying momentum by abusing bullet time slowdown\r\n- Void Out Storage or any other effect of Apparatus Storage\r\n- (Note: Newly discovered glitches/tricks will be subject to a vote before being allowed or banned).\r\n\n**100% Rules**\n\n- Same as Any%.\r\n- Must open all chests and obtain the item within. Destroying chests is allowed as long as the item is collected.\r\n- Must defeat all enemies.\r\n\n**No Major Glitches 100% Rules**\n\n- Same as Any%\r\n- Same as No Major Glitches Rules\r\n- Same as 100%",
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/levels/nwlleq0w"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/76rqjqd8"
+                  },
+                  {
+                    "rel": "categories",
+                    "uri": "https://www.speedrun.com/api/v1/levels/nwlleq0w/categories"
+                  },
+                  {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/levels/nwlleq0w/variables"
+                  },
+                  {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/levels/nwlleq0w/records"
+                  },
+                  {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?level=nwlleq0w"
+                  },
+                  {
+                    "rel": "leaderboard",
+                    "uri": "https://www.speedrun.com/api/v1/leaderboards/76rqjqd8/level/nwlleq0w/824mrqg2"
+                  }
+                ]
+              },
+              {
+                "id": "ewpj32lw",
+                "name": "Great Plateau Shrines",
+                "weblink": "https://www.speedrun.com/botw?h=Great_Plateau_Shrines&x=l_ewpj32lw",
+                "rules": "**General IL Rules:**\n\n- Game version must be the latest available (currently Ver. 1.5.0 for Wii U and Ver. 1.6.0 for Switch)\r\n- All homebrew applications are banned, except for BotwRuns v1.0 found in the resources section.\r\n- Video proof is required.\n- Video must contain an additional second of cutscene after run is complete.\r\n- Any preparation is allowed (unless specified). This includes, but is not limited to, entering with:\r\nAttack, Defense, or Speed boosts, Bonus Hearts, Bonus Stamina, “Moonjump”, “Skew”.\n\n**Shrines Any% Rules**\n\n- Timing starts from control of Link.\r\n- Timing ends once you interact with the Monk's pedestal.\r\n- The Spirit Orb must be collected in order for the run to be valid.\r\n- The Shrine must be completely untouched before starting.\r\n\n**No Major Glitches Rules**\n\n- Same as Any%\r\n- The following tricks are not allowed to be performed during the run or setup during the preparation in order to do during the run:\r\n- Clipping through solid surfaces or objects.\r\n- Moonjump\r\n- Windbomb\r\n- Horse Sliding\r\n- Skew Bouncing\r\n- Bomb Bouncing\r\n- Bow Lift Smuggling\r\n- Amplifying momentum by abusing bullet time slowdown\r\n- Void Out Storage or any other effect of Apparatus Storage\r\n- (Note: Newly discovered glitches/tricks will be subject to a vote before being allowed or banned).\r\n\n**100% Rules**\n\n- Same as Any%.\r\n- Must open all chests and obtain the item within. Destroying chests is allowed as long as the item is collected.\r\n- Must defeat all enemies.\r\n\n**No Major Glitches 100% Rules**\n\n- Same as Any%\r\n- Same as No Major Glitches Rules\r\n- Same as 100%",
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/levels/ewpj32lw"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/76rqjqd8"
+                  },
+                  {
+                    "rel": "categories",
+                    "uri": "https://www.speedrun.com/api/v1/levels/ewpj32lw/categories"
+                  },
+                  {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/levels/ewpj32lw/variables"
+                  },
+                  {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/levels/ewpj32lw/records"
+                  },
+                  {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?level=ewpj32lw"
+                  },
+                  {
+                    "rel": "leaderboard",
+                    "uri": "https://www.speedrun.com/api/v1/leaderboards/76rqjqd8/level/ewpj32lw/824mrqg2"
+                  }
+                ]
+              },
+              {
+                "id": "kwj5kzz9",
+                "name": "Gut Check Challenge",
+                "weblink": "https://www.speedrun.com/botw?h=Gut_Check_Challenge&x=l_kwj5kzz9",
+                "rules": "**General IL Rules:**\n\n- Game version must be the latest available (currently Ver. 1.5.0 for Wii U and Ver. 1.6.0 for Switch)\r\n- All homebrew applications are banned, except for BotwRuns v1.0 found in the resources section.\r\n- Video proof is required.\n- Video must contain an additional second of cutscene after run is complete.\r\n- Any preparation is allowed (unless specified). This includes, but is not limited to, entering with:\r\nAttack, Defense, or Speed boosts, Bonus Hearts, Bonus Stamina, “Moonjump”, “Skew”.\n\n**Gut Check Challenge Rules**\n\n- Timing starts on \"START!\".\r\n- Timing ends on the whistle when reaching the top of the rock.\r\n- Submitted times must be RTA, not the in-game time.\r\n\n**No Major Glitches Rules**\n\n- Do not submit to this subcategory.\r\n\n**100% Rules**\n\n- Do not submit to this subcategory.\r\n\n**No Major Glitches 100% Rules**\n\n- Do not submit to this subcategory.",
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/levels/kwj5kzz9"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/76rqjqd8"
+                  },
+                  {
+                    "rel": "categories",
+                    "uri": "https://www.speedrun.com/api/v1/levels/kwj5kzz9/categories"
+                  },
+                  {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/levels/kwj5kzz9/variables"
+                  },
+                  {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/levels/kwj5kzz9/records"
+                  },
+                  {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?level=kwj5kzz9"
+                  },
+                  {
+                    "rel": "leaderboard",
+                    "uri": "https://www.speedrun.com/api/v1/leaderboards/76rqjqd8/level/kwj5kzz9/824mrqg2"
+                  }
+                ]
+              },
+              {
+                "id": "y9mj6ml9",
+                "name": "Hateno Shrines",
+                "weblink": "https://www.speedrun.com/botw?h=Hateno_Shrines&x=l_y9mj6ml9",
+                "rules": "**General IL Rules:**\n\n- Game version must be the latest available (currently Ver. 1.5.0 for Wii U and Ver. 1.6.0 for Switch)\r\n- All homebrew applications are banned, except for BotwRuns v1.0 found in the resources section.\r\n- Video proof is required.\n- Video must contain an additional second of cutscene after run is complete.\r\n- Any preparation is allowed (unless specified). This includes, but is not limited to, entering with:\r\nAttack, Defense, or Speed boosts, Bonus Hearts, Bonus Stamina, “Moonjump”, “Skew”.\n\n**Shrines Any% Rules**\n\n- Timing starts from control of Link.\r\n- Timing ends once you interact with the Monk's pedestal.\r\n- The Spirit Orb must be collected in order for the run to be valid.\r\n- The Shrine must be completely untouched before starting.\r\n\n**No Major Glitches Rules**\n\n- Same as Any%\r\n- The following tricks are not allowed to be performed during the run or setup during the preparation in order to do during the run:\r\n- Clipping through solid surfaces or objects.\r\n- Moonjump\r\n- Windbomb\r\n- Horse Sliding\r\n- Skew Bouncing\r\n- Bomb Bouncing\r\n- Bow Lift Smuggling\r\n- Amplifying momentum by abusing bullet time slowdown\r\n- Void Out Storage or any other effect of Apparatus Storage\r\n- (Note: Newly discovered glitches/tricks will be subject to a vote before being allowed or banned).\r\n\n**100% Rules**\n\n- Same as Any%.\r\n- Must open all chests and obtain the item within. Destroying chests is allowed as long as the item is collected.\r\n- Must defeat all enemies.\r\n\n**No Major Glitches 100% Rules**\n\n- Same as Any%\r\n- Same as No Major Glitches Rules\r\n- Same as 100%",
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/levels/y9mj6ml9"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/76rqjqd8"
+                  },
+                  {
+                    "rel": "categories",
+                    "uri": "https://www.speedrun.com/api/v1/levels/y9mj6ml9/categories"
+                  },
+                  {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/levels/y9mj6ml9/variables"
+                  },
+                  {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/levels/y9mj6ml9/records"
+                  },
+                  {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?level=y9mj6ml9"
+                  },
+                  {
+                    "rel": "leaderboard",
+                    "uri": "https://www.speedrun.com/api/v1/leaderboards/76rqjqd8/level/y9mj6ml9/824mrqg2"
+                  }
+                ]
+              },
+              {
+                "id": "5wkjxm5d",
+                "name": "Hebra Shrines",
+                "weblink": "https://www.speedrun.com/botw?h=Hebra_Shrines&x=l_5wkjxm5d",
+                "rules": "**General IL Rules:**\n\n- Game version must be the latest available (currently Ver. 1.5.0 for Wii U and Ver. 1.6.0 for Switch)\r\n- All homebrew applications are banned, except for BotwRuns v1.0 found in the resources section.\r\n- Video proof is required.\n- Video must contain an additional second of cutscene after run is complete.\r\n- Any preparation is allowed (unless specified). This includes, but is not limited to, entering with:\r\nAttack, Defense, or Speed boosts, Bonus Hearts, Bonus Stamina, “Moonjump”, “Skew”.\n\n**Shrines Any% Rules**\n\n- Timing starts from control of Link.\r\n- Timing ends once you interact with the Monk's pedestal.\r\n- The Spirit Orb must be collected in order for the run to be valid.\r\n- The Shrine must be completely untouched before starting.\r\n\n**No Major Glitches Rules**\n\n- Same as Any%\r\n- The following tricks are not allowed to be performed during the run or setup during the preparation in order to do during the run:\r\n- Clipping through solid surfaces or objects.\r\n- Moonjump\r\n- Windbomb\r\n- Horse Sliding\r\n- Skew Bouncing\r\n- Bomb Bouncing\r\n- Bow Lift Smuggling\r\n- Amplifying momentum by abusing bullet time slowdown\r\n- Void Out Storage or any other effect of Apparatus Storage\r\n- (Note: Newly discovered glitches/tricks will be subject to a vote before being allowed or banned).\r\n\n**100% Rules**\n\n- Same as Any%.\r\n- Must open all chests and obtain the item within. Destroying chests is allowed as long as the item is collected.\r\n- Must defeat all enemies.\r\n\n**No Major Glitches 100% Rules**\n\n- Same as Any%\r\n- Same as No Major Glitches Rules\r\n- Same as 100%",
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/levels/5wkjxm5d"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/76rqjqd8"
+                  },
+                  {
+                    "rel": "categories",
+                    "uri": "https://www.speedrun.com/api/v1/levels/5wkjxm5d/categories"
+                  },
+                  {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/levels/5wkjxm5d/variables"
+                  },
+                  {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/levels/5wkjxm5d/records"
+                  },
+                  {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?level=5wkjxm5d"
+                  },
+                  {
+                    "rel": "leaderboard",
+                    "uri": "https://www.speedrun.com/api/v1/leaderboards/76rqjqd8/level/5wkjxm5d/824mrqg2"
+                  }
+                ]
+              },
+              {
+                "id": "592zk6g9",
+                "name": "Lake Shrines",
+                "weblink": "https://www.speedrun.com/botw?h=Lake_Shrines&x=l_592zk6g9",
+                "rules": "**General IL Rules:**\n\n- Game version must be the latest available (currently Ver. 1.5.0 for Wii U and Ver. 1.6.0 for Switch)\r\n- All homebrew applications are banned, except for BotwRuns v1.0 found in the resources section.\r\n- Video proof is required.\n- Video must contain an additional second of cutscene after run is complete.\r\n- Any preparation is allowed (unless specified). This includes, but is not limited to, entering with:\r\nAttack, Defense, or Speed boosts, Bonus Hearts, Bonus Stamina, “Moonjump”, “Skew”.\n\n**Shrines Any% Rules**\n\n- Timing starts from control of Link.\r\n- Timing ends once you interact with the Monk's pedestal.\r\n- The Spirit Orb must be collected in order for the run to be valid.\r\n- The Shrine must be completely untouched before starting.\r\n\n**No Major Glitches Rules**\n\n- Same as Any%\r\n- The following tricks are not allowed to be performed during the run or setup during the preparation in order to do during the run:\r\n- Clipping through solid surfaces or objects.\r\n- Moonjump\r\n- Windbomb\r\n- Horse Sliding\r\n- Skew Bouncing\r\n- Bomb Bouncing\r\n- Bow Lift Smuggling\r\n- Amplifying momentum by abusing bullet time slowdown\r\n- Void Out Storage or any other effect of Apparatus Storage\r\n- (Note: Newly discovered glitches/tricks will be subject to a vote before being allowed or banned).\r\n\n**100% Rules**\n\n- Same as Any%.\r\n- Must open all chests and obtain the item within. Destroying chests is allowed as long as the item is collected.\r\n- Must defeat all enemies.\r\n\n**No Major Glitches 100% Rules**\n\n- Same as Any%\r\n- Same as No Major Glitches Rules\r\n- Same as 100%",
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/levels/592zk6g9"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/76rqjqd8"
+                  },
+                  {
+                    "rel": "categories",
+                    "uri": "https://www.speedrun.com/api/v1/levels/592zk6g9/categories"
+                  },
+                  {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/levels/592zk6g9/variables"
+                  },
+                  {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/levels/592zk6g9/records"
+                  },
+                  {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?level=592zk6g9"
+                  },
+                  {
+                    "rel": "leaderboard",
+                    "uri": "https://www.speedrun.com/api/v1/leaderboards/76rqjqd8/level/592zk6g9/824mrqg2"
+                  }
+                ]
+              },
+              {
+                "id": "29v36x1w",
+                "name": "Lanayru Shrines",
+                "weblink": "https://www.speedrun.com/botw?h=Lanayru_Shrines&x=l_29v36x1w",
+                "rules": "**General IL Rules:**\n\n- Game version must be the latest available (currently Ver. 1.5.0 for Wii U and Ver. 1.6.0 for Switch)\r\n- All homebrew applications are banned, except for BotwRuns v1.0 found in the resources section.\r\n- Video proof is required.\n- Video must contain an additional second of cutscene after run is complete.\r\n- Any preparation is allowed (unless specified). This includes, but is not limited to, entering with:\r\nAttack, Defense, or Speed boosts, Bonus Hearts, Bonus Stamina, “Moonjump”, “Skew”.\n\n**Shrines Any% Rules**\n\n- Timing starts from control of Link.\r\n- Timing ends once you interact with the Monk's pedestal.\r\n- The Spirit Orb must be collected in order for the run to be valid.\r\n- The Shrine must be completely untouched before starting.\r\n\n**No Major Glitches Rules**\n\n- Same as Any%\r\n- The following tricks are not allowed to be performed during the run or setup during the preparation in order to do during the run:\r\n- Clipping through solid surfaces or objects.\r\n- Moonjump\r\n- Windbomb\r\n- Horse Sliding\r\n- Skew Bouncing\r\n- Bomb Bouncing\r\n- Bow Lift Smuggling\r\n- Amplifying momentum by abusing bullet time slowdown\r\n- Void Out Storage or any other effect of Apparatus Storage\r\n- (Note: Newly discovered glitches/tricks will be subject to a vote before being allowed or banned).\r\n\n**100% Rules**\n\n- Same as Any%.\r\n- Must open all chests and obtain the item within. Destroying chests is allowed as long as the item is collected.\r\n- Must defeat all enemies.\r\n\n**No Major Glitches 100% Rules**\n\n- Same as Any%\r\n- Same as No Major Glitches Rules\r\n- Same as 100%",
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/levels/29v36x1w"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/76rqjqd8"
+                  },
+                  {
+                    "rel": "categories",
+                    "uri": "https://www.speedrun.com/api/v1/levels/29v36x1w/categories"
+                  },
+                  {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/levels/29v36x1w/variables"
+                  },
+                  {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/levels/29v36x1w/records"
+                  },
+                  {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?level=29v36x1w"
+                  },
+                  {
+                    "rel": "leaderboard",
+                    "uri": "https://www.speedrun.com/api/v1/leaderboards/76rqjqd8/level/29v36x1w/824mrqg2"
+                  }
+                ]
+              },
+              {
+                "id": "69z30yld",
+                "name": "Mipha's Song Shrines",
+                "weblink": "https://www.speedrun.com/botw?h=Miphas_Song_Shrines&x=l_69z30yld",
+                "rules": "**General IL Rules:**\n\n- Game version must be the latest available (currently Ver. 1.5.0 for Wii U and Ver. 1.6.0 for Switch)\r\n- All homebrew applications are banned, except for BotwRuns v1.0 found in the resources section.\r\n- Video proof is required.\n- Video must contain an additional second of cutscene after run is complete.\r\n- Any preparation is allowed (unless specified). This includes, but is not limited to, entering with:\r\nAttack, Defense, or Speed boosts, Bonus Hearts, Bonus Stamina, “Moonjump”, “Skew”.\n\n**Shrines Any% Rules**\n\n- Timing starts from control of Link.\r\n- Timing ends once you interact with the Monk's pedestal.\r\n- The Spirit Orb must be collected in order for the run to be valid.\r\n- The Shrine must be completely untouched before starting.\r\n\n**No Major Glitches Rules**\n\n- Same as Any%\r\n- The following tricks are not allowed to be performed during the run or setup during the preparation in order to do during the run:\r\n- Clipping through solid surfaces or objects.\r\n- Moonjump\r\n- Windbomb\r\n- Horse Sliding\r\n- Skew Bouncing\r\n- Bomb Bouncing\r\n- Bow Lift Smuggling\r\n- Amplifying momentum by abusing bullet time slowdown\r\n- Void Out Storage or any other effect of Apparatus Storage\r\n- (Note: Newly discovered glitches/tricks will be subject to a vote before being allowed or banned).\r\n\n**100% Rules**\n\n- Same as Any%.\r\n- Must open all chests and obtain the item within. Destroying chests is allowed as long as the item is collected.\r\n- Must defeat all enemies.\r\n\n**No Major Glitches 100% Rules**\n\n- Same as Any%\r\n- Same as No Major Glitches Rules\r\n- Same as 100%",
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/levels/69z30yld"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/76rqjqd8"
+                  },
+                  {
+                    "rel": "categories",
+                    "uri": "https://www.speedrun.com/api/v1/levels/69z30yld/categories"
+                  },
+                  {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/levels/69z30yld/variables"
+                  },
+                  {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/levels/69z30yld/records"
+                  },
+                  {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?level=69z30yld"
+                  },
+                  {
+                    "rel": "leaderboard",
+                    "uri": "https://www.speedrun.com/api/v1/leaderboards/76rqjqd8/level/69z30yld/824mrqg2"
+                  }
+                ]
+              }
+            ],
+            "pagination": {
+              "offset": 0,
+              "max": 20,
+              "size": 20
+            },
+            "status": 200
+          }
+  - name: bloons td 6
+    description: use an abbreviation to list the levels for a specific game
+    request:
+      url: https://api.speedrun.io/src/games/btd6/levels
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: |-
+          {
+            "data": [
+              {
+                "id": "owo6zykw",
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/levels/owo6zykw"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/nd2er3ed"
+                  },
+                  {
+                    "rel": "categories",
+                    "uri": "https://www.speedrun.com/api/v1/levels/owo6zykw/categories"
+                  },
+                  {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/levels/owo6zykw/variables"
+                  },
+                  {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/levels/owo6zykw/records"
+                  },
+                  {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?level=owo6zykw"
+                  },
+                  {
+                    "rel": "leaderboard",
+                    "uri": "https://www.speedrun.com/api/v1/leaderboards/nd2er3ed/level/owo6zykw/9kvyy7ok"
+                  }
+                ],
+                "name": "#Ouch",
+                "rules": null,
+                "weblink": "https://www.speedrun.com/btd6?h=Ouch&x=l_owo6zykw"
+              },
+              {
+                "id": "z98z30p9",
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/levels/z98z30p9"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/nd2er3ed"
+                  },
+                  {
+                    "rel": "categories",
+                    "uri": "https://www.speedrun.com/api/v1/levels/z98z30p9/categories"
+                  },
+                  {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/levels/z98z30p9/variables"
+                  },
+                  {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/levels/z98z30p9/records"
+                  },
+                  {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?level=z98z30p9"
+                  },
+                  {
+                    "rel": "leaderboard",
+                    "uri": "https://www.speedrun.com/api/v1/leaderboards/nd2er3ed/level/z98z30p9/9kvyy7ok"
+                  }
+                ],
+                "name": "Adora's Temple",
+                "rules": null,
+                "weblink": "https://www.speedrun.com/btd6?h=Adoras_Temple&x=l_z98z30p9"
+              },
+              {
+                "id": "ldyj0xpd",
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/levels/ldyj0xpd"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/nd2er3ed"
+                  },
+                  {
+                    "rel": "categories",
+                    "uri": "https://www.speedrun.com/api/v1/levels/ldyj0xpd/categories"
+                  },
+                  {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/levels/ldyj0xpd/variables"
+                  },
+                  {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/levels/ldyj0xpd/records"
+                  },
+                  {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?level=ldyj0xpd"
+                  },
+                  {
+                    "rel": "leaderboard",
+                    "uri": "https://www.speedrun.com/api/v1/leaderboards/nd2er3ed/level/ldyj0xpd/9kvyy7ok"
+                  }
+                ],
+                "name": "Alpine Run",
+                "rules": null,
+                "weblink": "https://www.speedrun.com/btd6?h=Alpine_Run&x=l_ldyj0xpd"
+              },
+              {
+                "id": "wj7z8m7w",
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/levels/wj7z8m7w"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/nd2er3ed"
+                  },
+                  {
+                    "rel": "categories",
+                    "uri": "https://www.speedrun.com/api/v1/levels/wj7z8m7w/categories"
+                  },
+                  {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/levels/wj7z8m7w/variables"
+                  },
+                  {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/levels/wj7z8m7w/records"
+                  },
+                  {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?level=wj7z8m7w"
+                  },
+                  {
+                    "rel": "leaderboard",
+                    "uri": "https://www.speedrun.com/api/v1/leaderboards/nd2er3ed/level/wj7z8m7w/9kvyy7ok"
+                  }
+                ],
+                "name": "Ancient Portal",
+                "rules": "",
+                "weblink": "https://www.speedrun.com/btd6?h=ancient-portal&x=l_wj7z8m7w"
+              },
+              {
+                "id": "o9x7p7pd",
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/levels/o9x7p7pd"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/nd2er3ed"
+                  },
+                  {
+                    "rel": "categories",
+                    "uri": "https://www.speedrun.com/api/v1/levels/o9x7p7pd/categories"
+                  },
+                  {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/levels/o9x7p7pd/variables"
+                  },
+                  {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/levels/o9x7p7pd/records"
+                  },
+                  {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?level=o9x7p7pd"
+                  },
+                  {
+                    "rel": "leaderboard",
+                    "uri": "https://www.speedrun.com/api/v1/leaderboards/nd2er3ed/level/o9x7p7pd/9kvyy7ok"
+                  }
+                ],
+                "name": "Another Brick",
+                "rules": null,
+                "weblink": "https://www.speedrun.com/btd6?h=Another_Brick&x=l_o9x7p7pd"
+              },
+              {
+                "id": "drp1q6zw",
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/levels/drp1q6zw"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/nd2er3ed"
+                  },
+                  {
+                    "rel": "categories",
+                    "uri": "https://www.speedrun.com/api/v1/levels/drp1q6zw/categories"
+                  },
+                  {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/levels/drp1q6zw/variables"
+                  },
+                  {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/levels/drp1q6zw/records"
+                  },
+                  {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?level=drp1q6zw"
+                  },
+                  {
+                    "rel": "leaderboard",
+                    "uri": "https://www.speedrun.com/api/v1/leaderboards/nd2er3ed/level/drp1q6zw/9kvyy7ok"
+                  }
+                ],
+                "name": "Ascent",
+                "rules": "",
+                "weblink": "https://www.speedrun.com/btd6?h=ascent&x=l_drp1q6zw"
+              },
+              {
+                "id": "ldyl8yj9",
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/levels/ldyl8yj9"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/nd2er3ed"
+                  },
+                  {
+                    "rel": "categories",
+                    "uri": "https://www.speedrun.com/api/v1/levels/ldyl8yj9/categories"
+                  },
+                  {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/levels/ldyl8yj9/variables"
+                  },
+                  {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/levels/ldyl8yj9/records"
+                  },
+                  {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?level=ldyl8yj9"
+                  },
+                  {
+                    "rel": "leaderboard",
+                    "uri": "https://www.speedrun.com/api/v1/leaderboards/nd2er3ed/level/ldyl8yj9/9kvyy7ok"
+                  }
+                ],
+                "name": "Balance",
+                "rules": null,
+                "weblink": "https://www.speedrun.com/btd6?h=Balance&x=l_ldyl8yj9"
+              },
+              {
+                "id": "n93mr7ed",
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/levels/n93mr7ed"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/nd2er3ed"
+                  },
+                  {
+                    "rel": "categories",
+                    "uri": "https://www.speedrun.com/api/v1/levels/n93mr7ed/categories"
+                  },
+                  {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/levels/n93mr7ed/variables"
+                  },
+                  {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/levels/n93mr7ed/records"
+                  },
+                  {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?level=n93mr7ed"
+                  },
+                  {
+                    "rel": "leaderboard",
+                    "uri": "https://www.speedrun.com/api/v1/leaderboards/nd2er3ed/level/n93mr7ed/9kvyy7ok"
+                  }
+                ],
+                "name": "Bazaar",
+                "rules": null,
+                "weblink": "https://www.speedrun.com/btd6?h=Bazaar&x=l_n93mr7ed"
+              },
+              {
+                "id": "gdr61e8d",
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/levels/gdr61e8d"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/nd2er3ed"
+                  },
+                  {
+                    "rel": "categories",
+                    "uri": "https://www.speedrun.com/api/v1/levels/gdr61e8d/categories"
+                  },
+                  {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/levels/gdr61e8d/variables"
+                  },
+                  {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/levels/gdr61e8d/records"
+                  },
+                  {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?level=gdr61e8d"
+                  },
+                  {
+                    "rel": "leaderboard",
+                    "uri": "https://www.speedrun.com/api/v1/leaderboards/nd2er3ed/level/gdr61e8d/9kvyy7ok"
+                  }
+                ],
+                "name": "Blons",
+                "rules": null,
+                "weblink": "https://www.speedrun.com/btd6?h=Blons&x=l_gdr61e8d"
+              },
+              {
+                "id": "ywejmord",
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/levels/ywejmord"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/nd2er3ed"
+                  },
+                  {
+                    "rel": "categories",
+                    "uri": "https://www.speedrun.com/api/v1/levels/ywejmord/categories"
+                  },
+                  {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/levels/ywejmord/variables"
+                  },
+                  {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/levels/ywejmord/records"
+                  },
+                  {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?level=ywejmord"
+                  },
+                  {
+                    "rel": "leaderboard",
+                    "uri": "https://www.speedrun.com/api/v1/leaderboards/nd2er3ed/level/ywejmord/9kvyy7ok"
+                  }
+                ],
+                "name": "Bloody Puddles",
+                "rules": null,
+                "weblink": "https://www.speedrun.com/btd6?h=Bloody_Puddles&x=l_ywejmord"
+              },
+              {
+                "id": "y9m0l7xw",
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/levels/y9m0l7xw"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/nd2er3ed"
+                  },
+                  {
+                    "rel": "categories",
+                    "uri": "https://www.speedrun.com/api/v1/levels/y9m0l7xw/categories"
+                  },
+                  {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/levels/y9m0l7xw/variables"
+                  },
+                  {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/levels/y9m0l7xw/records"
+                  },
+                  {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?level=y9m0l7xw"
+                  },
+                  {
+                    "rel": "leaderboard",
+                    "uri": "https://www.speedrun.com/api/v1/leaderboards/nd2er3ed/level/y9m0l7xw/9kvyy7ok"
+                  }
+                ],
+                "name": "Bloonarius Prime",
+                "rules": null,
+                "weblink": "https://www.speedrun.com/btd6?h=Bloonarius_Prime&x=l_y9m0l7xw"
+              },
+              {
+                "id": "xd048g1w",
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/levels/xd048g1w"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/nd2er3ed"
+                  },
+                  {
+                    "rel": "categories",
+                    "uri": "https://www.speedrun.com/api/v1/levels/xd048g1w/categories"
+                  },
+                  {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/levels/xd048g1w/variables"
+                  },
+                  {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/levels/xd048g1w/records"
+                  },
+                  {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?level=xd048g1w"
+                  },
+                  {
+                    "rel": "leaderboard",
+                    "uri": "https://www.speedrun.com/api/v1/leaderboards/nd2er3ed/level/xd048g1w/9kvyy7ok"
+                  }
+                ],
+                "name": "Candy Falls",
+                "rules": null,
+                "weblink": "https://www.speedrun.com/btd6?h=Candy_Falls&x=l_xd048g1w"
+              },
+              {
+                "id": "5wk8zr2w",
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/levels/5wk8zr2w"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/nd2er3ed"
+                  },
+                  {
+                    "rel": "categories",
+                    "uri": "https://www.speedrun.com/api/v1/levels/5wk8zr2w/categories"
+                  },
+                  {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/levels/5wk8zr2w/variables"
+                  },
+                  {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/levels/5wk8zr2w/records"
+                  },
+                  {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?level=5wk8zr2w"
+                  },
+                  {
+                    "rel": "leaderboard",
+                    "uri": "https://www.speedrun.com/api/v1/leaderboards/nd2er3ed/level/5wk8zr2w/9kvyy7ok"
+                  }
+                ],
+                "name": "Cargo",
+                "rules": null,
+                "weblink": "https://www.speedrun.com/btd6?h=Cargo&x=l_5wk8zr2w"
+              },
+              {
+                "id": "ldy58ozw",
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/levels/ldy58ozw"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/nd2er3ed"
+                  },
+                  {
+                    "rel": "categories",
+                    "uri": "https://www.speedrun.com/api/v1/levels/ldy58ozw/categories"
+                  },
+                  {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/levels/ldy58ozw/variables"
+                  },
+                  {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/levels/ldy58ozw/records"
+                  },
+                  {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?level=ldy58ozw"
+                  },
+                  {
+                    "rel": "leaderboard",
+                    "uri": "https://www.speedrun.com/api/v1/leaderboards/nd2er3ed/level/ldy58ozw/9kvyy7ok"
+                  }
+                ],
+                "name": "Carved",
+                "rules": null,
+                "weblink": "https://www.speedrun.com/btd6?h=Carved&x=l_ldy58ozw"
+              },
+              {
+                "id": "9vm1r739",
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/levels/9vm1r739"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/nd2er3ed"
+                  },
+                  {
+                    "rel": "categories",
+                    "uri": "https://www.speedrun.com/api/v1/levels/9vm1r739/categories"
+                  },
+                  {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/levels/9vm1r739/variables"
+                  },
+                  {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/levels/9vm1r739/records"
+                  },
+                  {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?level=9vm1r739"
+                  },
+                  {
+                    "rel": "leaderboard",
+                    "uri": "https://www.speedrun.com/api/v1/leaderboards/nd2er3ed/level/9vm1r739/9kvyy7ok"
+                  }
+                ],
+                "name": "Castle Revenge",
+                "rules": "",
+                "weblink": "https://www.speedrun.com/btd6?h=castle-revenge&x=l_9vm1r739"
+              },
+              {
+                "id": "ywe5657w",
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/levels/ywe5657w"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/nd2er3ed"
+                  },
+                  {
+                    "rel": "categories",
+                    "uri": "https://www.speedrun.com/api/v1/levels/ywe5657w/categories"
+                  },
+                  {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/levels/ywe5657w/variables"
+                  },
+                  {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/levels/ywe5657w/records"
+                  },
+                  {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?level=ywe5657w"
+                  },
+                  {
+                    "rel": "leaderboard",
+                    "uri": "https://www.speedrun.com/api/v1/leaderboards/nd2er3ed/level/ywe5657w/9kvyy7ok"
+                  }
+                ],
+                "name": "Chutes",
+                "rules": null,
+                "weblink": "https://www.speedrun.com/btd6?h=Chutes&x=l_ywe5657w"
+              },
+              {
+                "id": "rdq7x729",
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/levels/rdq7x729"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/nd2er3ed"
+                  },
+                  {
+                    "rel": "categories",
+                    "uri": "https://www.speedrun.com/api/v1/levels/rdq7x729/categories"
+                  },
+                  {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/levels/rdq7x729/variables"
+                  },
+                  {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/levels/rdq7x729/records"
+                  },
+                  {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?level=rdq7x729"
+                  },
+                  {
+                    "rel": "leaderboard",
+                    "uri": "https://www.speedrun.com/api/v1/leaderboards/nd2er3ed/level/rdq7x729/9kvyy7ok"
+                  }
+                ],
+                "name": "Cornfield",
+                "rules": null,
+                "weblink": "https://www.speedrun.com/btd6?h=Cornfield&x=l_rdq7x729"
+              },
+              {
+                "id": "y9mo2llw",
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/levels/y9mo2llw"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/nd2er3ed"
+                  },
+                  {
+                    "rel": "categories",
+                    "uri": "https://www.speedrun.com/api/v1/levels/y9mo2llw/categories"
+                  },
+                  {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/levels/y9mo2llw/variables"
+                  },
+                  {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/levels/y9mo2llw/records"
+                  },
+                  {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?level=y9mo2llw"
+                  },
+                  {
+                    "rel": "leaderboard",
+                    "uri": "https://www.speedrun.com/api/v1/leaderboards/nd2er3ed/level/y9mo2llw/9kvyy7ok"
+                  }
+                ],
+                "name": "Covered Garden",
+                "rules": null,
+                "weblink": "https://www.speedrun.com/btd6?h=Covered_Garden&x=l_y9mo2llw"
+              },
+              {
+                "id": "gdrx5xld",
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/levels/gdrx5xld"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/nd2er3ed"
+                  },
+                  {
+                    "rel": "categories",
+                    "uri": "https://www.speedrun.com/api/v1/levels/gdrx5xld/categories"
+                  },
+                  {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/levels/gdrx5xld/variables"
+                  },
+                  {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/levels/gdrx5xld/records"
+                  },
+                  {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?level=gdrx5xld"
+                  },
+                  {
+                    "rel": "leaderboard",
+                    "uri": "https://www.speedrun.com/api/v1/leaderboards/nd2er3ed/level/gdrx5xld/9kvyy7ok"
+                  }
+                ],
+                "name": "Cracked",
+                "rules": null,
+                "weblink": "https://www.speedrun.com/btd6?h=Cracked&x=l_gdrx5xld"
+              },
+              {
+                "id": "rw6ojogw",
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/levels/rw6ojogw"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/nd2er3ed"
+                  },
+                  {
+                    "rel": "categories",
+                    "uri": "https://www.speedrun.com/api/v1/levels/rw6ojogw/categories"
+                  },
+                  {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/levels/rw6ojogw/variables"
+                  },
+                  {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/levels/rw6ojogw/records"
+                  },
+                  {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?level=rw6ojogw"
+                  },
+                  {
+                    "rel": "leaderboard",
+                    "uri": "https://www.speedrun.com/api/v1/leaderboards/nd2er3ed/level/rw6ojogw/9kvyy7ok"
+                  }
+                ],
+                "name": "Cubism",
+                "rules": null,
+                "weblink": "https://www.speedrun.com/btd6?h=Cubism&x=l_rw6ojogw"
+              }
+            ],
+            "pagination": {
+              "offset": 0,
+              "max": 20,
+              "size": 20
+            },
+            "status": 200
+          }
+  - name: mario kart 8 deluxe ce
+    description: use an abbreviation to list the levels for a specific game
+    request:
+      url: https://api.speedrun.io/src/games/mk8dxce/levels
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: |-
+          {
+            "data": [],
+            "pagination": {
+              "offset": 0,
+              "max": 20,
+              "size": 0
+            },
+            "status": 200
+          }

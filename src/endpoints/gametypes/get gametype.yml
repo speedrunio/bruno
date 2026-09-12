@@ -1,0 +1,81 @@
+info:
+  name: get gametype
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: https://api.speedrun.io/src/gametypes/{{slug}}
+  auth: inherit
+
+runtime:
+  variables:
+    - name: slug
+      value: 53no817x
+      description: example gametype id
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: category extensions
+    description: use an ID to get a specific gametype
+    request:
+      url: https://api.speedrun.io/src/gametypes/53no817x
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: |-
+          {
+            "data": {
+              "allows-base-game": true,
+              "id": "53no817x",
+              "links": [
+                {
+                  "rel": "self",
+                  "uri": "https://www.speedrun.com/api/v1/gametypes/53no817x"
+                },
+                {
+                  "rel": "games",
+                  "uri": "https://www.speedrun.com/api/v1/games?gametype=53no817x"
+                }
+              ],
+              "name": "Category Extension"
+            },
+            "status": 200
+          }
+  - name: expansion/dlc
+    description: use an ID to get a specific gametype
+    request:
+      url: https://api.speedrun.io/src/gametypes/j8138myw
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: |-
+          {
+            "data": {
+              "allows-base-game": true,
+              "id": "j8138myw",
+              "links": [
+                {
+                  "rel": "self",
+                  "uri": "https://www.speedrun.com/api/v1/gametypes/j8138myw"
+                },
+                {
+                  "rel": "games",
+                  "uri": "https://www.speedrun.com/api/v1/games?gametype=j8138myw"
+                }
+              ],
+              "name": "Expansion/DLC"
+            },
+            "status": 200
+          }

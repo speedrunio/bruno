@@ -1,0 +1,484 @@
+info:
+  name: get game by abbreviation
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: https://api.speedrun.io/src/games/{{slug}}
+  auth: inherit
+
+runtime:
+  variables:
+    - name: slug
+      value: oot
+      description: example game id
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true
+
+examples:
+  - name: "zelda: ocarina of time"
+    description: use an abbreviation to get a specific game
+    request:
+      url: https://api.speedrun.io/src/games/oot
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: |-
+          {
+            "data": {
+              "abbreviation": "oot",
+              "assets": {
+                "background": {
+                  "uri": "https://www.speedrun.com/static/theme/g84jn383/background?v=f34de80"
+                },
+                "cover-large": {
+                  "uri": "https://www.speedrun.com/static/game/j1l9qz1g/cover?v=67e956c"
+                },
+                "cover-medium": {
+                  "uri": "https://www.speedrun.com/static/game/j1l9qz1g/cover?v=67e956c"
+                },
+                "cover-small": {
+                  "uri": "https://www.speedrun.com/static/game/j1l9qz1g/cover?v=67e956c"
+                },
+                "cover-tiny": {
+                  "uri": "https://www.speedrun.com/static/game/j1l9qz1g/cover?v=67e956c"
+                },
+                "foreground": {
+                  "uri": null
+                },
+                "icon": {
+                  "uri": "https://www.speedrun.com/static/theme/g84jn383/favicon?v=ce7e075"
+                },
+                "logo": {
+                  "uri": "https://www.speedrun.com/static/theme/g84jn383/logo?v=05571f3"
+                },
+                "trophy-1st": {
+                  "uri": "https://www.speedrun.com/static/theme/g84jn383/1st?v=d919fb9"
+                },
+                "trophy-2nd": {
+                  "uri": "https://www.speedrun.com/static/theme/g84jn383/2nd?v=27cc699"
+                },
+                "trophy-3rd": {
+                  "uri": "https://www.speedrun.com/static/theme/g84jn383/3rd?v=caa08b9"
+                },
+                "trophy-4th": {
+                  "uri": "https://www.speedrun.com/static/theme/g84jn383/4th?v=8a4e198"
+                }
+              },
+              "boostDistinctDonors": 11,
+              "boostReceived": 19,
+              "created": "2015-02-17T01:43:13Z",
+              "developers": [],
+              "discord": "https://discord.gg/7FYGh3d",
+              "engines": [],
+              "gametypes": [],
+              "genres": [],
+              "id": "j1l9qz1g",
+              "links": [
+                {
+                  "rel": "self",
+                  "uri": "https://www.speedrun.com/api/v1/games/j1l9qz1g"
+                },
+                {
+                  "rel": "runs",
+                  "uri": "https://www.speedrun.com/api/v1/runs?game=j1l9qz1g"
+                },
+                {
+                  "rel": "levels",
+                  "uri": "https://www.speedrun.com/api/v1/games/j1l9qz1g/levels"
+                },
+                {
+                  "rel": "categories",
+                  "uri": "https://www.speedrun.com/api/v1/games/j1l9qz1g/categories"
+                },
+                {
+                  "rel": "variables",
+                  "uri": "https://www.speedrun.com/api/v1/games/j1l9qz1g/variables"
+                },
+                {
+                  "rel": "records",
+                  "uri": "https://www.speedrun.com/api/v1/games/j1l9qz1g/records"
+                },
+                {
+                  "rel": "series",
+                  "uri": "https://www.speedrun.com/api/v1/series/j643gd7w"
+                },
+                {
+                  "rel": "derived-games",
+                  "uri": "https://www.speedrun.com/api/v1/games/j1l9qz1g/derived-games"
+                },
+                {
+                  "rel": "romhacks",
+                  "uri": "https://www.speedrun.com/api/v1/games/j1l9qz1g/derived-games"
+                },
+                {
+                  "rel": "leaderboard",
+                  "uri": "https://www.speedrun.com/api/v1/leaderboards/j1l9qz1g/category/q25g198d"
+                }
+              ],
+              "moderators": {
+                "863nmn38": "moderator",
+                "8en714d8": "moderator",
+                "e8e3pdoj": "super-moderator",
+                "e8e5v680": "super-moderator",
+                "kjppz52j": "super-moderator",
+                "qjn35kwx": "super-moderator",
+                "qjnk6djm": "moderator",
+                "qxkge2j0": "moderator",
+                "v81vzkq8": "moderator",
+                "zxz55rxq": "moderator"
+              },
+              "names": {
+                "international": "The Legend of Zelda: Ocarina of Time",
+                "japanese": null,
+                "twitch": "The Legend of Zelda: Ocarina of Time"
+              },
+              "platforms": [
+                "w89rwelk",
+                "4p9z06rn",
+                "nzelreqp",
+                "v06dr394",
+                "p36nd598",
+                "7m6ylw9p",
+                "3167lw9q"
+              ],
+              "publishers": [],
+              "regions": [
+                "pr184lqn",
+                "e6lxy1dz",
+                "o316x197",
+                "mol4z19n"
+              ],
+              "release-date": "1998-11-21",
+              "released": 1998,
+              "romhack": false,
+              "ruleset": {
+                "default-time": "realtime",
+                "emulators-allowed": true,
+                "require-verification": true,
+                "require-video": true,
+                "run-times": [
+                  "realtime"
+                ],
+                "show-milliseconds": true
+              },
+              "weblink": "https://www.speedrun.com/oot"
+            },
+            "status": 200
+          }
+  - name: super mario 64
+    description: use an abbreviation to get a specific game
+    request:
+      url: https://api.speedrun.io/src/games/sm64
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: |-
+          {
+            "data": {
+              "abbreviation": "sm64",
+              "assets": {
+                "background": {
+                  "uri": "https://www.speedrun.com/static/theme/e87d4p8q/background?v=dc04a3b"
+                },
+                "cover-large": {
+                  "uri": "https://www.speedrun.com/static/game/o1y9wo6q/cover?v=82fa0a4"
+                },
+                "cover-medium": {
+                  "uri": "https://www.speedrun.com/static/game/o1y9wo6q/cover?v=82fa0a4"
+                },
+                "cover-small": {
+                  "uri": "https://www.speedrun.com/static/game/o1y9wo6q/cover?v=82fa0a4"
+                },
+                "cover-tiny": {
+                  "uri": "https://www.speedrun.com/static/game/o1y9wo6q/cover?v=82fa0a4"
+                },
+                "foreground": {
+                  "uri": null
+                },
+                "icon": {
+                  "uri": "https://www.speedrun.com/static/theme/e87d4p8q/favicon?v=efb01e9"
+                },
+                "logo": {
+                  "uri": "https://www.speedrun.com/static/theme/e87d4p8q/logo?v=b0fced9"
+                },
+                "trophy-1st": {
+                  "uri": "https://www.speedrun.com/static/theme/e87d4p8q/1st?v=efb01e9"
+                },
+                "trophy-2nd": {
+                  "uri": "https://www.speedrun.com/static/theme/e87d4p8q/2nd?v=e792dc2"
+                },
+                "trophy-3rd": {
+                  "uri": "https://www.speedrun.com/static/theme/e87d4p8q/3rd?v=de2a568"
+                },
+                "trophy-4th": {
+                  "uri": null
+                }
+              },
+              "boostDistinctDonors": 45,
+              "boostReceived": 174,
+              "created": null,
+              "developers": [],
+              "discord": "https://discord.gg/0Si1OtnB7Ylmwkwr",
+              "engines": [],
+              "gametypes": [],
+              "genres": [],
+              "id": "o1y9wo6q",
+              "links": [
+                {
+                  "rel": "self",
+                  "uri": "https://www.speedrun.com/api/v1/games/o1y9wo6q"
+                },
+                {
+                  "rel": "runs",
+                  "uri": "https://www.speedrun.com/api/v1/runs?game=o1y9wo6q"
+                },
+                {
+                  "rel": "levels",
+                  "uri": "https://www.speedrun.com/api/v1/games/o1y9wo6q/levels"
+                },
+                {
+                  "rel": "categories",
+                  "uri": "https://www.speedrun.com/api/v1/games/o1y9wo6q/categories"
+                },
+                {
+                  "rel": "variables",
+                  "uri": "https://www.speedrun.com/api/v1/games/o1y9wo6q/variables"
+                },
+                {
+                  "rel": "records",
+                  "uri": "https://www.speedrun.com/api/v1/games/o1y9wo6q/records"
+                },
+                {
+                  "rel": "series",
+                  "uri": "https://www.speedrun.com/api/v1/series/rv7emz49"
+                },
+                {
+                  "rel": "derived-games",
+                  "uri": "https://www.speedrun.com/api/v1/games/o1y9wo6q/derived-games"
+                },
+                {
+                  "rel": "romhacks",
+                  "uri": "https://www.speedrun.com/api/v1/games/o1y9wo6q/derived-games"
+                },
+                {
+                  "rel": "leaderboard",
+                  "uri": "https://www.speedrun.com/api/v1/leaderboards/o1y9wo6q/category/zdnq4oqd"
+                }
+              ],
+              "moderators": {
+                "18qk2m78": "super-moderator",
+                "1xy1oozx": "super-moderator",
+                "8e6k1loj": "super-moderator",
+                "8l0nq548": "moderator",
+                "8lpgwllj": "super-moderator",
+                "8q3dqn7j": "moderator",
+                "8qrldp7j": "super-moderator",
+                "8qrv5k0j": "moderator",
+                "8wgrz4qx": "super-moderator",
+                "j2w1w5lj": "super-moderator",
+                "j2wnprnj": "super-moderator",
+                "jm6o02e8": "super-moderator",
+                "jprg1g58": "super-moderator",
+                "pj0v90mx": "super-moderator",
+                "qjonw238": "super-moderator",
+                "x31lpv28": "super-moderator",
+                "x3w377ej": "super-moderator",
+                "xyld2znj": "super-moderator",
+                "zx7gkrx7": "super-moderator"
+              },
+              "names": {
+                "international": "Super Mario 64",
+                "japanese": null,
+                "twitch": "Super Mario 64"
+              },
+              "platforms": [
+                "w89rwelk",
+                "nzelreqp",
+                "v06dr394",
+                "7m6ylw9p"
+              ],
+              "publishers": [],
+              "regions": [
+                "pr184lqn",
+                "e6lxy1dz",
+                "o316x197"
+              ],
+              "release-date": "1996-06-23",
+              "released": 1996,
+              "romhack": false,
+              "ruleset": {
+                "default-time": "realtime",
+                "emulators-allowed": true,
+                "require-verification": true,
+                "require-video": true,
+                "run-times": [
+                  "realtime"
+                ],
+                "show-milliseconds": true
+              },
+              "weblink": "https://www.speedrun.com/sm64"
+            },
+            "status": 200
+          }
+  - name: gta 5
+    description: use an abbreviation to get a specific game
+    request:
+      url: https://api.speedrun.io/src/games/gta5
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: |-
+          {
+            "data": {
+              "abbreviation": "gtav",
+              "assets": {
+                "background": {
+                  "uri": "https://www.speedrun.com/static/theme/qrjene8k/background?v=f8cf0e3"
+                },
+                "cover-large": {
+                  "uri": "https://www.speedrun.com/static/game/om1mx362/cover?v=1d6e037"
+                },
+                "cover-medium": {
+                  "uri": "https://www.speedrun.com/static/game/om1mx362/cover?v=1d6e037"
+                },
+                "cover-small": {
+                  "uri": "https://www.speedrun.com/static/game/om1mx362/cover?v=1d6e037"
+                },
+                "cover-tiny": {
+                  "uri": "https://www.speedrun.com/static/game/om1mx362/cover?v=1d6e037"
+                },
+                "foreground": {
+                  "uri": null
+                },
+                "icon": {
+                  "uri": "https://www.speedrun.com/static/theme/qrjene8k/favicon?v=d42abbd"
+                },
+                "logo": {
+                  "uri": "https://www.speedrun.com/static/theme/qrjene8k/logo?v=f22ef24"
+                },
+                "trophy-1st": {
+                  "uri": "https://www.speedrun.com/images/1st.png"
+                },
+                "trophy-2nd": {
+                  "uri": "https://www.speedrun.com/images/2nd.png"
+                },
+                "trophy-3rd": {
+                  "uri": "https://www.speedrun.com/images/3rd.png"
+                },
+                "trophy-4th": {
+                  "uri": null
+                }
+              },
+              "boostDistinctDonors": 10,
+              "boostReceived": 31,
+              "created": null,
+              "developers": [],
+              "discord": "https://discord.gg/3qjGGBM",
+              "engines": [],
+              "gametypes": [],
+              "genres": [],
+              "id": "om1mx362",
+              "links": [
+                {
+                  "rel": "self",
+                  "uri": "https://www.speedrun.com/api/v1/games/om1mx362"
+                },
+                {
+                  "rel": "runs",
+                  "uri": "https://www.speedrun.com/api/v1/runs?game=om1mx362"
+                },
+                {
+                  "rel": "levels",
+                  "uri": "https://www.speedrun.com/api/v1/games/om1mx362/levels"
+                },
+                {
+                  "rel": "categories",
+                  "uri": "https://www.speedrun.com/api/v1/games/om1mx362/categories"
+                },
+                {
+                  "rel": "variables",
+                  "uri": "https://www.speedrun.com/api/v1/games/om1mx362/variables"
+                },
+                {
+                  "rel": "records",
+                  "uri": "https://www.speedrun.com/api/v1/games/om1mx362/records"
+                },
+                {
+                  "rel": "series",
+                  "uri": "https://www.speedrun.com/api/v1/series/9v7og6n0"
+                },
+                {
+                  "rel": "derived-games",
+                  "uri": "https://www.speedrun.com/api/v1/games/om1mx362/derived-games"
+                },
+                {
+                  "rel": "romhacks",
+                  "uri": "https://www.speedrun.com/api/v1/games/om1mx362/derived-games"
+                },
+                {
+                  "rel": "leaderboard",
+                  "uri": "https://www.speedrun.com/api/v1/leaderboards/om1mx362/category/wkpn1jdr"
+                }
+              ],
+              "moderators": {
+                "814k4l38": "moderator",
+                "8e96vm2j": "moderator",
+                "8vo0e4vx": "moderator",
+                "j260lplx": "moderator",
+                "jpmqg60j": "super-moderator",
+                "kjpw02xq": "super-moderator",
+                "xkm4egkj": "moderator",
+                "xz90kzr8": "moderator",
+                "zx72zmv8": "super-moderator"
+              },
+              "names": {
+                "international": "Grand Theft Auto V",
+                "japanese": null,
+                "twitch": "Grand Theft Auto V"
+              },
+              "platforms": [
+                "mx6pwe3g",
+                "n568oevp",
+                "nzelkr6q",
+                "o7e2mx6w",
+                "8gej2n93",
+                "4p9zjrer",
+                "nzelyv9q",
+                "o7e2xj9w"
+              ],
+              "publishers": [],
+              "regions": [],
+              "release-date": "2013-09-17",
+              "released": 2013,
+              "romhack": false,
+              "ruleset": {
+                "default-time": "realtime",
+                "emulators-allowed": true,
+                "require-verification": true,
+                "require-video": true,
+                "run-times": [
+                  "realtime",
+                  "realtime_noloads"
+                ],
+                "show-milliseconds": false
+              },
+              "weblink": "https://www.speedrun.com/gtav"
+            },
+            "status": 200
+          }

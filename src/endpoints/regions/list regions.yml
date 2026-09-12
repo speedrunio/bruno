@@ -1,0 +1,151 @@
+info:
+  name: list regions
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: https://api.speedrun.io/src/regions
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true
+
+examples:
+  - name: list the first 10
+    description: a list of the first 10 regions using max=10, default sorted by name ascending
+    request:
+      url: https://api.speedrun.io/src/regions?max=10
+      method: GET
+      params:
+        - name: max
+          value: "10"
+          type: query
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: |-
+          {
+            "data": [
+              {
+                "id": "ypl25l47",
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/regions/ypl25l47"
+                  },
+                  {
+                    "rel": "games",
+                    "uri": "https://www.speedrun.com/api/v1/games?region=ypl25l47"
+                  },
+                  {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?region=ypl25l47"
+                  }
+                ],
+                "name": "BRA / PAL"
+              },
+              {
+                "id": "mol4z19n",
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/regions/mol4z19n"
+                  },
+                  {
+                    "rel": "games",
+                    "uri": "https://www.speedrun.com/api/v1/games?region=mol4z19n"
+                  },
+                  {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?region=mol4z19n"
+                  }
+                ],
+                "name": "CHN / PAL"
+              },
+              {
+                "id": "e6lxy1dz",
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/regions/e6lxy1dz"
+                  },
+                  {
+                    "rel": "games",
+                    "uri": "https://www.speedrun.com/api/v1/games?region=e6lxy1dz"
+                  },
+                  {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?region=e6lxy1dz"
+                  }
+                ],
+                "name": "EUR / PAL"
+              },
+              {
+                "id": "o316x197",
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/regions/o316x197"
+                  },
+                  {
+                    "rel": "games",
+                    "uri": "https://www.speedrun.com/api/v1/games?region=o316x197"
+                  },
+                  {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?region=o316x197"
+                  }
+                ],
+                "name": "JPN / NTSC"
+              },
+              {
+                "id": "p2g50lnk",
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/regions/p2g50lnk"
+                  },
+                  {
+                    "rel": "games",
+                    "uri": "https://www.speedrun.com/api/v1/games?region=p2g50lnk"
+                  },
+                  {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?region=p2g50lnk"
+                  }
+                ],
+                "name": "KOR / NTSC"
+              },
+              {
+                "id": "pr184lqn",
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/regions/pr184lqn"
+                  },
+                  {
+                    "rel": "games",
+                    "uri": "https://www.speedrun.com/api/v1/games?region=pr184lqn"
+                  },
+                  {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?region=pr184lqn"
+                  }
+                ],
+                "name": "USA / NTSC"
+              }
+            ],
+            "pagination": {
+              "offset": 0,
+              "max": 10,
+              "size": 6
+            },
+            "status": 200
+          }

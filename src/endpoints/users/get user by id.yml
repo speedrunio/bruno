@@ -1,0 +1,288 @@
+info:
+  name: get user by id
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: https://api.speedrun.io/src/users/{{slug}}
+  auth: inherit
+
+runtime:
+  variables:
+    - name: slug
+      value: 8d3el3lx
+      description: example user id
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true
+
+examples:
+  - name: thekrynn
+    description: use an ID to get a specific user
+    request:
+      url: https://api.speedrun.io/src/users/8d3el3lx
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: |-
+          {
+            "data": {
+              "assets": {
+                "icon": {
+                  "uri": null
+                },
+                "image": {
+                  "uri": "https://www.speedrun.com/static/user/8d3el3lx/image?v=da2da7d"
+                },
+                "supporterIcon": {
+                  "uri": null
+                }
+              },
+              "hitbox": null,
+              "id": "8d3el3lx",
+              "links": [
+                {
+                  "rel": "self",
+                  "uri": "https://www.speedrun.com/api/v1/users/8d3el3lx"
+                },
+                {
+                  "rel": "runs",
+                  "uri": "https://www.speedrun.com/api/v1/runs?user=8d3el3lx"
+                },
+                {
+                  "rel": "games",
+                  "uri": "https://www.speedrun.com/api/v1/games?moderator=8d3el3lx"
+                },
+                {
+                  "rel": "personal-bests",
+                  "uri": "https://www.speedrun.com/api/v1/users/8d3el3lx/personal-bests"
+                }
+              ],
+              "location": {
+                "country": {
+                  "code": "us",
+                  "names": {
+                    "international": "United States",
+                    "japanese": null
+                  }
+                },
+                "region": {
+                  "code": "us/ny",
+                  "names": {
+                    "international": "New York, USA",
+                    "japanese": null
+                  }
+                }
+              },
+              "name-style": {
+                "color-from": {
+                  "dark": "#09B876",
+                  "light": "#009856"
+                },
+                "color-to": {
+                  "dark": "#8AC951",
+                  "light": "#7AB941"
+                },
+                "style": "gradient"
+              },
+              "names": {
+                "international": "thekrynn",
+                "japanese": null
+              },
+              "pronouns": "He/Him",
+              "role": "user",
+              "signup": "2021-01-24T10:33:46Z",
+              "speedrunslive": null,
+              "supporterAnimation": false,
+              "twitch": {
+                "uri": "https://www.twitch.tv/thekrynn"
+              },
+              "twitter": {
+                "uri": "https://www.twitter.com/thekrynn"
+              },
+              "weblink": "https://www.speedrun.com/users/thekrynn",
+              "youtube": {
+                "uri": "https://www.youtube.com/user/thekrynn"
+              }
+            },
+            "status": 200
+          }
+  - name: cavecavecave
+    description: use an ID to get a specific user
+    request:
+      url: https://api.speedrun.io/src/users/8qr502oj
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: |-
+          {
+            "data": {
+              "assets": {
+                "icon": {
+                  "uri": null
+                },
+                "image": {
+                  "uri": "https://www.speedrun.com/static/user/8qr502oj/image?v=7d40200"
+                },
+                "supporterIcon": null
+              },
+              "hitbox": null,
+              "id": "8qr502oj",
+              "links": [
+                {
+                  "rel": "self",
+                  "uri": "https://www.speedrun.com/api/v1/users/8qr502oj"
+                },
+                {
+                  "rel": "runs",
+                  "uri": "https://www.speedrun.com/api/v1/runs?user=8qr502oj"
+                },
+                {
+                  "rel": "games",
+                  "uri": "https://www.speedrun.com/api/v1/games?moderator=8qr502oj"
+                },
+                {
+                  "rel": "personal-bests",
+                  "uri": "https://www.speedrun.com/api/v1/users/8qr502oj/personal-bests"
+                }
+              ],
+              "location": {
+                "country": {
+                  "code": "us",
+                  "names": {
+                    "international": "United States",
+                    "japanese": null
+                  }
+                }
+              },
+              "name-style": {
+                "color-from": {
+                  "dark": "#EF8241",
+                  "light": "#EF8239"
+                },
+                "color-to": {
+                  "dark": "#E77471",
+                  "light": "#E77471"
+                },
+                "style": "gradient"
+              },
+              "names": {
+                "international": "cavecavecave",
+                "japanese": null
+              },
+              "pronouns": "He/Him",
+              "role": "user",
+              "signup": "2021-01-19T19:08:33Z",
+              "speedrunslive": null,
+              "supporterAnimation": false,
+              "twitch": {
+                "uri": "https://www.twitch.tv/CaveWasTaken"
+              },
+              "twitter": {
+                "uri": "https://www.twitter.com/coltwastaken"
+              },
+              "weblink": "https://www.speedrun.com/users/cavecavecave",
+              "youtube": null
+            },
+            "status": 200
+          }
+  - name: chx42
+    description: use an ID to get a specific user
+    request:
+      url: https://api.speedrun.io/src/users/dx3vlm78
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: |-
+          {
+            "data": {
+              "assets": {
+                "icon": {
+                  "uri": "https://www.speedrun.com/static/user/dx3vlm78/icon?v=aa637ad"
+                },
+                "image": {
+                  "uri": "https://www.speedrun.com/static/user/dx3vlm78/image?v=f8c5ba3"
+                },
+                "supporterIcon": null
+              },
+              "hitbox": null,
+              "id": "dx3vlm78",
+              "links": [
+                {
+                  "rel": "self",
+                  "uri": "https://www.speedrun.com/api/v1/users/dx3vlm78"
+                },
+                {
+                  "rel": "runs",
+                  "uri": "https://www.speedrun.com/api/v1/runs?user=dx3vlm78"
+                },
+                {
+                  "rel": "games",
+                  "uri": "https://www.speedrun.com/api/v1/games?moderator=dx3vlm78"
+                },
+                {
+                  "rel": "personal-bests",
+                  "uri": "https://www.speedrun.com/api/v1/users/dx3vlm78/personal-bests"
+                }
+              ],
+              "location": {
+                "country": {
+                  "code": "us",
+                  "names": {
+                    "international": "United States",
+                    "japanese": null
+                  }
+                },
+                "region": {
+                  "code": "us/nv/reno",
+                  "names": {
+                    "international": "Reno, NV, USA",
+                    "japanese": null
+                  }
+                }
+              },
+              "name-style": {
+                "color-from": {
+                  "dark": "#FF3091",
+                  "light": "#EF2081"
+                },
+                "color-to": {
+                  "dark": "#6666EE",
+                  "light": "#4646CE"
+                },
+                "style": "gradient"
+              },
+              "names": {
+                "international": "CHX42",
+                "japanese": null
+              },
+              "pronouns": "He/Him",
+              "role": "user",
+              "signup": "2018-02-27T00:22:10Z",
+              "speedrunslive": null,
+              "supporterAnimation": false,
+              "twitch": {
+                "uri": "https://www.twitch.tv/chx42"
+              },
+              "twitter": null,
+              "weblink": "https://www.speedrun.com/users/CHX42",
+              "youtube": {
+                "uri": "https://www.youtube.com/user/chickenhawk666"
+              }
+            },
+            "status": 200
+          }

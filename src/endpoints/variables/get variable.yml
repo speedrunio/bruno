@@ -1,0 +1,204 @@
+info:
+  name: get variable
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: https://api.speedrun.io/src/variables/{{slug}}
+  auth: inherit
+
+runtime:
+  variables:
+    - name: slug
+      value: ql644dx8
+      description: example variable id
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true
+
+examples:
+  - name: "new smb u deluxe: run type"
+    description: using an ID to get a specific variable
+    request:
+      url: https://api.speedrun.io/src/variables/ql644dx8
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: |-
+          {
+            "data": {
+              "category": "8241x5w2",
+              "id": "ql644dx8",
+              "is-subcategory": true,
+              "links": [
+                {
+                  "rel": "self",
+                  "uri": "https://www.speedrun.com/api/v1/variables/ql644dx8"
+                },
+                {
+                  "rel": "game",
+                  "uri": "https://www.speedrun.com/api/v1/games/76rxy346"
+                },
+                {
+                  "rel": "category",
+                  "uri": "https://www.speedrun.com/api/v1/categories/8241x5w2"
+                }
+              ],
+              "mandatory": true,
+              "name": "Run Type",
+              "obsoletes": true,
+              "scope": {
+                "type": "full-game"
+              },
+              "user-defined": false,
+              "values": {
+                "_note": "`choices` is deprecated, please use `values` instead",
+                "choices": {
+                  "21g4w7m1": "100%",
+                  "4qyyv97q": "Any%",
+                  "gq74vwyq": "All Castles"
+                },
+                "default": "4qyyv97q",
+                "values": {
+                  "21g4w7m1": {
+                    "flags": {
+                      "miscellaneous": false
+                    },
+                    "label": "100%",
+                    "rules": "**100% rules :**\r\nBeat the game with 100% completion. 100% means get 5 stars on your save file. This include:\r\n\r\n-Defeating Bowser\r\n-Completing every single level and their secret exits\r\n-Getting all star coins from every level\r\n-Catching Nabbit in all 7 worlds\r\n-Completing Superstar Road\r\n\r\nGoing into Toad Houses are not required\r\nFighting overworld enemies are not required\r\nUsing Nabbit is technically allowed but you need all levels marked as **blue**.\r\n\r\n___\r\n\r\n**Timing :**\r\n\r\nTiming starts from first input (-7.7 seconds from a 0 file).\r\n\r\nTiming ends when you see the message \"\"You've completely cleared Story Mode! Amazing!\" (second text box after 9-9)\r\n\r\nPut your final time in time w/o loads and without milliseconds as this category isn't affected by the removal of loads for top times unless if it's decided in the future by mods.\r\n\r\n___\r\n\r\n**Other notes :**\r\n\r\nAll runs require video proof. No vid, no did. Please make the start of the run line up with the start of the video.\r\n\r\nAll runs must start from a fresh new file or 0 file. Starting from a quick save (save with a balloon) is not allowed.\r\n\r\nMust be done in single player, multiplayer isn't allowed.\r\n___"
+                  },
+                  "4qyyv97q": {
+                    "flags": {
+                      "miscellaneous": false
+                    },
+                    "label": "Any%",
+                    "rules": "**Any% rules :**\n\nBeat the game, no restrictions.\n___\n\n**Timing :**\n\nTiming starts from first input (-7.7 seconds from a 0 file).\n\nTiming stops on the last hit on Bowser.\n\nRuns under **27:00** for **Any% Normal** on **Switch1**/**26:00** on **Switch2** are retimed without loads and with milliseconds by the moderators. If your time is over 27:00/26:00 in this category, submit your final time on time w/o loads and leave time w/ loads blank and do not use milliseconds.\n___\n\n**Other notes :**\n\nAll runs require video proof. No vid, no did. Please make the start of the run line up with the start of the video.\n\nAll runs must start from a fresh new file or 0 file. Starting from a quick save (save with a balloon) is not allowed.\n\nMust be done in single player, multiplayer isn't allowed.\n___"
+                  },
+                  "gq74vwyq": {
+                    "flags": {
+                      "miscellaneous": false
+                    },
+                    "label": "All Castles",
+                    "rules": "**All Castles rules :**\r\n\r\nComplete every Koopaling castle, and beat the game. The use of secret levels is allowed as long every Koopaling castle is completed.\r\n___\r\n\r\n**Timing :**\r\n\r\nTiming starts from first input (-7.7 seconds from a 0 file).\r\n\r\nTiming stops on the last hit on Bowser.\r\n\r\nPut your final time in time w/o loads and without milliseconds as this category isn't affected by the removal of loads for top times unless if it's decided in the future by mods.\r\n___\r\n\r\n**Other notes :**\r\n\r\nAll runs require video proof. No vid, no did. Please make the start of the run line up with the start of the video.\r\n\r\nAll runs must start from a fresh new file or 0 file. Starting from a quick save (save with a balloon) is not allowed.\r\n\r\nMust be done in single player, multiplayer isn't allowed.\r\n___"
+                  }
+                }
+              }
+            },
+            "status": 200
+          }
+  - name: "kirby super star: resets"
+    description: using an ID to get a specific variable
+    request:
+      url: https://api.speedrun.io/src/variables/wl39j4vl
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: |-
+          {
+            "data": {
+              "category": "wkpy9wkr",
+              "id": "wl39j4vl",
+              "is-subcategory": false,
+              "links": [
+                {
+                  "rel": "self",
+                  "uri": "https://www.speedrun.com/api/v1/variables/wl39j4vl"
+                },
+                {
+                  "rel": "game",
+                  "uri": "https://www.speedrun.com/api/v1/games/l3dxny1y"
+                },
+                {
+                  "rel": "category",
+                  "uri": "https://www.speedrun.com/api/v1/categories/wkpy9wkr"
+                }
+              ],
+              "mandatory": true,
+              "name": "Resets",
+              "obsoletes": true,
+              "scope": {
+                "type": "global"
+              },
+              "user-defined": true,
+              "values": {
+                "_note": "`choices` is deprecated, please use `values` instead",
+                "choices": {
+                  "013knnrq": "No",
+                  "rqv255r1": "Yes"
+                },
+                "default": "rqv255r1",
+                "values": {
+                  "013knnrq": {
+                    "label": "No"
+                  },
+                  "rqv255r1": {
+                    "label": "Yes"
+                  }
+                }
+              }
+            },
+            "status": 200
+          }
+  - name: "hollow knight: itemless baldur"
+    description: using an ID to get a specific variable
+    request:
+      url: https://api.speedrun.io/src/variables/0nwyk5x8
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: |-
+          {
+            "data": {
+              "category": null,
+              "id": "0nwyk5x8",
+              "is-subcategory": false,
+              "links": [
+                {
+                  "rel": "self",
+                  "uri": "https://www.speedrun.com/api/v1/variables/0nwyk5x8"
+                },
+                {
+                  "rel": "game",
+                  "uri": "https://www.speedrun.com/api/v1/games/76rqmld8"
+                }
+              ],
+              "mandatory": true,
+              "name": "Itemless Baldur",
+              "obsoletes": true,
+              "scope": {
+                "type": "full-game"
+              },
+              "user-defined": false,
+              "values": {
+                "_note": "`choices` is deprecated, please use `values` instead",
+                "choices": {
+                  "14o4rpwq": "Yes",
+                  "192d0vjq": "No"
+                },
+                "default": "192d0vjq",
+                "values": {
+                  "14o4rpwq": {
+                    "label": "Yes"
+                  },
+                  "192d0vjq": {
+                    "label": "No"
+                  }
+                }
+              }
+            },
+            "status": 200
+          }

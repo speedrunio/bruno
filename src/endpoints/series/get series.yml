@@ -1,0 +1,180 @@
+info:
+  name: get series
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: https://api.speedrun.io/src/series/{{slug}}
+  auth: inherit
+
+runtime:
+  variables:
+    - name: slug
+      value: rv7emz49
+      description: example series id
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true
+
+examples:
+  - name: super mario
+    description: use an ID to get a specific series
+    request:
+      url: https://api.speedrun.io/src/series/rv7emz49
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: |-
+          {
+            "data": {
+              "abbreviation": "mario",
+              "assets": {
+                "background": {
+                  "uri": null
+                },
+                "cover-large": {
+                  "uri": "https://www.speedrun.com/static/game/kyd4og1e/cover?v=8f254bf"
+                },
+                "cover-medium": {
+                  "uri": "https://www.speedrun.com/static/game/kyd4og1e/cover?v=8f254bf"
+                },
+                "cover-small": {
+                  "uri": "https://www.speedrun.com/static/game/kyd4og1e/cover?v=8f254bf"
+                },
+                "cover-tiny": {
+                  "uri": "https://www.speedrun.com/static/game/kyd4og1e/cover?v=8f254bf"
+                },
+                "foreground": {
+                  "uri": null
+                },
+                "icon": {
+                  "uri": "https://www.speedrun.com/images/1st.png"
+                },
+                "logo": {
+                  "uri": "https://www.speedrun.com/images/logo.png"
+                },
+                "trophy-1st": {
+                  "uri": "https://www.speedrun.com/images/1st.png"
+                },
+                "trophy-2nd": {
+                  "uri": "https://www.speedrun.com/images/2nd.png"
+                },
+                "trophy-3rd": {
+                  "uri": "https://www.speedrun.com/images/3rd.png"
+                },
+                "trophy-4th": {
+                  "uri": null
+                }
+              },
+              "created": null,
+              "discord": "",
+              "id": "rv7emz49",
+              "links": [
+                {
+                  "rel": "self",
+                  "uri": "https://www.speedrun.com/api/v1/series/rv7emz49"
+                },
+                {
+                  "rel": "games",
+                  "uri": "https://www.speedrun.com/api/v1/series/rv7emz49/games"
+                }
+              ],
+              "moderators": {},
+              "names": {
+                "international": "Super Mario",
+                "japanese": null
+              },
+              "weblink": "https://www.speedrun.com/series/mario"
+            },
+            "status": 200
+          }
+  - name: tetris
+    description: use an ID to get a specific series
+    request:
+      url: https://api.speedrun.io/src/series/r4gx8xn1
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: |-
+          {
+            "data": {
+              "abbreviation": "tetris",
+              "assets": {
+                "background": {
+                  "uri": "https://www.speedrun.com/static/theme/grnkgqr5/background?v=9b1f1ca"
+                },
+                "cover-large": {
+                  "uri": "https://www.speedrun.com/static/game/k6q9891g/cover?v=c2d1e44"
+                },
+                "cover-medium": {
+                  "uri": "https://www.speedrun.com/static/game/k6q9891g/cover?v=c2d1e44"
+                },
+                "cover-small": {
+                  "uri": "https://www.speedrun.com/static/game/k6q9891g/cover?v=c2d1e44"
+                },
+                "cover-tiny": {
+                  "uri": "https://www.speedrun.com/static/game/k6q9891g/cover?v=c2d1e44"
+                },
+                "foreground": {
+                  "uri": null
+                },
+                "icon": {
+                  "uri": "https://www.speedrun.com/static/theme/grnkgqr5/favicon?v=5262241"
+                },
+                "logo": {
+                  "uri": "https://www.speedrun.com/images/logo.png"
+                },
+                "trophy-1st": {
+                  "uri": "https://www.speedrun.com/images/1st.png"
+                },
+                "trophy-2nd": {
+                  "uri": "https://www.speedrun.com/images/2nd.png"
+                },
+                "trophy-3rd": {
+                  "uri": "https://www.speedrun.com/images/3rd.png"
+                },
+                "trophy-4th": {
+                  "uri": null
+                }
+              },
+              "created": "2015-02-02T06:44:27Z",
+              "discord": "",
+              "id": "r4gx8xn1",
+              "links": [
+                {
+                  "rel": "self",
+                  "uri": "https://www.speedrun.com/api/v1/series/r4gx8xn1"
+                },
+                {
+                  "rel": "games",
+                  "uri": "https://www.speedrun.com/api/v1/series/r4gx8xn1/games"
+                }
+              ],
+              "moderators": {
+                "1xy5kzv8": "super-moderator",
+                "98r60pd8": "super-moderator",
+                "pj02948w": "super-moderator",
+                "qj25pljk": "super-moderator",
+                "qjo3117j": "super-moderator",
+                "qjoz2n86": "super-moderator",
+                "qxkn47x0": "moderator"
+              },
+              "names": {
+                "international": "Tetris",
+                "japanese": null
+              },
+              "weblink": "https://www.speedrun.com/series/tetris"
+            },
+            "status": 200
+          }

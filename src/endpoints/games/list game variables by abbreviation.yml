@@ -1,0 +1,1920 @@
+info:
+  name: list game variables by abbreviation
+  type: http
+  seq: 9
+
+http:
+  method: GET
+  url: https://api.speedrun.io/src/games/{{slug}}/variables
+  auth: inherit
+
+runtime:
+  variables:
+    - name: slug
+      value: re2
+      description: example game abbreviation
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true
+
+examples:
+  - name: resident evil 2
+    description: use an abbreviation to list the variables for a specific game
+    request:
+      url: https://api.speedrun.io/src/games/re2/variables
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: |-
+          {
+            "data": [
+              {
+                "category": null,
+                "id": "789qw3lw",
+                "is-subcategory": true,
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/variables/789qw3lw"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/m1zjmz60"
+                  }
+                ],
+                "mandatory": true,
+                "name": "Category",
+                "obsoletes": true,
+                "scope": {
+                  "type": "full-game"
+                },
+                "user-defined": false,
+                "values": {
+                  "_note": "`choices` is deprecated, please use `values` instead",
+                  "choices": {
+                    "21dk9dpl": "Any%",
+                    "5q8kjzyq": "Low%"
+                  },
+                  "default": "21dk9dpl",
+                  "values": {
+                    "21dk9dpl": {
+                      "flags": {
+                        "miscellaneous": null
+                      },
+                      "label": "Any%",
+                      "rules": null
+                    },
+                    "5q8kjzyq": {
+                      "flags": {
+                        "miscellaneous": false
+                      },
+                      "label": "Low%",
+                      "rules": "Knife Only (Exception: 1 rocket for Tyrant)"
+                    }
+                  }
+                }
+              },
+              {
+                "category": "7kjvxznk",
+                "id": "dlo76658",
+                "is-subcategory": true,
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/variables/dlo76658"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/m1zjmz60"
+                  },
+                  {
+                    "rel": "level",
+                    "uri": "https://www.speedrun.com/api/v1/levels/o9xln39l"
+                  },
+                  {
+                    "rel": "category",
+                    "uri": "https://www.speedrun.com/api/v1/categories/7kjvxznk"
+                  }
+                ],
+                "mandatory": true,
+                "name": "Character",
+                "obsoletes": false,
+                "scope": {
+                  "level": "o9xln39l",
+                  "type": "single-level"
+                },
+                "user-defined": false,
+                "values": {
+                  "_note": "`choices` is deprecated, please use `values` instead",
+                  "choices": {
+                    "81pv9je1": "Ada",
+                    "p12r7nvl": "Leon",
+                    "xqk2vd9q": "Chris",
+                    "z196n3j1": "Claire"
+                  },
+                  "default": "z196n3j1",
+                  "values": {
+                    "81pv9je1": {
+                      "flags": {
+                        "miscellaneous": null
+                      },
+                      "label": "Ada",
+                      "rules": null
+                    },
+                    "p12r7nvl": {
+                      "flags": {
+                        "miscellaneous": null
+                      },
+                      "label": "Leon",
+                      "rules": null
+                    },
+                    "xqk2vd9q": {
+                      "flags": {
+                        "miscellaneous": null
+                      },
+                      "label": "Chris",
+                      "rules": null
+                    },
+                    "z196n3j1": {
+                      "flags": {
+                        "miscellaneous": null
+                      },
+                      "label": "Claire",
+                      "rules": null
+                    }
+                  }
+                }
+              },
+              {
+                "category": "n2yqwjzk",
+                "id": "gnxj22xl",
+                "is-subcategory": true,
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/variables/gnxj22xl"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/m1zjmz60"
+                  },
+                  {
+                    "rel": "level",
+                    "uri": "https://www.speedrun.com/api/v1/levels/o9xln39l"
+                  },
+                  {
+                    "rel": "category",
+                    "uri": "https://www.speedrun.com/api/v1/categories/n2yqwjzk"
+                  }
+                ],
+                "mandatory": true,
+                "name": "Character",
+                "obsoletes": false,
+                "scope": {
+                  "level": "o9xln39l",
+                  "type": "single-level"
+                },
+                "user-defined": false,
+                "values": {
+                  "_note": "`choices` is deprecated, please use `values` instead",
+                  "choices": {
+                    "0q5yryrl": "Leon",
+                    "4lxrnrjl": "Ada",
+                    "5le9j9pq": "Claire",
+                    "8148z8wl": "Chris"
+                  },
+                  "default": "5le9j9pq",
+                  "values": {
+                    "0q5yryrl": {
+                      "flags": {
+                        "miscellaneous": null
+                      },
+                      "label": "Leon",
+                      "rules": null
+                    },
+                    "4lxrnrjl": {
+                      "flags": {
+                        "miscellaneous": null
+                      },
+                      "label": "Ada",
+                      "rules": null
+                    },
+                    "5le9j9pq": {
+                      "flags": {
+                        "miscellaneous": null
+                      },
+                      "label": "Claire",
+                      "rules": null
+                    },
+                    "8148z8wl": {
+                      "flags": {
+                        "miscellaneous": null
+                      },
+                      "label": "Chris",
+                      "rules": null
+                    }
+                  }
+                }
+              },
+              {
+                "category": "wk6p91qd",
+                "id": "ylq6oow8",
+                "is-subcategory": true,
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/variables/ylq6oow8"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/m1zjmz60"
+                  },
+                  {
+                    "rel": "level",
+                    "uri": "https://www.speedrun.com/api/v1/levels/o9xln39l"
+                  },
+                  {
+                    "rel": "category",
+                    "uri": "https://www.speedrun.com/api/v1/categories/wk6p91qd"
+                  }
+                ],
+                "mandatory": true,
+                "name": "Character",
+                "obsoletes": false,
+                "scope": {
+                  "level": "o9xln39l",
+                  "type": "single-level"
+                },
+                "user-defined": false,
+                "values": {
+                  "_note": "`choices` is deprecated, please use `values` instead",
+                  "choices": {
+                    "013dgdkl": "Ada",
+                    "81wzyz91": "Claire",
+                    "rqvg8g5q": "Chris",
+                    "zqok4kgl": "Leon"
+                  },
+                  "default": "81wzyz91",
+                  "values": {
+                    "013dgdkl": {
+                      "flags": {
+                        "miscellaneous": null
+                      },
+                      "label": "Ada",
+                      "rules": null
+                    },
+                    "81wzyz91": {
+                      "flags": {
+                        "miscellaneous": null
+                      },
+                      "label": "Claire",
+                      "rules": null
+                    },
+                    "rqvg8g5q": {
+                      "flags": {
+                        "miscellaneous": null
+                      },
+                      "label": "Chris",
+                      "rules": null
+                    },
+                    "zqok4kgl": {
+                      "flags": {
+                        "miscellaneous": null
+                      },
+                      "label": "Leon",
+                      "rules": null
+                    }
+                  }
+                }
+              },
+              {
+                "category": "q25qq5g2",
+                "id": "gnx0vg4n",
+                "is-subcategory": true,
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/variables/gnx0vg4n"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/m1zjmz60"
+                  },
+                  {
+                    "rel": "category",
+                    "uri": "https://www.speedrun.com/api/v1/categories/q25qq5g2"
+                  }
+                ],
+                "mandatory": true,
+                "name": "Difficulty",
+                "obsoletes": true,
+                "scope": {
+                  "type": "global"
+                },
+                "user-defined": false,
+                "values": {
+                  "_note": "`choices` is deprecated, please use `values` instead",
+                  "choices": {
+                    "0q5xj221": "Normal",
+                    "4lx07y4l": "Hard"
+                  },
+                  "default": "0q5xj221",
+                  "values": {
+                    "0q5xj221": {
+                      "flags": {
+                        "miscellaneous": false
+                      },
+                      "label": "Normal",
+                      "rules": "Normal mode runs only."
+                    },
+                    "4lx07y4l": {
+                      "flags": {
+                        "miscellaneous": false
+                      },
+                      "label": "Hard",
+                      "rules": "Hard mode runs only."
+                    }
+                  }
+                }
+              },
+              {
+                "category": "82466qnd",
+                "id": "jlz197n2",
+                "is-subcategory": true,
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/variables/jlz197n2"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/m1zjmz60"
+                  },
+                  {
+                    "rel": "category",
+                    "uri": "https://www.speedrun.com/api/v1/categories/82466qnd"
+                  }
+                ],
+                "mandatory": true,
+                "name": "Difficulty",
+                "obsoletes": true,
+                "scope": {
+                  "type": "full-game"
+                },
+                "user-defined": false,
+                "values": {
+                  "_note": "`choices` is deprecated, please use `values` instead",
+                  "choices": {
+                    "21gnvdml": "Hard",
+                    "gq750dy1": "Normal"
+                  },
+                  "default": "gq750dy1",
+                  "values": {
+                    "21gnvdml": {
+                      "flags": {
+                        "miscellaneous": false
+                      },
+                      "label": "Hard",
+                      "rules": "Hard mode runs only."
+                    },
+                    "gq750dy1": {
+                      "flags": {
+                        "miscellaneous": false
+                      },
+                      "label": "Normal",
+                      "rules": "Normal mode runs only."
+                    }
+                  }
+                }
+              },
+              {
+                "category": "wk677rpd",
+                "id": "gnxq4pp8",
+                "is-subcategory": true,
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/variables/gnxq4pp8"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/m1zjmz60"
+                  },
+                  {
+                    "rel": "category",
+                    "uri": "https://www.speedrun.com/api/v1/categories/wk677rpd"
+                  }
+                ],
+                "mandatory": true,
+                "name": "GCN Emu",
+                "obsoletes": true,
+                "scope": {
+                  "type": "full-game"
+                },
+                "user-defined": false,
+                "values": {
+                  "_note": "`choices` is deprecated, please use `values` instead",
+                  "choices": {
+                    "14o4ereq": "Dolphin Door Skip",
+                    "lx5dwm31": "Dolphin Vanilla"
+                  },
+                  "default": "lx5dwm31",
+                  "values": {
+                    "14o4ereq": {
+                      "flags": {
+                        "miscellaneous": false
+                      },
+                      "label": "Dolphin Door Skip",
+                      "rules": ""
+                    },
+                    "lx5dwm31": {
+                      "flags": {
+                        "miscellaneous": false
+                      },
+                      "label": "Dolphin Vanilla",
+                      "rules": ""
+                    }
+                  }
+                }
+              },
+              {
+                "category": "jdrxxwld",
+                "id": "0nw2oedn",
+                "is-subcategory": false,
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/variables/0nw2oedn"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/m1zjmz60"
+                  },
+                  {
+                    "rel": "category",
+                    "uri": "https://www.speedrun.com/api/v1/categories/jdrxxwld"
+                  }
+                ],
+                "mandatory": true,
+                "name": "Modchip",
+                "obsoletes": true,
+                "scope": {
+                  "type": "full-game"
+                },
+                "user-defined": false,
+                "values": {
+                  "_note": "`choices` is deprecated, please use `values` instead",
+                  "choices": {
+                    "jqzvzvkl": "Yes",
+                    "klrjojwq": "No"
+                  },
+                  "default": null,
+                  "values": {
+                    "jqzvzvkl": {
+                      "label": "Yes"
+                    },
+                    "klrjojwq": {
+                      "label": "No"
+                    }
+                  }
+                }
+              },
+              {
+                "category": "7kjpplzk",
+                "id": "kn04jq0l",
+                "is-subcategory": true,
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/variables/kn04jq0l"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/m1zjmz60"
+                  },
+                  {
+                    "rel": "category",
+                    "uri": "https://www.speedrun.com/api/v1/categories/7kjpplzk"
+                  }
+                ],
+                "mandatory": true,
+                "name": "New PSN or Old PSN",
+                "obsoletes": true,
+                "scope": {
+                  "type": "full-game"
+                },
+                "user-defined": false,
+                "values": {
+                  "_note": "`choices` is deprecated, please use `values` instead",
+                  "choices": {
+                    "p12oyo2l": "PSP/VITA/PSTV/PS3",
+                    "z195o54q": "PS4/PS5"
+                  },
+                  "default": "z195o54q",
+                  "values": {
+                    "p12oyo2l": {
+                      "flags": {
+                        "miscellaneous": false
+                      },
+                      "label": "PSP/VITA/PSTV/PS3",
+                      "rules": "Runs must be performed on any of the follow consoles \n\nPSP/Vita/PSTV or PS3\n\nThe game must be purchased directly from the PlayStation store.\n\nDifficulty: Normal\n\n\n\nNot allowed\n\nTurbo/Macros\n\nMuting the game audio\n\nMusic from outside of the game."
+                    },
+                    "z195o54q": {
+                      "flags": {
+                        "miscellaneous": false
+                      },
+                      "label": "PS4/PS5",
+                      "rules": "PS4/PS5 version only\n\nGame must be purchased directly from the PlayStation store\n\nDifficulty: Normal\n\nNot allowed\n\nMuting the game audio\n\nTurbo/Macros\n\nMusic from outside the game.\n\nRewind feature "
+                    }
+                  }
+                }
+              },
+              {
+                "category": null,
+                "id": "kn033dn3",
+                "is-subcategory": true,
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/variables/kn033dn3"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/m1zjmz60"
+                  }
+                ],
+                "mandatory": true,
+                "name": "Scenario",
+                "obsoletes": true,
+                "scope": {
+                  "type": "full-game"
+                },
+                "user-defined": false,
+                "values": {
+                  "_note": "`choices` is deprecated, please use `values` instead",
+                  "choices": {
+                    "0q5xjxv1": "Claire A",
+                    "4lx070gl": "Leon B",
+                    "5le3736q": "Leon A",
+                    "814k0kkl": "Claire B"
+                  },
+                  "default": "5le3736q",
+                  "values": {
+                    "0q5xjxv1": {
+                      "flags": {
+                        "miscellaneous": null
+                      },
+                      "label": "Claire A",
+                      "rules": null
+                    },
+                    "4lx070gl": {
+                      "flags": {
+                        "miscellaneous": null
+                      },
+                      "label": "Leon B",
+                      "rules": null
+                    },
+                    "5le3736q": {
+                      "flags": {
+                        "miscellaneous": false
+                      },
+                      "label": "Leon A",
+                      "rules": null
+                    },
+                    "814k0kkl": {
+                      "flags": {
+                        "miscellaneous": null
+                      },
+                      "label": "Claire B",
+                      "rules": null
+                    }
+                  }
+                }
+              },
+              {
+                "category": "82466qnd",
+                "id": "e8m7dgq8",
+                "is-subcategory": true,
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/variables/e8m7dgq8"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/m1zjmz60"
+                  },
+                  {
+                    "rel": "category",
+                    "uri": "https://www.speedrun.com/api/v1/categories/82466qnd"
+                  }
+                ],
+                "mandatory": true,
+                "name": "Vanilla or Cutscene Skip",
+                "obsoletes": true,
+                "scope": {
+                  "type": "full-game"
+                },
+                "user-defined": false,
+                "values": {
+                  "_note": "`choices` is deprecated, please use `values` instead",
+                  "choices": {
+                    "1gnoxv6l": "PC (Vanilla)",
+                    "qzny082q": "PC (Cutscene Skip)"
+                  },
+                  "default": "1gnoxv6l",
+                  "values": {
+                    "1gnoxv6l": {
+                      "flags": {
+                        "miscellaneous": false
+                      },
+                      "label": "PC (Vanilla)",
+                      "rules": ""
+                    },
+                    "qzny082q": {
+                      "flags": {
+                        "miscellaneous": false
+                      },
+                      "label": "PC (Cutscene Skip)",
+                      "rules": ""
+                    }
+                  }
+                }
+              }
+            ],
+            "pagination": {
+              "offset": 0,
+              "max": 20,
+              "size": 11
+            },
+            "status": 200
+          }
+  - name: halo 2
+    description: use an abbreviation to list the variables for a specific game
+    request:
+      url: https://api.speedrun.io/src/games/halo2/variables
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: |-
+          {
+            "data": [
+              {
+                "category": null,
+                "id": "dloe1grn",
+                "is-subcategory": true,
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/variables/dloe1grn"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/3dx28w41"
+                  }
+                ],
+                "mandatory": true,
+                "name": "Number of Players",
+                "obsoletes": true,
+                "scope": {
+                  "type": "global"
+                },
+                "user-defined": false,
+                "values": {
+                  "_note": "`choices` is deprecated, please use `values` instead",
+                  "choices": {
+                    "1gnrdgnl": "4 Player",
+                    "1pywoxg1": "1 Player",
+                    "q75edgv1": "3 Player",
+                    "qkek0znq": "2 Player"
+                  },
+                  "default": "1pywoxg1",
+                  "values": {
+                    "1gnrdgnl": {
+                      "flags": {
+                        "miscellaneous": false
+                      },
+                      "label": "4 Player",
+                      "rules": ""
+                    },
+                    "1pywoxg1": {
+                      "flags": {
+                        "miscellaneous": false
+                      },
+                      "label": "1 Player",
+                      "rules": ""
+                    },
+                    "q75edgv1": {
+                      "flags": {
+                        "miscellaneous": false
+                      },
+                      "label": "3 Player",
+                      "rules": ""
+                    },
+                    "qkek0znq": {
+                      "flags": {
+                        "miscellaneous": false
+                      },
+                      "label": "2 Player",
+                      "rules": ""
+                    }
+                  }
+                }
+              },
+              {
+                "category": null,
+                "id": "jlz5kyxl",
+                "is-subcategory": true,
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/variables/jlz5kyxl"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/3dx28w41"
+                  }
+                ],
+                "mandatory": true,
+                "name": "Version",
+                "obsoletes": true,
+                "scope": {
+                  "type": "full-game"
+                },
+                "user-defined": false,
+                "values": {
+                  "_note": "`choices` is deprecated, please use `values` instead",
+                  "choices": {
+                    "814dwvv1": "Halo 2 Classic",
+                    "p12z0w41": "Halo 2 Vista",
+                    "z19rp981": "Halo 2 MCC"
+                  },
+                  "default": "z19rp981",
+                  "values": {
+                    "814dwvv1": {
+                      "flags": {
+                        "miscellaneous": false
+                      },
+                      "label": "Halo 2 Classic",
+                      "rules": ""
+                    },
+                    "p12z0w41": {
+                      "flags": {
+                        "miscellaneous": false
+                      },
+                      "label": "Halo 2 Vista",
+                      "rules": ""
+                    },
+                    "z19rp981": {
+                      "flags": {
+                        "miscellaneous": false
+                      },
+                      "label": "Halo 2 MCC",
+                      "rules": ""
+                    }
+                  }
+                }
+              }
+            ],
+            "pagination": {
+              "offset": 0,
+              "max": 20,
+              "size": 2
+            },
+            "status": 200
+          }
+  - name: outer wilds
+    description: use an abbreviation to list the variables for a specific game
+    request:
+      url: https://api.speedrun.io/src/games/outer_wilds/variables
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: |-
+          {
+            "data": [
+              {
+                "category": "rklv8vwd",
+                "id": "789x5o68",
+                "is-subcategory": true,
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/variables/789x5o68"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/j1n5e91p"
+                  },
+                  {
+                    "rel": "category",
+                    "uri": "https://www.speedrun.com/api/v1/categories/rklv8vwd"
+                  }
+                ],
+                "mandatory": true,
+                "name": "Platform (100%)",
+                "obsoletes": true,
+                "scope": {
+                  "type": "full-game"
+                },
+                "user-defined": false,
+                "values": {
+                  "_note": "`choices` is deprecated, please use `values` instead",
+                  "choices": {
+                    "814pv601": "PC",
+                    "z19k9v0q": "Console"
+                  },
+                  "default": "814pv601",
+                  "values": {
+                    "814pv601": {
+                      "flags": {
+                        "miscellaneous": null
+                      },
+                      "label": "PC",
+                      "rules": null
+                    },
+                    "z19k9v0q": {
+                      "flags": {
+                        "miscellaneous": false
+                      },
+                      "label": "Console",
+                      "rules": null
+                    }
+                  }
+                }
+              },
+              {
+                "category": "9kvqq1ed",
+                "id": "68kozjyn",
+                "is-subcategory": true,
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/variables/68kozjyn"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/j1n5e91p"
+                  },
+                  {
+                    "rel": "category",
+                    "uri": "https://www.speedrun.com/api/v1/categories/9kvqq1ed"
+                  }
+                ],
+                "mandatory": true,
+                "name": "Platform (All Achievements)",
+                "obsoletes": true,
+                "scope": {
+                  "type": "full-game"
+                },
+                "user-defined": false,
+                "values": {
+                  "_note": "`choices` is deprecated, please use `values` instead",
+                  "choices": {
+                    "810pmnwl": "Console",
+                    "mln90v0q": "PC"
+                  },
+                  "default": "mln90v0q",
+                  "values": {
+                    "810pmnwl": {
+                      "flags": {
+                        "miscellaneous": false
+                      },
+                      "label": "Console",
+                      "rules": null
+                    },
+                    "mln90v0q": {
+                      "flags": {
+                        "miscellaneous": null
+                      },
+                      "label": "PC",
+                      "rules": null
+                    }
+                  }
+                }
+              },
+              {
+                "category": "vdo5ne9k",
+                "id": "6nj5rppl",
+                "is-subcategory": true,
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/variables/6nj5rppl"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/j1n5e91p"
+                  },
+                  {
+                    "rel": "category",
+                    "uri": "https://www.speedrun.com/api/v1/categories/vdo5ne9k"
+                  }
+                ],
+                "mandatory": true,
+                "name": "Platform (All Friends)",
+                "obsoletes": true,
+                "scope": {
+                  "type": "full-game"
+                },
+                "user-defined": false,
+                "values": {
+                  "_note": "`choices` is deprecated, please use `values` instead",
+                  "choices": {
+                    "013jprkl": "PC",
+                    "rqv09d5l": "Console"
+                  },
+                  "default": "013jprkl",
+                  "values": {
+                    "013jprkl": {
+                      "flags": {
+                        "miscellaneous": null
+                      },
+                      "label": "PC",
+                      "rules": null
+                    },
+                    "rqv09d5l": {
+                      "flags": {
+                        "miscellaneous": null
+                      },
+                      "label": "Console",
+                      "rules": null
+                    }
+                  }
+                }
+              },
+              {
+                "category": "wdm6o84k",
+                "id": "wl31go98",
+                "is-subcategory": true,
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/variables/wl31go98"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/j1n5e91p"
+                  },
+                  {
+                    "rel": "category",
+                    "uri": "https://www.speedrun.com/api/v1/categories/wdm6o84k"
+                  }
+                ],
+                "mandatory": true,
+                "name": "Platform (All Signals)",
+                "obsoletes": true,
+                "scope": {
+                  "type": "full-game"
+                },
+                "user-defined": false,
+                "values": {
+                  "_note": "`choices` is deprecated, please use `values` instead",
+                  "choices": {
+                    "21g540nl": "PC",
+                    "jqz952g1": "Console"
+                  },
+                  "default": "21g540nl",
+                  "values": {
+                    "21g540nl": {
+                      "flags": {
+                        "miscellaneous": null
+                      },
+                      "label": "PC",
+                      "rules": null
+                    },
+                    "jqz952g1": {
+                      "flags": {
+                        "miscellaneous": false
+                      },
+                      "label": "Console",
+                      "rules": null
+                    }
+                  }
+                }
+              },
+              {
+                "category": "mkeq7w8k",
+                "id": "789jpd0n",
+                "is-subcategory": true,
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/variables/789jpd0n"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/j1n5e91p"
+                  },
+                  {
+                    "rel": "category",
+                    "uri": "https://www.speedrun.com/api/v1/categories/mkeq7w8k"
+                  }
+                ],
+                "mandatory": true,
+                "name": "Platform (Any%)",
+                "obsoletes": true,
+                "scope": {
+                  "type": "full-game"
+                },
+                "user-defined": false,
+                "values": {
+                  "_note": "`choices` is deprecated, please use `values` instead",
+                  "choices": {
+                    "gq7re0rl": "Console",
+                    "xqkmk24l": "PC"
+                  },
+                  "default": "xqkmk24l",
+                  "values": {
+                    "gq7re0rl": {
+                      "flags": {
+                        "miscellaneous": false
+                      },
+                      "label": "Console",
+                      "rules": null
+                    },
+                    "xqkmk24l": {
+                      "flags": {
+                        "miscellaneous": false
+                      },
+                      "label": "PC",
+                      "rules": null
+                    }
+                  }
+                }
+              },
+              {
+                "category": "zd38z3vk",
+                "id": "wlew7jkl",
+                "is-subcategory": true,
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/variables/wlew7jkl"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/j1n5e91p"
+                  },
+                  {
+                    "rel": "category",
+                    "uri": "https://www.speedrun.com/api/v1/categories/zd38z3vk"
+                  }
+                ],
+                "mandatory": true,
+                "name": "Platform (Destroy Spacetime)",
+                "obsoletes": true,
+                "scope": {
+                  "type": "full-game"
+                },
+                "user-defined": false,
+                "values": {
+                  "_note": "`choices` is deprecated, please use `values` instead",
+                  "choices": {
+                    "21d5y84l": "PC",
+                    "5q8p0vgl": "Console"
+                  },
+                  "default": "21d5y84l",
+                  "values": {
+                    "21d5y84l": {
+                      "flags": {
+                        "miscellaneous": null
+                      },
+                      "label": "PC",
+                      "rules": ""
+                    },
+                    "5q8p0vgl": {
+                      "flags": {
+                        "miscellaneous": false
+                      },
+                      "label": "Console",
+                      "rules": ""
+                    }
+                  }
+                }
+              },
+              {
+                "category": "wdm57p32",
+                "id": "dlorperl",
+                "is-subcategory": true,
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/variables/dlorperl"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/j1n5e91p"
+                  },
+                  {
+                    "rel": "category",
+                    "uri": "https://www.speedrun.com/api/v1/categories/wdm57p32"
+                  }
+                ],
+                "mandatory": true,
+                "name": "Platform (Prisoner%)",
+                "obsoletes": false,
+                "scope": {
+                  "type": "full-game"
+                },
+                "user-defined": false,
+                "values": {
+                  "_note": "`choices` is deprecated, please use `values` instead",
+                  "choices": {
+                    "9qjo9d0l": "PC",
+                    "jq6wp7nl": "Console"
+                  },
+                  "default": "9qjo9d0l",
+                  "values": {
+                    "9qjo9d0l": {
+                      "flags": {
+                        "miscellaneous": null
+                      },
+                      "label": "PC",
+                      "rules": null
+                    },
+                    "jq6wp7nl": {
+                      "flags": {
+                        "miscellaneous": null
+                      },
+                      "label": "Console",
+                      "rules": null
+                    }
+                  }
+                }
+              },
+              {
+                "category": "wkpml90k",
+                "id": "0nw7j3k8",
+                "is-subcategory": true,
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/variables/0nw7j3k8"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/j1n5e91p"
+                  },
+                  {
+                    "rel": "category",
+                    "uri": "https://www.speedrun.com/api/v1/categories/wkpml90k"
+                  }
+                ],
+                "mandatory": true,
+                "name": "Platform (Solanum%)",
+                "obsoletes": true,
+                "scope": {
+                  "type": "full-game"
+                },
+                "user-defined": false,
+                "values": {
+                  "_note": "`choices` is deprecated, please use `values` instead",
+                  "choices": {
+                    "0q5p5mml": "Console",
+                    "5le5405l": "PC"
+                  },
+                  "default": "5le5405l",
+                  "values": {
+                    "0q5p5mml": {
+                      "flags": {
+                        "miscellaneous": false
+                      },
+                      "label": "Console",
+                      "rules": null
+                    },
+                    "5le5405l": {
+                      "flags": {
+                        "miscellaneous": null
+                      },
+                      "label": "PC",
+                      "rules": null
+                    }
+                  }
+                }
+              },
+              {
+                "category": null,
+                "id": "2lg37x7n",
+                "is-subcategory": false,
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/variables/2lg37x7n"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/j1n5e91p"
+                  }
+                ],
+                "mandatory": false,
+                "name": "Retiming",
+                "obsoletes": true,
+                "scope": {
+                  "type": "full-game"
+                },
+                "user-defined": false,
+                "values": {
+                  "_note": "`choices` is deprecated, please use `values` instead",
+                  "choices": {
+                    "013j9pkl": "Precise",
+                    "5le025pq": "None",
+                    "5lmezv4q": "Not needed",
+                    "mln254ol": "Partial",
+                    "q75n4nv1": "Self-Timing",
+                    "rqv0v95l": "Approx"
+                  },
+                  "default": null,
+                  "values": {
+                    "013j9pkl": {
+                      "label": "Precise"
+                    },
+                    "5le025pq": {
+                      "label": "None"
+                    },
+                    "5lmezv4q": {
+                      "label": "Not needed"
+                    },
+                    "mln254ol": {
+                      "label": "Partial"
+                    },
+                    "q75n4nv1": {
+                      "label": "Self-Timing"
+                    },
+                    "rqv0v95l": {
+                      "label": "Approx"
+                    }
+                  }
+                }
+              },
+              {
+                "category": "rklv8vwd",
+                "id": "38dpo1x8",
+                "is-subcategory": true,
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/variables/38dpo1x8"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/j1n5e91p"
+                  },
+                  {
+                    "rel": "category",
+                    "uri": "https://www.speedrun.com/api/v1/categories/rklv8vwd"
+                  }
+                ],
+                "mandatory": true,
+                "name": "Subcategories (100%)",
+                "obsoletes": true,
+                "scope": {
+                  "type": "full-game"
+                },
+                "user-defined": false,
+                "values": {
+                  "_note": "`choices` is deprecated, please use `values` instead",
+                  "choices": {
+                    "810g062l": "Shipless",
+                    "mlnpdej1": "Normal"
+                  },
+                  "default": "mlnpdej1",
+                  "values": {
+                    "810g062l": {
+                      "flags": {
+                        "miscellaneous": false
+                      },
+                      "label": "Shipless",
+                      "rules": "## Subcategory Rule\r\n\n- You cannot fly your ship, entering it and using its other functionalities is allowed."
+                    },
+                    "mlnpdej1": {
+                      "flags": {
+                        "miscellaneous": false
+                      },
+                      "label": "Normal",
+                      "rules": ""
+                    }
+                  }
+                }
+              },
+              {
+                "category": "9kvqq1ed",
+                "id": "ql6ed9jn",
+                "is-subcategory": true,
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/variables/ql6ed9jn"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/j1n5e91p"
+                  },
+                  {
+                    "rel": "category",
+                    "uri": "https://www.speedrun.com/api/v1/categories/9kvqq1ed"
+                  }
+                ],
+                "mandatory": true,
+                "name": "Subcategories (All Achievements)",
+                "obsoletes": true,
+                "scope": {
+                  "type": "full-game"
+                },
+                "user-defined": false,
+                "values": {
+                  "_note": "`choices` is deprecated, please use `values` instead",
+                  "choices": {
+                    "0q5mp8rl": "Base Game",
+                    "4lxk94j1": "DLC",
+                    "8146pdwq": "Base + DLC"
+                  },
+                  "default": "0q5mp8rl",
+                  "values": {
+                    "0q5mp8rl": {
+                      "flags": {
+                        "miscellaneous": false
+                      },
+                      "label": "Base Game",
+                      "rules": "## Subcategory Rule\r\n\n- Unlock the 17 achievements of the base game."
+                    },
+                    "4lxk94j1": {
+                      "flags": {
+                        "miscellaneous": false
+                      },
+                      "label": "DLC",
+                      "rules": "## Subcategory Rule\r\n\n- Unlock the 14 achievements of Echoes of the Eye.\r\n- Runs may start from \"Resume Expedition\". Launch codes and sleeping may be unlocked."
+                    },
+                    "8146pdwq": {
+                      "flags": {
+                        "miscellaneous": false
+                      },
+                      "label": "Base + DLC",
+                      "rules": "## Subcategory Rule\r\n\n- Unlock all 31 achievements."
+                    }
+                  }
+                }
+              },
+              {
+                "category": "vdo5ne9k",
+                "id": "p85w4738",
+                "is-subcategory": true,
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/variables/p85w4738"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/j1n5e91p"
+                  },
+                  {
+                    "rel": "category",
+                    "uri": "https://www.speedrun.com/api/v1/categories/vdo5ne9k"
+                  }
+                ],
+                "mandatory": true,
+                "name": "Subcategories (All Friends)",
+                "obsoletes": true,
+                "scope": {
+                  "type": "full-game"
+                },
+                "user-defined": false,
+                "values": {
+                  "_note": "`choices` is deprecated, please use `values` instead",
+                  "choices": {
+                    "le2d2vml": "Normal",
+                    "q5vkv77l": "Beginner's Luck"
+                  },
+                  "default": "le2d2vml",
+                  "values": {
+                    "le2d2vml": {
+                      "flags": {
+                        "miscellaneous": false
+                      },
+                      "label": "Normal",
+                      "rules": ""
+                    },
+                    "q5vkv77l": {
+                      "flags": {
+                        "miscellaneous": false
+                      },
+                      "label": "Beginner's Luck",
+                      "rules": "## Subcategory Rule\n\n- Talking to Solanum, talking to the Prisoner, and warping to the Eye must all be done in the same loop. You cannot die or quit out, but you can trigger the Statue cutscene"
+                    }
+                  }
+                }
+              },
+              {
+                "category": "wdm6o84k",
+                "id": "e8mr0owl",
+                "is-subcategory": true,
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/variables/e8mr0owl"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/j1n5e91p"
+                  },
+                  {
+                    "rel": "category",
+                    "uri": "https://www.speedrun.com/api/v1/categories/wdm6o84k"
+                  }
+                ],
+                "mandatory": true,
+                "name": "Subcategories (All Signals)",
+                "obsoletes": true,
+                "scope": {
+                  "type": "global"
+                },
+                "user-defined": false,
+                "values": {
+                  "_note": "`choices` is deprecated, please use `values` instead",
+                  "choices": {
+                    "4lxo2n4l": "Normal",
+                    "814gmzv1": "Shipless"
+                  },
+                  "default": "4lxo2n4l",
+                  "values": {
+                    "4lxo2n4l": {
+                      "flags": {
+                        "miscellaneous": false
+                      },
+                      "label": "Normal",
+                      "rules": "## Subcategory Rule\r"
+                    },
+                    "814gmzv1": {
+                      "flags": {
+                        "miscellaneous": false
+                      },
+                      "label": "Shipless",
+                      "rules": "## Subcategory Rule\r\n\n- You cannot fly your ship, entering it and using its other functionalities is allowed."
+                    }
+                  }
+                }
+              },
+              {
+                "category": "mkeq7w8k",
+                "id": "5ly7ddkl",
+                "is-subcategory": true,
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/variables/5ly7ddkl"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/j1n5e91p"
+                  },
+                  {
+                    "rel": "category",
+                    "uri": "https://www.speedrun.com/api/v1/categories/mkeq7w8k"
+                  }
+                ],
+                "mandatory": true,
+                "name": "Subcategories (Any%)",
+                "obsoletes": true,
+                "scope": {
+                  "type": "full-game"
+                },
+                "user-defined": false,
+                "values": {
+                  "_note": "`choices` is deprecated, please use `values` instead",
+                  "choices": {
+                    "013zw4dq": "Suitless",
+                    "5q8mgxyl": "Unrestricted",
+                    "81pdwvn1": "Sleepless",
+                    "p12x2gkl": "Shipless",
+                    "z198z0kq": "Normal"
+                  },
+                  "default": "z198z0kq",
+                  "values": {
+                    "013zw4dq": {
+                      "flags": {
+                        "miscellaneous": false
+                      },
+                      "label": "Suitless",
+                      "rules": "## Subcategory Rule\r\n\n- You cannot equip or use any spacesuit. Using *Menu Storage Wrong Wrap* to be on the Eye suitless is therefore mandatory (on PC only)."
+                    },
+                    "5q8mgxyl": {
+                      "flags": {
+                        "miscellaneous": false
+                      },
+                      "label": "Unrestricted",
+                      "rules": "## Subcategory Rules\n\n- Mousewalking is allowed.\n- Menu Storage is allowed.\n- At least one of those need to be used for the run to be accepted here, runs that do not meet this condition can be submitted on the main Any% board."
+                    },
+                    "81pdwvn1": {
+                      "flags": {
+                        "miscellaneous": false
+                      },
+                      "label": "Sleepless",
+                      "rules": "## Subcategory Rule\r\n\n- You cannot sleep at a campfire."
+                    },
+                    "p12x2gkl": {
+                      "flags": {
+                        "miscellaneous": false
+                      },
+                      "label": "Shipless",
+                      "rules": "## Subcategory Rule\r\n\n- You cannot fly your ship, entering it and using its other functionalities is allowed."
+                    },
+                    "z198z0kq": {
+                      "flags": {
+                        "miscellaneous": false
+                      },
+                      "label": "Normal",
+                      "rules": ""
+                    }
+                  }
+                }
+              },
+              {
+                "category": "zd38z3vk",
+                "id": "68kd2y4l",
+                "is-subcategory": true,
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/variables/68kd2y4l"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/j1n5e91p"
+                  },
+                  {
+                    "rel": "category",
+                    "uri": "https://www.speedrun.com/api/v1/categories/zd38z3vk"
+                  }
+                ],
+                "mandatory": true,
+                "name": "Subcategories (Destroy Spacetime)",
+                "obsoletes": true,
+                "scope": {
+                  "type": "full-game"
+                },
+                "user-defined": false,
+                "values": {
+                  "_note": "`choices` is deprecated, please use `values` instead",
+                  "choices": {
+                    "5lmky2jq": "Suitless",
+                    "810wegpq": "Shipless",
+                    "9qjxyvol": "Normal"
+                  },
+                  "default": "9qjxyvol",
+                  "values": {
+                    "5lmky2jq": {
+                      "flags": {
+                        "miscellaneous": false
+                      },
+                      "label": "Suitless",
+                      "rules": "## Subcategory Rule\r\n\n- You cannot equip any space suits."
+                    },
+                    "810wegpq": {
+                      "flags": {
+                        "miscellaneous": false
+                      },
+                      "label": "Shipless",
+                      "rules": "## Subcategory Rule\r\n\n- You cannot fly your ship, entering it and using its other functionalities is allowed."
+                    },
+                    "9qjxyvol": {
+                      "flags": {
+                        "miscellaneous": false
+                      },
+                      "label": "Normal",
+                      "rules": ""
+                    }
+                  }
+                }
+              },
+              {
+                "category": "wdm57p32",
+                "id": "jlzgo6xn",
+                "is-subcategory": true,
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/variables/jlzgo6xn"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/j1n5e91p"
+                  },
+                  {
+                    "rel": "category",
+                    "uri": "https://www.speedrun.com/api/v1/categories/wdm57p32"
+                  }
+                ],
+                "mandatory": true,
+                "name": "Subcategories (Prisoner%)",
+                "obsoletes": true,
+                "scope": {
+                  "type": "full-game"
+                },
+                "user-defined": false,
+                "values": {
+                  "_note": "`choices` is deprecated, please use `values` instead",
+                  "choices": {
+                    "192707kq": "Shipless",
+                    "5lmepnyq": "Normal",
+                    "81wj989q": "Suitless"
+                  },
+                  "default": "5lmepnyq",
+                  "values": {
+                    "192707kq": {
+                      "flags": {
+                        "miscellaneous": false
+                      },
+                      "label": "Shipless",
+                      "rules": "#### Subcategory Rule\r\n\n- You cannot fly your ship, entering it and using its other functionalities is allowed."
+                    },
+                    "5lmepnyq": {
+                      "flags": {
+                        "miscellaneous": null
+                      },
+                      "label": "Normal",
+                      "rules": ""
+                    },
+                    "81wj989q": {
+                      "flags": {
+                        "miscellaneous": false
+                      },
+                      "label": "Suitless",
+                      "rules": "#### Subcategory Rule\r\n* You cannot equip any space suits."
+                    }
+                  }
+                }
+              },
+              {
+                "category": "wkpml90k",
+                "id": "2lggqyol",
+                "is-subcategory": true,
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/variables/2lggqyol"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/j1n5e91p"
+                  },
+                  {
+                    "rel": "category",
+                    "uri": "https://www.speedrun.com/api/v1/categories/wkpml90k"
+                  }
+                ],
+                "mandatory": true,
+                "name": "Subcategories (Solanum%)",
+                "obsoletes": true,
+                "scope": {
+                  "type": "full-game"
+                },
+                "user-defined": false,
+                "values": {
+                  "_note": "`choices` is deprecated, please use `values` instead",
+                  "choices": {
+                    "21g2rvol": "Normal",
+                    "jqzx78k1": "Sleepless",
+                    "klrywvwq": "Shipless"
+                  },
+                  "default": "21g2rvol",
+                  "values": {
+                    "21g2rvol": {
+                      "flags": {
+                        "miscellaneous": false
+                      },
+                      "label": "Normal",
+                      "rules": ""
+                    },
+                    "jqzx78k1": {
+                      "flags": {
+                        "miscellaneous": false
+                      },
+                      "label": "Sleepless",
+                      "rules": "## Subcategory Rule\r\n\n- You cannot sleep at a campfire."
+                    },
+                    "klrywvwq": {
+                      "flags": {
+                        "miscellaneous": false
+                      },
+                      "label": "Shipless",
+                      "rules": "## Subcategory Rule\r\n\n- You cannot fly your ship, entering it and using its other functionalities is allowed."
+                    }
+                  }
+                }
+              },
+              {
+                "category": "rklv8vwd",
+                "id": "p85dkwxl",
+                "is-subcategory": true,
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/variables/p85dkwxl"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/j1n5e91p"
+                  },
+                  {
+                    "rel": "category",
+                    "uri": "https://www.speedrun.com/api/v1/categories/rklv8vwd"
+                  }
+                ],
+                "mandatory": true,
+                "name": "Subcategories DLC (100%)",
+                "obsoletes": true,
+                "scope": {
+                  "type": "full-game"
+                },
+                "user-defined": false,
+                "values": {
+                  "_note": "`choices` is deprecated, please use `values` instead",
+                  "choices": {
+                    "21g654oq": "Base Game",
+                    "jqzw95kq": "Base + DLC",
+                    "z19097k1": "Stranger 100%"
+                  },
+                  "default": "21g654oq",
+                  "values": {
+                    "21g654oq": {
+                      "flags": {
+                        "miscellaneous": false
+                      },
+                      "label": "Base Game",
+                      "rules": "- Complete your ship log and get the main ending, to consider your ship log completed it needs to satisfy these requirements for one of the legal versions (even if it's not the one being run):\r\n    - Every card unlocked.\r\n    - All permanent entries for every card.\r\n    - Every achievable link between two cards.\r\n- After completing your run you must load your previous save and show the content of every card in the Ship Log's rumor mode. Quitting out of the game during the credits is allowed but stopping your recording isn't. The game version on the main menu must be visible.\r\n- The timer starts when you press the key to wake up and ends on the final explosion.\r\n- [**Verification Image** (link)](https://outerwilds.ventures/)\n\n- If a fact is not obtainable on a version because of a bug, the run is still valid as long as you still perform the action that should have unlocked it."
+                    },
+                    "jqzw95kq": {
+                      "flags": {
+                        "miscellaneous": false
+                      },
+                      "label": "Base + DLC",
+                      "rules": "- Complete your ship log and get the main ending, to consider your ship log completed it needs to satisfy these requirements for one of the legal versions (even if it's not the one being run):\r\n    - Every card unlocked.\r\n    - All permanent entries for every card.\r\n    - Every achievable link between two cards.\r\n- After completing your run you must load your previous save and show the content of every card in the Ship Log's rumor mode. Quitting out of the game during the credits is allowed but stopping your recording isn't. The game version on the main menu must be visible.\r\n- The timer starts when you press the key to wake up and ends on the final explosion.\r\n\n- (If running on 1.1.12+ : You need 4 Facts on the Starlit Cove Card)\r\n- [**Verification Image** (link)](https://outerwilds.ventures/)\r\n- If a fact is not obtainable on a version because of a bug, the run is still valid as long as you still perform the action that should have unlocked it"
+                    },
+                    "z19097k1": {
+                      "flags": {
+                        "miscellaneous": false
+                      },
+                      "label": "Stranger 100%",
+                      "rules": "- Unlock every card, all permanent entries for every card and every achievable link between two cards you can get on the Stranger.\r\n*To consider your ship log completed it needs to satisfy these requirements for one of the legal versions (even if it's not the one being run)*\n- Runs may start from \"Resume Expedition\". Launch codes and sleeping may be unlocked.\r\n- After completing your run you must load your previous save and show the content of every card in the Ship Log's rumor mode. The game version on the main menu must be visible.\r\n- The timer starts when you press the key to wake up and ends when you quit out after getting the last fact.\r\n\n- (If running on 1.1.12+ : You need 4 Facts on the Starlit Cove Card.)\n- [**Verification Image** (link)](https://outerwilds.ventures/)\r\n\n- If a fact is not obtainable on a version because of a bug, the run is still valid as long as you still perform the action that should have unlocked it"
+                    }
+                  }
+                }
+              },
+              {
+                "category": "wdm6o84k",
+                "id": "onvvrywn",
+                "is-subcategory": true,
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/variables/onvvrywn"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/j1n5e91p"
+                  },
+                  {
+                    "rel": "category",
+                    "uri": "https://www.speedrun.com/api/v1/categories/wdm6o84k"
+                  }
+                ],
+                "mandatory": true,
+                "name": "Subcategories DLC (All Signals)",
+                "obsoletes": true,
+                "scope": {
+                  "type": "full-game"
+                },
+                "user-defined": false,
+                "values": {
+                  "_note": "`choices` is deprecated, please use `values` instead",
+                  "choices": {
+                    "p12kpwv1": "Base + DLC",
+                    "z19vk9jl": "Base Game"
+                  },
+                  "default": "z19vk9jl",
+                  "values": {
+                    "p12kpwv1": {
+                      "flags": {
+                        "miscellaneous": false
+                      },
+                      "label": "Base + DLC",
+                      "rules": "* Unlock every signal present in the game, including the DLC.\r\n\r\n----\r\n# List of signals\r\n* Hide and Seek\r\n    * Tephra\r\n    * Galena\r\n* Quantum Fluctuations\r\n    * Museum Shard\r\n    * Grove Shard\r\n    * Tower Shard\r\n    * Quantum Moon\r\n    * Island Shard\r\n    * Cave Shard\r\n* Travelers\r\n    * Esker\r\n    * Riebeck\r\n    * Gabbro\r\n    * Chert\r\n    * Feldspar\r\n    * Solanum\r\n    * Prisoner\r\n* Distress Beacon\r\n    * Escape Pod 1\r\n    * Escape Pod 2\r\n    * Escape Pod 3\r\n* Radio\r\n    * Radio Tower\r\n    * Satellite"
+                    },
+                    "z19vk9jl": {
+                      "flags": {
+                        "miscellaneous": false
+                      },
+                      "label": "Base Game",
+                      "rules": "* Unlock every signal present in the base game.\r\n* You cannot scan on the Eye the travelers that you can scan elsewhere (applies only to the Base Game subcategory).\r\n\r\n----\r\n# List of signals\r\n* Hide and Seek\r\n    * Tephra\r\n    * Galena\r\n* Quantum Fluctuations\r\n    * Museum Shard\r\n    * Grove Shard\r\n    * Tower Shard\r\n    * Quantum Moon\r\n    * Island Shard\r\n    * Cave Shard\r\n* Travelers\r\n    * Esker\r\n    * Riebeck\r\n    * Gabbro\r\n    * Chert\r\n    * Feldspar\r\n    * Solanum\r\n* Distress Beacon\r\n    * Escape Pod 1\r\n    * Escape Pod 2\r\n    * Escape Pod 3"
+                    }
+                  }
+                }
+              },
+              {
+                "category": null,
+                "id": "jlzw1mxl",
+                "is-subcategory": false,
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/variables/jlzw1mxl"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/j1n5e91p"
+                  }
+                ],
+                "mandatory": true,
+                "name": "Version",
+                "obsoletes": true,
+                "scope": {
+                  "type": "full-game"
+                },
+                "user-defined": true,
+                "values": {
+                  "_note": "`choices` is deprecated, please use `values` instead",
+                  "choices": {
+                    "10v0e75l": "1.1.14",
+                    "12vzw97q": "1.1.15",
+                    "21gdnno1": "1.0.7",
+                    "4qym943q": "1.0.X",
+                    "5q83pzr1": "1.1.10",
+                    "810jvv2l": "1.0.2",
+                    "9qjn7731": "1.0.4",
+                    "jqzennkq": "1.0.6",
+                    "klr433wq": "1.0.3",
+                    "mln24z6l": "1.1.13",
+                    "mln79361": "1.1.X",
+                    "q653pjjl": "1.1.16",
+                    "xqkw7ynq": "1.1.12",
+                    "z19ve8jl": "1.1.11"
+                  },
+                  "default": "12vzw97q",
+                  "values": {
+                    "10v0e75l": {
+                      "label": "1.1.14"
+                    },
+                    "12vzw97q": {
+                      "label": "1.1.15"
+                    },
+                    "21gdnno1": {
+                      "label": "1.0.7"
+                    },
+                    "4qym943q": {
+                      "label": "1.0.X"
+                    },
+                    "5q83pzr1": {
+                      "label": "1.1.10"
+                    },
+                    "810jvv2l": {
+                      "label": "1.0.2"
+                    },
+                    "9qjn7731": {
+                      "label": "1.0.4"
+                    },
+                    "jqzennkq": {
+                      "label": "1.0.6"
+                    },
+                    "klr433wq": {
+                      "label": "1.0.3"
+                    },
+                    "mln24z6l": {
+                      "label": "1.1.13"
+                    },
+                    "mln79361": {
+                      "label": "1.1.X"
+                    },
+                    "q653pjjl": {
+                      "label": "1.1.16"
+                    },
+                    "xqkw7ynq": {
+                      "label": "1.1.12"
+                    },
+                    "z19ve8jl": {
+                      "label": "1.1.11"
+                    }
+                  }
+                }
+              }
+            ],
+            "pagination": {
+              "offset": 0,
+              "max": 20,
+              "size": 20
+            },
+            "status": 200
+          }

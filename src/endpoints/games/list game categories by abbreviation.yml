@@ -1,0 +1,853 @@
+info:
+  name: list game categories by abbreviation
+  type: http
+  seq: 5
+
+http:
+  method: GET
+  url: https://api.speedrun.io/src/games/{{slug}}/categories
+  auth: inherit
+
+runtime:
+  variables:
+    - name: slug
+      value: mm
+      description: example game abbreviation
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true
+
+examples:
+  - name: "zelda: majora's mask"
+    description: use an abbreviation to list the categories for a specific game
+    request:
+      url: https://api.speedrun.io/src/games/mm/categories
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: |-
+          {
+            "data": [
+              {
+                "id": "02q4vx7d",
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/categories/02q4vx7d"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/268zey6p"
+                  },
+                  {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/categories/02q4vx7d/variables"
+                  },
+                  {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/categories/02q4vx7d/records"
+                  },
+                  {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?category=02q4vx7d"
+                  },
+                  {
+                    "rel": "leaderboard",
+                    "uri": "https://www.speedrun.com/api/v1/leaderboards/268zey6p/category/02q4vx7d"
+                  }
+                ],
+                "miscellaneous": false,
+                "name": "100%",
+                "players": {
+                  "type": "exactly",
+                  "value": 1
+                },
+                "rules": "100%\n------\n\nCollect everything that doesn't get erased when you play Song of Time and complete the game:\n\n- All unique Hearts Pieces and Heart Containers\r\n- All Items\r\n- All Masks\r\n- All Songs\r\n- All Fairy rewards\r\n- All Max Upgrades\r\n- All Dungeon maps and compasses\r\n- All Tingle maps\r\n- All Owls\r\n- All Happiness Seals\r\n- All Map Points\n\n**All of these items must be obtained from their original sources.**",
+                "type": "per-game",
+                "weblink": "https://www.speedrun.com/mm?h=100&x=02q4vx7d"
+              },
+              {
+                "id": "vdo0prvd",
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/categories/vdo0prvd"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/268zey6p"
+                  },
+                  {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/categories/vdo0prvd/variables"
+                  },
+                  {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/categories/vdo0prvd/records"
+                  },
+                  {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?category=vdo0prvd"
+                  }
+                ],
+                "miscellaneous": false,
+                "name": "100% No Major Glitches",
+                "players": {
+                  "type": "exactly",
+                  "value": 1
+                },
+                "rules": "General Rules:\n\n- The dungeons, upon the start of the run, must be in their untouched state.  (Cannot have been entered before the run)\n- Cannot have Items from the Dungeon being ran. (Boss Remains, Heart Container, Dungeon Item)\n- Cannot have Fierce Deity's Mask (not obtainable without having beat all dungeons before hand)\n- Starting from file select is allowed. \n- Timing starts upon gaining control of Link in the main entrance room of the dungeon. (first frame of movement, or first frame of the ui re-appearing after the intro cutscene)\n- Timing ends upon losing control of Link. (stepping into the blue warp to collect the boss remains, the frame the remains disappear and link begins picking them up) \n- Runs will be in 1 segment; savewarp and deaths warp are allowed. (unless stated otherwise)\n- Wii VC inject is banned.\n- Wii-U VC inject is banned.\n- KZ, the Majora's Mask Practice Rom, is allowed for IL submissions. You are allowed to use cheats, savestates, memfiles, etc. in order to setup your run and do runs without needing to re-setup your file. All items you give yourself must be theoretically possible to get with the restrictions of the category you are running (for example, you may not give yourself the dungeon item), nor are you allowed to use the flag editor to edit any of the dungeon's flags--the dungeon's state must remain untouched. During the run, all KZ cheats, input viewers, and watches must be disabled. All KZ menus and button command functionalities are banned for the duration of the run.\n- Controller adapters are permitted. The following rules apply:\n- Analog stick mappings that decrease the difficulty of holding the ESS position relative to official, unmodified controllers on that console are prohibited (with the exceptions of extremely minor changes to ESS position and changes made to the deadzone (such as Raphnets)).\n- Any adapters used may not map analog stick inputs to buttons (mapping the C-stick to the C-buttons is fine).\n- Notch calibration, and therefore adapters that expressly calibrate notches, are allowed.\n- Macros, including the use of turbo functions, is banned.\n- Modifying the control stick of a controller in any intentional way, including notch carving for the sake of getting \"better diagonals\" or an angle that is impossible to just as easily obtain on an official, unmodified controller, is banned.\n- Controller modification of digital inputs, including the removal of a GameCube controller's triggers' springs, is allowed (assuming the modification does not result in an analog output).\nPart replacement is acceptable, including swapping out a GameCube controller's control stick for a Wii nunchuk's control stick.\n- Emulators are allowed. The allowed emulators include Project64, Mupen64Plus and Dolphin. There is no time cap for emulators. All emulators must be on the latest build with default settings (including the cpu clock speed for Dolphin), with the exception of very specific settings on Dolphin, as follows:\n- Changing the Backend to Direct3D/DirectX for Windows, Vulkan for Linux, or Metal for MacOS.\n- Changing the Adapter to the most powerful graphics device on your PC.\n- Checking \"Skip EFB Access from CPU\"\n- Unchecking \"Store EFB Copies to Texture Only\"\n- Changing the Fallback Region to NTSC-U or NTSC-J.\n- EverDrive is allowed. However, it must be on v2.5, v3, or x7 and run the rom via the auto-boot function. 64Drive is allowed. There is no time cap for either of these.\n-Nintendont is banned for all submissions.\n- The intro cutscene can be cleared. (this is the one exception to the first rule)\n\n100% No Major Glitches:\n\nSet up the file and beat the dungeon while following the No Major Glitches ruleset. You must collect all items in the dungeon (specified after the No Major Glitches ruleset).\n\nNo Major Glitches Ruleset:\n\n- Stale Reference Manipulation (SRM) is banned.\n- Opening the Debug Menu and Text Overflow are banned.\n\nYou must collect:\n\n- Dungeon Map\n- Dungeon Compass\n- Dungeon Item\n- Dungeon Stray Fairies\n- Heart Container\n- Boss Remains\n- The Boss Key is not required.",
+                "type": "per-level",
+                "weblink": "https://www.speedrun.com/mm/levels?h=100_No_Major_Glitches&x=vdo0prvd"
+              },
+              {
+                "id": "w20gvv8k",
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/categories/w20gvv8k"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/268zey6p"
+                  },
+                  {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/categories/w20gvv8k/variables"
+                  },
+                  {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/categories/w20gvv8k/records"
+                  },
+                  {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?category=w20gvv8k"
+                  },
+                  {
+                    "rel": "leaderboard",
+                    "uri": "https://www.speedrun.com/api/v1/leaderboards/268zey6p/category/w20gvv8k"
+                  }
+                ],
+                "miscellaneous": false,
+                "name": "All Dungeons Restricted",
+                "players": {
+                  "type": "exactly",
+                  "value": 1
+                },
+                "rules": "All Dungeons\r\n--------------\r\n\r\n- Obtain all boss remains by triggering the blue warp at the end of each dungeon and complete the game.\r\n\r\nRestricted Ruleset\r\n-------------\r\n- The Restricted ruleset is an extension of the No Major Glitches (NMG) ruleset. The extension is driven by community polls. For a trick or glitch to be banned, the community must have a majority (more than 50% of voters) in favor of the ban. Otherwise, all tricks and glitches are assumed to be allowed. \r\n- Currently, the following tricks and glitches are banned under the Restricted ruleset:\r\n  - Indexwarp\r\n  - Equip Swap\r\n  - Get Item Manipulation (GIM)\r\n  - Stale Reference Manipulation (SRM) (NMG Ruleset)\r\n  - Opening the Debug Menu (NMG Ruleset)\r\n  - Text Overflow (NMG Ruleset)\r\n  \r\nSee Game Rules for more general rules.",
+                "type": "per-game",
+                "weblink": "https://www.speedrun.com/mm?h=All_Dungeons_Restricted&x=w20gvv8k"
+              },
+              {
+                "id": "zdn0mqq2",
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/categories/zdn0mqq2"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/268zey6p"
+                  },
+                  {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/categories/zdn0mqq2/variables"
+                  },
+                  {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/categories/zdn0mqq2/records"
+                  },
+                  {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?category=zdn0mqq2"
+                  },
+                  {
+                    "rel": "leaderboard",
+                    "uri": "https://www.speedrun.com/api/v1/leaderboards/268zey6p/category/zdn0mqq2"
+                  }
+                ],
+                "miscellaneous": false,
+                "name": "All Fairy Rewards",
+                "players": {
+                  "type": "exactly",
+                  "value": 1
+                },
+                "rules": "All Fairy Rewards  \r\n-----------------\r\n\r\nObtain the following items and beat the game:\r\n- Magic  \r\n- Great Fairy Mask  \r\n- Great Spin  \r\n- Double Magic  \r\n- Double Defense  \r\n- Great Fairy Sword  \r\n- All 61 Stray Fairies  \r\n\r\n**All of these items must be obtained from their original sources.**\r\n\r\nNo Major Glitches Rules\r\n-------------\r\n- Stale Reference Manipulation (SRM) is banned.\r\n- Opening the Debug Menu and Text Overflow are banned.\r\n\r\nSee Game Rules for more general rules.",
+                "type": "per-game",
+                "weblink": "https://www.speedrun.com/mm?h=All_Fairy_Rewards&x=zdn0mqq2"
+              },
+              {
+                "id": "z27mx502",
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/categories/z27mx502"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/268zey6p"
+                  },
+                  {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/categories/z27mx502/variables"
+                  },
+                  {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/categories/z27mx502/records"
+                  },
+                  {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?category=z27mx502"
+                  },
+                  {
+                    "rel": "leaderboard",
+                    "uri": "https://www.speedrun.com/api/v1/leaderboards/268zey6p/category/z27mx502"
+                  }
+                ],
+                "miscellaneous": false,
+                "name": "All Masks",
+                "players": {
+                  "type": "exactly",
+                  "value": 1
+                },
+                "rules": "All Masks\r\n----------\r\n\r\n- Collect all 24 masks.\r\n\r\n**All masks must be acquired from their original sources.**",
+                "type": "per-game",
+                "weblink": "https://www.speedrun.com/mm?h=All_Masks&x=z27mx502"
+              },
+              {
+                "id": "jdzlw4r2",
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/categories/jdzlw4r2"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/268zey6p"
+                  },
+                  {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/categories/jdzlw4r2/variables"
+                  },
+                  {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/categories/jdzlw4r2/records"
+                  },
+                  {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?category=jdzlw4r2"
+                  },
+                  {
+                    "rel": "leaderboard",
+                    "uri": "https://www.speedrun.com/api/v1/leaderboards/268zey6p/category/jdzlw4r2"
+                  }
+                ],
+                "miscellaneous": false,
+                "name": "Any%",
+                "players": {
+                  "type": "exactly",
+                  "value": 1
+                },
+                "rules": "Any%\r\n------\r\n\r\n- Complete the game with no additional requirements.",
+                "type": "per-game",
+                "weblink": "https://www.speedrun.com/mm?h=Any&x=jdzlw4r2"
+              },
+              {
+                "id": "wdmzmno2",
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/categories/wdmzmno2"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/268zey6p"
+                  },
+                  {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/categories/wdmzmno2/variables"
+                  },
+                  {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/categories/wdmzmno2/records"
+                  },
+                  {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?category=wdmzmno2"
+                  }
+                ],
+                "miscellaneous": false,
+                "name": "Any% No Major Glitches",
+                "players": {
+                  "type": "exactly",
+                  "value": 1
+                },
+                "rules": "General Rules:\n\n- The dungeons, upon the start of the run, must be in their untouched state. (Cannot have been entered before the run)\n- Cannot have Items from the Dungeon being ran. (Boss Remains, Heart Container, Dungeon Item)\n- Cannot have Fierce Deity's Mask (not obtainable without having beat all dungeons before hand)\n- Starting from file select is allowed. \n- Timing starts upon gaining control of Link in the main entrance room of the dungeon. (first frame of movement, or first frame of the ui re-appearing after the intro cutscene)\n- Timing ends upon losing control of Link. (stepping into the blue warp to collect the boss remains, the frame the remains disappear and link begins picking them up) \n- Runs will be in 1 segment; savewarp and deaths warp are allowed. (unless stated otherwise)\n- Wii VC inject is banned.\n- Wii-U VC inject is banned.\n- KZ, the Majora's Mask Practice Rom, is allowed for IL submissions. You are allowed to use cheats, savestates, memfiles, etc. in order to setup your run and do runs without needing to re-setup your file. All items you give yourself must be theoretically possible to get with the restrictions of the category you are running (for example, you may not give yourself the dungeon item), nor are you allowed to use the flag editor to edit any of the dungeon's flags--the dungeon's state must remain untouched. During the run, all KZ cheats, input viewers, and watches must be disabled. All KZ menus and button command functionalities are banned for the duration of the run.\n- Controller adapters are permitted. The following rules apply:\n- Analog stick mappings that decrease the difficulty of holding the ESS position relative to official, unmodified controllers on that console are prohibited (with the exceptions of extremely minor changes to ESS position and changes made to the deadzone (such as Raphnets)).\n- Any adapters used may not map analog stick inputs to buttons (mapping the C-stick to the C-buttons is fine).\n- Notch calibration, and therefore adapters that expressly calibrate notches, are allowed.\n- Macros, including the use of turbo functions, is banned.\n- Modifying the control stick of a controller in any intentional way, including notch carving for the sake of getting \"better diagonals\" or an angle that is impossible to just as easily obtain on an official, unmodified controller, is banned.\n- Controller modification of digital inputs, including the removal of a GameCube controller's triggers' springs, is allowed (assuming the modification does not result in an analog output).\nPart replacement is acceptable, including swapping out a GameCube controller's control stick for a Wii nunchuk's control stick.\n- Emulators are allowed. The allowed emulators include Project64, Mupen64Plus and Dolphin. There is no time cap for emulators. All emulators must be on the latest build with default settings (including the cpu clock speed for Dolphin), with the exception of very specific settings on Dolphin, as follows:\n- Changing the Backend to Direct3D/DirectX for Windows, Vulkan for Linux, or Metal for MacOS.\n- Changing the Adapter to the most powerful graphics device on your PC.\n- Checking \"Skip EFB Access from CPU\"\n- Unchecking \"Store EFB Copies to Texture Only\"\n- Changing the Fallback Region to NTSC-U or NTSC-J.\n- EverDrive is allowed. However, it must be on v2.5, v3, or x7 and run the rom via the auto-boot function. 64Drive is allowed. There is no time cap for either of these.\n-Nintendont is banned for all submissions.\n- The intro cutscene can be cleared. (this is the one exception to the first rule)\n\nAny% No Major Glitches:\n\nSet up the file and beat the dungeon while following the No Major Glitches ruleset.\n\nNo Major Glitches Ruleset:\n\n- Stale Reference Manipulation (SRM) is banned.\n- Opening the Debug Menu and Text Overflow are banned.",
+                "type": "per-level",
+                "weblink": "https://www.speedrun.com/mm/levels?h=Any_No_Major_Glitches&x=wdmzmno2"
+              },
+              {
+                "id": "7kjlmwx2",
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/categories/7kjlmwx2"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/268zey6p"
+                  },
+                  {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/categories/7kjlmwx2/variables"
+                  },
+                  {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/categories/7kjlmwx2/records"
+                  },
+                  {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?category=7kjlmwx2"
+                  }
+                ],
+                "miscellaneous": false,
+                "name": "Glitchless 100%",
+                "players": {
+                  "type": "exactly",
+                  "value": 1
+                },
+                "rules": "General Rules:\n\n- The dungeons, upon the start of the run, must be in their untouched state.  (Cannot have been entered before the run)\n- Cannot have Items from the Dungeon being ran. (Boss Remains, Heart Container, Dungeon Item)\n- Cannot have Fierce Deity's Mask (not obtainable without having beat all dungeons before hand)\n- Starting from file select is allowed. \n- Timing starts upon gaining control of Link in the main entrance room of the dungeon. (first frame of movement, or first frame of the ui re-appearing after the intro cutscene)\n- Timing ends upon losing control of Link. (stepping into the blue warp to collect the boss remains, the frame the remains disappear and link begins picking them up) \n- Runs will be in 1 segment; savewarp and deaths warp are allowed. (unless stated otherwise)\n- Wii VC inject is banned.\n- Wii-U VC inject is banned.\n- KZ, the Majora's Mask Practice Rom, is allowed for IL submissions. You are allowed to use cheats, savestates, memfiles, etc. in order to setup your run and do runs without needing to re-setup your file. All items you give yourself must be theoretically possible to get with the restrictions of the category you are running (for example, you may not give yourself the dungeon item), nor are you allowed to use the flag editor to edit any of the dungeon's flags--the dungeon's state must remain untouched. During the run, all KZ cheats, input viewers, and watches must be disabled. All KZ menus and button command functionalities are banned for the duration of the run.\n- Controller adapters are permitted. The following rules apply:\n- Analog stick mappings that decrease the difficulty of holding the ESS position relative to official, unmodified controllers on that console are prohibited (with the exceptions of extremely minor changes to ESS position and changes made to the deadzone (such as Raphnets)).\n- Any adapters used may not map analog stick inputs to buttons (mapping the C-stick to the C-buttons is fine).\n- Notch calibration, and therefore adapters that expressly calibrate notches, are allowed.\n- Macros, including the use of turbo functions, is banned.\n- Modifying the control stick of a controller in any intentional way, including notch carving for the sake of getting \"better diagonals\" or an angle that is impossible to just as easily obtain on an official, unmodified controller, is banned.\n- Controller modification of digital inputs, including the removal of a GameCube controller's triggers' springs, is allowed (assuming the modification does not result in an analog output).\nPart replacement is acceptable, including swapping out a GameCube controller's control stick for a Wii nunchuk's control stick.\n- Emulators are allowed. The allowed emulators include Project64, Mupen64Plus and Dolphin. There is no time cap for emulators. All emulators must be on the latest build with default settings (including the cpu clock speed for Dolphin), with the exception of very specific settings on Dolphin, as follows:\n- Changing the Backend to Direct3D/DirectX for Windows, Vulkan for Linux, or Metal for MacOS.\n- Changing the Adapter to the most powerful graphics device on your PC.\n- Checking \"Skip EFB Access from CPU\"\n- Unchecking \"Store EFB Copies to Texture Only\"\n- Changing the Fallback Region to NTSC-U or NTSC-J.\n- EverDrive is allowed. However, it must be on v2.5, v3, or x7 and run the rom via the auto-boot function. 64Drive is allowed. There is no time cap for either of these.\n-Nintendont is banned for all submissions.\n- The intro cutscene can be cleared. (this is the one exception to the first rule)\n\n100% Glitchless:\n\nSet up the file and beat the dungeon without performing any of the banned techniques. You must collect all items in the dungeon (specified after the banned techniques of Glitchless).\n\nBanned Techniques:\n\n- Infinite Sword Glitch\n- Hovering\n- Recoil Flip\n- Long Jump\n- Megaflip\n- Recoil Jump\n- Hyper Extended Superslide/Extended Superslide\n- Superslide\n- A-Slide\n- Z-Slide\n- Weirdshot\n- Ground Jump\n- Clipping\n- Out of Bounds\n- Seamwalking\n- Cutscene skips\n- Ocarina Items \n- Stale Reference Manipulation\n- Text Overflow\n- Zora Clipping\n- Flying Zora\n- Superswim\n- Spring Water Switch Activation\n- Song Storage\n- Timestop\n- Temp B\n- Weird B\n- Ocarina on B\n- Mask Storage\n- Goron missile\n- Goron mega pound\n- 0th Day/Owl Save Storage\n- 4th Day\n- Equip Swap\n- Action Swap / Quickdraw\n- Bottle Duplication\n- Item Manipulation (BA/GIM/etc.)\n- Extended Bow/Hookshot\n- Opening Flaming Chests\n- Collection Delay\n- Return A\n- Down A\n- Restricted Items\n- Backwalking past East Clocktown Guard\n- Deku Sword\n- Day Reset / Day Skip\n- False Mask\n- Saving at Owl Statues on Epona\n- Using day transitions to teleport Epona\n- Remote Control Epona\n- Epona hovering\n- Antigrav\n- Items Diving \n- Flame Storage\n- Using cutscenes to displace items off of \nplatforms\n- Delaying cutscenes from starting\n- Rolling through or on top of blocks in the \nchest minigame\n- Moving while in first person\n- Milk Swap/Remote Hookshot\n\n-----------------\nFurther Explanations:\n\n- Cutscene Skip : Causing a load to trigger during a cutscene\n- Out of Bounds : Surfaces that are exposed to the lowest void plane and unloaded areas\n- Clipping : Moving through solid objects or collision (popups are not included in this definition [deku palace, oceanside, pictograph hut, etc])\n- Spring Water Switch Activation : Using Spring Water (or Hot Spring Water) To cause switches such as Sunblocks to activate\n- Item Diving : Using item cutscenes in order to drop off of edges (ocarina diving, bottle diving, etc.)\n- Hovering : Slashing against a ledge during the Snowhead wind can result in link obtaining terminal velocity (-20 y velocity) while his y position stays unchanged which constitutes a hovering state. A community vote decided that all forms of lullaby skip that slash against the wind are banned.\n\nYou must collect:\n\n- Dungeon Map\n- Dungeon Compass\n- Dungeon Item\n- Dungeon Stray Fairies\n- Heart Container\n- Boss Remains\n- The Boss Key is not required.",
+                "type": "per-level",
+                "weblink": "https://www.speedrun.com/mm/levels?h=Glitchless_100&x=7kjlmwx2"
+              },
+              {
+                "id": "n2yr8z8d",
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/categories/n2yr8z8d"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/268zey6p"
+                  },
+                  {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/categories/n2yr8z8d/variables"
+                  },
+                  {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/categories/n2yr8z8d/records"
+                  },
+                  {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?category=n2yr8z8d"
+                  }
+                ],
+                "miscellaneous": false,
+                "name": "Glitchless Any%",
+                "players": {
+                  "type": "exactly",
+                  "value": 1
+                },
+                "rules": "General Rules:\n\n- The dungeons, upon the start of the run, must be in their untouched state. (Cannot have been entered before the run)\n- Cannot have Items from the Dungeon being ran. (Boss Remains, Heart Container, Dungeon Item)\n- Cannot have Fierce Deity's Mask (not obtainable without having beat all dungeons before hand)\n- Starting from file select is allowed. \n- Timing starts upon gaining control of Link in the main entrance room of the dungeon. (first frame of movement, or first frame of the ui re-appearing after the intro cutscene)\n- Timing ends upon losing control of Link. (stepping into the blue warp to collect the boss remains, the frame the remains disappear and link begins picking them up) \n- Runs will be in 1 segment; savewarp and deaths warp are allowed. (unless stated otherwise)\n- Wii VC inject is banned.\n- Wii-U VC inject is banned.\n- KZ, the Majora's Mask Practice Rom, is allowed for IL submissions. You are allowed to use cheats, savestates, memfiles, etc. in order to setup your run and do runs without needing to re-setup your file. All items you give yourself must be theoretically possible to get with the restrictions of the category you are running (for example, you may not give yourself the dungeon item), nor are you allowed to use the flag editor to edit any of the dungeon's flags--the dungeon's state must remain untouched. During the run, all KZ cheats, input viewers, and watches must be disabled. All KZ menus and button command functionalities are banned for the duration of the run.\n- Controller adapters are permitted. The following rules apply:\n- Analog stick mappings that decrease the difficulty of holding the ESS position relative to official, unmodified controllers on that console are prohibited (with the exceptions of extremely minor changes to ESS position and changes made to the deadzone (such as Raphnets)).\n- Any adapters used may not map analog stick inputs to buttons (mapping the C-stick to the C-buttons is fine).\n- Notch calibration, and therefore adapters that expressly calibrate notches, are allowed.\n- Macros, including the use of turbo functions, is banned.\n- Modifying the control stick of a controller in any intentional way, including notch carving for the sake of getting \"better diagonals\" or an angle that is impossible to just as easily obtain on an official, unmodified controller, is banned.\n- Controller modification of digital inputs, including the removal of a GameCube controller's triggers' springs, is allowed (assuming the modification does not result in an analog output).\nPart replacement is acceptable, including swapping out a GameCube controller's control stick for a Wii nunchuk's control stick.\n- Emulators are allowed. The allowed emulators include Project64, Mupen64Plus and Dolphin. There is no time cap for emulators. All emulators must be on the latest build with default settings (including the cpu clock speed for Dolphin), with the exception of very specific settings on Dolphin, as follows:\n- Changing the Backend to Direct3D/DirectX for Windows, Vulkan for Linux, or Metal for MacOS.\n- Changing the Adapter to the most powerful graphics device on your PC.\n- Checking \"Skip EFB Access from CPU\"\n- Unchecking \"Store EFB Copies to Texture Only\"\n- Changing the Fallback Region to NTSC-U or NTSC-J.\n- EverDrive is allowed. However, it must be on v2.5, v3, or x7 and run the rom via the auto-boot function. 64Drive is allowed. There is no time cap for either of these.\n-Nintendont is banned for all submissions.\n- The intro cutscene can be cleared. (this is the one exception to the first rule)\n\nAny% Glitchless:\n\nSet up the file and beat the dungeon without performing any of the banned techniques.\n\nBanned Techniques:\n\n- Infinite Sword Glitch\n- Hovering\n- Recoil Flip\n- Long Jump\n- Megaflip\n- Recoil Jump\n- Hyper Extended Superslide/Extended Superslide\n- Superslide\n- A-Slide\n- Z-Slide\n- Weirdshot\n- Ground Jump\n- Clipping\n- Out of Bounds\n- Seamwalking\n- Cutscene Skips\n- Ocarina Items \n- Stale Reference Manipulation\n- Text Overflow\n- Zora Clipping\n- Flying Zora\n- Superswim\n- Spring Water Switch Activation\n- Song Storage\n- Timestop\n- Temp B\n- Weird B\n- Ocarina on B\n- Mask Storage\n- Goron Missile\n- Goron Mega Pound\n- 0th Day/Owl Save Storage\n- 4th Day\n- Equip Swap\n- Action Swap / Quickdraw\n- Bottle Duplication\n- Item Manipulation (BA/GIM/etc.)\n- Extended Bow/Hookshot\n- Opening Flaming Chests\n- Collection Delay\n- Return A\n- Down A\n- Restricted Items\n- Backwalking past East Clocktown Guard\n- Deku Sword\n- Day Reset / Day Skip\n- False Mask\n- Saving at Owl Statues on Epona\n- Using day transitions to teleport Epona\n- Remote Control Epona\n- Epona Hovering\n- Antigrav\n- Items Diving \n- Flame Storage\n- Using cutscenes to displace items off of \nplatforms\n- Delaying cutscenes from starting\n- Rolling through or on top of blocks in the \nchest minigame\n- Moving while in first person\n- Milk Swap/Remote Hookshot\n\n-----------------\nFurther Explanations:\n\n- Cutscene Skip : Causing a load to trigger during a cutscene\n- Out of Bounds : Surfaces that are exposed to the lowest void plane and unloaded areas\n- Clipping : Moving through solid objects or collision (popups are not included in this definition [Deku Palace, Oceanside Spider House, Pictograph Hut, etc.])\n- Spring Water Switch Activation : Using Spring Water (or Hot Spring Water) to cause switches such as Sunblocks to activate\n- Item Diving : Using item cutscenes in order to drop off of edges (Ocarina Diving, Bottle Diving, etc.)\n- Hovering : Slashing against a ledge during the Snowhead wind can result in Link obtaining terminal velocity (-20 Y Velocity) while his Y Position stays unchanged, which constitutes a hovering state. A community vote decided that all forms of Lullaby Skip that slash against the wind are banned.",
+                "type": "per-level",
+                "weblink": "https://www.speedrun.com/mm/levels?h=Glitchless_Any&x=n2yr8z8d"
+              }
+            ],
+            "pagination": {
+              "offset": 0,
+              "max": 20,
+              "size": 9
+            },
+            "status": 200
+          }
+  - name: super mario odyssey
+    description: use an abbreviation to list the categories for a specific game
+    request:
+      url: https://api.speedrun.io/src/games/smo/categories
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: |-
+          {
+            "data": [
+              {
+                "id": "n2y5jwek",
+                "name": "100%",
+                "weblink": "https://www.speedrun.com/smo?h=100&x=n2y5jwek",
+                "type": "per-game",
+                "rules": "**100% Definition**\n\nIn order to get 100% you have to fulfill the following requirements:\n\n- Collect all 880 non duplicate moons from every kingdom\r\n- Buy every souvenir\r\n- Buy every costume (except for 1.2 DLC*)\r\n- Buy every hat (except for 1.2 DLC*)\r\n- Capture all 52 enemies\r\n- Fill out the entire music list (82 songs)\r\n\n(* the 1.2 DLC hats and costumes are marked as \"special\" in the shop inventory)\n\nThis can be verified with a star appearing on your save after completing all of these.\n\nTiming begins when selecting \"Start\" on a new file. Timing ends when the file star is shown.\n\n**Old 100% ruleset**\n\nPrior to the 29th March, 2020 the ruleset included dumping 999 moons into the Odyssey and ended timing on the secret cutscene on Peach's Castle. Runs done under this ruleset were grandfathered in.\n\n**General Rules**\n\nAll runs require video proof (with audio).\n\nRuns must be done entirely with your switch in docked or undocked mode, you may not switch between the 2 mid run.\n\nUse of Amiibo, 2P, Luigi's Balloon World, and Assist Mode is banned.\n\nPlease see Game Rules for information regarding breaks.",
+                "players": {
+                  "type": "exactly",
+                  "value": 1
+                },
+                "miscellaneous": false,
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/categories/n2y5jwek"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/76r55vd8"
+                  },
+                  {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/categories/n2y5jwek/variables"
+                  },
+                  {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/categories/n2y5jwek/records"
+                  },
+                  {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?category=n2y5jwek"
+                  },
+                  {
+                    "rel": "leaderboard",
+                    "uri": "https://www.speedrun.com/api/v1/leaderboards/76r55vd8/category/n2y5jwek"
+                  }
+                ]
+              },
+              {
+                "id": "wk6719ed",
+                "name": "All Moons",
+                "weblink": "https://www.speedrun.com/smo?h=All_Moons&x=wk6719ed",
+                "type": "per-game",
+                "rules": "**General Rules**\n\nCollect all 880 physical Moons and beat the harder final boss.\n\nTiming begins when selecting \"Start\" on a new file and ends when you shoot out of the electric wire in the harder escape sequence.\n\nAll runs require video proof (with audio).\n\nRuns must be done entirely with your switch in docked or undocked mode, you may not switch between the 2 mid run.\n\nUse of Amiibo, 2P, Luigi's Balloon World, and Assist Mode is banned.\n\nPlease see Game Rules for information regarding breaks.",
+                "players": {
+                  "type": "exactly",
+                  "value": 1
+                },
+                "miscellaneous": false,
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/categories/wk6719ed"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/76r55vd8"
+                  },
+                  {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/categories/wk6719ed/variables"
+                  },
+                  {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/categories/wk6719ed/records"
+                  },
+                  {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?category=wk6719ed"
+                  },
+                  {
+                    "rel": "leaderboard",
+                    "uri": "https://www.speedrun.com/api/v1/leaderboards/76r55vd8/category/wk6719ed"
+                  }
+                ]
+              },
+              {
+                "id": "w20w1lzd",
+                "name": "Any%",
+                "weblink": "https://www.speedrun.com/smo?h=Any&x=w20w1lzd",
+                "type": "per-game",
+                "rules": "Beat the game as fast as possible.\n\nTiming begins when selecting \"Start\" on a new file and ends when you shoot out of the electric wire in the escape sequence.\n\nFor runs under two hours, RTA timing is used meaning runs must be completed within one sitting and the timer cannot be paused at any point in the run.\n\nAll runs require video proof (with audio).\n\nRuns must be done entirely with your switch in docked or undocked mode, you may not switch between the 2 mid run.\n\nUse of Amiibo, Luigi's Balloon World, and Assist Mode is banned.",
+                "players": {
+                  "type": "up-to",
+                  "value": 2
+                },
+                "miscellaneous": false,
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/categories/w20w1lzd"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/76r55vd8"
+                  },
+                  {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/categories/w20w1lzd/variables"
+                  },
+                  {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/categories/w20w1lzd/records"
+                  },
+                  {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?category=w20w1lzd"
+                  },
+                  {
+                    "rel": "leaderboard",
+                    "uri": "https://www.speedrun.com/api/v1/leaderboards/76r55vd8/category/w20w1lzd"
+                  }
+                ]
+              },
+              {
+                "id": "wdmw4e42",
+                "name": "Dark Side",
+                "weblink": "https://www.speedrun.com/smo?h=Dark_Side&x=wdmw4e42",
+                "type": "per-game",
+                "rules": "Access the Dark Side of the Moon and beat the Broodal boss rush.\n\nTiming begins when selecting \"Start\" on a new file and ends when you grab the Multimoon after the Broodal Mech fight.\n\nFor runs under two hours, RTA timing is used meaning runs must be completed within one sitting and the timer cannot be paused at any point in the run.\n\nAll runs require video proof (with audio).\n\nRuns must be done entirely with your switch in docked or undocked mode, you may not switch between the 2 mid run.\n\nBuying more than one moon from any shop (duplicate moons) is banned. If you accidentally buy a duplicate moon, you must get another moon to have 253 total unique moons by the end of the run.\n\nUse of Amiibo, Luigi's Balloon World, and Assist Mode is banned.",
+                "players": {
+                  "type": "up-to",
+                  "value": 2
+                },
+                "miscellaneous": false,
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/categories/wdmw4e42"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/76r55vd8"
+                  },
+                  {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/categories/wdmw4e42/variables"
+                  },
+                  {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/categories/wdmw4e42/records"
+                  },
+                  {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?category=wdmw4e42"
+                  },
+                  {
+                    "rel": "leaderboard",
+                    "uri": "https://www.speedrun.com/api/v1/leaderboards/76r55vd8/category/wdmw4e42"
+                  }
+                ]
+              },
+              {
+                "id": "vdooqjod",
+                "name": "Darker Side",
+                "weblink": "https://www.speedrun.com/smo?h=Darker_Side&x=vdooqjod",
+                "type": "per-game",
+                "rules": "Access the Darker Side of the Moon and collect the Multimoon at the end of the kingdom.\n\nTiming begins when selecting \"Start\" on a new file and ends when you grab the Multimoon after the final level.\n\nAll runs require video proof (with audio).\n\nRuns must be done entirely with your switch in docked or undocked mode, you may not switch between the 2 mid run.\n\nBuying more than one moon from any shop (duplicate moons) is banned. If you accidentally buy a duplicate moon, you must get another moon to have 503 total unique moons by the end of the run.\n\nOn June 29th, 2025, *Frog Skip* (1.0 - 1.1) was banned for future submissions. Runs using *Frog Skip* before this date were grandfathered in.\n\nUse of Amiibo, Luigi's Balloon World, and Assist Mode is banned.\n\nPlease see Game Rules for information regarding breaks.",
+                "players": {
+                  "type": "up-to",
+                  "value": 2
+                },
+                "miscellaneous": false,
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/categories/vdooqjod"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/76r55vd8"
+                  },
+                  {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/categories/vdooqjod/variables"
+                  },
+                  {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/categories/vdooqjod/records"
+                  },
+                  {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?category=vdooqjod"
+                  },
+                  {
+                    "rel": "leaderboard",
+                    "uri": "https://www.speedrun.com/api/v1/leaderboards/76r55vd8/category/vdooqjod"
+                  }
+                ]
+              },
+              {
+                "id": "vdooo3yd",
+                "name": "World Peace",
+                "weblink": "https://www.speedrun.com/smo?h=World_Peace&x=vdooo3yd",
+                "type": "per-game",
+                "rules": "Bring Peace to every Kingdom and beat the game.\n\nTiming begins when selecting \"Start\" on a new file and ends when you shoot out of the electric wire in the escape sequence.\n\nFor runs under two hours, RTA timing is used meaning runs must be completed within one sitting and the timer cannot be paused at any point in the run.\n\nAll runs require video proof (with audio).\n\nRuns must be done entirely with your switch in docked or undocked mode, you may not switch between the 2 mid run.\n\nUse of Amiibo, Luigi's Balloon World, and Assist Mode is banned.",
+                "players": {
+                  "type": "up-to",
+                  "value": 2
+                },
+                "miscellaneous": false,
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/categories/vdooo3yd"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/76r55vd8"
+                  },
+                  {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/categories/vdooo3yd/variables"
+                  },
+                  {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/categories/vdooo3yd/records"
+                  },
+                  {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?category=vdooo3yd"
+                  },
+                  {
+                    "rel": "leaderboard",
+                    "uri": "https://www.speedrun.com/api/v1/leaderboards/76r55vd8/category/vdooo3yd"
+                  }
+                ]
+              }
+            ],
+            "pagination": {
+              "offset": 0,
+              "max": 20,
+              "size": 6
+            },
+            "status": 200
+          }
+  - name: half life 2
+    description: use an abbreviation to list the categories for a specific game
+    request:
+      url: https://api.speedrun.io/src/games/hl2/categories
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: |-
+          {
+            "data": [
+              {
+                "id": "824x05nd",
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/categories/824x05nd"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/ok6q991g"
+                  },
+                  {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/categories/824x05nd/variables"
+                  },
+                  {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/categories/824x05nd/records"
+                  },
+                  {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?category=824x05nd"
+                  }
+                ],
+                "miscellaneous": false,
+                "name": "New Engine",
+                "players": {
+                  "type": "exactly",
+                  "value": 1
+                },
+                "rules": "# IL Rules\n\nStart the chapter either from the menu or by starting the first map with the map command. Using a save for starting a run is only allowed in Point Insertion.\n\n# **Version**\n\nHalf-Life 2 New Engine runs must be done on one of the officially released versions of the game. The most commonly used versions by the community are 4260, 5288, or the latest version of the game on Steam. **The use of Ghosting and Versions 2.5 or older of 5135 Unpack is banned** as these versions do not comply with being an official release.\n\nUsing versions acquired from unofficial or illegal sources is not allowed.\n\nUsing maps from different versions is not allowed, this means you must use maps consistent with the version of the game you are running (i.e. you can't take maps from Steampipe and use them in Unpack).\n\nConsole runs currently sit on the same leaderboards and follow the same rules as PC runs, with the exception of timing being done in Real Time. This is subject to change in the future.\n\n# **Commands and Binds**\n\nThe use, and binding of any command accessible from the pause menu is allowed. All cheat commands, console exclusive commands, and commands that change gameplay are not allowed with the exceptions being listed on the community Whitelist. If you have questions over whether a command is legal, please ask in Source-help, or make a forum post on Half-Life 2 Speedrun.com page.\n\nExamples of **NOT** allowed console exclusive commands include ent_remove, unpause, “- commands” (ex. -speed), exec, toggle or BindToggle. These commands can never be executed by the player during the duration of the run.\n\nThe use of scripts or macros is not allowed. This includes Aliases, which are considered to be scripts.\n\nYou are allowed to bind the same command to multiple keys (i.e. +jump to mwheelup and mwheeldown).\n\nMultiple commands can also be bound to the same key. (i.e. bind x “save glitch;load glitch”.\n\nThe use of two input methods in a run at the same is not allowed. This means you cannot use a keyboard and mouse at the same time as a controller.\n\nSending analogue input via analogue keyboard is not allowed.\n\nYou are allowed to 1:1 remap keys through the use of external mouse and keyboard software to use keys that wouldn’t normally be recognized by the game. (ex. For using a mouse8 button in game)\n\n# **Whitelist**\n\nThe community whitelist of console exclusive commands acts as both a set of quality of life commands, and commands that have had to be grandfathered in to maintain the current route.\n\n- **cl_showpos, use weapon_x, reload:** these commands are the main exceptions that have been made in terms of console exclusive commands that change how the run is played out.\n\n- **toggle_duck**: Usually only bindable when using a controller.\n\n- **cl_showfps, net_graph:** two different ways of viewing your fps in game as opposed to viewing it with third party tools.\n\n- **mat_dxlevel**: **Must be set to either 90 or 95**. Players may lower the value from 95 for  performance reasons. Values under 90 result in modification of game physics and fullbright auto-enabling on certain maps.\n\n- **r_portalsopenall 1**: quality of life command that opens up the rendering portals in order to draw the full game world when you skip a trigger that would handle it otherwise.\n\n- **fps_max 1-999: 999** is the max allowed value as anything over it will cause the game to enter a sort of timescaled like sped up state. Uncapping fps by setting fps_max to 0 is not allowed.\n\n- **viewmodel_fov 54-90**: serves as an allowed HUD modification. Going under 54 or above 90 is not allowed as it will cause the viewmodel to start disappearing. Disabling the viewmodel completely is not allowed.\n- **save_screenshot**: Disables saving save thumbnails for less stutter and disk usage.\n- **sv_max_queries_sec**: Can be increased to a value like 9 to prevent long loads from occuring.",
+                "type": "per-level",
+                "weblink": "https://www.speedrun.com/hl2/levels?h=New_Engine&x=824x05nd"
+              },
+              {
+                "id": "9d8x7el2",
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/categories/9d8x7el2"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/ok6q991g"
+                  },
+                  {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/categories/9d8x7el2/variables"
+                  },
+                  {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/categories/9d8x7el2/records"
+                  },
+                  {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?category=9d8x7el2"
+                  },
+                  {
+                    "rel": "leaderboard",
+                    "uri": "https://www.speedrun.com/api/v1/leaderboards/ok6q991g/category/9d8x7el2"
+                  }
+                ],
+                "miscellaneous": false,
+                "name": "New Engine",
+                "players": {
+                  "type": "exactly",
+                  "value": 1
+                },
+                "rules": "# **Version**\n\nHalf-Life 2 New Engine runs must be done on one of the officially released versions of the game. The most commonly used versions by the community are 4260, 5288, or the latest version of the game on Steam. **The use of Ghosting and Versions 2.5 or older of 5135 Unpack is banned** as these versions do not comply with being an official release.\n\nUsing versions acquired from unofficial or illegal sources is not allowed.\n\nUsing maps from different versions is not allowed, this means you must use maps consistent with the version of the game you are running (i.e. you can't take maps from Steampipe and use them in Unpack).\n\nConsole runs currently sit on the same leaderboards and follow the same rules as PC runs, with the exception of timing being done in Real Time. This is subject to change in the future.\n\n# **Commands and Binds**\n\nThe use, and binding of any command accessible from the pause menu is allowed. All cheat commands, console exclusive commands, and commands that change gameplay are not allowed with the exceptions being listed on the community Whitelist. If you have questions over whether a command is legal, please ask in Source-help, or make a forum post on Half-Life 2 Speedrun.com page.\n\nExamples of **NOT** allowed console exclusive commands include ent_remove, unpause, “- commands” (ex. -speed), exec, toggle or BindToggle. These commands can never be executed by the player during the duration of the run.\n\nThe use of scripts or macros is not allowed. This includes Aliases, which are considered to be scripts.\n\nYou are allowed to bind the same command to multiple keys (i.e. +jump to mwheelup and mwheeldown).\n\nMultiple commands can also be bound to the same key. (i.e. bind x “save glitch;load glitch”.\n\nThe use of two input methods in a run at the same is not allowed. This means you cannot use a keyboard and mouse at the same time as a controller.\n\nSending analogue input via analogue keyboard is not allowed.\n\nYou are allowed to 1:1 remap keys through the use of external mouse and keyboard software to use keys that wouldn’t normally be recognized by the game. (ex. For using a mouse8 button in game)\n\n# **Whitelist**\n\nThe community whitelist of console exclusive commands acts as both a set of quality of life commands, and commands that have had to be grandfathered in to maintain the current route.\n\n- **cl_showpos, use weapon_x, reload:** these commands are the main exceptions that have been made in terms of console exclusive commands that change how the run is played out.\n- **toggle_duck**: Usually only bindable when using a controller.\n- **cl_showfps, net_graph:** two different ways of viewing your fps in game as opposed to viewing it with third party tools.\n- **mat_dxlevel**: **Must be set to either 90 or 95**. Players may lower the value from 95 for  performance reasons. Values under 90 result in modification of game physics and fullbright auto-enabling on certain maps.\n- **r_portalsopenall 1**: quality of life command that opens up the rendering portals in order to draw the full game world when you skip a trigger that would handle it otherwise.\n- **fps_max 1-999: 999** is the max allowed value as anything over it will cause the game to enter a sort of timescaled like sped up state. Uncapping fps by setting fps_max to 0 is not allowed.\n- **viewmodel_fov 54-90**: serves as an allowed HUD modification. Going under 54 or above 90 is not allowed as it will cause the viewmodel to start disappearing. Disabling the viewmodel completely is not allowed.\n- **save_screenshot**: Disables saving save thumbnails for less stutter and disk usage.\n- **sv_max_queries_sec**: Can be increased to a value like 9 to prevent long loads from occuring.",
+                "type": "per-game",
+                "weblink": "https://www.speedrun.com/hl2?h=New_Engine&x=9d8x7el2"
+              },
+              {
+                "id": "jdz7n16k",
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/categories/jdz7n16k"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/ok6q991g"
+                  },
+                  {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/categories/jdz7n16k/variables"
+                  },
+                  {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/categories/jdz7n16k/records"
+                  },
+                  {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?category=jdz7n16k"
+                  }
+                ],
+                "miscellaneous": false,
+                "name": "New Engine (SS)",
+                "players": {
+                  "type": "exactly",
+                  "value": 1
+                },
+                "rules": "# IL Rules\n\nStart the chapter either from the menu or by starting the first map with the map command. Using a save for starting a run is only allowed in Point Insertion.\n\n# Single Segment\n\nYou may not load any saves during the duration of the run. Loading a save by dying in-game is not allowed.\n\n# **Version**\n\nHalf-Life 2 New Engine runs must be done on one of the officially released versions of the game. The most commonly used versions by the community are 5135, 5288, or the latest version of the game on Steam. **The use of Ghosting is banned** as it does not comply with being an official release.\n\nUsing versions acquired from unofficial or illegal sources is not allowed.\n\nUsing maps from different versions is not allowed, this means you must use maps consistent with the version of the game you are running (i.e. you can't take maps from Steampipe and use them in Unpack).\n\nConsole runs currently sit on the same leaderboards and follow the same rules as PC runs, with the exception of timing being done in Real Time. This is subject to change in the future.\n\n# **Commands and Binds**\n\nThe use, and binding of any command accessible from the pause menu is allowed. All cheat commands, console exclusive commands, and commands that change gameplay are not allowed with the exceptions being listed on the community Whitelist. If you have questions over whether a command is legal, please ask in Source-help, or make a forum post on Half-Life 2 Speedrun.com page.\n\nExamples of **NOT** allowed console exclusive commands include ent_remove, unpause, “- commands” (ex. -speed), exec, toggle or BindToggle. These commands can never be executed by the player during the duration of the run.\n\nThe use of scripts or macros is not allowed. This includes Aliases, which are considered to be scripts.\n\nYou are allowed to bind the same command to multiple keys (i.e. +jump to mwheelup and mwheeldown).\n\nMultiple commands can also be bound to the same key. (i.e. bind x “save glitch;load glitch”.\n\nThe use of two input methods in a run at the same is not allowed. This means you cannot use a keyboard and mouse at the same time as a controller.\n\nSending analogue input via analogue keyboard is not allowed.\n\nYou are allowed to 1:1 remap keys through the use of external mouse and keyboard software to use keys that wouldn’t normally be recognized by the game. (ex. For using a mouse8 button in game)\n\n# **Whitelist**\n\nThe community whitelist of console exclusive commands acts as both a set of quality of life commands, and commands that have had to be grandfathered in to maintain the current route.\n\n- **cl_showpos, use weapon_x, reload:** these commands are the main exceptions that have been made in terms of console exclusive commands that change how the run is played out.\n\n- **toggle_duck**: Usually only bindable when using a controller.\n\n- **cl_showfps, net_graph:** two different ways of viewing your fps in game as opposed to viewing it with third party tools.\n\n- **mat_dxlevel**: **Must be set to either 90 or 95**. Players may lower the value from 95 for  performance reasons. Values under 90 result in modification of game physics and fullbright auto-enabling on certain maps.\n\n- **r_portalsopenall 1**: quality of life command that opens up the rendering portals in order to draw the full game world when you skip a trigger that would handle it otherwise.\n\n- **fps_max 1-999: 999** is the max allowed value as anything over it will cause the game to enter a sort of timescaled like sped up state. Uncapping fps by setting fps_max to 0 is not allowed.\n\n- **viewmodel_fov 54-90**: serves as an allowed HUD modification. Going under 54 or above 90 is not allowed as it will cause the viewmodel to start disappearing. Disabling the viewmodel completely is not allowed.\n- **save_screenshot**: Disables saving save thumbnails for less stutter and disk usage.\n- **sv_max_queries_sec**: Can be increased to a value like 9 to prevent long loads from occuring.",
+                "type": "per-level",
+                "weblink": "https://www.speedrun.com/hl2/levels?h=New_Engine_SS&x=jdz7n16k"
+              },
+              {
+                "id": "9d8p31lk",
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/categories/9d8p31lk"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/ok6q991g"
+                  },
+                  {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/categories/9d8p31lk/variables"
+                  },
+                  {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/categories/9d8p31lk/records"
+                  },
+                  {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?category=9d8p31lk"
+                  }
+                ],
+                "miscellaneous": false,
+                "name": "Old Engine",
+                "players": {
+                  "type": "exactly",
+                  "value": 1
+                },
+                "rules": "# IL Rules\n\nStart the chapter either from the menu or by starting the first map with the map command. Using a save for starting a run is only allowed in Point Insertion.\n\n# **Version**\n\nHalf-Life 2 Old Engine runs must be done on one of the officially released versions of the game, **or** on a custom build running on Source 2006, verified by the mod team. The most common legitimate version of the game is 2707, while the most common mod versions are 2733 and 4044. The use of a legitimate build is highly encouraged.\n\nUsing versions acquired from unofficial or illegal sources is not allowed.\n\nUsing maps from different versions is not allowed, this means you must use maps consistent with the version of the game you are running (i.e. you can't take maps from The Collector’s Edition and use them in 2707).\n\nConsole runs currently sit on the same leaderboards and follow the same rules as PC runs, with the exception of timing being done in Real Time. This is subject to change in the future.\n\n# **Commands and Binds**\n\nThe use, and binding of any command accessible from the pause menu is allowed. All cheat commands, console exclusive commands, and commands that change gameplay are not allowed with the exceptions being listed on the community Whitelist. If you have questions over whether a command is legal, please ask in source-help, or make a forum post on Half-Life 2 Speedrun.com page.\n\nExamples of **NOT** allowed console exclusive commands include wait, ent_remove, unpause,  use weapon_x, “- commands” (ex. -speed), toggle or BindToggle. These commands can never be executed by the player during the duration of the run.\n\nThe use of scripts or macros is not allowed. This includes Aliases, which are considered to be scripts.\n\nYou are allowed to bind the same command to multiple keys (i.e. +jump to mwheelup and mwheeldown).\n\nMultiple commands can also be bound to the same key. (i.e. bind x “save glitch;load glitch”.\n\nThe use of two input methods in a run at the same is not allowed. This means you cannot use a keyboard and mouse at the same time as a controller.\n\nSending analogue input via analogue keyboard is not allowed.\n\nYou are allowed to 1:1 remap keys through the use of external mouse and keyboard software to use keys that wouldn’t normally be recognized by the game. (ex. For using a mouse8 button in game)\n\nSPT and AHK are not allowed.\n\n# **Whitelist**\n\nThe community whitelist of console exclusive commands acts as both a set of quality of life commands, and commands that have had to be grandfathered in to maintain the current route.\n\n- **cl_showpos, reload**: these commands are the main exceptions that have been made in terms of console exclusive commands that change how the run is played out.\n\n- **toggle_duck**: Usually only bindable when using a controller.\n\n- **cl_showfps, net_graph**: two different ways of viewing your fps in game as opposed to viewing it with third party tools.\n\n- **mat_dxlevel: Must be set to either 90 or 95**. Players may lower the value from 95 for  performance reasons. Values under 90 result in modification of game physics. With an edited, **moderator approved** dxsupport.cfg it may be set to 80, but values under 80 are not allowed even with one, due to helping with visibility.\n\n- **r_portalsopenall 1:** quality of life command that opens up the rendering portals in order to draw the full game world when you skip a trigger that would handle it otherwise.\n\n- **fps_max 1-999: 999** is the max allowed value as anything over it will cause the game to enter a sort of timescaled like sped up state. Uncapping fps by setting fps_max to 0 is not allowed.\n\n- **viewmodel_fov 54-90**: serves as an allowed HUD modification. Going under 54 or above 90 is not allowed as it will cause the viewmodel to start disappearing. Disabling the viewmodel completely is not allowed.\n- **sv_max_queries_sec**: Can be increased to a value like 9 to prevent long loads from occuring.\n\n- **exec (limited)**: the use of exec to execute .cfg files is **only allowed for Save Deletion**. It may not be used to achieve anything else. The contents of a Save Deletion .cfg file should be save “”;reload.",
+                "type": "per-level",
+                "weblink": "https://www.speedrun.com/hl2/levels?h=Old_Engine&x=9d8p31lk"
+              },
+              {
+                "id": "l824pw25",
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/categories/l824pw25"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/ok6q991g"
+                  },
+                  {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/categories/l824pw25/variables"
+                  },
+                  {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/categories/l824pw25/records"
+                  },
+                  {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?category=l824pw25"
+                  },
+                  {
+                    "rel": "leaderboard",
+                    "uri": "https://www.speedrun.com/api/v1/leaderboards/ok6q991g/category/l824pw25"
+                  }
+                ],
+                "miscellaneous": false,
+                "name": "Old Engine",
+                "players": {
+                  "type": "exactly",
+                  "value": 1
+                },
+                "rules": "# **Version**\n\nHalf-Life 2 Old Engine runs must be done on one of the officially released versions of the game, **or** on a custom build running on Source 2006, verified by the mod team. The most common legitimate version of the game is 2707, while the most common mod versions are 2733 and 4044. The use of a legitimate build is highly encouraged.\n\nUsing versions acquired from unofficial or illegal sources is not allowed.\n\nUsing maps from different versions is not allowed, this means you must use maps consistent with the version of the game you are running (i.e. you can't take maps from The Collector’s Edition and use them in 2707).\n\nConsole runs currently sit on the same leaderboards and follow the same rules as PC runs, with the exception of timing being done in Real Time. This is subject to change in the future.",
+                "type": "per-game",
+                "weblink": "https://www.speedrun.com/hl2?h=Old_Engine&x=l824pw25"
+              },
+              {
+                "id": "ndx8661k",
+                "links": [
+                  {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/categories/ndx8661k"
+                  },
+                  {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/ok6q991g"
+                  },
+                  {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/categories/ndx8661k/variables"
+                  },
+                  {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/categories/ndx8661k/records"
+                  },
+                  {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?category=ndx8661k"
+                  }
+                ],
+                "miscellaneous": false,
+                "name": "Old Engine with Scripts",
+                "players": {
+                  "type": "exactly",
+                  "value": 1
+                },
+                "rules": "# IL Rules\n\nStart the chapter either from the menu or by starting the first map with the map command. Using a save for starting a run is only allowed in Point Insertion.\n\n# **Version**\n\nHalf-Life 2 Old Engine runs must be done on one of the officially released versions of the game, **or** on a custom build running on Source 2006, verified by the mod team. The most common legitimate version of the game is 2707, while the most common mod versions are 2733 and 4044. The use of a legitimate build is highly encouraged.\n\nUsing versions acquired from unofficial or illegal sources is not allowed.\n\nUsing maps from different versions is not allowed, this means you must use maps consistent with the version of the game you are running (i.e. you can't take maps from The Collector’s Edition and use them in 2707).\n\nConsole runs currently sit on the same leaderboards and follow the same rules as PC runs, with the exception of timing being done in Real Time. This is subject to change in the future.\n\n# **Commands and Binds**\n\nThe use, and binding of any command accessible from the pause menu is allowed. All cheat commands, console exclusive commands, and commands that change gameplay are not allowed with the exceptions being listed on the community Whitelist. If you have questions over whether a command is legal, please ask in source-help, or make a forum post on Half-Life 2 Speedrun.com page.\n\nExamples of **NOT** allowed console exclusive commands include ent_remove, unpause,  use weapon_x, “- commands” (ex. -speed), toggle or BindToggle. These commands can never be executed by the player during the duration of the run.\n\nThe use of scripts is allowed. Aliases are allowed as they are considered scripts.\n\nYou are allowed to bind the same command to multiple keys (i.e. +jump to mwheelup and mwheeldown).\n\nMultiple commands can also be bound to the same key. (i.e. bind x “save glitch;load glitch”.\n\nThe use of two input methods in a run at the same is not allowed. This means you cannot use a keyboard and mouse at the same time as a controller.\n\nSending analogue input via analogue keyboard is not allowed.\n\nYou are allowed to 1:1 remap keys through the use of external mouse and keyboard software to use keys that wouldn’t normally be recognized by the game. (ex. For using a mouse8 button in game)\n\nThe usage of Source Pause Tool (SPT) or AutoHotkey (AHK) is allowed, however, with limitations.\n\nAny script fully automating a trick or glitch is not allowed. An example of a script like this is the AHK J-Clip script.\n\nOnly a few specific SPT commands are allowed. These are listed in the whitelist below.\n\n# **Whitelist**\n\nThe community whitelist of console exclusive commands acts as both a set of quality of life commands, and commands that have had to be grandfathered in to maintain the current route.\n\n- **cl_showpos, reload:** these commands are the main exceptions that have been made in terms of console exclusive commands that change how the run is played out.\n- **mat_dxlevel: Must be set to either 90 or 95**. Players may lower the value from 95 for  performance reasons. Values under 90 result in modification of game physics. With an edited, **moderator approved** dxsupport.cfg it may be set to 80, but values under 80 are not allowed even with one, due to helping with visibility.\n- **r_portalsopenall 1**: quality of life command that opens up the rendering portals in order to draw the full game world when you skip a trigger that would handle it otherwise.\n- **toggle_duck**: Usually only bindable when using a controller.\n- **cl_showfps, net_graph**: two different ways of viewing your fps in game as opposed to viewing it with third party tools.\n- **fps_max 1-999: 999** is the max allowed value as anything over it will cause the game to enter a sort of timescaled like sped up state. Uncapping fps by setting fps_max to 0 is not allowed.\n- **viewmodel_fov 54-90**: serves as an allowed HUD modification. Going under 54 or above 90 is not allowed as it will cause the viewmodel to start disappearing. Disabling the viewmodel completely is not allowed.\n- **sv_max_queries_sec**: Can be increased to a value like 9 to prevent long loads from occuring.\n- **wait**: wait is the primary command with which scripts are created. Usage of it counts as using scripts.\n- **exec**: the use of exec to execute .cfg files is fully allowed in the scripted category.\n- **alias**: basic aliases act as scripts. Complicated aliases may fall under “Scripts automating tricks and glitches”.\n\nIn addition, the following SPT commands, meant to act as scripts:\n\n- **spt_autojump 1**\n- **spt_pause 1**\n- **+spt_spam** (ex. +spt_spam duck)\n- **spt_force_fov**",
+                "type": "per-level",
+                "weblink": "https://www.speedrun.com/hl2/levels?h=Old_Engine_with_Scripts&x=ndx8661k"
+              }
+            ],
+            "pagination": {
+              "offset": 0,
+              "max": 20,
+              "size": 6
+            },
+            "status": 200
+          }
