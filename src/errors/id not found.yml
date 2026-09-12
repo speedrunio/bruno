@@ -6,9 +6,6 @@ info:
 http:
   method: GET
   url: https://api.speedrun.io/src/games/{{slug}}
-  headers:
-    - name: Content-Type
-      value: application/json
   auth: inherit
 
 runtime:

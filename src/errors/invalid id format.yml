@@ -5,10 +5,7 @@ info:
 
 http:
   method: GET
-  url: https://api.speedrun.io/src/games/{{slug}}
-  headers:
-    - name: Content-Type
-      value: application/json
+  url: https://api.speedrun.io/src/runs/{{slug}}
   auth: inherit
 
 runtime:
@@ -26,9 +23,9 @@ settings:
 
 examples:
   - name: 6 character src id
-    description: HTTP 400 error when a game ID is not 8 characters long
+    description: HTTP 400 error when a run ID is not 8 characters long
     request:
-      url: https://api.speedrun.io/src/games/abc123
+      url: https://api.speedrun.io/src/runs/abc123
       method: GET
       headers:
         - name: Content-Type
