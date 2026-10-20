@@ -1,0 +1,823 @@
+info:
+  name: list users
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: https://api.speedrun.io/v1/users
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true
+
+examples:
+  - name: list the first 10
+    description: a list of the first 10 users using max=10, default sorted by name ascending
+    request:
+      url: https://api.speedrun.io/v1/users?max=10
+      method: GET
+      params:
+        - name: max
+          value: "10"
+          type: query
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: |-
+          {
+            "data": {
+              "users": [
+                {
+                  "hitbox": null,
+                  "location": {
+                    "country": {
+                      "code": "fr",
+                      "names": {
+                        "international": "France",
+                        "japanese": null
+                      }
+                    }
+                  },
+                  "names": {
+                    "international": "-",
+                    "japanese": null
+                  },
+                  "pronouns": null,
+                  "role": "user",
+                  "signup": "2018-11-04T14:06:17Z",
+                  "speedrunslive": null,
+                  "src_user_id": "0jm5vl4x",
+                  "srio_user_id": "1qfvheepize14",
+                  "twitch": null,
+                  "twitter": null,
+                  "youtube": null
+                },
+                {
+                  "hitbox": null,
+                  "location": null,
+                  "names": {
+                    "international": "--",
+                    "japanese": null
+                  },
+                  "pronouns": null,
+                  "role": "user",
+                  "signup": "2020-08-31T19:57:15Z",
+                  "speedrunslive": null,
+                  "src_user_id": "8e9mv17j",
+                  "srio_user_id": "1naktsmhgz3v6",
+                  "twitch": null,
+                  "twitter": null,
+                  "youtube": null
+                },
+                {
+                  "hitbox": null,
+                  "location": {
+                    "country": {
+                      "code": "de",
+                      "names": {
+                        "international": "Germany",
+                        "japanese": null
+                      }
+                    },
+                    "region": {
+                      "code": "de/be",
+                      "names": {
+                        "international": "Berlin, Germany",
+                        "japanese": null
+                      }
+                    }
+                  },
+                  "names": {
+                    "international": "---",
+                    "japanese": null
+                  },
+                  "pronouns": null,
+                  "role": "user",
+                  "signup": "2020-11-27T23:23:16Z",
+                  "speedrunslive": null,
+                  "src_user_id": "8gewo07j",
+                  "srio_user_id": "07h2cx3ymyy44",
+                  "twitch": null,
+                  "twitter": null,
+                  "youtube": null
+                },
+                {
+                  "hitbox": null,
+                  "location": null,
+                  "names": {
+                    "international": "----",
+                    "japanese": null
+                  },
+                  "pronouns": null,
+                  "role": "user",
+                  "signup": "2018-02-03T12:57:39Z",
+                  "speedrunslive": null,
+                  "src_user_id": "68w2y3z8",
+                  "srio_user_id": "1sw492xc1mbcr",
+                  "twitch": null,
+                  "twitter": null,
+                  "youtube": null
+                },
+                {
+                  "hitbox": null,
+                  "location": null,
+                  "names": {
+                    "international": "-------___",
+                    "japanese": null
+                  },
+                  "pronouns": null,
+                  "role": "user",
+                  "signup": "2019-04-08T18:24:00Z",
+                  "speedrunslive": null,
+                  "src_user_id": "0jm957e8",
+                  "srio_user_id": "120c18398ex7h",
+                  "twitch": null,
+                  "twitter": null,
+                  "youtube": null
+                },
+                {
+                  "hitbox": null,
+                  "location": null,
+                  "names": {
+                    "international": "---Dradon---",
+                    "japanese": null
+                  },
+                  "pronouns": null,
+                  "role": "user",
+                  "signup": "2018-03-02T00:47:49Z",
+                  "speedrunslive": null,
+                  "src_user_id": "qj2oly7x",
+                  "srio_user_id": "0erk4ent3ubtn",
+                  "twitch": null,
+                  "twitter": null,
+                  "youtube": null
+                },
+                {
+                  "hitbox": null,
+                  "location": {
+                    "country": {
+                      "code": "bd",
+                      "names": {
+                        "international": "Bangladesh",
+                        "japanese": null
+                      }
+                    }
+                  },
+                  "names": {
+                    "international": "---RNGesus---",
+                    "japanese": null
+                  },
+                  "pronouns": null,
+                  "role": "user",
+                  "signup": "2019-07-19T03:42:51Z",
+                  "speedrunslive": null,
+                  "src_user_id": "e8er6zdj",
+                  "srio_user_id": "084zehkqjtu3b",
+                  "twitch": null,
+                  "twitter": null,
+                  "youtube": null
+                },
+                {
+                  "hitbox": null,
+                  "location": {
+                    "country": {
+                      "code": "it",
+                      "names": {
+                        "international": "Italy",
+                        "japanese": null
+                      }
+                    }
+                  },
+                  "names": {
+                    "international": "---RO---DIMA",
+                    "japanese": null
+                  },
+                  "pronouns": null,
+                  "role": "user",
+                  "signup": "2017-11-14T21:44:56Z",
+                  "speedrunslive": null,
+                  "src_user_id": "qjn560wj",
+                  "srio_user_id": "07q2irefd2ns3",
+                  "twitch": null,
+                  "twitter": null,
+                  "youtube": null
+                },
+                {
+                  "hitbox": null,
+                  "location": {
+                    "country": {
+                      "code": "lu",
+                      "names": {
+                        "international": "Luxembourg",
+                        "japanese": null
+                      }
+                    }
+                  },
+                  "names": {
+                    "international": "---Unknown---",
+                    "japanese": null
+                  },
+                  "pronouns": null,
+                  "role": "user",
+                  "signup": "2020-11-16T16:39:12Z",
+                  "speedrunslive": null,
+                  "src_user_id": "x7qvr0r8",
+                  "srio_user_id": "0uobs5u2nrmzg",
+                  "twitch": null,
+                  "twitter": null,
+                  "youtube": null
+                },
+                {
+                  "hitbox": null,
+                  "location": {
+                    "country": {
+                      "code": "za",
+                      "names": {
+                        "international": "South Africa",
+                        "japanese": null
+                      }
+                    }
+                  },
+                  "names": {
+                    "international": "--.Acearino.nVbs.--",
+                    "japanese": null
+                  },
+                  "pronouns": null,
+                  "role": "user",
+                  "signup": "2020-08-15T15:36:59Z",
+                  "speedrunslive": null,
+                  "src_user_id": "8rpyyowj",
+                  "srio_user_id": "0yn4vbhg9yfjl",
+                  "twitch": {
+                    "uri": "https://www.twitch.tv/acearinoza"
+                  },
+                  "twitter": {
+                    "uri": "https://www.twitter.com/AcearinoZA"
+                  },
+                  "youtube": {
+                    "uri": "https://www.youtube.com/channel/UCttwkOoYtaoL3cSlUsQcdMg%3Fview_assubscriber"
+                  }
+                }
+              ]
+            },
+            "meta": {
+              "pagination": {
+                "offset": 0,
+                "max": 10,
+                "size": 10
+              },
+              "schema": "1.0",
+              "sources": [
+                {
+                  "license": "CC-BY-NC-4.0",
+                  "name": "speedrun.com",
+                  "role": "authority",
+                  "timestamp": {
+                    "collected": {
+                      "from": "2026-05-29T05:56:28Z",
+                      "to": "2026-09-08T12:09:52Z"
+                    }
+                  },
+                  "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+                }
+              ],
+              "usage": {
+                "data_bytes": 9297
+              }
+            },
+            "status": 200
+          }
+  - name: recent signups
+    description: a list of the 20 most recent users signups
+    request:
+      url: https://api.speedrun.io/v1/users?orderby=signup&direction=desc
+      method: GET
+      params:
+        - name: orderby
+          value: signup
+          type: query
+        - name: direction
+          value: desc
+          type: query
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: |-
+          {
+            "data": {
+              "users": [
+                {
+                  "hitbox": null,
+                  "location": {
+                    "country": {
+                      "code": "us",
+                      "names": {
+                        "international": "United States",
+                        "japanese": null
+                      }
+                    }
+                  },
+                  "names": {
+                    "international": "SanosukeEindride",
+                    "japanese": null
+                  },
+                  "pronouns": null,
+                  "role": "user",
+                  "signup": "2026-09-09T15:51:19Z",
+                  "speedrunslive": null,
+                  "src_user_id": "jol6kw7j",
+                  "srio_user_id": "1vmarsvzuei8n",
+                  "twitch": null,
+                  "twitter": null,
+                  "youtube": null
+                },
+                {
+                  "hitbox": null,
+                  "location": {
+                    "country": {
+                      "code": "gb/eng",
+                      "names": {
+                        "international": "England",
+                        "japanese": null
+                      }
+                    },
+                    "region": {
+                      "code": "gb/eng/lin",
+                      "names": {
+                        "international": "Lincolnshire, England",
+                        "japanese": null
+                      }
+                    }
+                  },
+                  "names": {
+                    "international": "Sylvamy",
+                    "japanese": null
+                  },
+                  "pronouns": "She/Her, They/Them",
+                  "role": "user",
+                  "signup": "2026-09-09T10:53:21Z",
+                  "speedrunslive": null,
+                  "src_user_id": "x3r0652x",
+                  "srio_user_id": "08ltr5t0gwjrq",
+                  "twitch": null,
+                  "twitter": null,
+                  "youtube": null
+                },
+                {
+                  "hitbox": null,
+                  "location": null,
+                  "names": {
+                    "international": "glunky",
+                    "japanese": null
+                  },
+                  "pronouns": null,
+                  "role": "user",
+                  "signup": "2026-09-09T03:16:33Z",
+                  "speedrunslive": null,
+                  "src_user_id": "x3r0wwqx",
+                  "srio_user_id": "1w2tzxcszdc84",
+                  "twitch": null,
+                  "twitter": null,
+                  "youtube": null
+                },
+                {
+                  "hitbox": null,
+                  "location": {
+                    "country": {
+                      "code": "us",
+                      "names": {
+                        "international": "United States",
+                        "japanese": null
+                      }
+                    }
+                  },
+                  "names": {
+                    "international": "JTheGameGuy",
+                    "japanese": null
+                  },
+                  "pronouns": null,
+                  "role": "user",
+                  "signup": "2026-09-09T02:25:35Z",
+                  "speedrunslive": null,
+                  "src_user_id": "8qne6378",
+                  "srio_user_id": "1tw3buadaqp57",
+                  "twitch": null,
+                  "twitter": null,
+                  "youtube": null
+                },
+                {
+                  "hitbox": null,
+                  "location": null,
+                  "names": {
+                    "international": "GamingwithHaiderAli",
+                    "japanese": null
+                  },
+                  "pronouns": null,
+                  "role": "user",
+                  "signup": "2026-09-09T02:07:03Z",
+                  "speedrunslive": null,
+                  "src_user_id": "8g9w0ryx",
+                  "srio_user_id": "0053ovq0zhig0",
+                  "twitch": null,
+                  "twitter": null,
+                  "youtube": null
+                },
+                {
+                  "hitbox": null,
+                  "location": {
+                    "country": {
+                      "code": "dz",
+                      "names": {
+                        "international": "Algeria",
+                        "japanese": null
+                      }
+                    }
+                  },
+                  "names": {
+                    "international": "_YOV",
+                    "japanese": null
+                  },
+                  "pronouns": null,
+                  "role": "user",
+                  "signup": "2026-09-08T12:55:44Z",
+                  "speedrunslive": null,
+                  "src_user_id": "8e5p60d8",
+                  "srio_user_id": "0wwv1tfbp02fl",
+                  "twitch": null,
+                  "twitter": null,
+                  "youtube": null
+                },
+                {
+                  "hitbox": null,
+                  "location": {
+                    "country": {
+                      "code": "it",
+                      "names": {
+                        "international": "Italy",
+                        "japanese": null
+                      }
+                    }
+                  },
+                  "names": {
+                    "international": "FuntimeFreddy0_1",
+                    "japanese": null
+                  },
+                  "pronouns": null,
+                  "role": "user",
+                  "signup": "2026-09-08T12:37:36Z",
+                  "speedrunslive": null,
+                  "src_user_id": "jmy1l5yj",
+                  "srio_user_id": "1kzxcy0gu0ryu",
+                  "twitch": null,
+                  "twitter": null,
+                  "youtube": null
+                },
+                {
+                  "hitbox": null,
+                  "location": {
+                    "country": {
+                      "code": "it",
+                      "names": {
+                        "international": "Italy",
+                        "japanese": null
+                      }
+                    }
+                  },
+                  "names": {
+                    "international": "LoreGMD",
+                    "japanese": null
+                  },
+                  "pronouns": null,
+                  "role": "user",
+                  "signup": "2026-09-08T07:06:50Z",
+                  "speedrunslive": null,
+                  "src_user_id": "8vylkev8",
+                  "srio_user_id": "1ckowqng04jfb",
+                  "twitch": null,
+                  "twitter": null,
+                  "youtube": null
+                },
+                {
+                  "hitbox": null,
+                  "location": null,
+                  "names": {
+                    "international": "Ikaroxen",
+                    "japanese": null
+                  },
+                  "pronouns": null,
+                  "role": "user",
+                  "signup": "2026-09-07T21:49:51Z",
+                  "speedrunslive": null,
+                  "src_user_id": "xy945dvj",
+                  "srio_user_id": "1cmqw8xyhyyp4",
+                  "twitch": null,
+                  "twitter": null,
+                  "youtube": null
+                },
+                {
+                  "hitbox": null,
+                  "location": {
+                    "country": {
+                      "code": "iq",
+                      "names": {
+                        "international": "Iraq",
+                        "japanese": null
+                      }
+                    }
+                  },
+                  "names": {
+                    "international": "Iraqrun",
+                    "japanese": null
+                  },
+                  "pronouns": null,
+                  "role": "user",
+                  "signup": "2026-09-07T20:38:08Z",
+                  "speedrunslive": null,
+                  "src_user_id": "jmy1o94j",
+                  "srio_user_id": "1h591ru2p47vi",
+                  "twitch": null,
+                  "twitter": null,
+                  "youtube": null
+                },
+                {
+                  "hitbox": null,
+                  "location": {
+                    "country": {
+                      "code": "br",
+                      "names": {
+                        "international": "Brazil",
+                        "japanese": null
+                      }
+                    }
+                  },
+                  "names": {
+                    "international": "KeyjoGoesOnSpeed",
+                    "japanese": null
+                  },
+                  "pronouns": null,
+                  "role": "user",
+                  "signup": "2026-09-07T13:19:16Z",
+                  "speedrunslive": null,
+                  "src_user_id": "xkg9yk6j",
+                  "srio_user_id": "12ggx9c40dcs6",
+                  "twitch": null,
+                  "twitter": null,
+                  "youtube": null
+                },
+                {
+                  "hitbox": null,
+                  "location": {
+                    "country": {
+                      "code": "jp",
+                      "names": {
+                        "international": "Japan",
+                        "japanese": null
+                      }
+                    }
+                  },
+                  "names": {
+                    "international": "cupheee",
+                    "japanese": null
+                  },
+                  "pronouns": null,
+                  "role": "user",
+                  "signup": "2026-09-07T11:48:33Z",
+                  "speedrunslive": null,
+                  "src_user_id": "jn5o452j",
+                  "srio_user_id": "1aymj55aa3zr4",
+                  "twitch": null,
+                  "twitter": null,
+                  "youtube": null
+                },
+                {
+                  "hitbox": null,
+                  "location": {
+                    "country": {
+                      "code": "ca",
+                      "names": {
+                        "international": "Canada",
+                        "japanese": null
+                      }
+                    }
+                  },
+                  "names": {
+                    "international": "DarkFarno",
+                    "japanese": null
+                  },
+                  "pronouns": null,
+                  "role": "user",
+                  "signup": "2026-09-07T08:09:47Z",
+                  "speedrunslive": null,
+                  "src_user_id": "8dy6qog8",
+                  "srio_user_id": "03x0otwjjurzl",
+                  "twitch": null,
+                  "twitter": null,
+                  "youtube": null
+                },
+                {
+                  "hitbox": null,
+                  "location": {
+                    "country": {
+                      "code": "gb",
+                      "names": {
+                        "international": "United Kingdom",
+                        "japanese": null
+                      }
+                    }
+                  },
+                  "names": {
+                    "international": "FancyThatVA",
+                    "japanese": null
+                  },
+                  "pronouns": "She/Her",
+                  "role": "user",
+                  "signup": "2026-09-07T03:49:26Z",
+                  "speedrunslive": null,
+                  "src_user_id": "joly6llj",
+                  "srio_user_id": "0bgeb1rq4shbk",
+                  "twitch": null,
+                  "twitter": null,
+                  "youtube": null
+                },
+                {
+                  "hitbox": null,
+                  "location": {
+                    "country": {
+                      "code": "ve",
+                      "names": {
+                        "international": "Venezuela",
+                        "japanese": null
+                      }
+                    }
+                  },
+                  "names": {
+                    "international": "Deivimax",
+                    "japanese": null
+                  },
+                  "pronouns": null,
+                  "role": "user",
+                  "signup": "2026-09-07T02:46:12Z",
+                  "speedrunslive": null,
+                  "src_user_id": "x3r20pex",
+                  "srio_user_id": "1qckthk5qonqh",
+                  "twitch": null,
+                  "twitter": null,
+                  "youtube": null
+                },
+                {
+                  "hitbox": null,
+                  "location": {
+                    "country": {
+                      "code": "id",
+                      "names": {
+                        "international": "Indonesia",
+                        "japanese": null
+                      }
+                    }
+                  },
+                  "names": {
+                    "international": "Dhimzskuyyy",
+                    "japanese": null
+                  },
+                  "pronouns": null,
+                  "role": "user",
+                  "signup": "2026-09-07T01:21:36Z",
+                  "speedrunslive": null,
+                  "src_user_id": "8w54n9z8",
+                  "srio_user_id": "19z0rjz0w1971",
+                  "twitch": null,
+                  "twitter": null,
+                  "youtube": null
+                },
+                {
+                  "hitbox": null,
+                  "location": {
+                    "country": {
+                      "code": "es",
+                      "names": {
+                        "international": "Spain",
+                        "japanese": null
+                      }
+                    }
+                  },
+                  "names": {
+                    "international": "mishifuarroz",
+                    "japanese": null
+                  },
+                  "pronouns": null,
+                  "role": "user",
+                  "signup": "2026-09-06T19:07:13Z",
+                  "speedrunslive": null,
+                  "src_user_id": "86kood0x",
+                  "srio_user_id": "0ikc2t0vgw5jh",
+                  "twitch": null,
+                  "twitter": null,
+                  "youtube": {
+                    "uri": "https://www.youtube.com/user/MICHIGAMER25"
+                  }
+                },
+                {
+                  "hitbox": null,
+                  "location": {
+                    "country": {
+                      "code": "dz",
+                      "names": {
+                        "international": "Algeria",
+                        "japanese": null
+                      }
+                    }
+                  },
+                  "names": {
+                    "international": "PyshonadeBan2009",
+                    "japanese": null
+                  },
+                  "pronouns": null,
+                  "role": "user",
+                  "signup": "2026-09-06T18:29:46Z",
+                  "speedrunslive": null,
+                  "src_user_id": "jolyyg7j",
+                  "srio_user_id": "1dx8lb5x0msqq",
+                  "twitch": null,
+                  "twitter": null,
+                  "youtube": null
+                },
+                {
+                  "hitbox": null,
+                  "location": null,
+                  "names": {
+                    "international": "LeoBryant",
+                    "japanese": null
+                  },
+                  "pronouns": null,
+                  "role": "user",
+                  "signup": "2026-09-06T17:40:41Z",
+                  "speedrunslive": null,
+                  "src_user_id": "8vy11rn8",
+                  "srio_user_id": "0rj7ovh9hjz1i",
+                  "twitch": null,
+                  "twitter": null,
+                  "youtube": null
+                },
+                {
+                  "hitbox": null,
+                  "location": {
+                    "country": {
+                      "code": "ca",
+                      "names": {
+                        "international": "Canada",
+                        "japanese": null
+                      }
+                    }
+                  },
+                  "names": {
+                    "international": "VeryAquaLikePerson",
+                    "japanese": null
+                  },
+                  "pronouns": null,
+                  "role": "user",
+                  "signup": "2026-09-06T17:09:25Z",
+                  "speedrunslive": null,
+                  "src_user_id": "8qnll6q8",
+                  "srio_user_id": "1v0x7hp4vmzuf",
+                  "twitch": null,
+                  "twitter": null,
+                  "youtube": null
+                }
+              ]
+            },
+            "meta": {
+              "pagination": {
+                "offset": 0,
+                "max": 20,
+                "size": 20
+              },
+              "schema": "1.0",
+              "sources": [
+                {
+                  "license": "CC-BY-NC-4.0",
+                  "name": "speedrun.com",
+                  "role": "authority",
+                  "timestamp": {
+                    "collected": {
+                      "from": "2026-09-08T14:43:27Z",
+                      "to": "2026-09-10T14:11:15Z"
+                    }
+                  },
+                  "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+                }
+              ],
+              "usage": {
+                "data_bytes": 17626
+              }
+            },
+            "status": 200
+          }

@@ -1,0 +1,299 @@
+info:
+  name: get run
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: https://api.speedrun.io/v1/runs/{{slug}}
+  auth: inherit
+
+runtime:
+  variables:
+    - name: slug
+      value: m74q664m
+      description: example run id
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true
+
+examples:
+  - name: hollow knight any% nmg wr
+    description: use an ID to get a specific nmg run
+    request:
+      url: https://api.speedrun.io/v1/runs/m74q664m
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: |-
+          {
+            "data": {
+              "runs": [
+                {
+                  "category": "02q8o4p2",
+                  "comment": null,
+                  "date": "2026-07-13",
+                  "game": "76rqmld8",
+                  "level": null,
+                  "players": [
+                    {
+                      "id": "x3w7wrqj",
+                      "rel": "user",
+                      "uri": "https://www.speedrun.com/api/v1/users/x3w7wrqj"
+                    }
+                  ],
+                  "splits": null,
+                  "src_run_id": "m74q664m",
+                  "srio_run_id": "12ry0ru9jup4v",
+                  "status": {
+                    "examiner": "xk1np77j",
+                    "status": "verified",
+                    "verify-date": "2026-07-13T15:29:34Z"
+                  },
+                  "submitted": "2026-07-13T06:08:54Z",
+                  "system": {
+                    "emulated": false,
+                    "platform": "8gej2n93",
+                    "region": null
+                  },
+                  "times": {
+                    "ingame": null,
+                    "ingame_t": 0,
+                    "primary": "PT30M45S",
+                    "primary_t": 1845,
+                    "realtime": "PT36M35S",
+                    "realtime_noloads": "PT30M45S",
+                    "realtime_noloads_t": 1845,
+                    "realtime_t": 2195
+                  },
+                  "values": {
+                    "0nwyk5x8": "14o4rpwq",
+                    "789vev3n": "139r7ek1",
+                    "onvkzmlm": "klrjo0mq",
+                    "yn2p3085": "81w7r6vq"
+                  },
+                  "videos": {
+                    "links": [
+                      {
+                        "uri": "https://youtu.be/zqMChIUh4Ks"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "meta": {
+              "schema": "1.0",
+              "sources": [
+                {
+                  "license": "CC-BY-NC-4.0",
+                  "name": "speedrun.com",
+                  "role": "authority",
+                  "timestamp": {
+                    "collected": {
+                      "on": "2026-08-27T16:35:33Z"
+                    }
+                  },
+                  "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+                }
+              ],
+              "usage": {
+                "data_bytes": 1180
+              }
+            },
+            "status": 200
+          }
+  - name: plateup! any% trio
+    description: use an ID to get a specific nmg run
+    request:
+      url: https://api.speedrun.io/v1/runs/zx5qoq5m
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: |-
+          {
+            "data": {
+              "runs": [
+                {
+                  "category": "z275n0gk",
+                  "comment": null,
+                  "date": "2025-12-30",
+                  "game": "yd4kq3k6",
+                  "level": null,
+                  "players": [
+                    {
+                      "id": "8qr2kd0j",
+                      "rel": "user",
+                      "uri": "https://www.speedrun.com/api/v1/users/8qr2kd0j"
+                    },
+                    {
+                      "id": "8q5ypnw8",
+                      "rel": "user",
+                      "uri": "https://www.speedrun.com/api/v1/users/8q5ypnw8"
+                    },
+                    {
+                      "id": "xkpnd56j",
+                      "rel": "user",
+                      "uri": "https://www.speedrun.com/api/v1/users/xkpnd56j"
+                    }
+                  ],
+                  "splits": null,
+                  "src_run_id": "zx5qoq5m",
+                  "srio_run_id": "0ahdvrdxmv4bq",
+                  "status": {
+                    "examiner": "jm7z644j",
+                    "status": "verified",
+                    "verify-date": "2026-01-11T14:56:26Z"
+                  },
+                  "submitted": "2025-12-31T23:56:11Z",
+                  "system": {
+                    "emulated": false,
+                    "platform": "8gej2n93",
+                    "region": null
+                  },
+                  "times": {
+                    "ingame": null,
+                    "ingame_t": 0,
+                    "primary": "PT18M50.410S",
+                    "primary_t": 1130.41,
+                    "realtime": "PT18M50.410S",
+                    "realtime_noloads": null,
+                    "realtime_noloads_t": 0,
+                    "realtime_t": 1130.41
+                  },
+                  "values": {
+                    "0nwgp558": "qoxpenpq",
+                    "2lg135el": "jq6dmm71",
+                    "2lge25o8": "1w4dp0vq",
+                    "5lyx19gn": "klrgm92q",
+                    "6njy11vn": "qvvx3vrq",
+                    "p855yjv8": "139806r1",
+                    "wl3d19v8": "5lm5yy4q",
+                    "wlekw94l": "81p9jjkq"
+                  },
+                  "videos": {
+                    "links": [
+                      {
+                        "uri": "https://youtu.be/0wWGwP3yjBU"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "meta": {
+              "schema": "1.0",
+              "sources": [
+                {
+                  "license": "CC-BY-NC-4.0",
+                  "name": "speedrun.com",
+                  "role": "authority",
+                  "timestamp": {
+                    "collected": {
+                      "on": "2026-05-28T11:07:21Z"
+                    }
+                  },
+                  "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+                }
+              ],
+              "usage": {
+                "data_bytes": 1440
+              }
+            },
+            "status": 200
+          }
+  - name: nex machina master
+    description: use an ID to get a specific nmg run
+    request:
+      url: https://api.speedrun.io/v1/runs/z1rdqxjm
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: |-
+          {
+            "data": {
+              "runs": [
+                {
+                  "category": "z271zxg2",
+                  "comment": "Would have pbed by a lot if i didn't get Smartbomb on the final boss.",
+                  "date": "2021-04-11",
+                  "game": "k6qejz6g",
+                  "level": null,
+                  "players": [
+                    {
+                      "id": "kjplw0k8",
+                      "rel": "user",
+                      "uri": "https://www.speedrun.com/api/v1/users/kjplw0k8"
+                    }
+                  ],
+                  "splits": null,
+                  "src_run_id": "z1rdqxjm",
+                  "srio_run_id": "0phofncdjk634",
+                  "status": {
+                    "examiner": "kjplw0k8",
+                    "status": "verified",
+                    "verify-date": "2021-04-11T14:43:43Z"
+                  },
+                  "submitted": "2021-04-11T14:43:43Z",
+                  "system": {
+                    "emulated": false,
+                    "platform": "8gej2n93",
+                    "region": null
+                  },
+                  "times": {
+                    "ingame": null,
+                    "ingame_t": 0,
+                    "primary": "PT24M54.210S",
+                    "primary_t": 1494.21,
+                    "realtime": "PT24M54.210S",
+                    "realtime_noloads": null,
+                    "realtime_noloads_t": 0,
+                    "realtime_t": 1494.21
+                  },
+                  "values": {
+                    "5ly7z09l": "4qy3z42l"
+                  },
+                  "videos": {
+                    "links": [
+                      {
+                        "uri": "https://youtu.be/T5bgsC-XNhg"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "meta": {
+              "schema": "1.0",
+              "sources": [
+                {
+                  "license": "CC-BY-NC-4.0",
+                  "name": "speedrun.com",
+                  "role": "authority",
+                  "timestamp": {
+                    "collected": {
+                      "on": "2026-05-26T12:53:54Z"
+                    }
+                  },
+                  "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+                }
+              ],
+              "usage": {
+                "data_bytes": 1185
+              }
+            },
+            "status": 200
+          }

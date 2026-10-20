@@ -1,0 +1,271 @@
+info:
+  name: list series
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: https://api.speedrun.io/v1/series
+  headers:
+    - name: Content-Type
+      value: application/json
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true
+
+examples:
+  - name: list the first 10
+    description: a list of the first 10 series using max=10, default sorted by name ascending
+    request:
+      url: https://api.speedrun.io/v1/series?max=10
+      method: GET
+      params:
+        - name: max
+          value: "10"
+          type: query
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: |-
+          {
+            "data": {
+              "series": [
+                {
+                  "abbreviation": "Senko_no_Ronde_Series",
+                  "created": "2024-06-05T17:23:40Z",
+                  "discord": "https://discord.gg/6Ay9bmb",
+                  "moderators": {
+                    "zxzzvlrx": "super-moderator"
+                  },
+                  "names": {
+                    "international": " Senko no Ronde Series",
+                    "japanese": null
+                  },
+                  "src_series_id": "q4zpejvn",
+                  "srio_series_id": "0r0k4sstu8446"
+                },
+                {
+                  "abbreviation": ".hack",
+                  "created": "2015-11-19T03:09:47Z",
+                  "discord": "",
+                  "moderators": {
+                    "48ge6kyj": "super-moderator",
+                    "68we7q8g": "moderator",
+                    "qjoee786": "moderator"
+                  },
+                  "names": {
+                    "international": ".hack//",
+                    "japanese": null
+                  },
+                  "src_series_id": "8nwjpj7y",
+                  "srio_series_id": "0z7tmoamc1z49"
+                },
+                {
+                  "abbreviation": "10_gnomes",
+                  "created": "2017-11-29T04:56:33Z",
+                  "discord": "https://discord.gg/xxe8cNG",
+                  "moderators": {},
+                  "names": {
+                    "international": "10 Gnomes",
+                    "japanese": null
+                  },
+                  "src_series_id": "m72kkx17",
+                  "srio_series_id": "1ql5t956n3cuz"
+                },
+                {
+                  "abbreviation": "10_second_ninja",
+                  "created": "2017-06-07T03:36:19Z",
+                  "discord": "",
+                  "moderators": {
+                    "98rppqqj": "super-moderator",
+                    "kj92mw78": "moderator",
+                    "v811kr8p": "moderator"
+                  },
+                  "names": {
+                    "international": "10 Second Ninja",
+                    "japanese": null
+                  },
+                  "src_series_id": "r4gd1141",
+                  "srio_series_id": "18thlycy5idsu"
+                },
+                {
+                  "abbreviation": "100_Cats_Series",
+                  "created": "2025-04-30T16:31:51Z",
+                  "discord": null,
+                  "moderators": {
+                    "xz769wnj": "moderator"
+                  },
+                  "names": {
+                    "international": "100 Cats Series",
+                    "japanese": null
+                  },
+                  "src_series_id": "643kyw3n",
+                  "srio_series_id": "1bp3lb2nfh2zt"
+                },
+                {
+                  "abbreviation": "100_hidden",
+                  "created": "2023-07-10T15:37:12Z",
+                  "discord": null,
+                  "moderators": {},
+                  "names": {
+                    "international": "100 Hidden",
+                    "japanese": null
+                  },
+                  "src_series_id": "g452v5m4",
+                  "srio_series_id": "0mnbjdztdx3i0"
+                },
+                {
+                  "abbreviation": "101in1",
+                  "created": "2022-02-04T14:26:54Z",
+                  "discord": "",
+                  "moderators": {},
+                  "names": {
+                    "international": "101-in-1",
+                    "japanese": null
+                  },
+                  "src_series_id": "5nd0g9p7",
+                  "srio_series_id": "0to65zu3i54tk"
+                },
+                {
+                  "abbreviation": "1080_snowboarding",
+                  "created": null,
+                  "discord": "",
+                  "moderators": {
+                    "zx7ewmy8": "super-moderator"
+                  },
+                  "names": {
+                    "international": "1080°",
+                    "japanese": null
+                  },
+                  "src_series_id": "vnv30070",
+                  "srio_series_id": "16y9fwh3q1s0k"
+                },
+                {
+                  "abbreviation": "12loh",
+                  "created": "2017-04-30T03:04:04Z",
+                  "discord": "https://discord.gg/arP5R97wyN",
+                  "moderators": {
+                    "dx3r222x": "super-moderator"
+                  },
+                  "names": {
+                    "international": "12 Labours of Hercules",
+                    "japanese": null
+                  },
+                  "src_series_id": "34jdoo4o",
+                  "srio_series_id": "1704infgulqc5"
+                },
+                {
+                  "abbreviation": "12_Locks",
+                  "created": "2026-04-25T14:32:13Z",
+                  "discord": null,
+                  "moderators": {
+                    "jm3vm3y8": "moderator"
+                  },
+                  "names": {
+                    "international": "12 Locks",
+                    "japanese": null
+                  },
+                  "src_series_id": "qnl5eoo7",
+                  "srio_series_id": "000b1ulg490ft"
+                }
+              ]
+            },
+            "meta": {
+              "pagination": {
+                "offset": 0,
+                "max": 10,
+                "size": 10
+              },
+              "schema": "1.0",
+              "sources": [
+                {
+                  "license": "CC-BY-NC-4.0",
+                  "name": "speedrun.com",
+                  "role": "authority",
+                  "timestamp": {
+                    "collected": {
+                      "from": "2026-05-24T06:36:42Z",
+                      "to": "2026-05-24T06:36:42Z"
+                    }
+                  },
+                  "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+                }
+              ],
+              "usage": {
+                "data_bytes": 11860
+              }
+            },
+            "status": 200
+          }
+  - name: filter by abbreviation
+    description: a list of series matching by abbreviation
+    request:
+      url: https://api.speedrun.io/v1/series?abbreviation=metroid
+      method: GET
+      params:
+        - name: abbreviation
+          value: metroid
+          type: query
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: |-
+          {
+            "data": {
+              "series": [
+                {
+                  "abbreviation": "metroid",
+                  "created": "2015-02-09T22:06:06Z",
+                  "discord": "",
+                  "moderators": {
+                    "48g30m7x": "super-moderator",
+                    "o863k58z": "super-moderator",
+                    "qj2wdpjk": "super-moderator",
+                    "qjol50j6": "super-moderator",
+                    "zx7yvyx7": "super-moderator"
+                  },
+                  "names": {
+                    "international": "Metroid",
+                    "japanese": null
+                  },
+                  "src_series_id": "y4rgq271",
+                  "srio_series_id": "1toy1wud4g9gb"
+                }
+              ]
+            },
+            "meta": {
+              "pagination": {
+                "offset": 0,
+                "max": 20,
+                "size": 1
+              },
+              "schema": "1.0",
+              "sources": [
+                {
+                  "license": "CC-BY-NC-4.0",
+                  "name": "speedrun.com",
+                  "role": "authority",
+                  "timestamp": {
+                    "collected": {
+                      "from": "2026-05-24T06:37:49Z",
+                      "to": "2026-05-24T06:37:49Z"
+                    }
+                  },
+                  "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+                }
+              ],
+              "usage": {
+                "data_bytes": 1422
+              }
+            },
+            "status": 200
+          }

@@ -1,0 +1,321 @@
+info:
+  name: list game categories by id
+  type: http
+  seq: 4
+
+http:
+  method: GET
+  url: https://api.speedrun.io/v1/games/{{slug}}/categories
+  auth: inherit
+
+runtime:
+  variables:
+    - name: slug
+      value: 3dxkz0v1
+      description: example game id
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true
+
+examples:
+  - name: metroid dread
+    description: use an ID to list the categories for a specific game
+    request:
+      url: https://api.speedrun.io/v1/games/3dxkz0v1/categories
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: |-
+          {
+            "data": {
+              "categories": [
+                {
+                  "miscellaneous": false,
+                  "name": "0%",
+                  "players": {
+                    "type": "exactly",
+                    "value": 1
+                  },
+                  "rules": "**In this category, video proof is always required.**\n\n---",
+                  "src_category_id": "5dw1v5nk",
+                  "srio_category_id": "0rnbxewqzdj8c",
+                  "type": "per-game"
+                },
+                {
+                  "miscellaneous": false,
+                  "name": "100%",
+                  "players": {
+                    "type": "exactly",
+                    "value": 1
+                  },
+                  "rules": "**In this category, you must submit a complete, contiguous video recording of your run only if BOTH of the following are true:**\n\n- **Your run is faster than 2h00m00s RTA (Real Time Attack)**\n- **Your run is ranked 15th or better**\n\n---",
+                  "src_category_id": "mkex8zxd",
+                  "srio_category_id": "0zsxj0cb32is2",
+                  "type": "per-game"
+                },
+                {
+                  "miscellaneous": false,
+                  "name": "All Bosses",
+                  "players": {
+                    "type": "exactly",
+                    "value": 1
+                  },
+                  "rules": "**In this category, you must submit a complete, contiguous video recording of your run only if BOTH of the following are true:**\n\n- **Your run is faster than 1h45m00s RTA (Real Time Attack)**\n- **Your run is ranked 15th or better**\n\n---",
+                  "src_category_id": "ndx3qjod",
+                  "srio_category_id": "1sd3fjrhbenlt",
+                  "type": "per-game"
+                },
+                {
+                  "miscellaneous": false,
+                  "name": "Any%",
+                  "players": {
+                    "type": "exactly",
+                    "value": 1
+                  },
+                  "rules": "**In this category, you must submit a complete, contiguous video recording of your run only if BOTH of the following are true:**\n\n- **Your run is faster than 1h30m00s RTA (Real Time Attack)**\n- **Your run is ranked 30th or better**\n\n---",
+                  "src_category_id": "9kv83mjd",
+                  "srio_category_id": "18dd29hi26r1l",
+                  "type": "per-game"
+                },
+                {
+                  "miscellaneous": false,
+                  "name": "Boss Rush",
+                  "players": {
+                    "type": "exactly",
+                    "value": 1
+                  },
+                  "rules": "**In this category, you must submit a complete, contiguous video recording of your run if it has an In-Game Time (IGT) faster than 8m00s.**\n\n---\n\n# **Timing**\n\nBoss Rush categories are timed with IGT.",
+                  "src_category_id": "9kvrw802",
+                  "srio_category_id": "18k0ig5li1e6b",
+                  "type": "per-game"
+                },
+                {
+                  "miscellaneous": false,
+                  "name": "Boss Rush (Practice Mode)",
+                  "players": {
+                    "type": "up-to",
+                    "value": 1
+                  },
+                  "rules": "# Individual Level  (IL) Video Proof\n\n**For Individual Levels (ILs), proof is always required.** Your IL must have footage of the \"Boss Rush Practice\" or \"Dread Rush Practice\" screen at the **end** of an individual practice attempt (*after* you have defeated the boss you are challenging). ILs that do not have this footage, or ILs that are clipped from full Boss Rush runs **will be rejected**.\n\nIf your level and your \"Boss Rush Practice\" end screen both fit within the Nintendo Switch video capture maximum video length (30 seconds), you may submit videos recorded on the Switch itself. You may not stitch multiple Nintendo Switch video clips together for submission. If your footage is longer than 30 seconds, please use a capture card instead.\n\n---",
+                  "src_category_id": "02qzrop2",
+                  "srio_category_id": "184hx5c9zgzwf",
+                  "type": "per-level"
+                },
+                {
+                  "miscellaneous": false,
+                  "name": "Legacy",
+                  "players": {
+                    "type": "exactly",
+                    "value": 1
+                  },
+                  "rules": "",
+                  "src_category_id": "rkln5vr2",
+                  "srio_category_id": "0mchxidp2uczz",
+                  "type": "per-game"
+                },
+                {
+                  "miscellaneous": false,
+                  "name": "Minimum Items",
+                  "players": {
+                    "type": "exactly",
+                    "value": 1
+                  },
+                  "rules": "**In this category, video proof is always required.**\n\n---",
+                  "src_category_id": "ndx3z4jd",
+                  "srio_category_id": "1262hxukntcwl",
+                  "type": "per-game"
+                },
+                {
+                  "miscellaneous": true,
+                  "name": "Minimum Items (Obsoleted)",
+                  "players": {
+                    "type": "exactly",
+                    "value": 1
+                  },
+                  "rules": "**This board is for archival purposes only. Please don't submit runs to this board.**\n\nRuns from previous Minimum Items rulesets are stored here.",
+                  "src_category_id": "zd340jy2",
+                  "srio_category_id": "154y0qdtvbkqc",
+                  "type": "per-game"
+                }
+              ]
+            },
+            "meta": {
+              "pagination": {
+                "offset": 0,
+                "max": 20,
+                "size": 9
+              },
+              "schema": "1.0",
+              "sources": [
+                {
+                  "license": "CC-BY-NC-4.0",
+                  "name": "speedrun.com",
+                  "role": "authority",
+                  "timestamp": {
+                    "collected": {
+                      "from": "2026-06-22T09:48:33Z",
+                      "to": "2026-09-07T09:40:21Z"
+                    }
+                  },
+                  "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+                }
+              ],
+              "usage": {
+                "data_bytes": 8276
+              }
+            },
+            "status": 200
+          }
+  - name: dave the diver
+    description: use an ID to list the categories for a specific game
+    request:
+      url: https://api.speedrun.io/v1/games/4d7xkl31/categories
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: |-
+          {
+            "data": {
+              "categories": [
+                {
+                  "miscellaneous": false,
+                  "name": "Any%",
+                  "players": {
+                    "type": "up-to",
+                    "value": 1
+                  },
+                  "rules": "Get to the credits as fast as possible.\n\nTimer begins on starting cutscene and ends on last input (The dialogue before picking up the beer)\n\n\nRuns must be real-time (No pausing the timer).\n\nVideos are required to show the game clearly, and contain game audio.",
+                  "src_category_id": "zdn304x2",
+                  "srio_category_id": "1u34xufwybjqj",
+                  "type": "per-game"
+                },
+                {
+                  "miscellaneous": false,
+                  "name": "Cooksta or Chapter",
+                  "players": {
+                    "type": "up-to",
+                    "value": 1
+                  },
+                  "rules": "",
+                  "src_category_id": "q25pgqgd",
+                  "srio_category_id": "1a3hc0s4uwcxn",
+                  "type": "per-level"
+                }
+              ]
+            },
+            "meta": {
+              "pagination": {
+                "offset": 0,
+                "max": 20,
+                "size": 2
+              },
+              "schema": "1.0",
+              "sources": [
+                {
+                  "license": "CC-BY-NC-4.0",
+                  "name": "speedrun.com",
+                  "role": "authority",
+                  "timestamp": {
+                    "collected": {
+                      "from": "2026-06-27T00:25:11Z",
+                      "to": "2026-06-29T06:39:26Z"
+                    }
+                  },
+                  "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+                }
+              ],
+              "usage": {
+                "data_bytes": 1610
+              }
+            },
+            "status": 200
+          }
+  - name: minishoot' adventures
+    description: use an ID to list the categories for a specific game
+    request:
+      url: https://api.speedrun.io/v1/games/w6jg3326/categories
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: |-
+          {
+            "data": {
+              "categories": [
+                {
+                  "miscellaneous": false,
+                  "name": "100% (True Ending)",
+                  "players": {
+                    "type": "up-to",
+                    "value": 1
+                  },
+                  "rules": "Achieve 100% map completion and get the True Ending.\n\nThat means: Obtain all modules, all golden scarabs, all items and all ancient tablets. Defeat all bosses and complete the arena. Finish with True Ending.\n\nTime ends upon pressing \"Destroy your save file.\"",
+                  "src_category_id": "wdmpy13d",
+                  "srio_category_id": "02m55367e5kw4",
+                  "type": "per-game"
+                },
+                {
+                  "miscellaneous": false,
+                  "name": "Any%",
+                  "players": {
+                    "type": "up-to",
+                    "value": 1
+                  },
+                  "rules": "",
+                  "src_category_id": "xk9z46g2",
+                  "srio_category_id": "0sd7r0u27o4bm",
+                  "type": "per-game"
+                },
+                {
+                  "miscellaneous": false,
+                  "name": "Low%",
+                  "players": {
+                    "type": "up-to",
+                    "value": 1
+                  },
+                  "rules": "",
+                  "src_category_id": "wk6qxwq2",
+                  "srio_category_id": "09ezsq8bel574",
+                  "type": "per-game"
+                }
+              ]
+            },
+            "meta": {
+              "pagination": {
+                "offset": 0,
+                "max": 20,
+                "size": 3
+              },
+              "schema": "1.0",
+              "sources": [
+                {
+                  "license": "CC-BY-NC-4.0",
+                  "name": "speedrun.com",
+                  "role": "authority",
+                  "timestamp": {
+                    "collected": {
+                      "from": "2026-06-27T14:39:48Z",
+                      "to": "2026-06-28T19:26:04Z"
+                    }
+                  },
+                  "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+                }
+              ],
+              "usage": {
+                "data_bytes": 2387
+              }
+            },
+            "status": 200
+          }

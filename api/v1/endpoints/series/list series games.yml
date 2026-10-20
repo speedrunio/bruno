@@ -1,0 +1,2361 @@
+info:
+  name: list series games
+  type: http
+  seq: 3
+
+http:
+  method: GET
+  url: https://api.speedrun.io/v1/series/{{slug}}/games
+  headers:
+    - name: Content-Type
+      value: application/json
+  auth: inherit
+
+runtime:
+  variables:
+    - name: slug
+      value: rv7emz49
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true
+
+examples:
+  - name: super mario
+    description: use an ID to list the first 25 games for a a specific series using max=25
+    request:
+      url: https://api.speedrun.io/v1/series/rv7emz49/games?max=25
+      method: GET
+      params:
+        - name: max
+          value: "25"
+          type: query
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: |-
+          {
+            "data": {
+              "games": [
+                {
+                  "abbreviation": "smbw",
+                  "boostDistinctDonors": 18,
+                  "boostReceived": 34,
+                  "created": "2023-09-05T14:51:24Z",
+                  "developers": [],
+                  "discord": "https://discord.gg/kxjxDKu4QX",
+                  "engines": [],
+                  "gametypes": [],
+                  "genres": [],
+                  "moderators": {
+                    "5j52r5zj": "moderator",
+                    "68w64o3j": "super-moderator",
+                    "8l01k2l8": "super-moderator",
+                    "j4rd5qv8": "moderator",
+                    "j5vrqz68": "moderator",
+                    "jn29o0wj": "super-moderator"
+                  },
+                  "names": {
+                    "international": "Super Mario Bros. Wonder",
+                    "japanese": null,
+                    "twitch": "Super Mario Bros. Wonder"
+                  },
+                  "platforms": [
+                    "7m6ylw9p",
+                    "3167lw9q"
+                  ],
+                  "publishers": [],
+                  "regions": [],
+                  "release-date": "2023-10-20",
+                  "released": 2023,
+                  "romhack": false,
+                  "ruleset": {
+                    "default-time": "realtime",
+                    "emulators-allowed": false,
+                    "require-verification": true,
+                    "require-video": true,
+                    "run-times": [
+                      "realtime"
+                    ],
+                    "show-milliseconds": true
+                  },
+                  "src_game_id": "2689w5k1",
+                  "srio_game_id": "0t7vcqx5refea"
+                },
+                {
+                  "abbreviation": "smb2ce",
+                  "boostDistinctDonors": 0,
+                  "boostReceived": 0,
+                  "created": "2018-02-27T14:55:26Z",
+                  "developers": [],
+                  "discord": "",
+                  "engines": [],
+                  "gametypes": [
+                    "53no817x"
+                  ],
+                  "genres": [],
+                  "moderators": {
+                    "68wl23jg": "moderator",
+                    "qjnzw4jm": "moderator",
+                    "qjonw238": "super-moderator"
+                  },
+                  "names": {
+                    "international": "Super Mario Bros. 2 Category Extensions",
+                    "japanese": null,
+                    "twitch": "Super Mario Bros. 2"
+                  },
+                  "platforms": [
+                    "jm95z9ol",
+                    "83exk6l5",
+                    "nzelreqp",
+                    "7m6ylw9p",
+                    "83exovel"
+                  ],
+                  "publishers": [],
+                  "regions": [
+                    "pr184lqn",
+                    "o316x197"
+                  ],
+                  "release-date": "1988-10-09",
+                  "released": 1988,
+                  "romhack": true,
+                  "ruleset": {
+                    "default-time": "realtime",
+                    "emulators-allowed": true,
+                    "require-verification": true,
+                    "require-video": true,
+                    "run-times": [
+                      "realtime"
+                    ],
+                    "show-milliseconds": false
+                  },
+                  "src_game_id": "268e9556",
+                  "srio_game_id": "0nryxr6r9khtf"
+                },
+                {
+                  "abbreviation": "smsarcade2",
+                  "boostDistinctDonors": 0,
+                  "boostReceived": 0,
+                  "created": "2019-10-26T23:00:35Z",
+                  "developers": [],
+                  "discord": "https://discord.gg/n8PtHYE",
+                  "engines": [],
+                  "gametypes": [
+                    "v4m291qw",
+                    "4jn49137"
+                  ],
+                  "genres": [],
+                  "moderators": {
+                    "48gv9dr8": "super-moderator",
+                    "98r7qw6j": "super-moderator",
+                    "kjppek0j": "super-moderator",
+                    "v815yw3j": "super-moderator"
+                  },
+                  "names": {
+                    "international": "Super Mario Sunshine Arcade 2",
+                    "japanese": null,
+                    "twitch": "Super Mario Sunshine Arcade 2"
+                  },
+                  "platforms": [
+                    "4p9z06rn",
+                    "v06dk3e4"
+                  ],
+                  "publishers": [],
+                  "regions": [
+                    "pr184lqn",
+                    "e6lxy1dz",
+                    "o316x197",
+                    "mol4z19n",
+                    "p2g50lnk",
+                    "ypl25l47"
+                  ],
+                  "release-date": "2019-10-20",
+                  "released": 2019,
+                  "romhack": true,
+                  "ruleset": {
+                    "default-time": "realtime",
+                    "emulators-allowed": true,
+                    "require-verification": true,
+                    "require-video": true,
+                    "run-times": [
+                      "realtime"
+                    ],
+                    "show-milliseconds": false
+                  },
+                  "src_game_id": "268emky6",
+                  "srio_game_id": "13mealhho5tun"
+                },
+                {
+                  "abbreviation": "smwext",
+                  "boostDistinctDonors": 2,
+                  "boostReceived": 11,
+                  "created": "2016-01-21T19:21:52Z",
+                  "developers": [],
+                  "discord": "https://discord.gg/uzuQaXU",
+                  "engines": [],
+                  "gametypes": [
+                    "53no817x"
+                  ],
+                  "genres": [],
+                  "moderators": {
+                    "8wk270l8": "moderator",
+                    "qjngnw8m": "super-moderator",
+                    "qxkl7168": "super-moderator",
+                    "v81vd58p": "super-moderator",
+                    "v8l66r8m": "super-moderator",
+                    "v8lp0nlj": "super-moderator",
+                    "zx7mknvx": "super-moderator"
+                  },
+                  "names": {
+                    "international": "Super Mario World Extra Categories",
+                    "japanese": null,
+                    "twitch": "Super Mario World"
+                  },
+                  "platforms": [
+                    "83exk6l5",
+                    "nzelreqp",
+                    "7g6mx89r",
+                    "v06dr394",
+                    "7m6ylw9p",
+                    "83exovel",
+                    "gz9qg3e0",
+                    "3167lw9q"
+                  ],
+                  "publishers": [],
+                  "regions": [
+                    "pr184lqn",
+                    "e6lxy1dz",
+                    "o316x197"
+                  ],
+                  "release-date": "1990-11-21",
+                  "released": 1990,
+                  "romhack": true,
+                  "ruleset": {
+                    "default-time": "realtime",
+                    "emulators-allowed": true,
+                    "require-verification": true,
+                    "require-video": false,
+                    "run-times": [
+                      "realtime"
+                    ],
+                    "show-milliseconds": true
+                  },
+                  "src_game_id": "268n5y6p",
+                  "srio_game_id": "0opw43h8t7ee8"
+                },
+                {
+                  "abbreviation": "another_special_world",
+                  "boostDistinctDonors": 0,
+                  "boostReceived": 0,
+                  "created": "2016-08-10T02:01:42Z",
+                  "developers": [],
+                  "discord": "",
+                  "engines": [],
+                  "gametypes": [
+                    "v4m291qw",
+                    "4jn49137"
+                  ],
+                  "genres": [],
+                  "moderators": {
+                    "18vpzd28": "super-moderator",
+                    "xkmq412j": "moderator"
+                  },
+                  "names": {
+                    "international": "Another Special World",
+                    "japanese": null,
+                    "twitch": "Another Special World"
+                  },
+                  "platforms": [
+                    "83exk6l5"
+                  ],
+                  "publishers": [],
+                  "regions": [
+                    "pr184lqn"
+                  ],
+                  "release-date": "2016-01-01",
+                  "released": 2016,
+                  "romhack": true,
+                  "ruleset": {
+                    "default-time": "realtime",
+                    "emulators-allowed": true,
+                    "require-verification": true,
+                    "require-video": true,
+                    "run-times": [
+                      "realtime"
+                    ],
+                    "show-milliseconds": false
+                  },
+                  "src_game_id": "369me21l",
+                  "srio_game_id": "1fqkjir78bbgd"
+                },
+                {
+                  "abbreviation": "super_mario_bros._3_the_forgotten_worlds",
+                  "boostDistinctDonors": 0,
+                  "boostReceived": 0,
+                  "created": "2019-04-08T14:01:22Z",
+                  "developers": [],
+                  "discord": "",
+                  "engines": [],
+                  "gametypes": [
+                    "v4m291qw",
+                    "4jn49137"
+                  ],
+                  "genres": [],
+                  "moderators": {
+                    "zxzz9vex": "super-moderator"
+                  },
+                  "names": {
+                    "international": "Super Mario Bros. 3: The Forgotten Worlds",
+                    "japanese": null,
+                    "twitch": "Super Mario Bros. 3: The Forgotten Worlds"
+                  },
+                  "platforms": [
+                    "jm95z9ol"
+                  ],
+                  "publishers": [],
+                  "regions": [
+                    "pr184lqn",
+                    "e6lxy1dz",
+                    "o316x197"
+                  ],
+                  "release-date": "2017-08-04",
+                  "released": 2017,
+                  "romhack": true,
+                  "ruleset": {
+                    "default-time": "realtime",
+                    "emulators-allowed": true,
+                    "require-verification": true,
+                    "require-video": true,
+                    "run-times": [
+                      "realtime"
+                    ],
+                    "show-milliseconds": false
+                  },
+                  "src_game_id": "369p20l1",
+                  "srio_game_id": "16bamcdbg9wyi"
+                },
+                {
+                  "abbreviation": "sm3dw",
+                  "boostDistinctDonors": 0,
+                  "boostReceived": 0,
+                  "created": null,
+                  "developers": [],
+                  "discord": "https://discord.gg/7Z8d7Eb",
+                  "engines": [],
+                  "gametypes": [],
+                  "genres": [],
+                  "moderators": {
+                    "0jmzy4x1": "moderator",
+                    "5j59e46x": "moderator",
+                    "j4r6l1d8": "moderator",
+                    "qj2pzp8k": "moderator",
+                    "qjo2r086": "super-moderator",
+                    "qxk3o980": "moderator",
+                    "qxk9l980": "super-moderator"
+                  },
+                  "names": {
+                    "international": "Super Mario 3D World",
+                    "japanese": null,
+                    "twitch": "Super Mario 3D World"
+                  },
+                  "platforms": [
+                    "8gejn93d"
+                  ],
+                  "publishers": [],
+                  "regions": [
+                    "pr184lqn",
+                    "e6lxy1dz",
+                    "o316x197"
+                  ],
+                  "release-date": "2013-11-21",
+                  "released": 2013,
+                  "romhack": false,
+                  "ruleset": {
+                    "default-time": "realtime",
+                    "emulators-allowed": false,
+                    "require-verification": true,
+                    "require-video": true,
+                    "run-times": [
+                      "realtime",
+                      "ingame"
+                    ],
+                    "show-milliseconds": false
+                  },
+                  "src_game_id": "369png1l",
+                  "srio_game_id": "0zanpcr657a8m"
+                },
+                {
+                  "abbreviation": "nsmbwce",
+                  "boostDistinctDonors": 0,
+                  "boostReceived": 0,
+                  "created": "2017-02-19T23:54:03Z",
+                  "developers": [],
+                  "discord": "https://discord.gg/XfGPJmp",
+                  "engines": [],
+                  "gametypes": [
+                    "53no817x"
+                  ],
+                  "genres": [],
+                  "moderators": {
+                    "68w64o3j": "moderator",
+                    "8e9w1y7j": "moderator",
+                    "8l01k2l8": "moderator",
+                    "8r7412qj": "moderator",
+                    "98r9rd38": "moderator",
+                    "v8lvke4j": "super-moderator",
+                    "xy5nqpy8": "moderator"
+                  },
+                  "names": {
+                    "international": "New Super Mario Bros. Wii Category Extensions",
+                    "japanese": null,
+                    "twitch": "New Super Mario Bros. Wii"
+                  },
+                  "platforms": [
+                    "8gejn93d",
+                    "v06dk3e4"
+                  ],
+                  "publishers": [],
+                  "regions": [],
+                  "release-date": "2009-11-12",
+                  "released": 2009,
+                  "romhack": true,
+                  "ruleset": {
+                    "default-time": "realtime",
+                    "emulators-allowed": false,
+                    "require-verification": true,
+                    "require-video": true,
+                    "run-times": [
+                      "realtime"
+                    ],
+                    "show-milliseconds": true
+                  },
+                  "src_game_id": "369qo8dl",
+                  "srio_game_id": "0b3wbpffk8ram"
+                },
+                {
+                  "abbreviation": "nsmb2ce",
+                  "boostDistinctDonors": 0,
+                  "boostReceived": 0,
+                  "created": "2017-04-30T00:54:16Z",
+                  "developers": [],
+                  "discord": "",
+                  "engines": [],
+                  "gametypes": [
+                    "53no817x"
+                  ],
+                  "genres": [],
+                  "moderators": {
+                    "1xyrqdwj": "super-moderator",
+                    "j4vqk05j": "super-moderator",
+                    "kj95ky78": "moderator",
+                    "qj2q6doj": "super-moderator",
+                    "xkmvgm6j": "moderator",
+                    "xy5nqpy8": "super-moderator"
+                  },
+                  "names": {
+                    "international": "New Super Mario Bros. 2 Category Extensions",
+                    "japanese": null,
+                    "twitch": "New Super Mario Bros. 2"
+                  },
+                  "platforms": [
+                    "gz9qx60q",
+                    "kz9wqn9p"
+                  ],
+                  "publishers": [],
+                  "regions": [
+                    "pr184lqn",
+                    "e6lxy1dz",
+                    "o316x197",
+                    "mol4z19n",
+                    "p2g50lnk",
+                    "ypl25l47"
+                  ],
+                  "release-date": "2012-07-28",
+                  "released": 2012,
+                  "romhack": true,
+                  "ruleset": {
+                    "default-time": "realtime",
+                    "emulators-allowed": true,
+                    "require-verification": true,
+                    "require-video": false,
+                    "run-times": [
+                      "realtime"
+                    ],
+                    "show-milliseconds": false
+                  },
+                  "src_game_id": "369rx26l",
+                  "srio_game_id": "0tn29wztr2oz9"
+                },
+                {
+                  "abbreviation": "super_mario_bros._gold_edition",
+                  "boostDistinctDonors": 0,
+                  "boostReceived": 0,
+                  "created": "2020-06-25T10:53:31Z",
+                  "developers": [],
+                  "discord": "https://discord.gg/rtDedAR",
+                  "engines": [],
+                  "gametypes": [
+                    "v4m291qw",
+                    "4jn49137"
+                  ],
+                  "genres": [],
+                  "moderators": {
+                    "qjn0yowx": "super-moderator"
+                  },
+                  "names": {
+                    "international": "Super Mario Bros. Gold Edition",
+                    "japanese": null,
+                    "twitch": "Super Mario Bros. Gold Edition"
+                  },
+                  "platforms": [
+                    "jm95z9ol"
+                  ],
+                  "publishers": [],
+                  "regions": [
+                    "pr184lqn",
+                    "e6lxy1dz",
+                    "o316x197"
+                  ],
+                  "release-date": "2018-02-22",
+                  "released": 2018,
+                  "romhack": true,
+                  "ruleset": {
+                    "default-time": "realtime",
+                    "emulators-allowed": true,
+                    "require-verification": true,
+                    "require-video": true,
+                    "run-times": [
+                      "realtime",
+                      "ingame"
+                    ],
+                    "show-milliseconds": true
+                  },
+                  "src_game_id": "3dx2ejp1",
+                  "srio_game_id": "04tlmg80s20ou"
+                },
+                {
+                  "abbreviation": "sml2",
+                  "boostDistinctDonors": 1,
+                  "boostReceived": 16,
+                  "created": "2014-12-05T22:18:11Z",
+                  "developers": [],
+                  "discord": "https://discord.gg/Gdcnyur",
+                  "engines": [],
+                  "gametypes": [],
+                  "genres": [],
+                  "moderators": {
+                    "0jmz3zx1": "super-moderator",
+                    "1xygemxr": "super-moderator",
+                    "48g24yjp": "super-moderator",
+                    "7j4q57vx": "super-moderator",
+                    "8geko7pj": "super-moderator",
+                    "8rpdvr6j": "super-moderator",
+                    "kjpp1oyj": "super-moderator",
+                    "qj299nxk": "super-moderator",
+                    "qj2pr68k": "super-moderator",
+                    "zx7q7d68": "super-moderator"
+                  },
+                  "names": {
+                    "international": "Super Mario Land 2: 6 Golden Coins",
+                    "japanese": null,
+                    "twitch": "Super Mario Land 2 - 6 Golden Coins"
+                  },
+                  "platforms": [
+                    "7g6mx89r",
+                    "3167jd6q",
+                    "7m6yvw6p",
+                    "n5e147e2",
+                    "n5683oev",
+                    "mx6p1463"
+                  ],
+                  "publishers": [],
+                  "regions": [
+                    "pr184lqn",
+                    "e6lxy1dz",
+                    "o316x197"
+                  ],
+                  "release-date": "1992-10-21",
+                  "released": 1992,
+                  "romhack": false,
+                  "ruleset": {
+                    "default-time": "realtime",
+                    "emulators-allowed": true,
+                    "require-verification": true,
+                    "require-video": true,
+                    "run-times": [
+                      "realtime"
+                    ],
+                    "show-milliseconds": true
+                  },
+                  "src_game_id": "3dxkk51y",
+                  "srio_game_id": "0gy3qoysdlrat"
+                },
+                {
+                  "abbreviation": "nsmbds",
+                  "boostDistinctDonors": 1,
+                  "boostReceived": 1,
+                  "created": "2015-02-04T09:13:58Z",
+                  "developers": [],
+                  "discord": "https://discord.gg/ffrZ97m",
+                  "engines": [],
+                  "gametypes": [],
+                  "genres": [],
+                  "moderators": {
+                    "68w64o3j": "moderator",
+                    "68wowpzj": "moderator",
+                    "8d3324gx": "super-moderator",
+                    "8wl60qqj": "super-moderator",
+                    "98r0q668": "super-moderator",
+                    "98rpnqdj": "super-moderator",
+                    "kj9d03ox": "super-moderator",
+                    "xkmvgm6j": "super-moderator",
+                    "xy5nqpy8": "moderator",
+                    "y8d7wzo8": "moderator"
+                  },
+                  "names": {
+                    "international": "New Super Mario Bros.",
+                    "japanese": null,
+                    "twitch": "New Super Mario Bros."
+                  },
+                  "platforms": [
+                    "7g6m8erk",
+                    "gz9qx60q",
+                    "v06dr394",
+                    "kz9wqn9p",
+                    "wxeo3zer",
+                    "jm951reo",
+                    "o064vv63"
+                  ],
+                  "publishers": [],
+                  "regions": [
+                    "pr184lqn",
+                    "e6lxy1dz",
+                    "o316x197",
+                    "mol4z19n",
+                    "p2g50lnk"
+                  ],
+                  "release-date": "2006-05-15",
+                  "released": 2006,
+                  "romhack": false,
+                  "ruleset": {
+                    "default-time": "realtime",
+                    "emulators-allowed": true,
+                    "require-verification": true,
+                    "require-video": true,
+                    "run-times": [
+                      "realtime",
+                      "realtime_noloads"
+                    ],
+                    "show-milliseconds": true
+                  },
+                  "src_game_id": "3dxz7p1y",
+                  "srio_game_id": "1at3wmzokjjfr"
+                },
+                {
+                  "abbreviation": "smb3classic",
+                  "boostDistinctDonors": 0,
+                  "boostReceived": 0,
+                  "created": "2020-05-11T19:00:51Z",
+                  "developers": [],
+                  "discord": "",
+                  "engines": [],
+                  "gametypes": [
+                    "v4m291qw",
+                    "4jn49137"
+                  ],
+                  "genres": [],
+                  "moderators": {
+                    "98rkrwx1": "super-moderator"
+                  },
+                  "names": {
+                    "international": "Super Mario Bros. 3 Classic",
+                    "japanese": null,
+                    "twitch": "Super Mario Bros. 3 Classic"
+                  },
+                  "platforms": [
+                    "jm95z9ol"
+                  ],
+                  "publishers": [],
+                  "regions": [
+                    "pr184lqn"
+                  ],
+                  "release-date": "2020-05-01",
+                  "released": 2020,
+                  "romhack": true,
+                  "ruleset": {
+                    "default-time": "realtime",
+                    "emulators-allowed": true,
+                    "require-verification": true,
+                    "require-video": true,
+                    "run-times": [
+                      "realtime"
+                    ],
+                    "show-milliseconds": false
+                  },
+                  "src_game_id": "46w3g531",
+                  "srio_game_id": "1fdht4fr71o7c"
+                },
+                {
+                  "abbreviation": "smas",
+                  "boostDistinctDonors": 0,
+                  "boostReceived": 0,
+                  "created": null,
+                  "developers": [],
+                  "discord": "https://discord.gg/Ck5ujFF",
+                  "engines": [],
+                  "gametypes": [],
+                  "genres": [],
+                  "moderators": {
+                    "68wl23jg": "moderator",
+                    "qjnzw4jm": "super-moderator",
+                    "qjo39y0j": "moderator",
+                    "qjonw238": "super-moderator",
+                    "v8lrgl8m": "moderator"
+                  },
+                  "names": {
+                    "international": "Super Mario All-Stars",
+                    "japanese": null,
+                    "twitch": "Super Mario All-Stars"
+                  },
+                  "platforms": [
+                    "83exk6l5",
+                    "8gejn93d",
+                    "v06dk3e4",
+                    "7m6ylw9p"
+                  ],
+                  "publishers": [],
+                  "regions": [
+                    "pr184lqn",
+                    "e6lxy1dz",
+                    "o316x197"
+                  ],
+                  "release-date": "1993-07-14",
+                  "released": 1993,
+                  "romhack": false,
+                  "ruleset": {
+                    "default-time": "realtime",
+                    "emulators-allowed": true,
+                    "require-verification": true,
+                    "require-video": true,
+                    "run-times": [
+                      "realtime"
+                    ],
+                    "show-milliseconds": true
+                  },
+                  "src_game_id": "46w3jl1r",
+                  "srio_game_id": "04en2a7bdjzod"
+                },
+                {
+                  "abbreviation": "smwki",
+                  "boostDistinctDonors": 0,
+                  "boostReceived": 0,
+                  "created": "2016-05-08T16:33:53Z",
+                  "developers": [],
+                  "discord": "",
+                  "engines": [],
+                  "gametypes": [
+                    "v4m291qw",
+                    "4jn49137"
+                  ],
+                  "genres": [],
+                  "moderators": {
+                    "68wl23jg": "super-moderator",
+                    "98rre381": "moderator"
+                  },
+                  "names": {
+                    "international": "Kamek's Island",
+                    "japanese": null,
+                    "twitch": "Super Mario World"
+                  },
+                  "platforms": [
+                    "83exk6l5",
+                    "nzelreqp"
+                  ],
+                  "publishers": [],
+                  "regions": [
+                    "pr184lqn"
+                  ],
+                  "release-date": "2013-01-01",
+                  "released": 2013,
+                  "romhack": true,
+                  "ruleset": {
+                    "default-time": "realtime",
+                    "emulators-allowed": true,
+                    "require-verification": true,
+                    "require-video": false,
+                    "run-times": [
+                      "realtime"
+                    ],
+                    "show-milliseconds": false
+                  },
+                  "src_game_id": "46w4y3dr",
+                  "srio_game_id": "060w319lynzfz"
+                },
+                {
+                  "abbreviation": "kamikaze_bros._3",
+                  "boostDistinctDonors": 0,
+                  "boostReceived": 0,
+                  "created": "2016-11-10T02:26:39Z",
+                  "developers": [],
+                  "discord": null,
+                  "engines": [],
+                  "gametypes": [
+                    "v4m291qw",
+                    "4jn49137"
+                  ],
+                  "genres": [],
+                  "moderators": {
+                    "kjpmg70j": "super-moderator",
+                    "y8d41398": "super-moderator"
+                  },
+                  "names": {
+                    "international": "Kamikaze Bros. 3",
+                    "japanese": null,
+                    "twitch": "Kamikaze Bros. 3"
+                  },
+                  "platforms": [
+                    "jm95z9ol"
+                  ],
+                  "publishers": [],
+                  "regions": [],
+                  "release-date": "2016-10-27",
+                  "released": 2016,
+                  "romhack": true,
+                  "ruleset": {
+                    "default-time": "realtime",
+                    "emulators-allowed": true,
+                    "require-verification": true,
+                    "require-video": true,
+                    "run-times": [
+                      "realtime"
+                    ],
+                    "show-milliseconds": false
+                  },
+                  "src_game_id": "46wnrn6r",
+                  "srio_game_id": "0wlng2ft8qsfi"
+                },
+                {
+                  "abbreviation": "smb_and_legend_of_mega_koopa",
+                  "boostDistinctDonors": 0,
+                  "boostReceived": 0,
+                  "created": "2017-05-27T21:30:41Z",
+                  "developers": [],
+                  "discord": "",
+                  "engines": [],
+                  "gametypes": [
+                    "v4m291qw",
+                    "4jn49137"
+                  ],
+                  "genres": [],
+                  "moderators": {},
+                  "names": {
+                    "international": "SMB and Legend of Mega Koopa",
+                    "japanese": null,
+                    "twitch": "SMB and Legend of Mega Koopa"
+                  },
+                  "platforms": [
+                    "jm95z9ol"
+                  ],
+                  "publishers": [],
+                  "regions": [],
+                  "release-date": "2017-01-01",
+                  "released": 2017,
+                  "romhack": true,
+                  "ruleset": {
+                    "default-time": "realtime",
+                    "emulators-allowed": true,
+                    "require-verification": true,
+                    "require-video": true,
+                    "run-times": [
+                      "realtime"
+                    ],
+                    "show-milliseconds": false
+                  },
+                  "src_game_id": "46wqwq6r",
+                  "srio_game_id": "0jc2nytfiydv2"
+                },
+                {
+                  "abbreviation": "smm2ce",
+                  "boostDistinctDonors": 1,
+                  "boostReceived": 2,
+                  "created": "2020-10-16T00:56:23Z",
+                  "developers": [],
+                  "discord": "https://discord.gg/VVHZMv5",
+                  "engines": [],
+                  "gametypes": [
+                    "53no817x"
+                  ],
+                  "genres": [],
+                  "moderators": {
+                    "18qvw9ox": "moderator",
+                    "5j52r5zj": "moderator",
+                    "5j5ggen8": "super-moderator",
+                    "81kr4llj": "moderator",
+                    "v8lqkklx": "super-moderator",
+                    "y8dq0lj6": "moderator"
+                  },
+                  "names": {
+                    "international": "Super Mario Maker 2 Category Extensions",
+                    "japanese": null,
+                    "twitch": "Super Mario Maker 2"
+                  },
+                  "platforms": [
+                    "7m6ylw9p",
+                    "3167lw9q"
+                  ],
+                  "publishers": [],
+                  "regions": [
+                    "pr184lqn",
+                    "e6lxy1dz",
+                    "o316x197"
+                  ],
+                  "release-date": "2019-06-28",
+                  "released": 2019,
+                  "romhack": true,
+                  "ruleset": {
+                    "default-time": "realtime",
+                    "emulators-allowed": false,
+                    "require-verification": true,
+                    "require-video": true,
+                    "run-times": [
+                      "realtime",
+                      "ingame"
+                    ],
+                    "show-milliseconds": true
+                  },
+                  "src_game_id": "4d7928l1",
+                  "srio_game_id": "1vm29vpg9vb9d"
+                },
+                {
+                  "abbreviation": "smsce",
+                  "boostDistinctDonors": 0,
+                  "boostReceived": 0,
+                  "created": "2018-09-14T20:17:07Z",
+                  "developers": [],
+                  "discord": "https://discord.gg/9dGJWEc",
+                  "engines": [],
+                  "gametypes": [
+                    "53no817x"
+                  ],
+                  "genres": [],
+                  "moderators": {
+                    "8dwepdmj": "moderator",
+                    "98r36381": "moderator",
+                    "j2wyv4lj": "super-moderator",
+                    "jmly4ry8": "moderator",
+                    "kj9k3lr8": "moderator",
+                    "o86d5k0j": "moderator",
+                    "qj239pxk": "moderator",
+                    "qjo22ke8": "moderator",
+                    "qjope3x6": "moderator",
+                    "v8lng64x": "moderator"
+                  },
+                  "names": {
+                    "international": "Super Mario Sunshine Category Extensions",
+                    "japanese": null,
+                    "twitch": "Super Mario Sunshine Category Extensions"
+                  },
+                  "platforms": [
+                    "4p9z06rn",
+                    "v06dk3e4",
+                    "7m6ylw9p"
+                  ],
+                  "publishers": [],
+                  "regions": [
+                    "pr184lqn",
+                    "e6lxy1dz",
+                    "o316x197",
+                    "p2g50lnk"
+                  ],
+                  "release-date": "2002-08-26",
+                  "released": 2002,
+                  "romhack": true,
+                  "ruleset": {
+                    "default-time": "realtime",
+                    "emulators-allowed": true,
+                    "require-verification": true,
+                    "require-video": true,
+                    "run-times": [
+                      "realtime"
+                    ],
+                    "show-milliseconds": true
+                  },
+                  "src_game_id": "4d794pl1",
+                  "srio_game_id": "0eixcam7u7o76"
+                },
+                {
+                  "abbreviation": "return_to_subcon",
+                  "boostDistinctDonors": 0,
+                  "boostReceived": 0,
+                  "created": "2018-12-02T07:38:09Z",
+                  "developers": [],
+                  "discord": "https://www.discord.gg/partyisland",
+                  "engines": [],
+                  "gametypes": [
+                    "v4m291qw",
+                    "4jn49137"
+                  ],
+                  "genres": [],
+                  "moderators": {
+                    "y8d41398": "super-moderator"
+                  },
+                  "names": {
+                    "international": "Return to Subcon",
+                    "japanese": null,
+                    "twitch": "Return to Subcon"
+                  },
+                  "platforms": [
+                    "jm95z9ol"
+                  ],
+                  "publishers": [],
+                  "regions": [
+                    "pr184lqn"
+                  ],
+                  "release-date": "1988-10-09",
+                  "released": 1988,
+                  "romhack": true,
+                  "ruleset": {
+                    "default-time": "realtime",
+                    "emulators-allowed": true,
+                    "require-verification": true,
+                    "require-video": true,
+                    "run-times": [
+                      "realtime"
+                    ],
+                    "show-milliseconds": false
+                  },
+                  "src_game_id": "4d79e5g1",
+                  "srio_game_id": "10sba68fla6pd"
+                },
+                {
+                  "abbreviation": "sma3",
+                  "boostDistinctDonors": 0,
+                  "boostReceived": 0,
+                  "created": "2015-06-26T01:25:12Z",
+                  "developers": [],
+                  "discord": "https://discord.com/invite/cdUzR3Z",
+                  "engines": [],
+                  "gametypes": [],
+                  "genres": [],
+                  "moderators": {
+                    "zxzkz19x": "super-moderator"
+                  },
+                  "names": {
+                    "international": "Yoshi's Island: Super Mario Advance 3",
+                    "japanese": null,
+                    "twitch": "Yoshi's Island: Super Mario Advance 3"
+                  },
+                  "platforms": [
+                    "3167d6q2",
+                    "7g6m8erk",
+                    "7g6mx89r",
+                    "v06dr394",
+                    "7m6yvw6p",
+                    "vm9v3ne3",
+                    "mx6p1463",
+                    "gde3rwek"
+                  ],
+                  "publishers": [],
+                  "regions": [
+                    "pr184lqn",
+                    "e6lxy1dz",
+                    "o316x197"
+                  ],
+                  "release-date": "2002-09-20",
+                  "released": 2002,
+                  "romhack": false,
+                  "ruleset": {
+                    "default-time": "realtime",
+                    "emulators-allowed": false,
+                    "require-verification": true,
+                    "require-video": true,
+                    "run-times": [
+                      "realtime"
+                    ],
+                    "show-milliseconds": true
+                  },
+                  "src_game_id": "4d7e0l67",
+                  "srio_game_id": "1gbarxa6gpdus"
+                },
+                {
+                  "abbreviation": "oirams_invasion",
+                  "boostDistinctDonors": 0,
+                  "boostReceived": 0,
+                  "created": "2016-11-20T20:47:36Z",
+                  "developers": [],
+                  "discord": "",
+                  "engines": [],
+                  "gametypes": [
+                    "v4m291qw",
+                    "4jn49137"
+                  ],
+                  "genres": [],
+                  "moderators": {
+                    "98rre381": "super-moderator"
+                  },
+                  "names": {
+                    "international": "Oiram's Invasion",
+                    "japanese": null,
+                    "twitch": "Oiram's Invasion"
+                  },
+                  "platforms": [
+                    "83exk6l5"
+                  ],
+                  "publishers": [],
+                  "regions": [],
+                  "release-date": "2014-02-12",
+                  "released": 2014,
+                  "romhack": true,
+                  "ruleset": {
+                    "default-time": "realtime",
+                    "emulators-allowed": true,
+                    "require-verification": true,
+                    "require-video": true,
+                    "run-times": [
+                      "realtime"
+                    ],
+                    "show-milliseconds": false
+                  },
+                  "src_game_id": "4d7mezd7",
+                  "srio_game_id": "0xs5i3d81o7ll"
+                },
+                {
+                  "abbreviation": "smbwce",
+                  "boostDistinctDonors": 0,
+                  "boostReceived": 0,
+                  "created": "2023-10-20T18:25:30Z",
+                  "developers": [],
+                  "discord": "https://discord.gg/kxjxDKu4QX",
+                  "engines": [],
+                  "gametypes": [
+                    "53no817x"
+                  ],
+                  "genres": [],
+                  "moderators": {
+                    "5j52r5zj": "moderator",
+                    "68w64o3j": "super-moderator",
+                    "8l01k2l8": "super-moderator",
+                    "j4rd5qv8": "moderator",
+                    "j5vrqz68": "moderator",
+                    "jn29o0wj": "super-moderator"
+                  },
+                  "names": {
+                    "international": "Super Mario Bros Wonder Category Extensions",
+                    "japanese": null,
+                    "twitch": "Super Mario Bros. Wonder"
+                  },
+                  "platforms": [
+                    "7m6ylw9p",
+                    "3167lw9q"
+                  ],
+                  "publishers": [],
+                  "regions": [],
+                  "release-date": "2023-10-20",
+                  "released": 2023,
+                  "romhack": true,
+                  "ruleset": {
+                    "default-time": "realtime",
+                    "emulators-allowed": false,
+                    "require-verification": true,
+                    "require-video": true,
+                    "run-times": [
+                      "realtime",
+                      "ingame"
+                    ],
+                    "show-milliseconds": true
+                  },
+                  "src_game_id": "4d7xx231",
+                  "srio_game_id": "19y3xzxqdwjvk"
+                },
+                {
+                  "abbreviation": "sma4",
+                  "boostDistinctDonors": 0,
+                  "boostReceived": 0,
+                  "created": null,
+                  "developers": [],
+                  "discord": "https://discord.gg/a6TNn7m84Q",
+                  "engines": [],
+                  "gametypes": [],
+                  "genres": [],
+                  "moderators": {
+                    "68wowpzj": "super-moderator",
+                    "98rkrwx1": "super-moderator",
+                    "jmo29wy8": "moderator"
+                  },
+                  "names": {
+                    "international": "Super Mario Advance 4: Super Mario Bros. 3",
+                    "japanese": null,
+                    "twitch": "Super Mario Bros. 3: Super Mario Advance 4"
+                  },
+                  "platforms": [
+                    "3167d6q2",
+                    "7g6m8erk",
+                    "v06dr394",
+                    "7m6yvw6p",
+                    "vm9v3ne3",
+                    "mx6p1463",
+                    "gde3rwek"
+                  ],
+                  "publishers": [],
+                  "regions": [
+                    "pr184lqn",
+                    "e6lxy1dz",
+                    "o316x197"
+                  ],
+                  "release-date": "2003-07-11",
+                  "released": 2003,
+                  "romhack": false,
+                  "ruleset": {
+                    "default-time": "realtime",
+                    "emulators-allowed": true,
+                    "require-verification": true,
+                    "require-video": true,
+                    "run-times": [
+                      "realtime"
+                    ],
+                    "show-milliseconds": true
+                  },
+                  "src_game_id": "4pdv2k6w",
+                  "srio_game_id": "15gpce9xqc4d4"
+                },
+                {
+                  "abbreviation": "smo",
+                  "boostDistinctDonors": 12,
+                  "boostReceived": 41,
+                  "created": "2017-09-27T00:35:19Z",
+                  "developers": [],
+                  "discord": "http://www.discord.gg/smospeedruns",
+                  "engines": [],
+                  "gametypes": [],
+                  "genres": [],
+                  "moderators": {
+                    "7j4z0ymx": "super-moderator",
+                    "86n7l15x": "super-moderator",
+                    "86r9le58": "moderator",
+                    "8ek5pzo8": "super-moderator",
+                    "8l0o2448": "super-moderator",
+                    "8lpq6zvj": "super-moderator",
+                    "8v5nwrnj": "super-moderator",
+                    "j0n564w8": "super-moderator",
+                    "j952gyn8": "moderator",
+                    "jmlzgrn8": "super-moderator",
+                    "jo3v643j": "moderator",
+                    "jpyw92kj": "super-moderator",
+                    "kj99w37j": "super-moderator",
+                    "o86lymp8": "super-moderator",
+                    "pj0l95mj": "super-moderator",
+                    "qj2dg2n8": "moderator",
+                    "qjor033j": "super-moderator",
+                    "x3wgo6ej": "super-moderator",
+                    "xk6v2028": "super-moderator",
+                    "xkp0k9kj": "super-moderator",
+                    "xyr3nqmj": "super-moderator",
+                    "xzyd0d4j": "super-moderator",
+                    "y8dk0mmj": "super-moderator",
+                    "y8dmq0m8": "super-moderator"
+                  },
+                  "names": {
+                    "international": "Super Mario Odyssey",
+                    "japanese": null,
+                    "twitch": "Super Mario Odyssey"
+                  },
+                  "platforms": [
+                    "7m6ylw9p",
+                    "3167lw9q"
+                  ],
+                  "publishers": [],
+                  "regions": [],
+                  "release-date": "2017-10-27",
+                  "released": 2017,
+                  "romhack": false,
+                  "ruleset": {
+                    "default-time": "realtime",
+                    "emulators-allowed": false,
+                    "require-verification": true,
+                    "require-video": true,
+                    "run-times": [
+                      "realtime"
+                    ],
+                    "show-milliseconds": false
+                  },
+                  "src_game_id": "76r55vd8",
+                  "srio_game_id": "070f2x6527tdr"
+                }
+              ]
+            },
+            "meta": {
+              "pagination": {
+                "offset": 0,
+                "max": 25,
+                "size": 25
+              },
+              "schema": "1.0",
+              "sources": [
+                {
+                  "license": "CC-BY-NC-4.0",
+                  "name": "speedrun.com",
+                  "role": "authority",
+                  "timestamp": {
+                    "collected": {
+                      "from": "2026-05-24T05:49:32Z",
+                      "to": "2026-05-24T06:58:19Z"
+                    }
+                  },
+                  "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+                }
+              ],
+              "usage": {
+                "data_bytes": 66620
+              }
+            },
+            "status": 200
+          }
+  - name: minecraft
+    description: use an ID to list the first 25 games for a a specific series
+    request:
+      url: https://api.speedrun.io/v1/series/g45lyw7q/games
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: |-
+          {
+            "data": {
+              "games": [
+                {
+                  "abbreviation": "mcece",
+                  "boostDistinctDonors": 0,
+                  "boostReceived": 0,
+                  "created": "2020-05-05T14:49:04Z",
+                  "developers": [],
+                  "discord": "https://discord.gg/tYpdRSn",
+                  "engines": [],
+                  "gametypes": [
+                    "53no817x"
+                  ],
+                  "genres": [],
+                  "moderators": {
+                    "8vokkz5x": "moderator",
+                    "v8le49vx": "moderator",
+                    "v8lrpg48": "super-moderator",
+                    "x7qey508": "super-moderator",
+                    "xz995g08": "super-moderator"
+                  },
+                  "names": {
+                    "international": "Minecraft: Legacy Console Edition Category Extensions",
+                    "japanese": null,
+                    "twitch": "Minecraft"
+                  },
+                  "platforms": [
+                    "8gejn93d",
+                    "mx6pwe3g",
+                    "n568oevp",
+                    "4p9z70er",
+                    "nzelkr6q",
+                    "o7e2mx6w",
+                    "7m6ylw9p",
+                    "4p9zjrer",
+                    "nzelyv9q",
+                    "3167lw9q"
+                  ],
+                  "publishers": [],
+                  "regions": [],
+                  "release-date": "2012-05-09",
+                  "released": 2012,
+                  "romhack": true,
+                  "ruleset": {
+                    "default-time": "realtime",
+                    "emulators-allowed": true,
+                    "require-verification": true,
+                    "require-video": true,
+                    "run-times": [
+                      "realtime"
+                    ],
+                    "show-milliseconds": true
+                  },
+                  "src_game_id": "369pky81",
+                  "srio_game_id": "0ot4x2x36vibv"
+                },
+                {
+                  "abbreviation": "mcedu",
+                  "boostDistinctDonors": 0,
+                  "boostReceived": 0,
+                  "created": "2020-08-21T03:07:27Z",
+                  "developers": [],
+                  "discord": "https://discord.gg/zYy4QqWZgq",
+                  "engines": [],
+                  "gametypes": [
+                    "lyn97m9o",
+                    "4jn49137"
+                  ],
+                  "genres": [],
+                  "moderators": {
+                    "866zr508": "moderator",
+                    "8v5ydv2j": "moderator",
+                    "8vokkz5x": "moderator",
+                    "j267157x": "moderator",
+                    "j921k2w8": "moderator",
+                    "j92gmk78": "moderator",
+                    "jn37p4qx": "super-moderator",
+                    "xy5k04w8": "super-moderator",
+                    "xzl1z2e8": "moderator"
+                  },
+                  "names": {
+                    "international": "Minecraft Education",
+                    "japanese": null,
+                    "twitch": "Minecraft Education Edition"
+                  },
+                  "platforms": [
+                    "8gej2n93",
+                    "lq60nl94",
+                    "gde3xgek",
+                    "mx6ppw63"
+                  ],
+                  "publishers": [],
+                  "regions": [],
+                  "release-date": "2016-11-01",
+                  "released": 2016,
+                  "romhack": true,
+                  "ruleset": {
+                    "default-time": "realtime",
+                    "emulators-allowed": true,
+                    "require-verification": true,
+                    "require-video": true,
+                    "run-times": [
+                      "realtime"
+                    ],
+                    "show-milliseconds": true
+                  },
+                  "src_game_id": "3dx2oz41",
+                  "srio_game_id": "09bhw6p61m47y"
+                },
+                {
+                  "abbreviation": "mcpe_lite",
+                  "boostDistinctDonors": 1,
+                  "boostReceived": 1,
+                  "created": "2020-08-14T23:51:01Z",
+                  "developers": [],
+                  "discord": "https://discord.gg/HU7nc379ee",
+                  "engines": [],
+                  "gametypes": [],
+                  "genres": [],
+                  "moderators": {
+                    "j267157x": "super-moderator",
+                    "jn37p4qx": "super-moderator",
+                    "kj9wqk78": "super-moderator",
+                    "xy5k04w8": "super-moderator",
+                    "xz903qr8": "super-moderator",
+                    "xzl1z2e8": "moderator"
+                  },
+                  "names": {
+                    "international": "Minecraft: Pocket Edition Lite",
+                    "japanese": null,
+                    "twitch": "Minecraft: Pocket Edition Lite"
+                  },
+                  "platforms": [
+                    "lq60nl94",
+                    "gde3xgek"
+                  ],
+                  "publishers": [],
+                  "regions": [],
+                  "release-date": "2012-09-13",
+                  "released": 2012,
+                  "romhack": false,
+                  "ruleset": {
+                    "default-time": "realtime",
+                    "emulators-allowed": true,
+                    "require-verification": true,
+                    "require-video": true,
+                    "run-times": [
+                      "realtime"
+                    ],
+                    "show-milliseconds": true
+                  },
+                  "src_game_id": "46w382n1",
+                  "srio_game_id": "02930m026qk1o"
+                },
+                {
+                  "abbreviation": "mcd2ce",
+                  "boostDistinctDonors": 0,
+                  "boostReceived": 0,
+                  "created": "2026-06-09T03:43:08Z",
+                  "developers": [],
+                  "discord": "https://discord.com/invite/pdtqewJVuJ",
+                  "engines": [],
+                  "gametypes": [],
+                  "genres": [],
+                  "moderators": {
+                    "48gngdyj": "moderator",
+                    "j5wrp6wj": "super-moderator"
+                  },
+                  "names": {
+                    "international": "Minecraft Dungeons II Category Extensions",
+                    "japanese": null,
+                    "twitch": "Minecraft Dungeons II Category Extensions"
+                  },
+                  "platforms": [
+                    "8gej2n93",
+                    "7m6ylw9p",
+                    "4p9zjrer",
+                    "nzelyv9q",
+                    "o7e2xj9w",
+                    "3167lw9q"
+                  ],
+                  "publishers": [],
+                  "regions": [],
+                  "release-date": "2026-09-29",
+                  "released": 2026,
+                  "romhack": false,
+                  "ruleset": {
+                    "default-time": "realtime",
+                    "emulators-allowed": true,
+                    "require-verification": true,
+                    "require-video": true,
+                    "run-times": [
+                      "realtime"
+                    ],
+                    "show-milliseconds": false
+                  },
+                  "src_game_id": "4d7ppzgd",
+                  "srio_game_id": "0vdvjxzuzfvm4"
+                },
+                {
+                  "abbreviation": "mcl",
+                  "boostDistinctDonors": 1,
+                  "boostReceived": 1,
+                  "created": "2023-04-07T00:08:59Z",
+                  "developers": [],
+                  "discord": "https://discord.gg/D68rFzMfxs",
+                  "engines": [],
+                  "gametypes": [],
+                  "genres": [],
+                  "moderators": {
+                    "48gngdyj": "super-moderator",
+                    "86v3w7wj": "super-moderator",
+                    "j5wrp6wj": "super-moderator"
+                  },
+                  "names": {
+                    "international": "Minecraft: Legends",
+                    "japanese": null,
+                    "twitch": "Minecraft: Legends"
+                  },
+                  "platforms": [
+                    "nzelkr6q",
+                    "o7e2mx6w",
+                    "8gej2n93",
+                    "7m6ylw9p",
+                    "4p9zjrer",
+                    "nzelyv9q",
+                    "o7e2xj9w"
+                  ],
+                  "publishers": [],
+                  "regions": [],
+                  "release-date": "2023-04-18",
+                  "released": 2023,
+                  "romhack": false,
+                  "ruleset": {
+                    "default-time": "realtime",
+                    "emulators-allowed": false,
+                    "require-verification": true,
+                    "require-video": true,
+                    "run-times": [
+                      "realtime"
+                    ],
+                    "show-milliseconds": true
+                  },
+                  "src_game_id": "9d38zqy1",
+                  "srio_game_id": "0gg4xlvlfkhzs"
+                },
+                {
+                  "abbreviation": "minecraft_pi",
+                  "boostDistinctDonors": 0,
+                  "boostReceived": 0,
+                  "created": "2020-08-23T01:43:56Z",
+                  "developers": [],
+                  "discord": "https://discord.gg/7g6X4M9yqz",
+                  "engines": [],
+                  "gametypes": [
+                    "lyn97m9o",
+                    "4jn49137"
+                  ],
+                  "genres": [],
+                  "moderators": {
+                    "8l04ryv8": "super-moderator",
+                    "j267157x": "moderator",
+                    "jn37p4qx": "super-moderator",
+                    "kj9wqk78": "super-moderator",
+                    "xy5k04w8": "super-moderator",
+                    "xz903qr8": "super-moderator"
+                  },
+                  "names": {
+                    "international": "Minecraft: Pi Edition",
+                    "japanese": null,
+                    "twitch": "Minecraft Pi Edition"
+                  },
+                  "platforms": [
+                    "5neg7key"
+                  ],
+                  "publishers": [],
+                  "regions": [],
+                  "release-date": "2013-02-11",
+                  "released": 2013,
+                  "romhack": true,
+                  "ruleset": {
+                    "default-time": "realtime",
+                    "emulators-allowed": true,
+                    "require-verification": true,
+                    "require-video": false,
+                    "run-times": [
+                      "realtime"
+                    ],
+                    "show-milliseconds": true
+                  },
+                  "src_game_id": "j1nejgx1",
+                  "srio_game_id": "1m6vdbtmgla6l"
+                },
+                {
+                  "abbreviation": "mc",
+                  "boostDistinctDonors": 24,
+                  "boostReceived": 171,
+                  "created": "2015-01-29T23:41:21Z",
+                  "developers": [],
+                  "discord": "https://discord.gg/tDPvR9c",
+                  "engines": [],
+                  "gametypes": [],
+                  "genres": [],
+                  "moderators": {
+                    "8147dl38": "moderator",
+                    "86nd46qx": "super-moderator",
+                    "8grwz9px": "super-moderator",
+                    "8l09zk48": "moderator",
+                    "8l0mv728": "super-moderator",
+                    "8rpk6pgj": "moderator",
+                    "8rpypdgj": "super-moderator",
+                    "j03ynz9j": "super-moderator",
+                    "j4rkyzv8": "super-moderator",
+                    "j9693ewj": "moderator",
+                    "jmo36no8": "super-moderator",
+                    "jmp14lej": "super-moderator",
+                    "qxkk259x": "super-moderator",
+                    "x3q964kj": "moderator",
+                    "x72pywr8": "super-moderator",
+                    "xko74v68": "super-moderator",
+                    "xy594zm8": "super-moderator",
+                    "xy5w67w8": "super-moderator",
+                    "xzl0wee8": "super-moderator",
+                    "y8dp36o8": "super-moderator"
+                  },
+                  "names": {
+                    "international": "Minecraft: Java Edition",
+                    "japanese": null,
+                    "twitch": "Minecraft"
+                  },
+                  "platforms": [
+                    "8gej2n93"
+                  ],
+                  "publishers": [],
+                  "regions": [],
+                  "release-date": "2011-11-18",
+                  "released": 2011,
+                  "romhack": false,
+                  "ruleset": {
+                    "default-time": "ingame",
+                    "emulators-allowed": false,
+                    "require-verification": true,
+                    "require-video": true,
+                    "run-times": [
+                      "realtime",
+                      "ingame"
+                    ],
+                    "show-milliseconds": true
+                  },
+                  "src_game_id": "j1npme6p",
+                  "srio_game_id": "0fc10q8s80y2i"
+                },
+                {
+                  "abbreviation": "minecraft_4k",
+                  "boostDistinctDonors": 0,
+                  "boostReceived": 0,
+                  "created": "2020-08-23T01:40:53Z",
+                  "developers": [],
+                  "discord": "https://discord.gg/7g6X4M9yqz",
+                  "engines": [],
+                  "gametypes": [
+                    "x3n6vme4",
+                    "4jn49137"
+                  ],
+                  "genres": [],
+                  "moderators": {
+                    "8rpep96j": "moderator",
+                    "j267157x": "moderator",
+                    "j5vn5lz8": "moderator",
+                    "jn37p4qx": "super-moderator",
+                    "kj9wqk78": "super-moderator",
+                    "xy5k04w8": "super-moderator"
+                  },
+                  "names": {
+                    "international": "Minecraft 4K",
+                    "japanese": null,
+                    "twitch": "Minecraft 4K"
+                  },
+                  "platforms": [
+                    "8gej2n93"
+                  ],
+                  "publishers": [],
+                  "regions": [],
+                  "release-date": "2009-12-02",
+                  "released": 2009,
+                  "romhack": true,
+                  "ruleset": {
+                    "default-time": "realtime",
+                    "emulators-allowed": true,
+                    "require-verification": true,
+                    "require-video": true,
+                    "run-times": [
+                      "realtime"
+                    ],
+                    "show-milliseconds": true
+                  },
+                  "src_game_id": "k6q4520d",
+                  "srio_game_id": "1ck3rkm62998p"
+                },
+                {
+                  "abbreviation": "mcc",
+                  "boostDistinctDonors": 0,
+                  "boostReceived": 0,
+                  "created": "2020-09-15T18:21:08Z",
+                  "developers": [],
+                  "discord": "https://discord.gg/Qj99fnNkdk",
+                  "engines": [],
+                  "gametypes": [],
+                  "genres": [],
+                  "moderators": {
+                    "j267157x": "moderator",
+                    "j921k2w8": "moderator",
+                    "jn37p4qx": "super-moderator",
+                    "kj9wqk78": "super-moderator",
+                    "xy5k04w8": "super-moderator"
+                  },
+                  "names": {
+                    "international": "Minecraft (Classic)",
+                    "japanese": null,
+                    "twitch": "Minecraft (Classic)"
+                  },
+                  "platforms": [
+                    "8gej2n93",
+                    "o7e25xew"
+                  ],
+                  "publishers": [],
+                  "regions": [],
+                  "release-date": "2009-05-17",
+                  "released": 2009,
+                  "romhack": false,
+                  "ruleset": {
+                    "default-time": "realtime",
+                    "emulators-allowed": true,
+                    "require-verification": true,
+                    "require-video": true,
+                    "run-times": [
+                      "realtime"
+                    ],
+                    "show-milliseconds": true
+                  },
+                  "src_game_id": "k6q474zd",
+                  "srio_game_id": "1pcz7yx6no91g"
+                },
+                {
+                  "abbreviation": "mcsm2",
+                  "boostDistinctDonors": 0,
+                  "boostReceived": 0,
+                  "created": "2018-06-13T15:25:44Z",
+                  "developers": [],
+                  "discord": "https://discord.gg/qWDPuK6H",
+                  "engines": [],
+                  "gametypes": [],
+                  "genres": [],
+                  "moderators": {
+                    "86npw3wx": "moderator",
+                    "e8en2528": "super-moderator",
+                    "qjnpze48": "super-moderator"
+                  },
+                  "names": {
+                    "international": "Minecraft: Story Mode - Season Two",
+                    "japanese": null,
+                    "twitch": "Minecraft: Story Mode - Season Two"
+                  },
+                  "platforms": [
+                    "n568oevp",
+                    "nzelkr6q",
+                    "o7e2mx6w",
+                    "8gej2n93",
+                    "lq60nl94",
+                    "gde3xgek",
+                    "mx6ppw63",
+                    "7m6ylw9p"
+                  ],
+                  "publishers": [],
+                  "regions": [
+                    "pr184lqn",
+                    "e6lxy1dz",
+                    "o316x197",
+                    "mol4z19n",
+                    "p2g50lnk",
+                    "ypl25l47"
+                  ],
+                  "release-date": "2017-07-11",
+                  "released": 2017,
+                  "romhack": false,
+                  "ruleset": {
+                    "default-time": "realtime_noloads",
+                    "emulators-allowed": false,
+                    "require-verification": true,
+                    "require-video": true,
+                    "run-times": [
+                      "realtime",
+                      "realtime_noloads"
+                    ],
+                    "show-milliseconds": false
+                  },
+                  "src_game_id": "k6q4jnzd",
+                  "srio_game_id": "1fcttns2ipdj7"
+                },
+                {
+                  "abbreviation": "mc_af",
+                  "boostDistinctDonors": 0,
+                  "boostReceived": 0,
+                  "created": "2021-12-25T17:26:40Z",
+                  "developers": [],
+                  "discord": "https://discord.gg/jtBMezBp8p",
+                  "engines": [],
+                  "gametypes": [],
+                  "genres": [],
+                  "moderators": {
+                    "8141yw58": "moderator",
+                    "qxkk259x": "super-moderator",
+                    "x3q964kj": "super-moderator"
+                  },
+                  "names": {
+                    "international": "Minecraft: April Fools'",
+                    "japanese": null,
+                    "twitch": "Minecraft: April Fools'"
+                  },
+                  "platforms": [
+                    "8gej2n93"
+                  ],
+                  "publishers": [],
+                  "regions": [],
+                  "release-date": "2013-04-01",
+                  "released": 2013,
+                  "romhack": false,
+                  "ruleset": {
+                    "default-time": "ingame",
+                    "emulators-allowed": false,
+                    "require-verification": true,
+                    "require-video": true,
+                    "run-times": [
+                      "realtime",
+                      "ingame"
+                    ],
+                    "show-milliseconds": true
+                  },
+                  "src_game_id": "k6qwrgz6",
+                  "srio_game_id": "0oopxye97mhvq"
+                },
+                {
+                  "abbreviation": "mc_juice",
+                  "boostDistinctDonors": 1,
+                  "boostReceived": 1,
+                  "created": "2022-02-09T15:25:49Z",
+                  "developers": [],
+                  "discord": "https://discord.gg/CWWKhTXpGg",
+                  "engines": [],
+                  "gametypes": [
+                    "53no817x"
+                  ],
+                  "genres": [],
+                  "moderators": {
+                    "8141yw58": "moderator",
+                    "8rpypdgj": "moderator",
+                    "8vk4q7vj": "moderator",
+                    "8vomrwyx": "moderator",
+                    "8vor79vx": "super-moderator",
+                    "8w1zw54x": "moderator",
+                    "8wlq7l4j": "moderator",
+                    "j2y2oml8": "moderator",
+                    "jo3rqynj": "moderator",
+                    "qxkk259x": "moderator",
+                    "x3q964kj": "moderator",
+                    "xkoe3568": "moderator"
+                  },
+                  "names": {
+                    "international": "Minecraft: Java Edition Unofficial Category Extensions",
+                    "japanese": null,
+                    "twitch": "Minecraft: Java Edition Unofficial Category Extensions"
+                  },
+                  "platforms": [
+                    "8gej2n93"
+                  ],
+                  "publishers": [],
+                  "regions": [],
+                  "release-date": "2011-11-18",
+                  "released": 2011,
+                  "romhack": true,
+                  "ruleset": {
+                    "default-time": "ingame",
+                    "emulators-allowed": false,
+                    "require-verification": true,
+                    "require-video": true,
+                    "run-times": [
+                      "realtime",
+                      "ingame"
+                    ],
+                    "show-milliseconds": true
+                  },
+                  "src_game_id": "m1mnjexd",
+                  "srio_game_id": "0sbot6ws8q12w"
+                },
+                {
+                  "abbreviation": "mcce",
+                  "boostDistinctDonors": 9,
+                  "boostReceived": 11,
+                  "created": "2019-07-18T04:49:49Z",
+                  "developers": [],
+                  "discord": "https://discord.gg/tDPvR9c",
+                  "engines": [],
+                  "gametypes": [
+                    "53no817x"
+                  ],
+                  "genres": [],
+                  "moderators": {
+                    "8147dl38": "moderator",
+                    "86nd46qx": "super-moderator",
+                    "8grwz9px": "super-moderator",
+                    "8l09zk48": "moderator",
+                    "8l0mv728": "super-moderator",
+                    "8rpk6pgj": "moderator",
+                    "8rpypdgj": "super-moderator",
+                    "j03ynz9j": "super-moderator",
+                    "j4rkyzv8": "super-moderator",
+                    "j9693ewj": "moderator",
+                    "jmo36no8": "super-moderator",
+                    "jmp14lej": "super-moderator",
+                    "qxkk259x": "super-moderator",
+                    "x3q964kj": "moderator",
+                    "x72pywr8": "super-moderator",
+                    "xko74v68": "super-moderator",
+                    "xy594zm8": "super-moderator",
+                    "xy5w67w8": "super-moderator",
+                    "xzl0wee8": "super-moderator",
+                    "y8dp36o8": "super-moderator"
+                  },
+                  "names": {
+                    "international": "Minecraft: Java Edition Category Extensions",
+                    "japanese": null,
+                    "twitch": "Minecraft"
+                  },
+                  "platforms": [
+                    "8gej2n93"
+                  ],
+                  "publishers": [],
+                  "regions": [],
+                  "release-date": "2011-11-18",
+                  "released": 2011,
+                  "romhack": true,
+                  "ruleset": {
+                    "default-time": "ingame",
+                    "emulators-allowed": false,
+                    "require-verification": true,
+                    "require-video": true,
+                    "run-times": [
+                      "realtime",
+                      "ingame"
+                    ],
+                    "show-milliseconds": true
+                  },
+                  "src_game_id": "nd2e9erd",
+                  "srio_game_id": "0ddfrt160mh6r"
+                },
+                {
+                  "abbreviation": "mcd2",
+                  "boostDistinctDonors": 0,
+                  "boostReceived": 0,
+                  "created": "2026-06-09T00:35:42Z",
+                  "developers": [],
+                  "discord": "https://discord.gg/pdtqewJVuJ",
+                  "engines": [],
+                  "gametypes": [],
+                  "genres": [],
+                  "moderators": {
+                    "0jm3r3z8": "moderator",
+                    "48gngdyj": "moderator",
+                    "j0nlz338": "moderator",
+                    "j5wrp6wj": "super-moderator"
+                  },
+                  "names": {
+                    "international": "Minecraft Dungeons II",
+                    "japanese": null,
+                    "twitch": "Minecraft Dungeons II"
+                  },
+                  "platforms": [
+                    "8gej2n93",
+                    "7m6ylw9p",
+                    "4p9zjrer",
+                    "nzelyv9q",
+                    "o7e2xj9w",
+                    "3167lw9q"
+                  ],
+                  "publishers": [],
+                  "regions": [],
+                  "release-date": "2026-09-29",
+                  "released": 2026,
+                  "romhack": false,
+                  "ruleset": {
+                    "default-time": "realtime_noloads",
+                    "emulators-allowed": true,
+                    "require-verification": true,
+                    "require-video": true,
+                    "run-times": [
+                      "realtime",
+                      "realtime_noloads"
+                    ],
+                    "show-milliseconds": false
+                  },
+                  "src_game_id": "nd2wwgvd",
+                  "srio_game_id": "17xr9dh7vy8uv"
+                },
+                {
+                  "abbreviation": "mcbeuce",
+                  "boostDistinctDonors": 0,
+                  "boostReceived": 0,
+                  "created": "2021-02-18T14:03:16Z",
+                  "developers": [],
+                  "discord": "https://discord.gg/wyzw7hf6JY",
+                  "engines": [],
+                  "gametypes": [
+                    "53no817x"
+                  ],
+                  "genres": [],
+                  "moderators": {
+                    "866zr508": "super-moderator",
+                    "86vevq5j": "super-moderator",
+                    "8l060pv8": "super-moderator",
+                    "8l0qeyv8": "moderator",
+                    "8v5lyg2j": "moderator",
+                    "8vokkz5x": "moderator",
+                    "8wl6yl3j": "moderator",
+                    "j267157x": "moderator",
+                    "x3qvzg2j": "moderator",
+                    "xkongz68": "super-moderator"
+                  },
+                  "names": {
+                    "international": "Minecraft: Bedrock Edition Unofficial Category Extensions",
+                    "japanese": null,
+                    "twitch": "Unofficial Minecraft Bedrock Category Extensions"
+                  },
+                  "platforms": [
+                    "nzelkr6q",
+                    "o7e2mx6w",
+                    "8gej2n93",
+                    "lq60nl94",
+                    "gde3xgek",
+                    "p36no5e8",
+                    "5neg7key",
+                    "4p9zq09r",
+                    "7m6ylw9p",
+                    "4p9z0r6r",
+                    "nzeljv9q",
+                    "o064j163",
+                    "4p9zjrer",
+                    "nzelyv9q",
+                    "o7e2xj9w",
+                    "mr6ko5ez",
+                    "wxeogz9r",
+                    "3167lw9q"
+                  ],
+                  "publishers": [],
+                  "regions": [],
+                  "release-date": "2011-08-16",
+                  "released": 2011,
+                  "romhack": true,
+                  "ruleset": {
+                    "default-time": "realtime_noloads",
+                    "emulators-allowed": false,
+                    "require-verification": true,
+                    "require-video": true,
+                    "run-times": [
+                      "realtime",
+                      "realtime_noloads"
+                    ],
+                    "show-milliseconds": true
+                  },
+                  "src_game_id": "o1y9glv6",
+                  "srio_game_id": "020u9prey848n"
+                },
+                {
+                  "abbreviation": "mcd",
+                  "boostDistinctDonors": 1,
+                  "boostReceived": 2,
+                  "created": "2020-05-29T20:47:26Z",
+                  "developers": [],
+                  "discord": "https://discord.gg/pdtqewJVuJ",
+                  "engines": [],
+                  "gametypes": [],
+                  "genres": [],
+                  "moderators": {
+                    "0jm3r3z8": "super-moderator",
+                    "48gngdyj": "moderator",
+                    "j0nlz338": "moderator",
+                    "j5wrp6wj": "super-moderator"
+                  },
+                  "names": {
+                    "international": "Minecraft Dungeons",
+                    "japanese": null,
+                    "twitch": "Minecraft Dungeons"
+                  },
+                  "platforms": [
+                    "nzelkr6q",
+                    "o7e2mx6w",
+                    "8gej2n93",
+                    "lq60nl94",
+                    "7m6ylw9p",
+                    "4p9z0r6r",
+                    "o064j163",
+                    "4p9zjrer",
+                    "nzelyv9q",
+                    "o7e2xj9w",
+                    "3167lw9q"
+                  ],
+                  "publishers": [],
+                  "regions": [],
+                  "release-date": "2020-05-26",
+                  "released": 2020,
+                  "romhack": false,
+                  "ruleset": {
+                    "default-time": "realtime_noloads",
+                    "emulators-allowed": false,
+                    "require-verification": true,
+                    "require-video": true,
+                    "run-times": [
+                      "realtime",
+                      "realtime_noloads"
+                    ],
+                    "show-milliseconds": true
+                  },
+                  "src_game_id": "o6glg48d",
+                  "srio_game_id": "0g3ls228pd1zh"
+                },
+                {
+                  "abbreviation": "mc3dsce",
+                  "boostDistinctDonors": 0,
+                  "boostReceived": 0,
+                  "created": "2021-10-27T15:53:26Z",
+                  "developers": [],
+                  "discord": "https://discord.gg/D9ubdJKHYC",
+                  "engines": [],
+                  "gametypes": [
+                    "53no817x"
+                  ],
+                  "genres": [],
+                  "moderators": {
+                    "jn37p4qx": "super-moderator",
+                    "kj9wqk78": "super-moderator",
+                    "xy5k04w8": "moderator",
+                    "xz995g08": "moderator"
+                  },
+                  "names": {
+                    "international": "Minecraft: New Nintendo 3DS Edition Category Extensions",
+                    "japanese": null,
+                    "twitch": "Minecraft: New Nintendo 3DS Edition Category Extensions"
+                  },
+                  "platforms": [
+                    "kz9wqn9p"
+                  ],
+                  "publishers": [],
+                  "regions": [],
+                  "release-date": "2017-09-13",
+                  "released": 2017,
+                  "romhack": true,
+                  "ruleset": {
+                    "default-time": "realtime",
+                    "emulators-allowed": true,
+                    "require-verification": true,
+                    "require-video": true,
+                    "run-times": [
+                      "realtime"
+                    ],
+                    "show-milliseconds": true
+                  },
+                  "src_game_id": "o6gnxlx1",
+                  "srio_game_id": "0kjgzru74yxbr"
+                },
+                {
+                  "abbreviation": "mchv",
+                  "boostDistinctDonors": 1,
+                  "boostReceived": 3,
+                  "created": "2021-05-09T15:24:50Z",
+                  "developers": [],
+                  "discord": "https://discord.gg/SdCStmwJ46",
+                  "engines": [],
+                  "gametypes": [],
+                  "genres": [],
+                  "moderators": {
+                    "8vkne42j": "super-moderator",
+                    "jn37p4qx": "super-moderator",
+                    "qxk5wo9x": "moderator",
+                    "qxkk259x": "super-moderator",
+                    "v8lvq4jm": "super-moderator"
+                  },
+                  "names": {
+                    "international": "Minecraft: Java Edition (Historical Versions)",
+                    "japanese": null,
+                    "twitch": "Minecraft: Java Edition (Historical Versions)"
+                  },
+                  "platforms": [
+                    "8gej2n93",
+                    "mx6ppw63",
+                    "5neg7key"
+                  ],
+                  "publishers": [],
+                  "regions": [],
+                  "release-date": "2009-05-13",
+                  "released": 2009,
+                  "romhack": false,
+                  "ruleset": {
+                    "default-time": "realtime",
+                    "emulators-allowed": false,
+                    "require-verification": true,
+                    "require-video": true,
+                    "run-times": [
+                      "realtime"
+                    ],
+                    "show-milliseconds": true
+                  },
+                  "src_game_id": "pd0qw9w1",
+                  "srio_game_id": "1rbr8uk5hmrf7"
+                },
+                {
+                  "abbreviation": "mc3ds",
+                  "boostDistinctDonors": 0,
+                  "boostReceived": 0,
+                  "created": "2020-08-15T15:31:20Z",
+                  "developers": [],
+                  "discord": "https://discord.gg/crsfbV5UD2",
+                  "engines": [],
+                  "gametypes": [],
+                  "genres": [],
+                  "moderators": {
+                    "jn37p4qx": "super-moderator",
+                    "kj9wqk78": "super-moderator",
+                    "xy5k04w8": "super-moderator",
+                    "xz995g08": "moderator"
+                  },
+                  "names": {
+                    "international": "Minecraft: New Nintendo 3DS Edition",
+                    "japanese": null,
+                    "twitch": "Minecraft New Nintendo 3DS Edition"
+                  },
+                  "platforms": [
+                    "kz9wqn9p"
+                  ],
+                  "publishers": [],
+                  "regions": [],
+                  "release-date": "2017-09-13",
+                  "released": 2017,
+                  "romhack": false,
+                  "ruleset": {
+                    "default-time": "realtime",
+                    "emulators-allowed": true,
+                    "require-verification": true,
+                    "require-video": true,
+                    "run-times": [
+                      "realtime"
+                    ],
+                    "show-milliseconds": true
+                  },
+                  "src_game_id": "pd0wkq01",
+                  "srio_game_id": "1oguwk72du134"
+                },
+                {
+                  "abbreviation": "Minecraft_NetEase_Edition",
+                  "boostDistinctDonors": 1,
+                  "boostReceived": 3,
+                  "created": "2024-12-03T19:37:38Z",
+                  "developers": [],
+                  "discord": null,
+                  "engines": [],
+                  "gametypes": [],
+                  "genres": [],
+                  "moderators": {
+                    "866zr508": "super-moderator",
+                    "8d4d9rm8": "moderator",
+                    "8v2rrv2j": "moderator",
+                    "8w0zepqj": "super-moderator",
+                    "j0nqepr8": "super-moderator",
+                    "jnp32nd8": "super-moderator"
+                  },
+                  "names": {
+                    "international": "Minecraft: NetEase Edition",
+                    "japanese": null,
+                    "twitch": "Minecraft: NetEase Edition"
+                  },
+                  "platforms": [
+                    "8gej2n93",
+                    "lq60nl94",
+                    "gde3xgek"
+                  ],
+                  "publishers": [],
+                  "regions": [
+                    "mol4z19n"
+                  ],
+                  "release-date": "2017-08-08",
+                  "released": 2017,
+                  "romhack": false,
+                  "ruleset": {
+                    "default-time": "realtime",
+                    "emulators-allowed": true,
+                    "require-verification": true,
+                    "require-video": true,
+                    "run-times": [
+                      "realtime"
+                    ],
+                    "show-milliseconds": true
+                  },
+                  "src_game_id": "v1pl0246",
+                  "srio_game_id": "00bggjqhz2bui"
+                }
+              ]
+            },
+            "meta": {
+              "pagination": {
+                "offset": 0,
+                "max": 20,
+                "size": 20
+              },
+              "schema": "1.0",
+              "sources": [
+                {
+                  "license": "CC-BY-NC-4.0",
+                  "name": "speedrun.com",
+                  "role": "authority",
+                  "timestamp": {
+                    "collected": {
+                      "from": "2026-05-24T06:31:46Z",
+                      "to": "2026-06-15T00:28:48Z"
+                    }
+                  },
+                  "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+                }
+              ],
+              "usage": {
+                "data_bytes": 53077
+              }
+            },
+            "status": 200
+          }

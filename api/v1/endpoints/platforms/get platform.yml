@@ -1,0 +1,110 @@
+info:
+  name: get platform
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: https://api.speedrun.io/v1/platforms/{{slug}}
+  auth: inherit
+
+runtime:
+  variables:
+    - name: slug
+      value: kz9wlm6p
+      description: example platform id
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true
+
+examples:
+  - name: pc platform
+    description: use an ID to get a specific platform
+    request:
+      url: https://api.speedrun.io/v1/platforms/8gej2n93
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: |-
+          {
+            "data": {
+              "platforms": [
+                {
+                  "name": "PC",
+                  "released": 1970,
+                  "src_platform_id": "8gej2n93",
+                  "srio_platform_id": "1iw9do42v06un"
+                }
+              ]
+            },
+            "meta": {
+              "schema": "1.0",
+              "sources": [
+                {
+                  "license": "CC-BY-NC-4.0",
+                  "name": "speedrun.com",
+                  "role": "authority",
+                  "timestamp": {
+                    "collected": {
+                      "on": "2026-05-24T06:34:58Z"
+                    }
+                  },
+                  "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+                }
+              ],
+              "usage": {
+                "data_bytes": 287
+              }
+            },
+            "status": 200
+          }
+  - name: analogue nt mini
+    description: use an ID to get a specific platform
+    request:
+      url: https://api.speedrun.io/v1/platforms/kz9wlm6p
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: |-
+          {
+            "data": {
+              "platforms": [
+                {
+                  "name": "Analogue Nt Mini",
+                  "released": 2015,
+                  "src_platform_id": "kz9wlm6p",
+                  "srio_platform_id": "1pjni9bl5ef4w"
+                }
+              ]
+            },
+            "meta": {
+              "schema": "1.0",
+              "sources": [
+                {
+                  "license": "CC-BY-NC-4.0",
+                  "name": "speedrun.com",
+                  "role": "authority",
+                  "timestamp": {
+                    "collected": {
+                      "on": "2026-05-24T06:34:49Z"
+                    }
+                  },
+                  "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+                }
+              ],
+              "usage": {
+                "data_bytes": 301
+              }
+            },
+            "status": 200
+          }

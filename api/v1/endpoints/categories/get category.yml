@@ -1,0 +1,171 @@
+info:
+  name: get category
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: https://api.speedrun.io/v1/categories/{{slug}}
+  auth: inherit
+
+runtime:
+  variables:
+    - name: slug
+      value: jdz8oprd
+      description: example category id
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true
+
+examples:
+  - name: "celeste: all red berries"
+    description: use an ID to get a specific category
+    request:
+      url: https://api.speedrun.io/v1/categories/jdz8oprd
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: |-
+          {
+            "data": {
+              "categories": [
+                {
+                  "miscellaneous": false,
+                  "name": "All Red Berries",
+                  "players": {
+                    "type": "exactly",
+                    "value": 1
+                  },
+                  "rules": "## Category Objective\r\n* Collect all 175 red berries and complete Core from a new file.",
+                  "src_category_id": "jdz8oprd",
+                  "srio_category_id": "1n73qubpwsdsw",
+                  "type": "per-game"
+                }
+              ]
+            },
+            "meta": {
+              "schema": "1.0",
+              "sources": [
+                {
+                  "license": "CC-BY-NC-4.0",
+                  "name": "speedrun.com",
+                  "role": "authority",
+                  "timestamp": {
+                    "collected": {
+                      "on": "2026-06-26T00:47:06Z"
+                    }
+                  },
+                  "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+                }
+              ],
+              "usage": {
+                "data_bytes": 806
+              }
+            },
+            "status": 200
+          }
+  - name: "hollow knight: main levels"
+    description: use an ID to get a specific category
+    request:
+      url: https://api.speedrun.io/v1/categories/wkpq608d
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: |-
+          {
+            "data": {
+              "categories": [
+                {
+                  "miscellaneous": false,
+                  "name": "Level",
+                  "players": {
+                    "type": "exactly",
+                    "value": 1
+                  },
+                  "rules": "",
+                  "src_category_id": "wkpq608d",
+                  "srio_category_id": "0hf1g791jb996",
+                  "type": "per-level"
+                }
+              ]
+            },
+            "meta": {
+              "schema": "1.0",
+              "sources": [
+                {
+                  "license": "CC-BY-NC-4.0",
+                  "name": "speedrun.com",
+                  "role": "authority",
+                  "timestamp": {
+                    "collected": {
+                      "on": "2026-06-27T21:47:09Z"
+                    }
+                  },
+                  "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+                }
+              ],
+              "usage": {
+                "data_bytes": 608
+              }
+            },
+            "status": 200
+          }
+  - name: "portal 2: single player"
+    description: use an ID to get a specific category
+    request:
+      url: https://api.speedrun.io/v1/categories/jzd33ndn
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: |-
+          {
+            "data": {
+              "categories": [
+                {
+                  "miscellaneous": false,
+                  "name": "Single Player",
+                  "players": {
+                    "type": "exactly",
+                    "value": 1
+                  },
+                  "rules": "Single Player Rules: https://rules.portal2.sr/#portal-2",
+                  "src_category_id": "jzd33ndn",
+                  "srio_category_id": "0i95b3gsrg5tw",
+                  "type": "per-game"
+                }
+              ]
+            },
+            "meta": {
+              "schema": "1.0",
+              "sources": [
+                {
+                  "license": "CC-BY-NC-4.0",
+                  "name": "speedrun.com",
+                  "role": "authority",
+                  "timestamp": {
+                    "collected": {
+                      "on": "2026-06-26T03:12:25Z"
+                    }
+                  },
+                  "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+                }
+              ],
+              "usage": {
+                "data_bytes": 774
+              }
+            },
+            "status": 200
+          }

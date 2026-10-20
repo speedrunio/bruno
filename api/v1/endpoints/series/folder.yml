@@ -1,0 +1,7 @@
+info:
+  name: series
+  type: folder
+  seq: 8
+
+request:
+  auth: inherit

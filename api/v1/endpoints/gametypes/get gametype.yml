@@ -1,0 +1,110 @@
+info:
+  name: get gametype
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: https://api.speedrun.io/v1/gametypes/{{slug}}
+  auth: inherit
+
+runtime:
+  variables:
+    - name: slug
+      value: 53no817x
+      description: example gametype id
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true
+
+examples:
+  - name: category extensions
+    description: use an ID to get a specific gametype
+    request:
+      url: https://api.speedrun.io/v1/gametypes/53no817x
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: |-
+          {
+            "data": {
+              "gametypes": [
+                {
+                  "allows-base-game": true,
+                  "name": "Category Extension",
+                  "src_gametype_id": "53no817x",
+                  "srio_gametype_id": "0hrxrugxen05l"
+                }
+              ]
+            },
+            "meta": {
+              "schema": "1.0",
+              "sources": [
+                {
+                  "license": "CC-BY-NC-4.0",
+                  "name": "speedrun.com",
+                  "role": "authority",
+                  "timestamp": {
+                    "collected": {
+                      "on": "2026-05-24T06:07:53Z"
+                    }
+                  },
+                  "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+                }
+              ],
+              "usage": {
+                "data_bytes": 233
+              }
+            },
+            "status": 200
+          }
+  - name: expansion/dlc
+    description: use an ID to get a specific gametype
+    request:
+      url: https://api.speedrun.io/v1/gametypes/j8138myw
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: |-
+          {
+            "data": {
+              "gametypes": [
+                {
+                  "allows-base-game": true,
+                  "name": "Expansion/DLC",
+                  "src_gametype_id": "j8138myw",
+                  "srio_gametype_id": "0y0n7thmgnkih"
+                }
+              ]
+            },
+            "meta": {
+              "schema": "1.0",
+              "sources": [
+                {
+                  "license": "CC-BY-NC-4.0",
+                  "name": "speedrun.com",
+                  "role": "authority",
+                  "timestamp": {
+                    "collected": {
+                      "on": "2026-05-24T06:07:53Z"
+                    }
+                  },
+                  "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+                }
+              ],
+              "usage": {
+                "data_bytes": 228
+              }
+            },
+            "status": 200
+          }

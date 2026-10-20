@@ -1,0 +1,375 @@
+info:
+  name: list game levels by id
+  type: http
+  seq: 6
+
+http:
+  method: GET
+  url: https://api.speedrun.io/v1/games/{{slug}}/levels
+  auth: inherit
+
+runtime:
+  variables:
+    - name: slug
+      value: 3dxy5vv6
+      description: example game id
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true
+
+examples:
+  - name: hades 2
+    description: use an ID to list the levels for a specific game
+    request:
+      url: https://api.speedrun.io/v1/games/3dxy5vv6/levels
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: |-
+          {
+            "data": {
+              "levels": [
+                {
+                  "name": "Trial of Blood",
+                  "rules": "The run must be completed in The Chaos Trial, the **Trial of Blood**.",
+                  "src_level_id": "d7y7klgd",
+                  "srio_level_id": "131sixbb92in2"
+                },
+                {
+                  "name": "Trial of Brawn",
+                  "rules": "The run must be completed in The Chaos Trial, the **Trial of Brawn**, previously known as **Trial of the Labrys.**",
+                  "src_level_id": "98rjvegd",
+                  "srio_level_id": "0kuolzku5uxbf"
+                },
+                {
+                  "name": "Trial of Destiny",
+                  "rules": "The run must be completed in The Chaos Trial, the **Trial of Destiny**.",
+                  "src_level_id": "we218nqw",
+                  "srio_level_id": "0bkcw5cwteo2n"
+                },
+                {
+                  "name": "Trial of Doom",
+                  "rules": "The run must be completed in The Chaos Trial, the **Trial of Doom**.",
+                  "src_level_id": "wj7yl3nw",
+                  "srio_level_id": "1c67v2vck5jp9"
+                },
+                {
+                  "name": "Trial of Flame",
+                  "rules": "The run must be completed in The Chaos Trial, the **Trial of Flame**.",
+                  "src_level_id": "we24knyw",
+                  "srio_level_id": "0tj2eq3px4lxi"
+                },
+                {
+                  "name": "Trial of Fury",
+                  "rules": "The run must be completed in The Chaos Trial, the **Trial of Fury**.",
+                  "src_level_id": "9gyz0r59",
+                  "srio_level_id": "15svt6qbirx0j"
+                },
+                {
+                  "name": "Trial of Glory",
+                  "rules": "The run must be completed in The Chaos Trial, the **Trial of Glory**.",
+                  "src_level_id": "dy1ypjjd",
+                  "srio_level_id": "0tk85o0g7f3ib"
+                },
+                {
+                  "name": "Trial of Gold",
+                  "rules": "The run must be completed in The Chaos Trial, the **Trial of Gold**.",
+                  "src_level_id": "9zproxlw",
+                  "srio_level_id": "040ynt34b7rq1"
+                },
+                {
+                  "name": "Trial of Haste",
+                  "rules": "The run must be completed in The Chaos Trial, the **Trial of Haste**.",
+                  "src_level_id": "dqz02gkd",
+                  "srio_level_id": "08a6yhpe6aorx"
+                },
+                {
+                  "name": "Trial of Heartache",
+                  "rules": "The run must be completed in The Chaos Trial, the **Trial of Heartache**.",
+                  "src_level_id": "95kjoy09",
+                  "srio_level_id": "1ttrng3mrbarr"
+                },
+                {
+                  "name": "Trial of Humility",
+                  "rules": "The run must be completed in The Chaos Trial, the **Trial of Humility**.",
+                  "src_level_id": "wo7k1lo9",
+                  "srio_level_id": "0albmbt86l6yi"
+                },
+                {
+                  "name": "Trial of Origin",
+                  "rules": "The run must be completed in The Chaos Trial, the **Trial of Origin**.",
+                  "src_level_id": "93q058nw",
+                  "srio_level_id": "02th88yf410dd"
+                },
+                {
+                  "name": "Trial of Precarity",
+                  "rules": "The run must be completed in The Chaos Trial, the **Trial of Precarity**.",
+                  "src_level_id": "9x125k0d",
+                  "srio_level_id": "0388uthxrp31j"
+                },
+                {
+                  "name": "Trial of Salt",
+                  "rules": "The run must be completed in The Chaos Trial, the **Trial of Salt**.",
+                  "src_level_id": "dy1e7jkd",
+                  "srio_level_id": "03pchad3csbp7"
+                },
+                {
+                  "name": "Trial of Slaughter",
+                  "rules": "The run must be completed in The Chaos Trial, the **Trial of Slaughter**.",
+                  "src_level_id": "wlgl7np9",
+                  "srio_level_id": "0p2nu5z4tofbm"
+                },
+                {
+                  "name": "Trial of Thunder",
+                  "rules": "The run must be completed in The Chaos Trial, the **Trial of Thunder**.",
+                  "src_level_id": "dno0prnw",
+                  "srio_level_id": "120ucxbf7odye"
+                },
+                {
+                  "name": "Trial of Vengeance",
+                  "rules": "The run must be completed in The Chaos Trial, the **Trial of Vengeance**.",
+                  "src_level_id": "dno5jrqw",
+                  "srio_level_id": "05eai9ov98s7o"
+                },
+                {
+                  "name": "Trial of Vigor",
+                  "rules": "The run must be completed in The Chaos Trial, the **Trial of Vigor**.",
+                  "src_level_id": "wlg6xn09",
+                  "srio_level_id": "1ewysqz0qlkkc"
+                },
+                {
+                  "name": "Trial of the Banshee",
+                  "rules": "The run must be completed in The Chaos Trial, the **Trial of the Banshee**.",
+                  "src_level_id": "95k5rv49",
+                  "srio_level_id": "01nepax6f3a16"
+                },
+                {
+                  "name": "Trial of the Daemon",
+                  "rules": "The run must be completed in The Chaos Trial, the **Trial of the Daemon**.",
+                  "src_level_id": "dqz736gd",
+                  "srio_level_id": "0lohkpw06hwy8"
+                }
+              ]
+            },
+            "meta": {
+              "pagination": {
+                "offset": 0,
+                "max": 20,
+                "size": 20
+              },
+              "schema": "1.0",
+              "sources": [
+                {
+                  "license": "CC-BY-NC-4.0",
+                  "name": "speedrun.com",
+                  "role": "authority",
+                  "timestamp": {
+                    "collected": {
+                      "from": "2026-06-23T19:38:27Z",
+                      "to": "2026-09-08T01:40:39Z"
+                    }
+                  },
+                  "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+                }
+              ],
+              "usage": {
+                "data_bytes": 15944
+              }
+            },
+            "status": 200
+          }
+  - name: spyro the dragon
+    description: use an ID to list the levels for a specific game
+    request:
+      url: https://api.speedrun.io/v1/games/576rje18/levels
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: |-
+          {
+            "data": {
+              "levels": [
+                {
+                  "name": "Crystal Flight",
+                  "rules": null,
+                  "src_level_id": "y9mx35w5",
+                  "srio_level_id": "0zysmhp95dm9c"
+                },
+                {
+                  "name": "Icy Flight",
+                  "rules": null,
+                  "src_level_id": "592qlo96",
+                  "srio_level_id": "1kanvllfdvv3r"
+                },
+                {
+                  "name": "Night Flight",
+                  "rules": null,
+                  "src_level_id": "ewpxykdn",
+                  "srio_level_id": "0qu0kvz9z8qtm"
+                },
+                {
+                  "name": "Sunny Flight",
+                  "rules": null,
+                  "src_level_id": "kwjzkn9g",
+                  "srio_level_id": "0fo6bgjskcw6n"
+                },
+                {
+                  "name": "Wild Flight",
+                  "rules": null,
+                  "src_level_id": "5wk6o294",
+                  "srio_level_id": "0fhznqu758jsy"
+                }
+              ]
+            },
+            "meta": {
+              "pagination": {
+                "offset": 0,
+                "max": 20,
+                "size": 5
+              },
+              "schema": "1.0",
+              "sources": [
+                {
+                  "license": "CC-BY-NC-4.0",
+                  "name": "speedrun.com",
+                  "role": "authority",
+                  "timestamp": {
+                    "collected": {
+                      "from": "2026-06-23T00:44:36Z",
+                      "to": "2026-06-30T20:39:23Z"
+                    }
+                  },
+                  "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+                }
+              ],
+              "usage": {
+                "data_bytes": 3593
+              }
+            },
+            "status": 200
+          }
+  - name: matterfall
+    description: use an ID to list the levels for a specific game
+    request:
+      url: https://api.speedrun.io/v1/games/o1y90246/levels
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: |-
+          {
+            "data": {
+              "levels": [
+                {
+                  "name": "1-1 Skyline Heights",
+                  "rules": null,
+                  "src_level_id": "n93o2ke9",
+                  "srio_level_id": "17o7svg5el7jn"
+                },
+                {
+                  "name": "1-2 Boulevard Concourse",
+                  "rules": null,
+                  "src_level_id": "z98n2pl9",
+                  "srio_level_id": "1j0cg007xcp2i"
+                },
+                {
+                  "name": "1-3 FortCorp Headquarters",
+                  "rules": null,
+                  "src_level_id": "rdnnk3vd",
+                  "srio_level_id": "1iyrq0c88mrhv"
+                },
+                {
+                  "name": "1-4 Autonomous Hunter-Killer",
+                  "rules": null,
+                  "src_level_id": "ldy24qzw",
+                  "srio_level_id": "1q92oom0qox72"
+                },
+                {
+                  "name": "2-1 Vertical Farms",
+                  "rules": null,
+                  "src_level_id": "gdr2krz9",
+                  "srio_level_id": "13r2aywxfrgkj"
+                },
+                {
+                  "name": "2-2 Produce Distribution",
+                  "rules": null,
+                  "src_level_id": "nwl3k0rw",
+                  "srio_level_id": "0vf07y551a8il"
+                },
+                {
+                  "name": "2-3 Greenhouse Complex",
+                  "rules": null,
+                  "src_level_id": "ywelz0r9",
+                  "srio_level_id": "0bz8vxwqy2cym"
+                },
+                {
+                  "name": "2-4 Area Denial Swarm",
+                  "rules": null,
+                  "src_level_id": "69zzm7o9",
+                  "srio_level_id": "1v043weym8tys"
+                },
+                {
+                  "name": "3-1 Extraction Shafts",
+                  "rules": null,
+                  "src_level_id": "r9gxklkw",
+                  "srio_level_id": "0fz49yrop93i8"
+                },
+                {
+                  "name": "3-2 Research Labs",
+                  "rules": null,
+                  "src_level_id": "o9x4mg1d",
+                  "srio_level_id": "082xv2v306od2"
+                },
+                {
+                  "name": "3-3 Processing Plant",
+                  "rules": null,
+                  "src_level_id": "4954v2jw",
+                  "srio_level_id": "06nlgs3e6lsrn"
+                },
+                {
+                  "name": "3-4 Weaponized Excavator",
+                  "rules": null,
+                  "src_level_id": "rdql681w",
+                  "srio_level_id": "0ba2qbn4t0tzv"
+                }
+              ]
+            },
+            "meta": {
+              "pagination": {
+                "offset": 0,
+                "max": 20,
+                "size": 12
+              },
+              "schema": "1.0",
+              "sources": [
+                {
+                  "license": "CC-BY-NC-4.0",
+                  "name": "speedrun.com",
+                  "role": "authority",
+                  "timestamp": {
+                    "collected": {
+                      "from": "2026-06-22T18:08:53Z",
+                      "to": "2026-07-01T04:11:33Z"
+                    }
+                  },
+                  "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+                }
+              ],
+              "usage": {
+                "data_bytes": 8912
+              }
+            },
+            "status": 200
+          }

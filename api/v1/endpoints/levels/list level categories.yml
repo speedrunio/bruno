@@ -1,0 +1,158 @@
+info:
+  name: list level categories
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: https://api.speedrun.io/v1/levels/{{slug}}/categories
+  auth: inherit
+
+runtime:
+  variables:
+    - name: slug
+      value: 495lx03d
+      description: example level id
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true
+
+examples:
+  - name: "hollow knight: pantheon of the master"
+    description: use an ID to list the categories for a specific level
+    request:
+      url: https://api.speedrun.io/v1/levels/495lx03d/categories
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: |-
+          {
+            "data": {
+              "categories": [
+                {
+                  "miscellaneous": false,
+                  "name": "Level",
+                  "players": {
+                    "type": "exactly",
+                    "value": 1
+                  },
+                  "rules": "",
+                  "src_category_id": "wkpq608d",
+                  "srio_category_id": "0hf1g791jb996",
+                  "type": "per-level"
+                }
+              ]
+            },
+            "meta": {
+              "pagination": {
+                "offset": 0,
+                "max": 20,
+                "size": 1
+              },
+              "schema": "1.0",
+              "sources": [
+                {
+                  "license": "CC-BY-NC-4.0",
+                  "name": "speedrun.com",
+                  "role": "authority",
+                  "timestamp": {
+                    "collected": {
+                      "from": "2026-06-27T21:47:09Z",
+                      "to": "2026-06-27T21:47:09Z"
+                    }
+                  },
+                  "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+                }
+              ],
+              "usage": {
+                "data_bytes": 608
+              }
+            },
+            "status": 200
+          }
+  - name: "ultra kill: bridgeburner"
+    description: use an ID to list the categories for a specific level
+    request:
+      url: https://api.speedrun.io/v1/levels/5d7245ew/categories
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: |-
+          {
+            "data": {
+              "categories": [
+                {
+                  "miscellaneous": false,
+                  "name": "Any%",
+                  "players": {
+                    "type": "exactly",
+                    "value": 1
+                  },
+                  "rules": "> Please make sure to also read the Game Rules.\n\n# Individual Levels - Any%\n\nComplete the level from start to finish with **any rank**.\n\n- When submitting for ILs, **leave \"Time\" blank** and **fill in IGT (In-Game Time) only**, including the 3 decimal digits.\n- Play on the patches that includes the available levels. Current patch *(-- EA (mm/dd/yy) --)* is preferred, but not mandatory (and may vary depending on the selected revamp split).\n- False finishes are acceptable as long as the \"Mission Completion\" screen is shown.\n- It is highly recommended for runners to designate their run with an additional subcategory as long as it still follows the rules for both categories. *(e.g. Any% and Inbounds)*",
+                  "src_category_id": "5dw44w5k",
+                  "srio_category_id": "0zmwh1gmei922",
+                  "type": "per-level"
+                },
+                {
+                  "miscellaneous": false,
+                  "name": "No Monsters",
+                  "players": {
+                    "type": "exactly",
+                    "value": 1
+                  },
+                  "rules": "> Please make sure to also read the Game Rules.\n\n# Individual Levels - No Monsters\n\nComplete the level from start to finish with **any rank** whilst **enabling the [Disable Enemy Spawns] and [Keep Cheats Activated] cheats**. *(no other cheats may be enabled throughout the entirety of the run)*\n\n- When submitting for ILs, **leave \"Time\" blank** and **fill in IGT (In-Game Time) only**, including the 3 decimal digits.\n- Play on the patches that includes the available levels. Current patch *(-- EA (mm/dd/yy) --)* is preferred, but not mandatory (and may vary depending on the selected revamp split).\n- False finishes are acceptable as long as the \"Mission Completion\" screen is shown.\n- It is highly recommended for runners to designate their run with an additional subcategory as long as it still follows the rules for both categories. *(e.g. NoMo and Weaponless)*",
+                  "src_category_id": "rkl3wl6k",
+                  "srio_category_id": "11elf1bt1c0h1",
+                  "type": "per-level"
+                },
+                {
+                  "miscellaneous": false,
+                  "name": "P Rank",
+                  "players": {
+                    "type": "exactly",
+                    "value": 1
+                  },
+                  "rules": "> Please make sure to also read the Game Rules.\n\n# Individual Levels - P%\n\nComplete the level from start to finish with a **perfect (P) rank**. *(meeting the Time, Kills, and Style requirements without restarting from a checkpoint)*\n\n- When submitting for ILs, **leave \"Time\" blank** and **fill in IGT (In-Game Time) only**, including the 3 decimal digits.\n- Play on the patches that includes the available levels. Current patch *(-- EA (mm/dd/yy) --)* is preferred, but not mandatory (and may vary depending on the selected revamp split).\n- False finishes are acceptable as long as the \"Mission Completion\" screen is shown.\n- It is highly recommended for runners to designate their run with an additional subcategory as long as it still follows the rules for both categories. *(e.g. P% and Inbounds)*",
+                  "src_category_id": "zd3wqlnk",
+                  "srio_category_id": "0xyxj23hqt6cr",
+                  "type": "per-level"
+                }
+              ]
+            },
+            "meta": {
+              "pagination": {
+                "offset": 0,
+                "max": 20,
+                "size": 3
+              },
+              "schema": "1.0",
+              "sources": [
+                {
+                  "license": "CC-BY-NC-4.0",
+                  "name": "speedrun.com",
+                  "role": "authority",
+                  "timestamp": {
+                    "collected": {
+                      "from": "2026-06-22T10:16:55Z",
+                      "to": "2026-06-29T05:37:42Z"
+                    }
+                  },
+                  "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+                }
+              ],
+              "usage": {
+                "data_bytes": 4232
+              }
+            },
+            "status": 200
+          }

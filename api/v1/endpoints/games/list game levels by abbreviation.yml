@@ -1,0 +1,386 @@
+info:
+  name: list game levels by abbreviation
+  type: http
+  seq: 7
+
+http:
+  method: GET
+  url: https://api.speedrun.io/v1/games/{{slug}}/levels
+  auth: inherit
+
+runtime:
+  variables:
+    - name: slug
+      value: botw
+      description: example game abbreviation
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true
+
+examples:
+  - name: "zelda: breath of the wild"
+    description: use an abbreviation to list the levels for a specific game
+    request:
+      url: https://api.speedrun.io/v1/games/botw/levels
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: |-
+          {
+            "data": {
+              "levels": [
+                {
+                  "name": "Akkala Shrines",
+                  "rules": "**General IL Rules:**\n\n- Game version must be the latest available (currently Ver. 1.5.0 for Wii U and Ver. 1.6.0 for Switch)\r\n- All homebrew applications are banned, except for BotwRuns v1.0 found in the resources section.\r\n- Video proof is required.\n- Video must contain an additional second of cutscene after run is complete.\r\n- Any preparation is allowed (unless specified). This includes, but is not limited to, entering with:\r\nAttack, Defense, or Speed boosts, Bonus Hearts, Bonus Stamina, “Moonjump”, “Skew”.\n\n**Shrines Any% Rules**\n\n- Timing starts from control of Link.\r\n- Timing ends once you interact with the Monk's pedestal.\r\n- The Spirit Orb must be collected in order for the run to be valid.\r\n- The Shrine must be completely untouched before starting.\r\n\n**No Major Glitches Rules**\n\n- Same as Any%\r\n- The following tricks are not allowed to be performed during the run or setup during the preparation in order to do during the run:\r\n- Clipping through solid surfaces or objects.\r\n- Moonjump\r\n- Windbomb\r\n- Horse Sliding\r\n- Skew Bouncing\r\n- Bomb Bouncing\r\n- Bow Lift Smuggling\r\n- Amplifying momentum by abusing bullet time slowdown\r\n- Void Out Storage or any other effect of Apparatus Storage\r\n- (Note: Newly discovered glitches/tricks will be subject to a vote before being allowed or banned).\r\n\n**100% Rules**\n\n- Same as Any%.\r\n- Must open all chests and obtain the item within. Destroying chests is allowed as long as the item is collected.\r\n- Must defeat all enemies.\r\n\n**No Major Glitches 100% Rules**\n\n- Same as Any%\r\n- Same as No Major Glitches Rules\r\n- Same as 100%",
+                  "src_level_id": "49562q2d",
+                  "srio_level_id": "1rvl1rly69r02"
+                },
+                {
+                  "name": "Central Shrines",
+                  "rules": "**General IL Rules:**\n\n- Game version must be the latest available (currently Ver. 1.5.0 for Wii U and Ver. 1.6.0 for Switch)\r\n- All homebrew applications are banned, except for BotwRuns v1.0 found in the resources section.\r\n- Video proof is required.\n- Video must contain an additional second of cutscene after run is complete.\r\n- Any preparation is allowed (unless specified). This includes, but is not limited to, entering with:\r\nAttack, Defense, or Speed boosts, Bonus Hearts, Bonus Stamina, “Moonjump”, “Skew”.\n\n**Shrines Any% Rules**\n\n- Timing starts from control of Link.\r\n- Timing ends once you interact with the Monk's pedestal.\r\n- The Spirit Orb must be collected in order for the run to be valid.\r\n- The Shrine must be completely untouched before starting.\r\n\n**No Major Glitches Rules**\n\n- Same as Any%\r\n- The following tricks are not allowed to be performed during the run or setup during the preparation in order to do during the run:\r\n- Clipping through solid surfaces or objects.\r\n- Moonjump\r\n- Windbomb\r\n- Horse Sliding\r\n- Skew Bouncing\r\n- Bomb Bouncing\r\n- Bow Lift Smuggling\r\n- Amplifying momentum by abusing bullet time slowdown\r\n- Void Out Storage or any other effect of Apparatus Storage\r\n- (Note: Newly discovered glitches/tricks will be subject to a vote before being allowed or banned).\r\n\n**100% Rules**\n\n- Same as Any%.\r\n- Must open all chests and obtain the item within. Destroying chests is allowed as long as the item is collected.\r\n- Must defeat all enemies.\r\n\n**No Major Glitches 100% Rules**\n\n- Same as Any%\r\n- Same as No Major Glitches Rules\r\n- Same as 100%",
+                  "src_level_id": "rdqj8mm9",
+                  "srio_level_id": "0ql1hdcazrwyc"
+                },
+                {
+                  "name": "Daruk's Song Shrines",
+                  "rules": "**General IL Rules:**\n\n- Game version must be the latest available (currently Ver. 1.5.0 for Wii U and Ver. 1.6.0 for Switch)\r\n- All homebrew applications are banned, except for BotwRuns v1.0 found in the resources section.\r\n- Video proof is required.\n- Video must contain an additional second of cutscene after run is complete.\r\n- Any preparation is allowed (unless specified). This includes, but is not limited to, entering with:\r\nAttack, Defense, or Speed boosts, Bonus Hearts, Bonus Stamina, “Moonjump”, “Skew”.\n\n**Shrines Any% Rules**\n\n- Timing starts from control of Link.\r\n- Timing ends once you interact with the Monk's pedestal.\r\n- The Spirit Orb must be collected in order for the run to be valid.\r\n- The Shrine must be completely untouched before starting.\r\n\n**No Major Glitches Rules**\n\n- Same as Any%\r\n- The following tricks are not allowed to be performed during the run or setup during the preparation in order to do during the run:\r\n- Clipping through solid surfaces or objects.\r\n- Moonjump\r\n- Windbomb\r\n- Horse Sliding\r\n- Skew Bouncing\r\n- Bomb Bouncing\r\n- Bow Lift Smuggling\r\n- Amplifying momentum by abusing bullet time slowdown\r\n- Void Out Storage or any other effect of Apparatus Storage\r\n- (Note: Newly discovered glitches/tricks will be subject to a vote before being allowed or banned).\r\n\n**100% Rules**\n\n- Same as Any%.\r\n- Must open all chests and obtain the item within. Destroying chests is allowed as long as the item is collected.\r\n- Must defeat all enemies.\r\n\n**No Major Glitches 100% Rules**\n\n- Same as Any%\r\n- Same as No Major Glitches Rules\r\n- Same as 100%",
+                  "src_level_id": "ywe1pryd",
+                  "srio_level_id": "08xa3vj5fhj18"
+                },
+                {
+                  "name": "Divine Beast Vah Medoh",
+                  "rules": "**General IL Rules:**\n\n- Game version must be the latest available (currently Ver. 1.5.0 for Wii U and Ver. 1.6.0 for Switch)\r\n- All homebrew applications are banned, except for BotwRuns v1.0 found in the resources section.\r\n- Video proof is required.\n- Video must contain an additional second of cutscene after run is complete.\r\n- Any preparation is allowed (unless specified). This includes, but is not limited to, entering with:\r\nAttack, Defense, or Speed boosts, Bonus Hearts, Bonus Stamina, “Moonjump”, “Skew”.\n\n**Divine Beast Any% Rules**\n\n- Timing starts when gaining control of Link.\r\n- Timing ends once you interact with the final pedestal of the Divine Beast.\r\n- The Divine Beast must be completely untouched before starting.\r\n\n**No Major Glitches Rules**\n\n- Same as Any%\r\n- The following tricks are not allowed to be performed during the run or setup during the preparation in order to do during the run:\r\n- Clipping through solid surfaces or objects.\r\n- Moonjump\r\n- Windbomb\r\n- Horse Sliding\r\n- Skew Bouncing\r\n- Bomb Bouncing\r\n- Bow Lift Smuggling\r\n- Amplifying momentum by abusing bullet time slowdown\r\n- Void Out Storage or any other effect of Apparatus Storage\r\n- (Note: Newly discovered glitches/tricks will be subject to a vote before being allowed or banned).\r\n\n**100% Rules**\n\n- Same as Any%\r\n- Must open all 8 chests and obtain the item within. Destroying wooden chests is allowed as long as the item is collected. List of chests:\r\n- Giant Ancient Core\r\n- Ice Arrow x10\r\n- Knight’s Bow\r\n- Ancient Shaft\r\n- Bomb Arrow x5\r\n- Ancient Core\r\n- Knight’s Claymore\r\n- Sapphire\r\n- Must obtain the Heart Container.\r\n- Must defeat all enemies.\r\n\n**No Major Glitches 100% Rules**\n\n- Same as Any%\r\n- Same as No Major Glitches Rules\r\n- Same as 100%",
+                  "src_level_id": "z988e219",
+                  "srio_level_id": "01cjtccic5gis"
+                },
+                {
+                  "name": "Divine Beast Vah Naboris",
+                  "rules": "**General IL Rules:**\n\n- Game version must be the latest available (currently Ver. 1.5.0 for Wii U and Ver. 1.6.0 for Switch)\r\n- All homebrew applications are banned, except for BotwRuns v1.0 found in the resources section.\r\n- Video proof is required.\n- Video must contain an additional second of cutscene after run is complete.\r\n- Any preparation is allowed (unless specified). This includes, but is not limited to, entering with:\r\nAttack, Defense, or Speed boosts, Bonus Hearts, Bonus Stamina, “Moonjump”, “Skew”.\n\n**Divine Beast Any% Rules**\n\n- Timing starts when gaining control of Link.\r\n- Timing ends once you interact with the final pedestal of the Divine Beast.\r\n- The Divine Beast must be completely untouched before starting.\r\n\n**No Major Glitches Rules**\n\n- Same as Any%\r\n- The following tricks are not allowed to be performed during the run or setup during the preparation in order to do during the run:\r\n- Clipping through solid surfaces or objects.\r\n- Moonjump\r\n- Windbomb\r\n- Horse Sliding\r\n- Skew Bouncing\r\n- Bomb Bouncing\r\n- Bow Lift Smuggling\r\n- Amplifying momentum by abusing bullet time slowdown\r\n- Void Out Storage or any other effect of Apparatus Storage\r\n- (Note: Newly discovered glitches/tricks will be subject to a vote before being allowed or banned).\r\n\n**100% Rules**\n\n- Same as Any%\r\n- Must open all 9 chests and obtain the item within. Destroying wooden chests is allowed as long as the item is collected. List of chests:\r\n- Knight’s Shield\r\n- Ancient Spring\r\n- Ancient Shaft\r\n- Knight’s Bow\r\n- Topaz\r\n- Ancient Screw\r\n- Bomb Arrow x5\r\n- Ancient Gear\r\n- Ancient Core\r\n- Must obtain the Heart Container.\r\n- Must defeat all enemies.\r\n\n**No Major Glitches 100% Rules**\n\n- Same as Any%\r\n- Same as No Major Glitches Rules\r\n- Same as 100%",
+                  "src_level_id": "rdnprk69",
+                  "srio_level_id": "0z6dyygzleg8q"
+                },
+                {
+                  "name": "Divine Beast Vah Rudania",
+                  "rules": "**General IL Rules:**\n\n- Game version must be the latest available (currently Ver. 1.5.0 for Wii U and Ver. 1.6.0 for Switch)\r\n- All homebrew applications are banned, except for BotwRuns v1.0 found in the resources section.\r\n- Video proof is required.\n- Video must contain an additional second of cutscene after run is complete.\r\n- Any preparation is allowed (unless specified). This includes, but is not limited to, entering with:\r\nAttack, Defense, or Speed boosts, Bonus Hearts, Bonus Stamina, “Moonjump”, “Skew”.\n\n**Divine Beast Any% Rules**\n\n- Timing starts when gaining control of Link.\r\n- Timing ends once you interact with the final pedestal of the Divine Beast.\r\n- The Divine Beast must be completely untouched before starting.\r\n\n**No Major Glitches Rules**\n\n- Same as Any%\r\n- The following tricks are not allowed to be performed during the run or setup during the preparation in order to do during the run:\r\n- Clipping through solid surfaces or objects.\r\n- Moonjump\r\n- Windbomb\r\n- Horse Sliding\r\n- Skew Bouncing\r\n- Bomb Bouncing\r\n- Bow Lift Smuggling\r\n- Amplifying momentum by abusing bullet time slowdown\r\n- Void Out Storage or any other effect of Apparatus Storage\r\n- (Note: Newly discovered glitches/tricks will be subject to a vote before being allowed or banned).\r\n\n**100% Rules**\n\n- Same as Any%\r\n- Must open all 8 chests and obtain the item within. Destroying wooden chests is allowed as long as the item is collected. List of chests:\r\n- Giant Ancient Core\r\n- Ice Arrow x10\r\n- Knight’s Bow\r\n- Ancient Shaft\r\n- Bomb Arrow x5\r\n- Ancient Core\r\n- Knight’s Claymore\r\n- Sapphire\r\n- Must obtain the Heart Container.\r\n- Must defeat all enemies.\r\n\n**No Major Glitches 100% Rules**\n\n- Same as Any%\r\n- Same as No Major Glitches Rules\r\n- Same as 100%",
+                  "src_level_id": "ldypj47d",
+                  "srio_level_id": "06zuwb8exw3af"
+                },
+                {
+                  "name": "Divine Beast Vah Ruta",
+                  "rules": "**General IL Rules:**\n\n- Game version must be the latest available (currently Ver. 1.5.0 for Wii U and Ver. 1.6.0 for Switch)\r\n- All homebrew applications are banned, except for BotwRuns v1.0 found in the resources section.\r\n- Video proof is required.\n- Video must contain an additional second of cutscene after run is complete.\r\n- Any preparation is allowed (unless specified). This includes, but is not limited to, entering with:\r\nAttack, Defense, or Speed boosts, Bonus Hearts, Bonus Stamina, “Moonjump”, “Skew”.\n\n**Divine Beast Any% Rules**\n\n- Timing starts when gaining control of Link.\r\n- Timing ends once you interact with the final pedestal of the Divine Beast.\r\n- The Divine Beast must be completely untouched before starting.\r\n\n**No Major Glitches Rules**\n\n- Same as Any%\r\n- The following tricks are not allowed to be performed during the run or setup during the preparation in order to do during the run:\r\n- Clipping through solid surfaces or objects.\r\n- Moonjump\r\n- Windbomb\r\n- Horse Sliding\r\n- Skew Bouncing\r\n- Bomb Bouncing\r\n- Bow Lift Smuggling\r\n- Amplifying momentum by abusing bullet time slowdown\r\n- Void Out Storage or any other effect of Apparatus Storage\r\n- (Note: Newly discovered glitches/tricks will be subject to a vote before being allowed or banned).\r\n\n**100% Rules**\n\n- Same as Any%\r\n- Must open all 8 chests and obtain the item within. Destroying wooden chests is allowed as long as the item is collected. List of chests:\r\n- Giant Ancient Core\r\n- Ice Arrow x10\r\n- Knight’s Bow\r\n- Ancient Shaft\r\n- Bomb Arrow x5\r\n- Ancient Core\r\n- Knight’s Claymore\r\n- Sapphire\r\n- Must obtain the Heart Container.\r\n- Must defeat all enemies.\r\n\n**No Major Glitches 100% Rules**\n\n- Same as Any%\r\n- Same as No Major Glitches Rules\r\n- Same as 100%",
+                  "src_level_id": "gdrqgpk9",
+                  "srio_level_id": "046wucnyjk43r"
+                },
+                {
+                  "name": "Dueling Peaks Shrines",
+                  "rules": "**General IL Rules:**\n\n- Game version must be the latest available (currently Ver. 1.5.0 for Wii U and Ver. 1.6.0 for Switch)\r\n- All homebrew applications are banned, except for BotwRuns v1.0 found in the resources section.\r\n- Video proof is required.\n- Video must contain an additional second of cutscene after run is complete.\r\n- Any preparation is allowed (unless specified). This includes, but is not limited to, entering with:\r\nAttack, Defense, or Speed boosts, Bonus Hearts, Bonus Stamina, “Moonjump”, “Skew”.\n\n**Shrines Any% Rules**\n\n- Timing starts from control of Link.\r\n- Timing ends once you interact with the Monk's pedestal.\r\n- The Spirit Orb must be collected in order for the run to be valid.\r\n- The Shrine must be completely untouched before starting.\r\n\n**No Major Glitches Rules**\n\n- Same as Any%\r\n- The following tricks are not allowed to be performed during the run or setup during the preparation in order to do during the run:\r\n- Clipping through solid surfaces or objects.\r\n- Moonjump\r\n- Windbomb\r\n- Horse Sliding\r\n- Skew Bouncing\r\n- Bomb Bouncing\r\n- Bow Lift Smuggling\r\n- Amplifying momentum by abusing bullet time slowdown\r\n- Void Out Storage or any other effect of Apparatus Storage\r\n- (Note: Newly discovered glitches/tricks will be subject to a vote before being allowed or banned).\r\n\n**100% Rules**\n\n- Same as Any%.\r\n- Must open all chests and obtain the item within. Destroying chests is allowed as long as the item is collected.\r\n- Must defeat all enemies.\r\n\n**No Major Glitches 100% Rules**\n\n- Same as Any%\r\n- Same as No Major Glitches Rules\r\n- Same as 100%",
+                  "src_level_id": "5d7v1j5d",
+                  "srio_level_id": "0gnt5zk7tpmus"
+                },
+                {
+                  "name": "Eldin Shrines",
+                  "rules": "**General IL Rules:**\n\n- Game version must be the latest available (currently Ver. 1.5.0 for Wii U and Ver. 1.6.0 for Switch)\r\n- All homebrew applications are banned, except for BotwRuns v1.0 found in the resources section.\r\n- Video proof is required.\n- Video must contain an additional second of cutscene after run is complete.\r\n- Any preparation is allowed (unless specified). This includes, but is not limited to, entering with:\r\nAttack, Defense, or Speed boosts, Bonus Hearts, Bonus Stamina, “Moonjump”, “Skew”.\n\n**Shrines Any% Rules**\n\n- Timing starts from control of Link.\r\n- Timing ends once you interact with the Monk's pedestal.\r\n- The Spirit Orb must be collected in order for the run to be valid.\r\n- The Shrine must be completely untouched before starting.\r\n\n**No Major Glitches Rules**\n\n- Same as Any%\r\n- The following tricks are not allowed to be performed during the run or setup during the preparation in order to do during the run:\r\n- Clipping through solid surfaces or objects.\r\n- Moonjump\r\n- Windbomb\r\n- Horse Sliding\r\n- Skew Bouncing\r\n- Bomb Bouncing\r\n- Bow Lift Smuggling\r\n- Amplifying momentum by abusing bullet time slowdown\r\n- Void Out Storage or any other effect of Apparatus Storage\r\n- (Note: Newly discovered glitches/tricks will be subject to a vote before being allowed or banned).\r\n\n**100% Rules**\n\n- Same as Any%.\r\n- Must open all chests and obtain the item within. Destroying chests is allowed as long as the item is collected.\r\n- Must defeat all enemies.\r\n\n**No Major Glitches 100% Rules**\n\n- Same as Any%\r\n- Same as No Major Glitches Rules\r\n- Same as 100%",
+                  "src_level_id": "kwj5gkr9",
+                  "srio_level_id": "19a7ygdbcohag"
+                },
+                {
+                  "name": "Faron Shrines",
+                  "rules": "**General IL Rules:**\n\n- Game version must be the latest available (currently Ver. 1.5.0 for Wii U and Ver. 1.6.0 for Switch)\r\n- All homebrew applications are banned, except for BotwRuns v1.0 found in the resources section.\r\n- Video proof is required.\n- Video must contain an additional second of cutscene after run is complete.\r\n- Any preparation is allowed (unless specified). This includes, but is not limited to, entering with:\r\nAttack, Defense, or Speed boosts, Bonus Hearts, Bonus Stamina, “Moonjump”, “Skew”.\n\n**Shrines Any% Rules**\n\n- Timing starts from control of Link.\r\n- Timing ends once you interact with the Monk's pedestal.\r\n- The Spirit Orb must be collected in order for the run to be valid.\r\n- The Shrine must be completely untouched before starting.\r\n\n**No Major Glitches Rules**\n\n- Same as Any%\r\n- The following tricks are not allowed to be performed during the run or setup during the preparation in order to do during the run:\r\n- Clipping through solid surfaces or objects.\r\n- Moonjump\r\n- Windbomb\r\n- Horse Sliding\r\n- Skew Bouncing\r\n- Bomb Bouncing\r\n- Bow Lift Smuggling\r\n- Amplifying momentum by abusing bullet time slowdown\r\n- Void Out Storage or any other effect of Apparatus Storage\r\n- (Note: Newly discovered glitches/tricks will be subject to a vote before being allowed or banned).\r\n\n**100% Rules**\n\n- Same as Any%.\r\n- Must open all chests and obtain the item within. Destroying chests is allowed as long as the item is collected.\r\n- Must defeat all enemies.\r\n\n**No Major Glitches 100% Rules**\n\n- Same as Any%\r\n- Same as No Major Glitches Rules\r\n- Same as 100%",
+                  "src_level_id": "owo0jmvw",
+                  "srio_level_id": "0p8vvfmnk2oxb"
+                },
+                {
+                  "name": "Footrace",
+                  "rules": "**General IL Rules:**\n\n- Game version must be the latest available (currently Ver. 1.5.0 for Wii U and Ver. 1.6.0 for Switch)\r\n- All homebrew applications are banned, except for BotwRuns v1.0 found in the resources section.\r\n- Video proof is required.\n- Video must contain an additional second of cutscene after run is complete.\r\n- Any preparation is allowed (unless specified). This includes, but is not limited to, entering with:\r\nAttack, Defense, or Speed boosts, Bonus Hearts, Bonus Stamina, “Moonjump”, “Skew”.\n\n**Footrace Rules**\n\n- Timing starts on the gunshot.\r\n- Timing ends when the timer stops changing.\r\n- Submitted times must be RTA, not the in-game time.\r\n\n**No Major Glitches Rules**\n\n- Do not submit to this subcategory.\r\n\n** 100% Rules **\n\n- Do not submit to this subcategory.\r\n\n**No Major Glitches 100% Rules**\n\n- Do not submit to this subcategory.",
+                  "src_level_id": "kwj5j009",
+                  "srio_level_id": "1b3kalscng7zk"
+                },
+                {
+                  "name": "Gerudo Shrines",
+                  "rules": "**General IL Rules:**\n\n- Game version must be the latest available (currently Ver. 1.5.0 for Wii U and Ver. 1.6.0 for Switch)\r\n- All homebrew applications are banned, except for BotwRuns v1.0 found in the resources section.\r\n- Video proof is required.\n- Video must contain an additional second of cutscene after run is complete.\r\n- Any preparation is allowed (unless specified). This includes, but is not limited to, entering with:\r\nAttack, Defense, or Speed boosts, Bonus Hearts, Bonus Stamina, “Moonjump”, “Skew”.\n\n**Shrines Any% Rules**\n\n- Timing starts from control of Link.\r\n- Timing ends once you interact with the Monk's pedestal.\r\n- The Spirit Orb must be collected in order for the run to be valid.\r\n- The Shrine must be completely untouched before starting.\r\n\n**No Major Glitches Rules**\n\n- Same as Any%\r\n- The following tricks are not allowed to be performed during the run or setup during the preparation in order to do during the run:\r\n- Clipping through solid surfaces or objects.\r\n- Moonjump\r\n- Windbomb\r\n- Horse Sliding\r\n- Skew Bouncing\r\n- Bomb Bouncing\r\n- Bow Lift Smuggling\r\n- Amplifying momentum by abusing bullet time slowdown\r\n- Void Out Storage or any other effect of Apparatus Storage\r\n- (Note: Newly discovered glitches/tricks will be subject to a vote before being allowed or banned).\r\n\n**100% Rules**\n\n- Same as Any%.\r\n- Must open all chests and obtain the item within. Destroying chests is allowed as long as the item is collected.\r\n- Must defeat all enemies.\r\n\n**No Major Glitches 100% Rules**\n\n- Same as Any%\r\n- Same as No Major Glitches Rules\r\n- Same as 100%",
+                  "src_level_id": "xd17mzqd",
+                  "srio_level_id": "04hu0oehi9d95"
+                },
+                {
+                  "name": "Great Plateau Revisit Shrines",
+                  "rules": "**General IL Rules:**\n\n- Game version must be the latest available (currently Ver. 1.5.0 for Wii U and Ver. 1.6.0 for Switch)\r\n- All homebrew applications are banned, except for BotwRuns v1.0 found in the resources section.\r\n- Video proof is required.\n- Video must contain an additional second of cutscene after run is complete.\r\n- Any preparation is allowed (unless specified). This includes, but is not limited to, entering with:\r\nAttack, Defense, or Speed boosts, Bonus Hearts, Bonus Stamina, “Moonjump”, “Skew”.\n\n**Shrines Any% Rules**\n\n- Timing starts from control of Link.\r\n- Timing ends once you interact with the Monk's pedestal.\r\n- The Spirit Orb must be collected in order for the run to be valid.\r\n- The Shrine must be completely untouched before starting.\r\n\n**No Major Glitches Rules**\n\n- Same as Any%\r\n- The following tricks are not allowed to be performed during the run or setup during the preparation in order to do during the run:\r\n- Clipping through solid surfaces or objects.\r\n- Moonjump\r\n- Windbomb\r\n- Horse Sliding\r\n- Skew Bouncing\r\n- Bomb Bouncing\r\n- Bow Lift Smuggling\r\n- Amplifying momentum by abusing bullet time slowdown\r\n- Void Out Storage or any other effect of Apparatus Storage\r\n- (Note: Newly discovered glitches/tricks will be subject to a vote before being allowed or banned).\r\n\n**100% Rules**\n\n- Same as Any%.\r\n- Must open all chests and obtain the item within. Destroying chests is allowed as long as the item is collected.\r\n- Must defeat all enemies.\r\n\n**No Major Glitches 100% Rules**\n\n- Same as Any%\r\n- Same as No Major Glitches Rules\r\n- Same as 100%",
+                  "src_level_id": "nwlleq0w",
+                  "srio_level_id": "0qjve6lswd2qa"
+                },
+                {
+                  "name": "Great Plateau Shrines",
+                  "rules": "**General IL Rules:**\n\n- Game version must be the latest available (currently Ver. 1.5.0 for Wii U and Ver. 1.6.0 for Switch)\r\n- All homebrew applications are banned, except for BotwRuns v1.0 found in the resources section.\r\n- Video proof is required.\n- Video must contain an additional second of cutscene after run is complete.\r\n- Any preparation is allowed (unless specified). This includes, but is not limited to, entering with:\r\nAttack, Defense, or Speed boosts, Bonus Hearts, Bonus Stamina, “Moonjump”, “Skew”.\n\n**Shrines Any% Rules**\n\n- Timing starts from control of Link.\r\n- Timing ends once you interact with the Monk's pedestal.\r\n- The Spirit Orb must be collected in order for the run to be valid.\r\n- The Shrine must be completely untouched before starting.\r\n\n**No Major Glitches Rules**\n\n- Same as Any%\r\n- The following tricks are not allowed to be performed during the run or setup during the preparation in order to do during the run:\r\n- Clipping through solid surfaces or objects.\r\n- Moonjump\r\n- Windbomb\r\n- Horse Sliding\r\n- Skew Bouncing\r\n- Bomb Bouncing\r\n- Bow Lift Smuggling\r\n- Amplifying momentum by abusing bullet time slowdown\r\n- Void Out Storage or any other effect of Apparatus Storage\r\n- (Note: Newly discovered glitches/tricks will be subject to a vote before being allowed or banned).\r\n\n**100% Rules**\n\n- Same as Any%.\r\n- Must open all chests and obtain the item within. Destroying chests is allowed as long as the item is collected.\r\n- Must defeat all enemies.\r\n\n**No Major Glitches 100% Rules**\n\n- Same as Any%\r\n- Same as No Major Glitches Rules\r\n- Same as 100%",
+                  "src_level_id": "ewpj32lw",
+                  "srio_level_id": "1aetkexhxcbz8"
+                },
+                {
+                  "name": "Gut Check Challenge",
+                  "rules": "**General IL Rules:**\n\n- Game version must be the latest available (currently Ver. 1.5.0 for Wii U and Ver. 1.6.0 for Switch)\r\n- All homebrew applications are banned, except for BotwRuns v1.0 found in the resources section.\r\n- Video proof is required.\n- Video must contain an additional second of cutscene after run is complete.\r\n- Any preparation is allowed (unless specified). This includes, but is not limited to, entering with:\r\nAttack, Defense, or Speed boosts, Bonus Hearts, Bonus Stamina, “Moonjump”, “Skew”.\n\n**Gut Check Challenge Rules**\n\n- Timing starts on \"START!\".\r\n- Timing ends on the whistle when reaching the top of the rock.\r\n- Submitted times must be RTA, not the in-game time.\r\n\n**No Major Glitches Rules**\n\n- Do not submit to this subcategory.\r\n\n**100% Rules**\n\n- Do not submit to this subcategory.\r\n\n**No Major Glitches 100% Rules**\n\n- Do not submit to this subcategory.",
+                  "src_level_id": "kwj5kzz9",
+                  "srio_level_id": "1tk66r64ht1ra"
+                },
+                {
+                  "name": "Hateno Shrines",
+                  "rules": "**General IL Rules:**\n\n- Game version must be the latest available (currently Ver. 1.5.0 for Wii U and Ver. 1.6.0 for Switch)\r\n- All homebrew applications are banned, except for BotwRuns v1.0 found in the resources section.\r\n- Video proof is required.\n- Video must contain an additional second of cutscene after run is complete.\r\n- Any preparation is allowed (unless specified). This includes, but is not limited to, entering with:\r\nAttack, Defense, or Speed boosts, Bonus Hearts, Bonus Stamina, “Moonjump”, “Skew”.\n\n**Shrines Any% Rules**\n\n- Timing starts from control of Link.\r\n- Timing ends once you interact with the Monk's pedestal.\r\n- The Spirit Orb must be collected in order for the run to be valid.\r\n- The Shrine must be completely untouched before starting.\r\n\n**No Major Glitches Rules**\n\n- Same as Any%\r\n- The following tricks are not allowed to be performed during the run or setup during the preparation in order to do during the run:\r\n- Clipping through solid surfaces or objects.\r\n- Moonjump\r\n- Windbomb\r\n- Horse Sliding\r\n- Skew Bouncing\r\n- Bomb Bouncing\r\n- Bow Lift Smuggling\r\n- Amplifying momentum by abusing bullet time slowdown\r\n- Void Out Storage or any other effect of Apparatus Storage\r\n- (Note: Newly discovered glitches/tricks will be subject to a vote before being allowed or banned).\r\n\n**100% Rules**\n\n- Same as Any%.\r\n- Must open all chests and obtain the item within. Destroying chests is allowed as long as the item is collected.\r\n- Must defeat all enemies.\r\n\n**No Major Glitches 100% Rules**\n\n- Same as Any%\r\n- Same as No Major Glitches Rules\r\n- Same as 100%",
+                  "src_level_id": "y9mj6ml9",
+                  "srio_level_id": "0q20j40j0ksle"
+                },
+                {
+                  "name": "Hebra Shrines",
+                  "rules": "**General IL Rules:**\n\n- Game version must be the latest available (currently Ver. 1.5.0 for Wii U and Ver. 1.6.0 for Switch)\r\n- All homebrew applications are banned, except for BotwRuns v1.0 found in the resources section.\r\n- Video proof is required.\n- Video must contain an additional second of cutscene after run is complete.\r\n- Any preparation is allowed (unless specified). This includes, but is not limited to, entering with:\r\nAttack, Defense, or Speed boosts, Bonus Hearts, Bonus Stamina, “Moonjump”, “Skew”.\n\n**Shrines Any% Rules**\n\n- Timing starts from control of Link.\r\n- Timing ends once you interact with the Monk's pedestal.\r\n- The Spirit Orb must be collected in order for the run to be valid.\r\n- The Shrine must be completely untouched before starting.\r\n\n**No Major Glitches Rules**\n\n- Same as Any%\r\n- The following tricks are not allowed to be performed during the run or setup during the preparation in order to do during the run:\r\n- Clipping through solid surfaces or objects.\r\n- Moonjump\r\n- Windbomb\r\n- Horse Sliding\r\n- Skew Bouncing\r\n- Bomb Bouncing\r\n- Bow Lift Smuggling\r\n- Amplifying momentum by abusing bullet time slowdown\r\n- Void Out Storage or any other effect of Apparatus Storage\r\n- (Note: Newly discovered glitches/tricks will be subject to a vote before being allowed or banned).\r\n\n**100% Rules**\n\n- Same as Any%.\r\n- Must open all chests and obtain the item within. Destroying chests is allowed as long as the item is collected.\r\n- Must defeat all enemies.\r\n\n**No Major Glitches 100% Rules**\n\n- Same as Any%\r\n- Same as No Major Glitches Rules\r\n- Same as 100%",
+                  "src_level_id": "5wkjxm5d",
+                  "srio_level_id": "0cvflv9m6n50a"
+                },
+                {
+                  "name": "Lake Shrines",
+                  "rules": "**General IL Rules:**\n\n- Game version must be the latest available (currently Ver. 1.5.0 for Wii U and Ver. 1.6.0 for Switch)\r\n- All homebrew applications are banned, except for BotwRuns v1.0 found in the resources section.\r\n- Video proof is required.\n- Video must contain an additional second of cutscene after run is complete.\r\n- Any preparation is allowed (unless specified). This includes, but is not limited to, entering with:\r\nAttack, Defense, or Speed boosts, Bonus Hearts, Bonus Stamina, “Moonjump”, “Skew”.\n\n**Shrines Any% Rules**\n\n- Timing starts from control of Link.\r\n- Timing ends once you interact with the Monk's pedestal.\r\n- The Spirit Orb must be collected in order for the run to be valid.\r\n- The Shrine must be completely untouched before starting.\r\n\n**No Major Glitches Rules**\n\n- Same as Any%\r\n- The following tricks are not allowed to be performed during the run or setup during the preparation in order to do during the run:\r\n- Clipping through solid surfaces or objects.\r\n- Moonjump\r\n- Windbomb\r\n- Horse Sliding\r\n- Skew Bouncing\r\n- Bomb Bouncing\r\n- Bow Lift Smuggling\r\n- Amplifying momentum by abusing bullet time slowdown\r\n- Void Out Storage or any other effect of Apparatus Storage\r\n- (Note: Newly discovered glitches/tricks will be subject to a vote before being allowed or banned).\r\n\n**100% Rules**\n\n- Same as Any%.\r\n- Must open all chests and obtain the item within. Destroying chests is allowed as long as the item is collected.\r\n- Must defeat all enemies.\r\n\n**No Major Glitches 100% Rules**\n\n- Same as Any%\r\n- Same as No Major Glitches Rules\r\n- Same as 100%",
+                  "src_level_id": "592zk6g9",
+                  "srio_level_id": "1ii0414quwfil"
+                },
+                {
+                  "name": "Lanayru Shrines",
+                  "rules": "**General IL Rules:**\n\n- Game version must be the latest available (currently Ver. 1.5.0 for Wii U and Ver. 1.6.0 for Switch)\r\n- All homebrew applications are banned, except for BotwRuns v1.0 found in the resources section.\r\n- Video proof is required.\n- Video must contain an additional second of cutscene after run is complete.\r\n- Any preparation is allowed (unless specified). This includes, but is not limited to, entering with:\r\nAttack, Defense, or Speed boosts, Bonus Hearts, Bonus Stamina, “Moonjump”, “Skew”.\n\n**Shrines Any% Rules**\n\n- Timing starts from control of Link.\r\n- Timing ends once you interact with the Monk's pedestal.\r\n- The Spirit Orb must be collected in order for the run to be valid.\r\n- The Shrine must be completely untouched before starting.\r\n\n**No Major Glitches Rules**\n\n- Same as Any%\r\n- The following tricks are not allowed to be performed during the run or setup during the preparation in order to do during the run:\r\n- Clipping through solid surfaces or objects.\r\n- Moonjump\r\n- Windbomb\r\n- Horse Sliding\r\n- Skew Bouncing\r\n- Bomb Bouncing\r\n- Bow Lift Smuggling\r\n- Amplifying momentum by abusing bullet time slowdown\r\n- Void Out Storage or any other effect of Apparatus Storage\r\n- (Note: Newly discovered glitches/tricks will be subject to a vote before being allowed or banned).\r\n\n**100% Rules**\n\n- Same as Any%.\r\n- Must open all chests and obtain the item within. Destroying chests is allowed as long as the item is collected.\r\n- Must defeat all enemies.\r\n\n**No Major Glitches 100% Rules**\n\n- Same as Any%\r\n- Same as No Major Glitches Rules\r\n- Same as 100%",
+                  "src_level_id": "29v36x1w",
+                  "srio_level_id": "03thk8hq7z2l3"
+                },
+                {
+                  "name": "Mipha's Song Shrines",
+                  "rules": "**General IL Rules:**\n\n- Game version must be the latest available (currently Ver. 1.5.0 for Wii U and Ver. 1.6.0 for Switch)\r\n- All homebrew applications are banned, except for BotwRuns v1.0 found in the resources section.\r\n- Video proof is required.\n- Video must contain an additional second of cutscene after run is complete.\r\n- Any preparation is allowed (unless specified). This includes, but is not limited to, entering with:\r\nAttack, Defense, or Speed boosts, Bonus Hearts, Bonus Stamina, “Moonjump”, “Skew”.\n\n**Shrines Any% Rules**\n\n- Timing starts from control of Link.\r\n- Timing ends once you interact with the Monk's pedestal.\r\n- The Spirit Orb must be collected in order for the run to be valid.\r\n- The Shrine must be completely untouched before starting.\r\n\n**No Major Glitches Rules**\n\n- Same as Any%\r\n- The following tricks are not allowed to be performed during the run or setup during the preparation in order to do during the run:\r\n- Clipping through solid surfaces or objects.\r\n- Moonjump\r\n- Windbomb\r\n- Horse Sliding\r\n- Skew Bouncing\r\n- Bomb Bouncing\r\n- Bow Lift Smuggling\r\n- Amplifying momentum by abusing bullet time slowdown\r\n- Void Out Storage or any other effect of Apparatus Storage\r\n- (Note: Newly discovered glitches/tricks will be subject to a vote before being allowed or banned).\r\n\n**100% Rules**\n\n- Same as Any%.\r\n- Must open all chests and obtain the item within. Destroying chests is allowed as long as the item is collected.\r\n- Must defeat all enemies.\r\n\n**No Major Glitches 100% Rules**\n\n- Same as Any%\r\n- Same as No Major Glitches Rules\r\n- Same as 100%",
+                  "src_level_id": "69z30yld",
+                  "srio_level_id": "1kk9xag27b1jd"
+                }
+              ]
+            },
+            "meta": {
+              "pagination": {
+                "offset": 0,
+                "max": 20,
+                "size": 20
+              },
+              "schema": "1.0",
+              "sources": [
+                {
+                  "license": "CC-BY-NC-4.0",
+                  "name": "speedrun.com",
+                  "role": "authority",
+                  "timestamp": {
+                    "collected": {
+                      "from": "2026-06-22T04:04:35Z",
+                      "to": "2026-07-01T02:40:46Z"
+                    }
+                  },
+                  "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+                }
+              ],
+              "usage": {
+                "data_bytes": 46934
+              }
+            },
+            "status": 200
+          }
+  - name: bloons td 6
+    description: use an abbreviation to list the levels for a specific game
+    request:
+      url: https://api.speedrun.io/v1/games/btd6/levels
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: |-
+          {
+            "data": {
+              "levels": [
+                {
+                  "name": "#Ouch",
+                  "rules": null,
+                  "src_level_id": "owo6zykw",
+                  "srio_level_id": "1ic57oycn6uik"
+                },
+                {
+                  "name": "Adora's Temple",
+                  "rules": null,
+                  "src_level_id": "z98z30p9",
+                  "srio_level_id": "0iz9a89pa68he"
+                },
+                {
+                  "name": "Alpine Run",
+                  "rules": null,
+                  "src_level_id": "ldyj0xpd",
+                  "srio_level_id": "0647frd3usvtp"
+                },
+                {
+                  "name": "Ancient Portal",
+                  "rules": "",
+                  "src_level_id": "wj7z8m7w",
+                  "srio_level_id": "0gf3t89cteatd"
+                },
+                {
+                  "name": "Another Brick",
+                  "rules": null,
+                  "src_level_id": "o9x7p7pd",
+                  "srio_level_id": "0ievhlxgw7zh1"
+                },
+                {
+                  "name": "Ascent",
+                  "rules": "",
+                  "src_level_id": "drp1q6zw",
+                  "srio_level_id": "11pmwy9rmhdx4"
+                },
+                {
+                  "name": "Balance",
+                  "rules": null,
+                  "src_level_id": "ldyl8yj9",
+                  "srio_level_id": "0eqw7x9xf5lqn"
+                },
+                {
+                  "name": "Bazaar",
+                  "rules": null,
+                  "src_level_id": "n93mr7ed",
+                  "srio_level_id": "1f5erscxth21u"
+                },
+                {
+                  "name": "Blons",
+                  "rules": null,
+                  "src_level_id": "gdr61e8d",
+                  "srio_level_id": "1t58z4k4urndm"
+                },
+                {
+                  "name": "Bloody Puddles",
+                  "rules": null,
+                  "src_level_id": "ywejmord",
+                  "srio_level_id": "0x5p145983k32"
+                },
+                {
+                  "name": "Bloonarius Prime",
+                  "rules": null,
+                  "src_level_id": "y9m0l7xw",
+                  "srio_level_id": "0vyuqz0g71spz"
+                },
+                {
+                  "name": "Candy Falls",
+                  "rules": null,
+                  "src_level_id": "xd048g1w",
+                  "srio_level_id": "09ybifc504rd6"
+                },
+                {
+                  "name": "Cargo",
+                  "rules": null,
+                  "src_level_id": "5wk8zr2w",
+                  "srio_level_id": "037lks8cx7sfi"
+                },
+                {
+                  "name": "Carved",
+                  "rules": null,
+                  "src_level_id": "ldy58ozw",
+                  "srio_level_id": "1v6qa8pr6gw4u"
+                },
+                {
+                  "name": "Castle Revenge",
+                  "rules": "",
+                  "src_level_id": "9vm1r739",
+                  "srio_level_id": "186f2z4ilae4z"
+                },
+                {
+                  "name": "Chutes",
+                  "rules": null,
+                  "src_level_id": "ywe5657w",
+                  "srio_level_id": "0v5ney6z42weq"
+                },
+                {
+                  "name": "Cornfield",
+                  "rules": null,
+                  "src_level_id": "rdq7x729",
+                  "srio_level_id": "1rybzplgm9zig"
+                },
+                {
+                  "name": "Covered Garden",
+                  "rules": null,
+                  "src_level_id": "y9mo2llw",
+                  "srio_level_id": "1cxgxpnvuihis"
+                },
+                {
+                  "name": "Cracked",
+                  "rules": null,
+                  "src_level_id": "gdrx5xld",
+                  "srio_level_id": "12k95mazgksxz"
+                },
+                {
+                  "name": "Cubism",
+                  "rules": null,
+                  "src_level_id": "rw6ojogw",
+                  "srio_level_id": "083fn7k604zm6"
+                }
+              ]
+            },
+            "meta": {
+              "pagination": {
+                "offset": 0,
+                "max": 20,
+                "size": 20
+              },
+              "schema": "1.0",
+              "sources": [
+                {
+                  "license": "CC-BY-NC-4.0",
+                  "name": "speedrun.com",
+                  "role": "authority",
+                  "timestamp": {
+                    "collected": {
+                      "from": "2026-06-23T07:09:07Z",
+                      "to": "2026-09-07T23:01:49Z"
+                    }
+                  },
+                  "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+                }
+              ],
+              "usage": {
+                "data_bytes": 14228
+              }
+            },
+            "status": 200
+          }
+  - name: mario kart 8 deluxe ce
+    description: use an abbreviation to list the levels for a specific game
+    request:
+      url: https://api.speedrun.io/v1/games/mk8dxce/levels
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: |-
+          {
+            "data": {
+              "levels": []
+            },
+            "meta": {
+              "pagination": {
+                "offset": 0,
+                "max": 20,
+                "size": 0
+              },
+              "schema": "1.0",
+              "sources": [
+                {
+                  "license": "CC-BY-NC-4.0",
+                  "name": "speedrun.com",
+                  "role": "authority",
+                  "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+                }
+              ],
+              "usage": {
+                "data_bytes": 0
+              }
+            },
+            "status": 200
+          }

@@ -1,0 +1,257 @@
+info:
+  name: get user by id
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: https://api.speedrun.io/v1/users/{{slug}}
+  auth: inherit
+
+runtime:
+  variables:
+    - name: slug
+      value: 8d3el3lx
+      description: example user id
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true
+
+examples:
+  - name: thekrynn
+    description: use an ID to get a specific user
+    request:
+      url: https://api.speedrun.io/v1/users/8d3el3lx
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: |-
+          {
+            "data": {
+              "users": [
+                {
+                  "hitbox": null,
+                  "location": {
+                    "country": {
+                      "code": "us",
+                      "names": {
+                        "international": "United States",
+                        "japanese": null
+                      }
+                    },
+                    "region": {
+                      "code": "us/ny",
+                      "names": {
+                        "international": "New York, USA",
+                        "japanese": null
+                      }
+                    }
+                  },
+                  "names": {
+                    "international": "thekrynn",
+                    "japanese": null
+                  },
+                  "pronouns": "He/Him",
+                  "role": "user",
+                  "signup": "2021-01-24T10:33:46Z",
+                  "speedrunslive": null,
+                  "src_user_id": "8d3el3lx",
+                  "srio_user_id": "10kwvgxt4i8c3",
+                  "twitch": {
+                    "uri": "https://www.twitch.tv/thekrynn"
+                  },
+                  "twitter": {
+                    "uri": "https://www.twitter.com/thekrynn"
+                  },
+                  "youtube": {
+                    "uri": "https://www.youtube.com/user/thekrynn"
+                  }
+                }
+              ]
+            },
+            "meta": {
+              "schema": "1.0",
+              "sources": [
+                {
+                  "license": "CC0-1.0",
+                  "name": "speedrun.io",
+                  "role": "owner",
+                  "timestamp": {
+                    "updated": "2026-10-18T00:00:00Z"
+                  },
+                  "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+                  "user": {
+                    "accessible": [
+                      "bulk",
+                      "api",
+                      "personal"
+                    ],
+                    "id": "10kwvgxt4i8c3",
+                    "name": "thekrynn",
+                    "visible": "public"
+                  }
+                },
+                {
+                  "license": "CC-BY-NC-4.0",
+                  "name": "speedrun.com",
+                  "role": "authority",
+                  "timestamp": {
+                    "collected": {
+                      "on": "2026-05-31T12:18:23Z"
+                    }
+                  },
+                  "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+                }
+              ],
+              "usage": {
+                "data_bytes": 1192
+              }
+            },
+            "status": 200
+          }
+  - name: cavecavecave
+    description: use an ID to get a specific user
+    request:
+      url: https://api.speedrun.io/v1/users/8qr502oj
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: |-
+          {
+            "data": {
+              "users": [
+                {
+                  "hitbox": null,
+                  "location": {
+                    "country": {
+                      "code": "us",
+                      "names": {
+                        "international": "United States",
+                        "japanese": null
+                      }
+                    }
+                  },
+                  "names": {
+                    "international": "cavecavecave",
+                    "japanese": null
+                  },
+                  "pronouns": "He/Him",
+                  "role": "user",
+                  "signup": "2021-01-19T19:08:33Z",
+                  "speedrunslive": null,
+                  "src_user_id": "8qr502oj",
+                  "srio_user_id": "0ipmjpt0ndbc9",
+                  "twitch": {
+                    "uri": "https://www.twitch.tv/CaveWasTaken"
+                  },
+                  "twitter": {
+                    "uri": "https://www.twitter.com/coltwastaken"
+                  },
+                  "youtube": null
+                }
+              ]
+            },
+            "meta": {
+              "schema": "1.0",
+              "sources": [
+                {
+                  "license": "CC-BY-NC-4.0",
+                  "name": "speedrun.com",
+                  "role": "authority",
+                  "timestamp": {
+                    "collected": {
+                      "on": "2026-06-03T05:29:51Z"
+                    }
+                  },
+                  "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+                }
+              ],
+              "usage": {
+                "data_bytes": 1073
+              }
+            },
+            "status": 200
+          }
+  - name: chx42
+    description: use an ID to get a specific user
+    request:
+      url: https://api.speedrun.io/v1/users/dx3vlm78
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: |-
+          {
+            "data": {
+              "users": [
+                {
+                  "hitbox": null,
+                  "location": {
+                    "country": {
+                      "code": "us",
+                      "names": {
+                        "international": "United States",
+                        "japanese": null
+                      }
+                    },
+                    "region": {
+                      "code": "us/nv/reno",
+                      "names": {
+                        "international": "Reno, NV, USA",
+                        "japanese": null
+                      }
+                    }
+                  },
+                  "names": {
+                    "international": "CHX42",
+                    "japanese": null
+                  },
+                  "pronouns": "He/Him",
+                  "role": "user",
+                  "signup": "2018-02-27T00:22:10Z",
+                  "speedrunslive": null,
+                  "src_user_id": "dx3vlm78",
+                  "srio_user_id": "1tvc2qaa4l40u",
+                  "twitch": {
+                    "uri": "https://www.twitch.tv/chx42"
+                  },
+                  "twitter": null,
+                  "youtube": {
+                    "uri": "https://www.youtube.com/user/chickenhawk666"
+                  }
+                }
+              ]
+            },
+            "meta": {
+              "schema": "1.0",
+              "sources": [
+                {
+                  "license": "CC-BY-NC-4.0",
+                  "name": "speedrun.com",
+                  "role": "authority",
+                  "timestamp": {
+                    "collected": {
+                      "on": "2026-06-05T03:57:06Z"
+                    }
+                  },
+                  "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+                }
+              ],
+              "usage": {
+                "data_bytes": 1206
+              }
+            },
+            "status": 200
+          }

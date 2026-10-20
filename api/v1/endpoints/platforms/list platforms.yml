@@ -1,0 +1,125 @@
+info:
+  name: list platforms
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: https://api.speedrun.io/v1/platforms
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true
+
+examples:
+  - name: list the first 10
+    description: a list of the first 10 platforms using max=10, default sorted by name ascending
+    request:
+      url: https://api.speedrun.io/v1/platforms?max=10
+      method: GET
+      params:
+        - name: max
+          value: "10"
+          type: query
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: |-
+          {
+            "data": {
+              "platforms": [
+                {
+                  "name": "2DS",
+                  "released": 2013,
+                  "src_platform_id": "jm951reo",
+                  "srio_platform_id": "0ogr1b1lm1bck"
+                },
+                {
+                  "name": "2DS Backwards Compatibility",
+                  "released": 2013,
+                  "src_platform_id": "nzelm79q",
+                  "srio_platform_id": "0ux4pjczm5791"
+                },
+                {
+                  "name": "2DS XL",
+                  "released": 2017,
+                  "src_platform_id": "o064vv63",
+                  "srio_platform_id": "0gytw5ni957zs"
+                },
+                {
+                  "name": "3DO Interactive Multiplayer",
+                  "released": 1993,
+                  "src_platform_id": "8gejmne3",
+                  "srio_platform_id": "1e0wdgt7gkfqd"
+                },
+                {
+                  "name": "3DS Backwards Compatibility",
+                  "released": 2012,
+                  "src_platform_id": "vm9vw163",
+                  "srio_platform_id": "1u8l5zj5k8331"
+                },
+                {
+                  "name": "Acorn Archimedes",
+                  "released": 1987,
+                  "src_platform_id": "mx6pow93",
+                  "srio_platform_id": "0pyafbnsmsfeu"
+                },
+                {
+                  "name": "Acorn Electron",
+                  "released": 1983,
+                  "src_platform_id": "mr6kzg6z",
+                  "srio_platform_id": "0f3femdl8v87v"
+                },
+                {
+                  "name": "Advanced Pico Beena",
+                  "released": 2005,
+                  "src_platform_id": "o7e2dj6w",
+                  "srio_platform_id": "096nlqfsbfxw3"
+                },
+                {
+                  "name": "Airplane Seats",
+                  "released": 1925,
+                  "src_platform_id": "gz9qv3e0",
+                  "srio_platform_id": "0ryz7if119i26"
+                },
+                {
+                  "name": "Amazon Fire TV",
+                  "released": 2014,
+                  "src_platform_id": "mr6ko5ez",
+                  "srio_platform_id": "0mf8jvgbs0g17"
+                }
+              ]
+            },
+            "meta": {
+              "pagination": {
+                "offset": 0,
+                "max": 10,
+                "size": 10
+              },
+              "schema": "1.0",
+              "sources": [
+                {
+                  "license": "CC-BY-NC-4.0",
+                  "name": "speedrun.com",
+                  "role": "authority",
+                  "timestamp": {
+                    "collected": {
+                      "from": "2026-05-24T06:34:49Z",
+                      "to": "2026-05-24T06:34:49Z"
+                    }
+                  },
+                  "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+                }
+              ],
+              "usage": {
+                "data_bytes": 3017
+              }
+            },
+            "status": 200
+          }

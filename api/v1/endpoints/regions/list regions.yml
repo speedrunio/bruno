@@ -1,0 +1,95 @@
+info:
+  name: list regions
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: https://api.speedrun.io/v1/regions
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true
+
+examples:
+  - name: list the first 10
+    description: a list of the first 10 regions using max=10, default sorted by name ascending
+    request:
+      url: https://api.speedrun.io/v1/regions?max=10
+      method: GET
+      params:
+        - name: max
+          value: "10"
+          type: query
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: |-
+          {
+            "data": {
+              "regions": [
+                {
+                  "name": "BRA / PAL",
+                  "src_region_id": "ypl25l47",
+                  "srio_region_id": "0lgd3ld6ezmhl"
+                },
+                {
+                  "name": "CHN / PAL",
+                  "src_region_id": "mol4z19n",
+                  "srio_region_id": "0vfozk5t56goc"
+                },
+                {
+                  "name": "EUR / PAL",
+                  "src_region_id": "e6lxy1dz",
+                  "srio_region_id": "0538qg1w3yibl"
+                },
+                {
+                  "name": "JPN / NTSC",
+                  "src_region_id": "o316x197",
+                  "srio_region_id": "0xuzjljucwi9d"
+                },
+                {
+                  "name": "KOR / NTSC",
+                  "src_region_id": "p2g50lnk",
+                  "srio_region_id": "08bb3i3vuqxzg"
+                },
+                {
+                  "name": "USA / NTSC",
+                  "src_region_id": "pr184lqn",
+                  "srio_region_id": "07v0sp0bi6gij"
+                }
+              ]
+            },
+            "meta": {
+              "pagination": {
+                "offset": 0,
+                "max": 10,
+                "size": 6
+              },
+              "schema": "1.0",
+              "sources": [
+                {
+                  "license": "CC-BY-NC-4.0",
+                  "name": "speedrun.com",
+                  "role": "authority",
+                  "timestamp": {
+                    "collected": {
+                      "from": "2026-05-24T06:35:36Z",
+                      "to": "2026-05-24T06:35:36Z"
+                    }
+                  },
+                  "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+                }
+              ],
+              "usage": {
+                "data_bytes": 1635
+              }
+            },
+            "status": 200
+          }

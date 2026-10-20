@@ -1,0 +1,130 @@
+info:
+  name: get series
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: https://api.speedrun.io/v1/series/{{slug}}
+  auth: inherit
+
+runtime:
+  variables:
+    - name: slug
+      value: rv7emz49
+      description: example series id
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true
+
+examples:
+  - name: super mario
+    description: use an ID to get a specific series
+    request:
+      url: https://api.speedrun.io/v1/series/rv7emz49
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: |-
+          {
+            "data": {
+              "series": [
+                {
+                  "abbreviation": "mario",
+                  "created": null,
+                  "discord": "",
+                  "moderators": {},
+                  "names": {
+                    "international": "Super Mario",
+                    "japanese": null
+                  },
+                  "src_series_id": "rv7emz49",
+                  "srio_series_id": "1fehry4v73yed"
+                }
+              ]
+            },
+            "meta": {
+              "schema": "1.0",
+              "sources": [
+                {
+                  "license": "CC-BY-NC-4.0",
+                  "name": "speedrun.com",
+                  "role": "authority",
+                  "timestamp": {
+                    "collected": {
+                      "on": "2026-05-24T06:59:13Z"
+                    }
+                  },
+                  "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+                }
+              ],
+              "usage": {
+                "data_bytes": 1086
+              }
+            },
+            "status": 200
+          }
+  - name: tetris
+    description: use an ID to get a specific series
+    request:
+      url: https://api.speedrun.io/v1/series/r4gx8xn1
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: |-
+          {
+            "data": {
+              "series": [
+                {
+                  "abbreviation": "tetris",
+                  "created": "2015-02-02T06:44:27Z",
+                  "discord": "",
+                  "moderators": {
+                    "1xy5kzv8": "super-moderator",
+                    "98r60pd8": "super-moderator",
+                    "pj02948w": "super-moderator",
+                    "qj25pljk": "super-moderator",
+                    "qjo3117j": "super-moderator",
+                    "qjoz2n86": "super-moderator",
+                    "qxkn47x0": "moderator"
+                  },
+                  "names": {
+                    "international": "Tetris",
+                    "japanese": null
+                  },
+                  "src_series_id": "r4gx8xn1",
+                  "srio_series_id": "0dkgvcann0eh0"
+                }
+              ]
+            },
+            "meta": {
+              "schema": "1.0",
+              "sources": [
+                {
+                  "license": "CC-BY-NC-4.0",
+                  "name": "speedrun.com",
+                  "role": "authority",
+                  "timestamp": {
+                    "collected": {
+                      "on": "2026-05-24T06:59:19Z"
+                    }
+                  },
+                  "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+                }
+              ],
+              "usage": {
+                "data_bytes": 1387
+              }
+            },
+            "status": 200
+          }

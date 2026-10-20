@@ -1,0 +1,868 @@
+info:
+  name: list category variables
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: https://api.speedrun.io/v1/categories/{{slug}}/variables
+  auth: inherit
+
+runtime:
+  variables:
+    - name: slug
+      value: wkpq608d
+      description: example category id
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true
+
+examples:
+  - name: "hollow knight: main levels"
+    description: use an ID to list the variables for a a specific category
+    request:
+      url: https://api.speedrun.io/v1/categories/wkpq608d/variables
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: |-
+          {
+            "data": {
+              "variables": [
+                {
+                  "category": "wkpq608d",
+                  "is-subcategory": true,
+                  "mandatory": true,
+                  "name": "Artist Bindings",
+                  "obsoletes": true,
+                  "scope": {
+                    "level": "o9x3rvp9",
+                    "type": "single-level"
+                  },
+                  "src_variable_id": "e8mrrwql",
+                  "srio_variable_id": "05kfpmsl7yvmk",
+                  "user-defined": false,
+                  "values": {
+                    "_note": "`choices` is deprecated, please use `values` instead",
+                    "choices": {
+                      "4qy3g2dl": "All Bindings",
+                      "5q85wv6q": "Any Bindings",
+                      "81pwvpnl": "All Bindings (1.4.3.2+)",
+                      "qj7vr8gq": "Any Bindings Furyless"
+                    },
+                    "default": "5q85wv6q",
+                    "values": {
+                      "4qy3g2dl": {
+                        "flags": {
+                          "miscellaneous": false
+                        },
+                        "label": "All Bindings",
+                        "rules": "All bindings must be active."
+                      },
+                      "5q85wv6q": {
+                        "flags": {
+                          "miscellaneous": false
+                        },
+                        "label": "Any Bindings",
+                        "rules": "Any combination of bindings is allowed."
+                      },
+                      "81pwvpnl": {
+                        "flags": {
+                          "miscellaneous": false
+                        },
+                        "label": "All Bindings (1.4.3.2+)",
+                        "rules": "All bindings must be active. Must be run on patch 1.4.3.2 or later."
+                      },
+                      "qj7vr8gq": {
+                        "flags": {
+                          "miscellaneous": false
+                        },
+                        "label": "Any Bindings Furyless",
+                        "rules": "Any combination of bindings is allowed. Fury of the Fallen is banned."
+                      }
+                    }
+                  }
+                },
+                {
+                  "category": "wkpq608d",
+                  "is-subcategory": true,
+                  "mandatory": true,
+                  "name": "Hallownest Bindings",
+                  "obsoletes": true,
+                  "scope": {
+                    "level": "kwj14q7w",
+                    "type": "single-level"
+                  },
+                  "src_variable_id": "dloyyge8",
+                  "srio_variable_id": "1tgg947ymhvdd",
+                  "user-defined": false,
+                  "values": {
+                    "_note": "`choices` is deprecated, please use `values` instead",
+                    "choices": {
+                      "1w4zg05q": "Any Bindings Furyless",
+                      "21grv8oq": "All Bindings (1.4.3.2+)",
+                      "5lmz030q": "Any Bindings",
+                      "81w3x26l": "All Bindings"
+                    },
+                    "default": "5lmz030q",
+                    "values": {
+                      "1w4zg05q": {
+                        "flags": {
+                          "miscellaneous": false
+                        },
+                        "label": "Any Bindings Furyless",
+                        "rules": "Any combination of bindings is allowed. Fury of the Fallen is banned."
+                      },
+                      "21grv8oq": {
+                        "flags": {
+                          "miscellaneous": false
+                        },
+                        "label": "All Bindings (1.4.3.2+)",
+                        "rules": "All bindings must be active. Must be run on patch 1.4.3.2 or later."
+                      },
+                      "5lmz030q": {
+                        "flags": {
+                          "miscellaneous": false
+                        },
+                        "label": "Any Bindings",
+                        "rules": "Any combination of bindings is allowed."
+                      },
+                      "81w3x26l": {
+                        "flags": {
+                          "miscellaneous": false
+                        },
+                        "label": "All Bindings",
+                        "rules": "All bindings must be active."
+                      }
+                    }
+                  }
+                },
+                {
+                  "category": "wkpq608d",
+                  "is-subcategory": true,
+                  "mandatory": true,
+                  "name": "Knight Bindings",
+                  "obsoletes": true,
+                  "scope": {
+                    "level": "5d7zqm6w",
+                    "type": "single-level"
+                  },
+                  "src_variable_id": "gnxvvy6l",
+                  "srio_variable_id": "1w7opetseo97o",
+                  "user-defined": false,
+                  "values": {
+                    "_note": "`choices` is deprecated, please use `values` instead",
+                    "choices": {
+                      "9qjjkmoq": "Any Bindings",
+                      "gq7e0jr1": "All Bindings (1.4.3.2+)",
+                      "jq636ooq": "All Bindings",
+                      "lmovym41": "Any Bindings Furyless"
+                    },
+                    "default": "9qjjkmoq",
+                    "values": {
+                      "9qjjkmoq": {
+                        "flags": {
+                          "miscellaneous": false
+                        },
+                        "label": "Any Bindings",
+                        "rules": "Any combination of bindings is allowed."
+                      },
+                      "gq7e0jr1": {
+                        "flags": {
+                          "miscellaneous": false
+                        },
+                        "label": "All Bindings (1.4.3.2+)",
+                        "rules": "All bindings must be active. Must be run on patch 1.4.3.2 or later."
+                      },
+                      "jq636ooq": {
+                        "flags": {
+                          "miscellaneous": false
+                        },
+                        "label": "All Bindings",
+                        "rules": "All bindings must be active."
+                      },
+                      "lmovym41": {
+                        "flags": {
+                          "miscellaneous": false
+                        },
+                        "label": "Any Bindings Furyless",
+                        "rules": "Any combination of bindings is allowed. Fury of the Fallen is banned."
+                      }
+                    }
+                  }
+                },
+                {
+                  "category": null,
+                  "is-subcategory": false,
+                  "mandatory": true,
+                  "name": "Load Remover",
+                  "obsoletes": true,
+                  "scope": {
+                    "type": "global"
+                  },
+                  "src_variable_id": "789vev3n",
+                  "srio_variable_id": "0n7j8qbuvohky",
+                  "user-defined": false,
+                  "values": {
+                    "_note": "`choices` is deprecated, please use `values` instead",
+                    "choices": {
+                      "139r7ek1": "WASM",
+                      "qoxnowgq": "Default",
+                      "qvvdow5q": "None"
+                    },
+                    "default": "qoxnowgq",
+                    "values": {
+                      "139r7ek1": {
+                        "label": "WASM"
+                      },
+                      "qoxnowgq": {
+                        "label": "Default"
+                      },
+                      "qvvdow5q": {
+                        "label": "None"
+                      }
+                    }
+                  }
+                },
+                {
+                  "category": "wkpq608d",
+                  "is-subcategory": true,
+                  "mandatory": true,
+                  "name": "Master Bindings",
+                  "obsoletes": true,
+                  "scope": {
+                    "level": "495lx03d",
+                    "type": "single-level"
+                  },
+                  "src_variable_id": "5lyppm9l",
+                  "srio_variable_id": "1ql6cvmtz39n2",
+                  "user-defined": false,
+                  "values": {
+                    "_note": "`choices` is deprecated, please use `values` instead",
+                    "choices": {
+                      "10vg8d5l": "Any Bindings Furyless",
+                      "21drx8gq": "All Bindings",
+                      "jqz78pkl": "All Bindings (1.4.3.2+)",
+                      "klrnokw1": "Any Bindings"
+                    },
+                    "default": "klrnokw1",
+                    "values": {
+                      "10vg8d5l": {
+                        "flags": {
+                          "miscellaneous": false
+                        },
+                        "label": "Any Bindings Furyless",
+                        "rules": "Any combination of bindings is allowed. Fury of the Fallen is banned."
+                      },
+                      "21drx8gq": {
+                        "flags": {
+                          "miscellaneous": false
+                        },
+                        "label": "All Bindings",
+                        "rules": "All bindings must be active."
+                      },
+                      "jqz78pkl": {
+                        "flags": {
+                          "miscellaneous": false
+                        },
+                        "label": "All Bindings (1.4.3.2+)",
+                        "rules": "All bindings must be active. Must be run on patch 1.4.3.2 or later."
+                      },
+                      "klrnokw1": {
+                        "flags": {
+                          "miscellaneous": false
+                        },
+                        "label": "Any Bindings",
+                        "rules": "Any combination of bindings is allowed."
+                      }
+                    }
+                  }
+                },
+                {
+                  "category": null,
+                  "is-subcategory": false,
+                  "mandatory": true,
+                  "name": "Patch",
+                  "obsoletes": true,
+                  "scope": {
+                    "type": "global"
+                  },
+                  "src_variable_id": "onvkzmlm",
+                  "srio_variable_id": "0kc9vyiewcm67",
+                  "user-defined": false,
+                  "values": {
+                    "_note": "`choices` is deprecated, please use `values` instead",
+                    "choices": {
+                      "013r24y1": "1.4.1.4",
+                      "013wjzkq": "1.2.1.0",
+                      "013xker1": "1.0.1.1",
+                      "0q54we7l": "1.0.0.5",
+                      "12vndkdq": "1.5.12620",
+                      "21ge25ol": "1.1.1.8",
+                      "4qynvo61": "1.3.1.5",
+                      "5le3225q": "1.0.3.4",
+                      "5lenygml": "1.0.2.8",
+                      "5q82koyq": "1.0.3.7",
+                      "814pd3e1": "1.5.75",
+                      "81p405v1": "1.1.1.7",
+                      "81w72wmq": "1.0.0.6",
+                      "gq7937dl": "1.2.1.4",
+                      "gq7o3rnl": "1.5.78",
+                      "jq687n3l": "1.5.80",
+                      "jqz90x21": "1.5.72",
+                      "klrjo0mq": "1.2.2.1",
+                      "klrxg30l": "1.0.3.1",
+                      "ln8pn6nl": "1.5.12459",
+                      "p12n0nv1": "1.5.68",
+                      "p12ow0dl": "1.1.1.6",
+                      "p12oww7l": "1.1.1.4",
+                      "q5v637ml": "1.5.12624 (Console)",
+                      "q8kjnzkq": "1.5.12450 (Console)",
+                      "qoxkvm5q": "1.5.12556 (Console)",
+                      "qyzdk471": "1.5.12558 (Console)",
+                      "rqv60j5l": "1.2.1.1",
+                      "rqvdmzyq": "1.4.3.2",
+                      "rqvx2wrl": "1.0.1.4",
+                      "z19zpgyq": "1.4.2.4",
+                      "zqojew51": "1.0.0.7"
+                    },
+                    "default": null,
+                    "values": {
+                      "013r24y1": {
+                        "label": "1.4.1.4"
+                      },
+                      "013wjzkq": {
+                        "label": "1.2.1.0"
+                      },
+                      "013xker1": {
+                        "label": "1.0.1.1"
+                      },
+                      "0q54we7l": {
+                        "label": "1.0.0.5"
+                      },
+                      "12vndkdq": {
+                        "label": "1.5.12620"
+                      },
+                      "21ge25ol": {
+                        "label": "1.1.1.8"
+                      },
+                      "4qynvo61": {
+                        "label": "1.3.1.5"
+                      },
+                      "5le3225q": {
+                        "label": "1.0.3.4"
+                      },
+                      "5lenygml": {
+                        "label": "1.0.2.8"
+                      },
+                      "5q82koyq": {
+                        "label": "1.0.3.7"
+                      },
+                      "814pd3e1": {
+                        "label": "1.5.75"
+                      },
+                      "81p405v1": {
+                        "label": "1.1.1.7"
+                      },
+                      "81w72wmq": {
+                        "label": "1.0.0.6"
+                      },
+                      "gq7937dl": {
+                        "label": "1.2.1.4"
+                      },
+                      "gq7o3rnl": {
+                        "label": "1.5.78"
+                      },
+                      "jq687n3l": {
+                        "label": "1.5.80"
+                      },
+                      "jqz90x21": {
+                        "label": "1.5.72"
+                      },
+                      "klrjo0mq": {
+                        "label": "1.2.2.1"
+                      },
+                      "klrxg30l": {
+                        "label": "1.0.3.1"
+                      },
+                      "ln8pn6nl": {
+                        "label": "1.5.12459"
+                      },
+                      "p12n0nv1": {
+                        "label": "1.5.68"
+                      },
+                      "p12ow0dl": {
+                        "label": "1.1.1.6"
+                      },
+                      "p12oww7l": {
+                        "label": "1.1.1.4"
+                      },
+                      "q5v637ml": {
+                        "label": "1.5.12624 (Console)"
+                      },
+                      "q8kjnzkq": {
+                        "label": "1.5.12450 (Console)"
+                      },
+                      "qoxkvm5q": {
+                        "label": "1.5.12556 (Console)"
+                      },
+                      "qyzdk471": {
+                        "label": "1.5.12558 (Console)"
+                      },
+                      "rqv60j5l": {
+                        "label": "1.2.1.1"
+                      },
+                      "rqvdmzyq": {
+                        "label": "1.4.3.2"
+                      },
+                      "rqvx2wrl": {
+                        "label": "1.0.1.4"
+                      },
+                      "z19zpgyq": {
+                        "label": "1.4.2.4"
+                      },
+                      "zqojew51": {
+                        "label": "1.0.0.7"
+                      }
+                    }
+                  }
+                },
+                {
+                  "category": "wkpq608d",
+                  "is-subcategory": true,
+                  "mandatory": true,
+                  "name": "Sage Bindings",
+                  "obsoletes": true,
+                  "scope": {
+                    "level": "rdq54v2d",
+                    "type": "single-level"
+                  },
+                  "src_variable_id": "ylqmme3n",
+                  "srio_variable_id": "1rek0jw5ccjkc",
+                  "user-defined": false,
+                  "values": {
+                    "_note": "`choices` is deprecated, please use `values` instead",
+                    "choices": {
+                      "8103knp1": "All Bindings",
+                      "mlnrjvnq": "Any Bindings",
+                      "q65nme7l": "Any Bindings Furyless",
+                      "xqkk2j4q": "All Bindings (1.4.3.2+)"
+                    },
+                    "default": "mlnrjvnq",
+                    "values": {
+                      "8103knp1": {
+                        "flags": {
+                          "miscellaneous": false
+                        },
+                        "label": "All Bindings",
+                        "rules": "All bindings must be active."
+                      },
+                      "mlnrjvnq": {
+                        "flags": {
+                          "miscellaneous": false
+                        },
+                        "label": "Any Bindings",
+                        "rules": "Any combination of bindings is allowed."
+                      },
+                      "q65nme7l": {
+                        "flags": {
+                          "miscellaneous": false
+                        },
+                        "label": "Any Bindings Furyless",
+                        "rules": "Any combination of bindings is allowed. Fury of the Fallen is banned."
+                      },
+                      "xqkk2j4q": {
+                        "flags": {
+                          "miscellaneous": false
+                        },
+                        "label": "All Bindings (1.4.3.2+)",
+                        "rules": "All bindings must be active. Must be run on patch 1.4.3.2 or later."
+                      }
+                    }
+                  }
+                },
+                {
+                  "category": "wkpq608d",
+                  "is-subcategory": true,
+                  "mandatory": true,
+                  "name": "White Palace Patch",
+                  "obsoletes": true,
+                  "scope": {
+                    "level": "69znevg9",
+                    "type": "single-level"
+                  },
+                  "src_variable_id": "r8r11k7n",
+                  "srio_variable_id": "0ba0gfimvjs9f",
+                  "user-defined": false,
+                  "values": {
+                    "_note": "`choices` is deprecated, please use `values` instead",
+                    "choices": {
+                      "21gyz0o1": "1.0.0.5-1.0.0.7",
+                      "jqzkz2kq": "1.0.1.1-1.2.2.1",
+                      "klr8rr21": "1.3.1.5+"
+                    },
+                    "default": "21gyz0o1",
+                    "values": {
+                      "21gyz0o1": {
+                        "flags": {
+                          "miscellaneous": false
+                        },
+                        "label": "1.0.0.5-1.0.0.7",
+                        "rules": "Runs must be on patches 1.0.0.5 - 1.0.0.7"
+                      },
+                      "jqzkz2kq": {
+                        "flags": {
+                          "miscellaneous": false
+                        },
+                        "label": "1.0.1.1-1.2.2.1",
+                        "rules": "Runs must be on any official patch after 1.0.0.7 and before the Lifeblood update."
+                      },
+                      "klr8rr21": {
+                        "flags": {
+                          "miscellaneous": false
+                        },
+                        "label": "1.3.1.5+",
+                        "rules": "Runs must be done on patch 1.3.1.5 or later."
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            "meta": {
+              "pagination": {
+                "offset": 0,
+                "max": 20,
+                "size": 8
+              },
+              "schema": "1.0",
+              "sources": [
+                {
+                  "license": "CC-BY-NC-4.0",
+                  "name": "speedrun.com",
+                  "role": "authority",
+                  "timestamp": {
+                    "collected": {
+                      "from": "2026-08-24T15:31:27Z",
+                      "to": "2026-08-26T14:12:28Z"
+                    }
+                  },
+                  "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+                }
+              ],
+              "usage": {
+                "data_bytes": 10246
+              }
+            },
+            "status": 200
+          }
+  - name: "nex machina: any%"
+    description: use an ID to list the variables for a a specific category
+    request:
+      url: https://api.speedrun.io/v1/categories/z271zxg2/variables
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: |-
+          {
+            "data": {
+              "variables": [
+                {
+                  "category": null,
+                  "is-subcategory": true,
+                  "mandatory": true,
+                  "name": "Difficulty",
+                  "obsoletes": true,
+                  "scope": {
+                    "type": "full-game"
+                  },
+                  "src_variable_id": "5ly7z09l",
+                  "srio_variable_id": "1sqiqkuy6ky1l",
+                  "user-defined": false,
+                  "values": {
+                    "_note": "`choices` is deprecated, please use `values` instead",
+                    "choices": {
+                      "21drkd5q": "Experienced",
+                      "4qy3z42l": "Master",
+                      "5q85kz3q": "Veteran",
+                      "klrn37m1": "Rookie"
+                    },
+                    "default": "klrn37m1",
+                    "values": {
+                      "21drkd5q": {
+                        "flags": {
+                          "miscellaneous": null
+                        },
+                        "label": "Experienced",
+                        "rules": ""
+                      },
+                      "4qy3z42l": {
+                        "flags": {
+                          "miscellaneous": null
+                        },
+                        "label": "Master",
+                        "rules": ""
+                      },
+                      "5q85kz3q": {
+                        "flags": {
+                          "miscellaneous": null
+                        },
+                        "label": "Veteran",
+                        "rules": ""
+                      },
+                      "klrn37m1": {
+                        "flags": {
+                          "miscellaneous": null
+                        },
+                        "label": "Rookie",
+                        "rules": ""
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            "meta": {
+              "pagination": {
+                "offset": 0,
+                "max": 20,
+                "size": 1
+              },
+              "schema": "1.0",
+              "sources": [
+                {
+                  "license": "CC-BY-NC-4.0",
+                  "name": "speedrun.com",
+                  "role": "authority",
+                  "timestamp": {
+                    "collected": {
+                      "from": "2026-08-24T14:48:33Z",
+                      "to": "2026-08-24T14:48:33Z"
+                    }
+                  },
+                  "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+                }
+              ],
+              "usage": {
+                "data_bytes": 811
+              }
+            },
+            "status": 200
+          }
+  - name: "cuphead: legacy"
+    description: use an ID to list the variables for a a specific category
+    request:
+      url: https://api.speedrun.io/v1/categories/82481pmk/variables
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: |-
+          {
+            "data": {
+              "variables": [
+                {
+                  "category": "82481pmk",
+                  "is-subcategory": true,
+                  "mandatory": true,
+                  "name": "Legacy - Categories",
+                  "obsoletes": true,
+                  "scope": {
+                    "type": "full-game"
+                  },
+                  "src_variable_id": "ql6ew5kn",
+                  "srio_variable_id": "1bjucmib8kin0",
+                  "user-defined": false,
+                  "values": {
+                    "_note": "`choices` is deprecated, please use `values` instead",
+                    "choices": {
+                      "21d8nwpl": "Any%",
+                      "4qy2mr61": "Full Clear",
+                      "5ley05m1": "Low%",
+                      "5q8v3oyl": "All Flags"
+                    },
+                    "default": "21d8nwpl",
+                    "values": {
+                      "21d8nwpl": {
+                        "flags": {
+                          "miscellaneous": false
+                        },
+                        "label": "Any%",
+                        "rules": "- [한국어](https://docs.google.com/document/d/1mH84ryy1PxeQKo6wXlqqgdml-aSkBYfvp433DWBIgo8/edit) - @Exclamation_MarkYT\r\n- [Português](https://docs.google.com/spreadsheets/d/114gJxnm8ZI3BYkPTf2OVEyF0cq_psmWjq9EAtf6dBtY/edit?ts=601f050b#gid=355911141) - @Airam_98\r\n- [Italiano](https://docs.google.com/document/d/1DfY8NrVRDcvpl2JxICArrvyA2fy8FggtTj2btYA9WZA/edit?ts=601f1678#heading=h.rg5ha2a9puo2) - @SBDWolf\r\n- [Pусский](https://docs.google.com/document/d/11EEqRcQLu4IFqr_wvaBwfpA7CRc0EZujBQ1VIsJwLlo/edit#heading=h.2meszm5feh0z) - @Facejif\r\n\nPlaying on a clean file, beat the game as fast as possible by defeating The Devil (or entering King Dice's level for Simple mode).\n\nFor Expert, you must use the Fresh Expert Glitch. See: [link](http://www.docs.google.com/document/d/1OEchIopd8IqfKu283U0rWYzN44mg-OJSR9pnlSp3UyE/edit#) (towards bottom of document under Glitches - Difficulty).\n\nMust be played on the Legacy (1.0) patch.\n\nAll of the game rules apply."
+                      },
+                      "4qy2mr61": {
+                        "flags": {
+                          "miscellaneous": false
+                        },
+                        "label": "Full Clear",
+                        "rules": "-[Pусский](https://docs.google.com/document/d/11EEqRcQLu4IFqr_wvaBwfpA7CRc0EZujBQ1VIsJwLlo/edit#heading=h.33gwyc8vnoot) - @Facejif\n\nPlaying on a clean file, reach the credits doing everything the game offers while playing on Regular. This includes: all levels, all coins, all items, all bosses, and all King Dice fights (these don't have to be done in a single King Dice fight, each miniboss has to be killed at least once in the run though).\n\nFor Simple, since you can't fight King Dice, the minibosses aren't required, and the timer stops on selecting Regular on King Dice.\n\nFor Expert, you must use the Fresh Expert Glitch. See: [link](http://www.docs.google.com/document/d/1OEchIopd8IqfKu283U0rWYzN44mg-OJSR9pnlSp3UyE/edit#) (towards bottom of document under Glitches - Difficulty).\n\nMust be played on the Legacy (1.0) patch.\n\nAll of the game rules apply."
+                      },
+                      "5ley05m1": {
+                        "flags": {
+                          "miscellaneous": false
+                        },
+                        "label": "Low%",
+                        "rules": "- [Pусский](https://docs.google.com/document/d/11EEqRcQLu4IFqr_wvaBwfpA7CRc0EZujBQ1VIsJwLlo/edit#heading=h.8rv29e9ayxsf) - @Facejif\r\n\nPlaying on a clean file, beat The Devil doing only what is necessary to beat the game. This means no Run and Guns/Mausoleums, no coins, and no weapons* other than Peashooter and plane Machine Gun. For Simple, only the same three bosses required in Simple% are required here. That is to say, Rumor Honeybottoms, Sally Stageplay, and Phantom Express are the only bosses needed.\n\n*Peashooter and Machine Gun EX attacks are allowed, since they're inherently attached to the weapons in question.\n\nFor Expert, you must use the Fresh Expert Glitch. See: [link](https://docs.google.com/document/d/1OEchIopd8IqfKu283U0rWYzN44mg-OJSR9pnlSp3UyE/edit#) (towards bottom of document under Glitches - Difficulty).\n\nMust be played on the Legacy (1.0) patch.\n\nAll of the game rules apply."
+                      },
+                      "5q8v3oyl": {
+                        "flags": {
+                          "miscellaneous": false
+                        },
+                        "label": "All Flags",
+                        "rules": "- [Pусский](https://docs.google.com/document/d/11EEqRcQLu4IFqr_wvaBwfpA7CRc0EZujBQ1VIsJwLlo/edit#heading=h.6kjx9m7hyfoq) - @Facejif\r\n\nPlaying on a clean file, defeat all main bosses (i.e. you don't have to beat all 9 of King Dice's \"minibosses\") on a single difficulty. You must also complete all 6 run and gun stages.\n\nFor Expert, you must use the Fresh Expert Glitch. See: [link](http://www.docs.google.com/document/d/1OEchIopd8IqfKu283U0rWYzN44mg-OJSR9pnlSp3UyE/edit#) (towards bottom of document under Glitches - Difficulty).\n\nMust be played on the Legacy (1.0) patch.\n\nAll of the game rules apply."
+                      }
+                    }
+                  }
+                },
+                {
+                  "category": "82481pmk",
+                  "is-subcategory": true,
+                  "mandatory": true,
+                  "name": "Legacy - Difficulties",
+                  "obsoletes": true,
+                  "scope": {
+                    "type": "full-game"
+                  },
+                  "src_variable_id": "onvv9m0n",
+                  "srio_variable_id": "1w8npiri8ip0b",
+                  "user-defined": false,
+                  "values": {
+                    "_note": "`choices` is deprecated, please use `values` instead",
+                    "choices": {
+                      "5lm3ep81": "Regular",
+                      "81w2j9m1": "Expert",
+                      "jq6owpvq": "Simple"
+                    },
+                    "default": "5lm3ep81",
+                    "values": {
+                      "5lm3ep81": {
+                        "flags": {
+                          "miscellaneous": false
+                        },
+                        "label": "Regular",
+                        "rules": "Timing ends on Knockout screen of Devil"
+                      },
+                      "81w2j9m1": {
+                        "flags": {
+                          "miscellaneous": false
+                        },
+                        "label": "Expert",
+                        "rules": "Timing ends on Knockout screen of Devil"
+                      },
+                      "jq6owpvq": {
+                        "flags": {
+                          "miscellaneous": false
+                        },
+                        "label": "Simple",
+                        "rules": "Timing ends on selecting difficulty on \"All Bets Are Off!\"."
+                      }
+                    }
+                  }
+                },
+                {
+                  "category": null,
+                  "is-subcategory": false,
+                  "mandatory": true,
+                  "name": "Loadless?",
+                  "obsoletes": true,
+                  "scope": {
+                    "type": "full-game"
+                  },
+                  "src_variable_id": "68k4ez4l",
+                  "srio_variable_id": "1hndccd8o81g8",
+                  "user-defined": false,
+                  "values": {
+                    "_note": "`choices` is deprecated, please use `values` instead",
+                    "choices": {
+                      "0138763q": "No",
+                      "zqopov21": "Yes"
+                    },
+                    "default": null,
+                    "values": {
+                      "0138763q": {
+                        "label": "No"
+                      },
+                      "zqopov21": {
+                        "label": "Yes"
+                      }
+                    }
+                  }
+                },
+                {
+                  "category": null,
+                  "is-subcategory": false,
+                  "mandatory": true,
+                  "name": "Version",
+                  "obsoletes": true,
+                  "scope": {
+                    "type": "full-game"
+                  },
+                  "src_variable_id": "68kd7ekl",
+                  "srio_variable_id": "1lfuorbezoudt",
+                  "user-defined": false,
+                  "values": {
+                    "_note": "`choices` is deprecated, please use `values` instead",
+                    "choices": {
+                      "81p0z7vq": "1.0",
+                      "gq74onpq": "1.2",
+                      "xqk43rdl": "1.1",
+                      "zqo45321": "1.3"
+                    },
+                    "default": "zqo45321",
+                    "values": {
+                      "81p0z7vq": {
+                        "label": "1.0"
+                      },
+                      "gq74onpq": {
+                        "label": "1.2"
+                      },
+                      "xqk43rdl": {
+                        "label": "1.1"
+                      },
+                      "zqo45321": {
+                        "label": "1.3"
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            "meta": {
+              "pagination": {
+                "offset": 0,
+                "max": 20,
+                "size": 4
+              },
+              "schema": "1.0",
+              "sources": [
+                {
+                  "license": "CC-BY-NC-4.0",
+                  "name": "speedrun.com",
+                  "role": "authority",
+                  "timestamp": {
+                    "collected": {
+                      "from": "2026-08-24T16:29:24Z",
+                      "to": "2026-08-26T01:47:51Z"
+                    }
+                  },
+                  "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+                }
+              ],
+              "usage": {
+                "data_bytes": 6364
+              }
+            },
+            "status": 200
+          }
